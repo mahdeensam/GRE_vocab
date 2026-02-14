@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRE Vocab Master</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">GRE Vocab Master</div>
+  <div class="nav-links">
+    <button class="nav-btn active" data-view="flashcard">Flashcards</button>
+    <button class="nav-btn" data-view="list">Word List</button>
+    <button class="nav-btn" data-view="concepts">Concept Groups</button>
+  </div>
+  <div class="nav-right">
+    <div class="nav-stats">{{ total }} words</div>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme">&#9790;</button>
+  </div>
+</nav>
+
+<!-- FLASHCARD VIEW -->
+<section id="flashcard-view" class="view active">
+  <div class="flashcard-controls">
+    <div class="deck-info">
+      <span id="card-counter">1 / 20</span>
+      <span id="known-count" class="badge green">0 Known</span>
+      <span id="unknown-count" class="badge red">0 Learning</span>
+    </div>
+    <div class="deck-actions">
+      <label for="batch-size">Cards:</label>
+      <select id="batch-size">
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+      <button id="new-deck-btn" class="btn btn-primary">New Deck</button>
+    </div>
+  </div>
+
+  <div class="flashcard-area">
+    <button class="arrow-btn" id="prev-btn">&larr;</button>
+
+    <div class="flashcard-container">
+      <div class="flashcard" id="flashcard" onclick="flipCard()">
+        <div class="flashcard-front">
+          <div class="card-word" id="card-word">Loading...</div>
+          <div class="card-hint">Click to reveal</div>
+        </div>
+        <div class="flashcard-back">
+          <div class="card-section card-hook-section" id="card-hook-section" style="display:none">
+            <div class="card-label card-hook-label">&#129504; Memory Hook</div>
+            <div class="card-hook-text" id="card-hook"></div>
+          </div>
+          <div class="card-section">
+            <div class="card-label">Meaning</div>
+            <div id="card-meaning"></div>
+          </div>
+          <div class="card-section">
+            <div class="card-label">Functional Use</div>
+            <div id="card-usage"></div>
+          </div>
+          <div class="card-section">
+            <div class="card-label">NOT Used For</div>
+            <div id="card-not-used" class="text-muted"></div>
+          </div>
+          <div class="card-section">
+            <div class="card-label">Example</div>
+            <div id="card-example" class="text-italic"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow-btn" id="next-btn">&rarr;</button>
+  </div>
+
+  <div class="flashcard-actions">
+    <button class="btn btn-danger" id="dont-know-btn" onclick="markCard(false)">Still Learning</button>
+    <button class="btn btn-success" id="know-btn" onclick="markCard(true)">Got It!</button>
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+</section>
+
+<!-- LIST VIEW -->
+<section id="list-view" class="view">
+  <div class="list-toolbar">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search words or meanings..." autocomplete="off">
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All <span id="count-all" class="filter-count">0</span></button>
+      <button class="filter-btn" data-filter="learned">Learned <span id="count-learned" class="filter-count">0</span></button>
+      <button class="filter-btn" data-filter="confused">Confused <span id="count-confused" class="filter-count">0</span></button>
+      <button class="filter-btn" data-filter="hard">Hard <span id="count-hard" class="filter-count">0</span></button>
+      <button class="filter-btn" data-filter="unmarked">Unmarked <span id="count-unmarked" class="filter-count">0</span></button>
+    </div>
+    <div class="list-actions">
+      <div class="list-actions-left">
+        <select id="sort-select" class="action-select" onchange="sortWords(this.value)">
+          <option value="default">Default Order</option>
+          <option value="alpha">A &rarr; Z</option>
+          <option value="learned">Learned First</option>
+          <option value="confused">Confused First</option>
+          <option value="hard">Hard First</option>
+        </select>
+        <button class="action-btn" id="shuffle-btn" onclick="shuffleWords()">Shuffle</button>
+      </div>
+      <div class="list-actions-right">
+        <button class="action-btn" id="compact-toggle" onclick="toggleCompact()">Compact</button>
+      </div>
+    </div>
+  </div>
+  <div class="word-list" id="word-list"></div>
+</section>
+
+<!-- CONCEPT GROUPS VIEW -->
+<section id="concepts-view" class="view">
+  <div class="concepts-header">
+    <h2 class="concepts-title">GRE Vocabulary - Concept Groups with Bengali</h2>
+    <div class="concepts-search-bar">
+      <input type="text" id="concepts-search" placeholder="Search groups or words..." autocomplete="off">
+    </div>
+    <div class="concepts-stats" id="concepts-stats"></div>
+  </div>
+  <div class="concepts-container" id="concepts-container"></div>
+</section>
+
+<script>
+// --- Theme ---
+const savedTheme = localStorage.getItem('greTheme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const btn = document.getElementById('theme-toggle');
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  btn.style.transform = 'rotate(360deg) scale(0.8)';
+  setTimeout(() => { btn.style.transform = ''; }, 400);
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('greTheme', next);
+  updateThemeIcon(next);
+});
+
+function updateThemeIcon(theme) {
+  document.getElementById('theme-toggle').innerHTML = theme === 'dark' ? '&#9788;' : '&#9790;';
+}
+
+// --- State ---
+let deck = [];
+let currentIndex = 0;
+let known = new Set();
+let learning = new Set();
+let allWords = [];
+
+// --- Navigation ---
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.view + '-view').classList.add('active');
+    if (btn.dataset.view === 'list' && allWords.length === 0) loadWordList();
+    if (btn.dataset.view === 'concepts' && !conceptsLoaded) loadConceptGroups();
+  });
+});
+
+// --- Flashcard Logic ---
+async function loadDeck() {
+  const count = document.getElementById('batch-size').value;
+  const res = await fetch(`/api/flashcards/batch?count=${count}`);
+  deck = await res.json();
+  currentIndex = 0;
+  known = new Set();
+  learning = new Set();
+  showCard();
+  updateStats();
+}
+
+let lastDirection = 'right';
+
+function showCard() {
+  if (deck.length === 0) return;
+  const card = deck[currentIndex];
+  const fc = document.getElementById('flashcard');
+  fc.classList.remove('flipped');
+
+  // Slide animation
+  fc.classList.remove('slide-right', 'slide-left');
+  void fc.offsetWidth; // force reflow
+  fc.classList.add(lastDirection === 'right' ? 'slide-right' : 'slide-left');
+
+  document.getElementById('card-word').textContent = card.word;
+  if (card.memory_hook) {
+    document.getElementById('card-hook').textContent = card.memory_hook;
+    document.getElementById('card-hook-section').style.display = '';
+  } else {
+    document.getElementById('card-hook-section').style.display = 'none';
+  }
+  document.getElementById('card-meaning').textContent = card.meaning;
+  document.getElementById('card-usage').textContent = card.usage;
+  document.getElementById('card-not-used').textContent = card.not_used_for;
+  document.getElementById('card-example').textContent = card.example;
+  document.getElementById('card-counter').textContent = `${currentIndex + 1} / ${deck.length}`;
+
+  document.getElementById('prev-btn').disabled = currentIndex === 0;
+  document.getElementById('next-btn').disabled = currentIndex === deck.length - 1;
+
+  const pct = ((known.size + learning.size) / deck.length) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+}
+
+function flipCard() {
+  document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+function markCard(isKnown) {
+  const word = deck[currentIndex].word;
+  const fc = document.getElementById('flashcard');
+
+  // Flash animation
+  fc.classList.remove('flash-green', 'flash-red');
+  void fc.offsetWidth;
+  fc.classList.add(isKnown ? 'flash-green' : 'flash-red');
+
+  if (isKnown) {
+    known.add(word);
+    learning.delete(word);
+  } else {
+    learning.add(word);
+    known.delete(word);
+  }
+  updateStats();
+
+  // Badge pop animation
+  const badge = document.getElementById(isKnown ? 'known-count' : 'unknown-count');
+  badge.classList.remove('pop');
+  void badge.offsetWidth;
+  badge.classList.add('pop');
+
+  lastDirection = 'right';
+  if (currentIndex < deck.length - 1) {
+    setTimeout(() => { currentIndex++; showCard(); }, 200);
+  } else {
+    setTimeout(() => showSummary(), 200);
+  }
+}
+
+function showSummary() {
+  showCard();
+  const total = deck.length;
+  const pct = Math.round((known.size / total) * 100);
+  document.getElementById('card-word').textContent = `Done! ${known.size}/${total} (${pct}%)`;
+  document.getElementById('flashcard').classList.remove('flipped');
+  document.querySelector('.card-hint').textContent = 'Click "New Deck" to continue';
+}
+
+function updateStats() {
+  document.getElementById('known-count').textContent = `${known.size} Known`;
+  document.getElementById('unknown-count').textContent = `${learning.size} Learning`;
+}
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+  if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); }
+});
+document.getElementById('next-btn').addEventListener('click', () => {
+  if (currentIndex < deck.length - 1) { lastDirection = 'right'; currentIndex++; showCard(); }
+});
+document.getElementById('new-deck-btn').addEventListener('click', loadDeck);
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (document.activeElement.tagName === 'INPUT') return;
+  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+  if (e.key === 'ArrowLeft') { if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); } }
+  if (e.key === 'ArrowRight') { markCard(true); }
+  if (e.key === 'ArrowDown') { markCard(false); }
+});
+
+// --- Word List ---
+let searchTimeout;
+let wordTags = JSON.parse(localStorage.getItem('greWordTags') || '{}');
+let activeFilter = 'all';
+let compactMode = false;
+let originalWords = [];
+
+function saveTags() {
+  localStorage.setItem('greWordTags', JSON.stringify(wordTags));
+}
+
+async function loadWordList(q = '') {
+  const res = await fetch(`/api/words?q=${encodeURIComponent(q)}`);
+  allWords = await res.json();
+  originalWords = [...allWords];
+  document.getElementById('sort-select').value = 'default';
+  renderWordList();
+}
+
+function getFilteredWords() {
+  if (activeFilter === 'all') return allWords;
+  if (activeFilter === 'unmarked') return allWords.filter(w => !wordTags[w.word]);
+  return allWords.filter(w => wordTags[w.word] === activeFilter);
+}
+
+function updateFilterCounts() {
+  const counts = { all: allWords.length, learned: 0, confused: 0, hard: 0, unmarked: 0 };
+  allWords.forEach(w => {
+    const tag = wordTags[w.word];
+    if (tag) counts[tag] = (counts[tag] || 0) + 1;
+    else counts.unmarked++;
+  });
+  document.getElementById('count-all').textContent = counts.all;
+  document.getElementById('count-learned').textContent = counts.learned;
+  document.getElementById('count-confused').textContent = counts.confused;
+  document.getElementById('count-hard').textContent = counts.hard;
+  document.getElementById('count-unmarked').textContent = counts.unmarked;
+}
+
+function toggleTag(word, tag) {
+  if (wordTags[word] === tag) {
+    delete wordTags[word];
+  } else {
+    wordTags[word] = tag;
+  }
+  saveTags();
+  renderWordList();
+}
+
+function renderWordList() {
+  updateFilterCounts();
+  const words = getFilteredWords();
+  const list = document.getElementById('word-list');
+  if (words.length === 0) {
+    list.innerHTML = '<div class="empty-state">No words found</div>';
+    list.classList.remove('compact');
+    return;
+  }
+
+  if (compactMode) {
+    list.classList.add('compact');
+    list.innerHTML = words.map(w => {
+      const tag = wordTags[w.word] || '';
+      return `<div class="word-chip ${tag ? 'chip-' + tag : ''}" title="${w.meaning}">${w.word}</div>`;
+    }).join('');
+  } else {
+    list.classList.remove('compact');
+    list.innerHTML = words.map((w, i) => {
+      const tag = wordTags[w.word] || '';
+      const globalIndex = allWords.indexOf(w) + 1;
+      return `
+      <div class="word-row ${tag ? 'tagged-' + tag : ''}">
+        <div class="word-row-num">${globalIndex}</div>
+        <div class="word-row-content">
+          <div class="word-row-header">
+            <div class="word-row-title">${w.word}</div>
+            <div class="word-row-toggles">
+              <button class="tag-btn tag-learned ${tag === 'learned' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'learned')">Learned</button>
+              <button class="tag-btn tag-confused ${tag === 'confused' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'confused')">Confused</button>
+              <button class="tag-btn tag-hard ${tag === 'hard' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'hard')">Hard</button>
+            </div>
+          </div>
+          <div class="word-row-meaning">${w.meaning}</div>
+          ${w.memory_hook ? `<div class="word-row-hook">&#129504; ${w.memory_hook}</div>` : ''}
+          <div class="word-row-details">
+            <span><span class="meta-label">Use:</span> ${w.usage}</span>
+            <span class="not-for"><span class="meta-label">Not for:</span> ${w.not_used_for}</span>
+          </div>
+          <div class="word-row-example">"${w.example}"</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
+
+function toggleCompact() {
+  compactMode = !compactMode;
+  const btn = document.getElementById('compact-toggle');
+  btn.textContent = compactMode ? 'Full View' : 'Compact';
+  btn.classList.toggle('active', compactMode);
+  renderWordList();
+}
+
+function shuffleWords() {
+  for (let i = allWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
+  }
+  document.getElementById('sort-select').value = 'default';
+  renderWordList();
+}
+
+function sortWords(mode) {
+  if (mode === 'default') {
+    allWords = [...originalWords];
+  } else if (mode === 'alpha') {
+    allWords.sort((a, b) => a.word.localeCompare(b.word));
+  } else {
+    // learned, confused, hard - put matching tag first
+    allWords.sort((a, b) => {
+      const aMatch = wordTags[a.word] === mode ? 0 : 1;
+      const bMatch = wordTags[b.word] === mode ? 0 : 1;
+      return aMatch - bMatch;
+    });
+  }
+  renderWordList();
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderWordList();
+  });
+});
+
+document.getElementById('search-input').addEventListener('input', (e) => {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(() => loadWordList(e.target.value), 300);
+});
+
+// --- Concept Groups ---
+let conceptsLoaded = false;
+let conceptData = {};
+let collapsedGroups = JSON.parse(localStorage.getItem('greCollapsedGroups') || '{}');
+
+async function loadConceptGroups() {
+  const res = await fetch('/api/concept-groups');
+  conceptData = await res.json();
+  conceptsLoaded = true;
+  renderConceptGroups();
+}
+
+function renderConceptGroups(filter = '') {
+  const container = document.getElementById('concepts-container');
+  const groups = Object.entries(conceptData);
+  const q = filter.toLowerCase();
+
+  let totalGroups = 0;
+  let totalWords = 0;
+  let html = '';
+
+  groups.forEach(([groupName, words]) => {
+    const wordEntries = Object.entries(words);
+    let filtered = wordEntries;
+    if (q) {
+      filtered = wordEntries.filter(([word, info]) =>
+        word.toLowerCase().includes(q) ||
+        info.meaning.toLowerCase().includes(q) ||
+        info.bengali.includes(q) ||
+        groupName.toLowerCase().includes(q)
+      );
+      if (filtered.length === 0) return;
+    }
+
+    totalGroups++;
+    totalWords += filtered.length;
+    const isCollapsed = collapsedGroups[groupName] && !q;
+
+    html += `
+    <div class="concept-group">
+      <div class="concept-group-header" onclick="toggleGroup(this, '${groupName.replace(/'/g, "\\'")}')">
+        <div class="concept-group-title">
+          <span class="collapse-icon">${isCollapsed ? '+' : '-'}</span>
+          ${groupName}
+        </div>
+        <span class="concept-group-count">${filtered.length} words</span>
+      </div>
+      <div class="concept-group-body" style="${isCollapsed ? 'display:none' : ''}">
+        <table class="concept-table">
+          <thead>
+            <tr>
+              <th class="col-num">#</th>
+              <th class="col-word">Word</th>
+              <th class="col-meaning">Meaning</th>
+              <th class="col-bengali">Bengali (বাংলা)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${filtered.map(([word, info], i) => `
+            <tr>
+              <td class="col-num">${i + 1}</td>
+              <td class="col-word">${word}</td>
+              <td class="col-meaning">${info.meaning}</td>
+              <td class="col-bengali">${info.bengali}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+  });
+
+  container.innerHTML = html || '<div class="empty-state">No matching groups found</div>';
+  document.getElementById('concepts-stats').textContent = `${totalGroups} groups \u00B7 ${totalWords} words`;
+}
+
+function toggleGroup(header, groupName) {
+  const body = header.nextElementSibling;
+  const icon = header.querySelector('.collapse-icon');
+  if (body.style.display === 'none') {
+    body.style.display = '';
+    body.style.overflow = 'hidden';
+    body.style.maxHeight = '0';
+    requestAnimationFrame(() => {
+      body.style.transition = 'max-height 0.4s ease, opacity 0.3s ease';
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.style.opacity = '1';
+    });
+    setTimeout(() => { body.style.maxHeight = 'none'; body.style.overflow = ''; }, 450);
+    icon.textContent = '-';
+    delete collapsedGroups[groupName];
+  } else {
+    body.style.overflow = 'hidden';
+    body.style.maxHeight = body.scrollHeight + 'px';
+    requestAnimationFrame(() => {
+      body.style.transition = 'max-height 0.35s ease, opacity 0.25s ease';
+      body.style.maxHeight = '0';
+      body.style.opacity = '0';
+    });
+    setTimeout(() => { body.style.display = 'none'; body.style.opacity = '1'; }, 350);
+    icon.textContent = '+';
+    collapsedGroups[groupName] = true;
+  }
+  localStorage.setItem('greCollapsedGroups', JSON.stringify(collapsedGroups));
+}
+
+let conceptSearchTimeout;
+document.getElementById('concepts-search').addEventListener('input', (e) => {
+  clearTimeout(conceptSearchTimeout);
+  conceptSearchTimeout = setTimeout(() => renderConceptGroups(e.target.value), 300);
+});
+
+// --- Init ---
+loadDeck();
+</script>
+</body>
+</html>

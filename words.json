@@ -1,0 +1,5014 @@
+[
+  {
+    "word": "abate",
+    "meaning": "become less intense; reduce",
+    "usage": "Signals gradual weakening, not removal",
+    "not_used_for": "permanent elimination",
+    "example": "Public criticism began to abate once reforms were announced."
+  },
+  {
+    "word": "abolish",
+    "meaning": "eliminate completely",
+    "usage": "Signals decisive, total removal",
+    "not_used_for": "emotions, temporary trends",
+    "example": "The outdated regulation was abolished, not merely revised."
+  },
+  {
+    "word": "absolve",
+    "meaning": "free from blame or guilt",
+    "usage": "Shifts moral or legal responsibility",
+    "not_used_for": "undoing consequences",
+    "example": "New evidence absolved her of all wrongdoing."
+  },
+  {
+    "word": "abstemious",
+    "meaning": "moderate, restrained",
+    "usage": "Shows deliberate self-control in habits",
+    "not_used_for": "involuntary scarcity",
+    "example": "His abstemious lifestyle reflected discipline, not poverty."
+  },
+  {
+    "word": "abstract",
+    "meaning": "theoretical, not concrete",
+    "usage": "Separates ideas from concrete application",
+    "not_used_for": "specific examples or data",
+    "example": "The proposal remained abstract, lacking practical details."
+  },
+  {
+    "word": "abstruse",
+    "meaning": "difficult to understand",
+    "usage": "Blames complexity of content, not poor explanation",
+    "not_used_for": "vague or ambiguous ideas",
+    "example": "The philosopher's prose was abstruse even for experts."
+  },
+  {
+    "word": "abrupt",
+    "meaning": "sudden; blunt in manner",
+    "usage": "Highlights lack of transition or tact",
+    "not_used_for": "gradual change",
+    "example": "The meeting ended in an abrupt dismissal of questions."
+  },
+  {
+    "word": "accessible",
+    "meaning": "easy to approach or understand",
+    "usage": "Signals openness to a wide audience",
+    "not_used_for": "dumbed-down content",
+    "example": "Her writing makes complex science accessible to laypeople."
+  },
+  {
+    "word": "acclaim",
+    "meaning": "praise publicly",
+    "usage": "Signals broad, public recognition",
+    "not_used_for": "private or casual praise",
+    "example": "The novel received widespread acclaim from critics."
+  },
+  {
+    "word": "accent",
+    "meaning": "emphasize",
+    "usage": "Draws attention to a specific element",
+    "not_used_for": "downplay",
+    "example": "The report accents the urgency of climate policy."
+  },
+  {
+    "word": "accentuate",
+    "meaning": "make more noticeable",
+    "usage": "Heightens or sharpens a feature",
+    "not_used_for": "create from nothing",
+    "example": "The lighting accentuated the painting's vivid colors."
+  },
+  {
+    "word": "accept",
+    "meaning": "receive or agree to",
+    "usage": "Signals willingness or passive agreement",
+    "not_used_for": "enthusiastic endorsement",
+    "example": "She accepted the criticism without protest."
+  },
+  {
+    "word": "accord",
+    "meaning": "agreement; harmony",
+    "usage": "Signals mutual agreement between parties",
+    "not_used_for": "forced compliance",
+    "example": "The two nations reached an accord on trade policy."
+  },
+  {
+    "word": "acerbic",
+    "meaning": "sharp and bitter in tone",
+    "usage": "Marks cutting, sarcastic criticism",
+    "not_used_for": "physical sharpness",
+    "example": "Her acerbic wit made even allies uncomfortable."
+  },
+  {
+    "word": "acrid",
+    "meaning": "bitter, harsh, irritating",
+    "usage": "Describes harsh sensory or tonal quality",
+    "not_used_for": "mild unpleasantness",
+    "example": "The acrid tone of the editorial alienated readers."
+  },
+  {
+    "word": "acrimony",
+    "meaning": "bitterness or hostility",
+    "usage": "Signals deep interpersonal hostility",
+    "not_used_for": "mild disagreement",
+    "example": "The debate devolved into acrimony and personal attacks."
+  },
+  {
+    "word": "acquiesce",
+    "meaning": "silently accept",
+    "usage": "Signals passive, reluctant agreement",
+    "not_used_for": "enthusiastic support",
+    "example": "She acquiesced to the new policy despite reservations."
+  },
+  {
+    "word": "acquit",
+    "meaning": "declare not guilty",
+    "usage": "Clears someone legally",
+    "not_used_for": "moral vindication",
+    "example": "The jury acquitted the defendant due to insufficient evidence."
+  },
+  {
+    "word": "acumen",
+    "meaning": "sharp insight; keen judgment",
+    "usage": "Signals practical intelligence or shrewdness",
+    "not_used_for": "academic knowledge alone",
+    "example": "Her business acumen turned a startup into an empire."
+  },
+  {
+    "word": "adamant",
+    "meaning": "refusing to change one's mind",
+    "usage": "Signals firmness bordering on stubbornness",
+    "not_used_for": "reasoned flexibility",
+    "example": "He was adamant that the deadline would not be extended."
+  },
+  {
+    "word": "adopt",
+    "meaning": "take up or accept",
+    "usage": "Signals active choice to embrace",
+    "not_used_for": "passive reception",
+    "example": "The committee adopted a more cautious approach."
+  },
+  {
+    "word": "admonish",
+    "meaning": "warn or gently scold",
+    "usage": "Signals mild, corrective criticism",
+    "not_used_for": "harsh punishment",
+    "example": "The teacher admonished the student for being late."
+  },
+  {
+    "word": "adulation",
+    "meaning": "excessive praise",
+    "usage": "Signals praise beyond what is deserved",
+    "not_used_for": "sincere, measured praise",
+    "example": "The politician basked in the adulation of supporters."
+  },
+  {
+    "word": "adversarial",
+    "meaning": "involving conflict or opposition",
+    "usage": "Marks a relationship defined by opposition",
+    "not_used_for": "friendly competition",
+    "example": "The adversarial tone of the hearing surprised observers."
+  },
+  {
+    "word": "affable",
+    "meaning": "friendly and easy to talk to",
+    "usage": "Signals warmth and approachability",
+    "not_used_for": "superficial charm",
+    "example": "His affable manner put even nervous guests at ease."
+  },
+  {
+    "word": "affirm",
+    "meaning": "state as true",
+    "usage": "Signals confident, positive declaration",
+    "not_used_for": "tentative suggestion",
+    "example": "The court affirmed the lower court's decision."
+  },
+  {
+    "word": "aggravate",
+    "meaning": "make worse",
+    "usage": "Signals worsening of an existing problem",
+    "not_used_for": "creating a new problem",
+    "example": "The new policy only aggravated existing tensions."
+  },
+  {
+    "word": "agreeable",
+    "meaning": "pleasant or willing to agree",
+    "usage": "Signals cooperative disposition",
+    "not_used_for": "passive submission",
+    "example": "She was agreeable to the proposed changes."
+  },
+  {
+    "word": "allay",
+    "meaning": "reduce fear or worry",
+    "usage": "Signals calming of emotional distress",
+    "not_used_for": "solving the root cause",
+    "example": "His reassurances did little to allay public fears."
+  },
+  {
+    "word": "alleviate",
+    "meaning": "make less severe",
+    "usage": "Signals partial relief, not cure",
+    "not_used_for": "complete elimination",
+    "example": "The medication alleviated the symptoms but didn't cure the disease."
+  },
+  {
+    "word": "allusions",
+    "meaning": "indirect references",
+    "usage": "Signals unstated connections to other works",
+    "not_used_for": "explicit citations",
+    "example": "The poem is rich with allusions to classical mythology."
+  },
+  {
+    "word": "aloof",
+    "meaning": "distant; not friendly",
+    "usage": "Signals emotional or social detachment",
+    "not_used_for": "shyness or introversion",
+    "example": "Her aloof demeanor was mistaken for arrogance."
+  },
+  {
+    "word": "altruistic",
+    "meaning": "selflessly concerned for others",
+    "usage": "Signals genuine, self-sacrificing motivation",
+    "not_used_for": "strategic generosity",
+    "example": "Her altruistic work in the community earned widespread respect."
+  },
+  {
+    "word": "ameliorate",
+    "meaning": "improve; make better",
+    "usage": "Signals improvement of a bad situation",
+    "not_used_for": "perfecting something good",
+    "example": "New regulations ameliorated working conditions in factories."
+  },
+  {
+    "word": "amenable",
+    "meaning": "open to suggestion",
+    "usage": "Signals willingness to cooperate",
+    "not_used_for": "pushover or spineless",
+    "example": "He was amenable to revising the proposal."
+  },
+  {
+    "word": "amiable",
+    "meaning": "friendly and pleasant",
+    "usage": "Signals genuine warmth in character",
+    "not_used_for": "calculated friendliness",
+    "example": "Her amiable personality made her popular among colleagues."
+  },
+  {
+    "word": "ambiguous",
+    "meaning": "open to more than one interpretation",
+    "usage": "Signals genuine uncertainty in meaning",
+    "not_used_for": "deliberate deception",
+    "example": "The contract's ambiguous language led to disputes."
+  },
+  {
+    "word": "ambivalent",
+    "meaning": "having mixed feelings",
+    "usage": "Signals genuine internal conflict",
+    "not_used_for": "indifference",
+    "example": "She felt ambivalent about accepting the promotion."
+  },
+  {
+    "word": "amplify",
+    "meaning": "increase; make stronger",
+    "usage": "Signals magnification of effect or message",
+    "not_used_for": "create from scratch",
+    "example": "Social media amplified the controversy beyond proportion."
+  },
+  {
+    "word": "analogous",
+    "meaning": "comparable; similar in function",
+    "usage": "Draws structural parallels between things",
+    "not_used_for": "identical or interchangeable",
+    "example": "The brain's network is analogous to a computer's circuitry."
+  },
+  {
+    "word": "ancillary",
+    "meaning": "supporting; secondary",
+    "usage": "Marks something subordinate to the main element",
+    "not_used_for": "irrelevant or trivial",
+    "example": "The ancillary evidence supported the central claim."
+  },
+  {
+    "word": "animus",
+    "meaning": "hostility or ill will",
+    "usage": "Signals deep-seated personal hostility",
+    "not_used_for": "casual dislike",
+    "example": "His animus toward the rival was evident in every speech."
+  },
+  {
+    "word": "anodyne",
+    "meaning": "soothing; inoffensive",
+    "usage": "Signals deliberate avoidance of provocation",
+    "not_used_for": "meaningfully calming",
+    "example": "The candidate offered only anodyne platitudes."
+  },
+  {
+    "word": "anomalous",
+    "meaning": "abnormal; deviating from the norm",
+    "usage": "Highlights deviation from expected patterns",
+    "not_used_for": "random or chaotic",
+    "example": "The anomalous data point warranted further investigation."
+  },
+  {
+    "word": "antagonistic",
+    "meaning": "hostile; opposed",
+    "usage": "Signals active opposition or hostility",
+    "not_used_for": "passive disagreement",
+    "example": "The antagonistic relationship between the factions deepened."
+  },
+  {
+    "word": "antipathy",
+    "meaning": "strong dislike",
+    "usage": "Signals deep, instinctive aversion",
+    "not_used_for": "mild preference against",
+    "example": "Her antipathy toward bureaucracy was well known."
+  },
+  {
+    "word": "apodictic",
+    "meaning": "unquestionably true; certain",
+    "usage": "Signals absolute logical certainty",
+    "not_used_for": "empirical probability",
+    "example": "The theorem's proof is apodictic and admits no exception."
+  },
+  {
+    "word": "appease",
+    "meaning": "calm or satisfy",
+    "usage": "Signals concession to reduce conflict",
+    "not_used_for": "genuine resolution",
+    "example": "The concessions were meant to appease critics, not reform policy."
+  },
+  {
+    "word": "appraise",
+    "meaning": "evaluate",
+    "usage": "Signals careful assessment of value or quality",
+    "not_used_for": "casual opinion",
+    "example": "Experts appraised the painting at over a million dollars."
+  },
+  {
+    "word": "applied",
+    "meaning": "practical, not theoretical",
+    "usage": "Signals real-world application",
+    "not_used_for": "pure theory",
+    "example": "Applied research addresses specific industrial problems."
+  },
+  {
+    "word": "approve",
+    "meaning": "agree or support",
+    "usage": "Signals formal or informal endorsement",
+    "not_used_for": "passive tolerance",
+    "example": "The board approved the budget unanimously."
+  },
+  {
+    "word": "arcane",
+    "meaning": "known by few; obscure",
+    "usage": "Signals specialist or secret knowledge",
+    "not_used_for": "simply difficult",
+    "example": "The arcane rituals were understood only by initiates."
+  },
+  {
+    "word": "archaic",
+    "meaning": "old-fashioned",
+    "usage": "Signals outdatedness",
+    "not_used_for": "historical importance",
+    "example": "The law was criticized as archaic and out of touch."
+  },
+  {
+    "word": "archetype",
+    "meaning": "standard model; stock character",
+    "usage": "Emphasizes typicality over individuality",
+    "not_used_for": "unique or nuanced cases",
+    "example": "The character is an archetype of the tragic hero."
+  },
+  {
+    "word": "ardent",
+    "meaning": "passionate",
+    "usage": "Signals intense emotional commitment",
+    "not_used_for": "casual interest",
+    "example": "She was an ardent advocate for environmental reform."
+  },
+  {
+    "word": "articulate",
+    "meaning": "express clearly",
+    "usage": "Signals skillful verbal expression",
+    "not_used_for": "mere loudness",
+    "example": "He articulated his position with precision and clarity."
+  },
+  {
+    "word": "ascetic",
+    "meaning": "self-denying; avoiding luxury",
+    "usage": "Signals voluntary austerity for moral reasons",
+    "not_used_for": "poverty or deprivation",
+    "example": "The monk's ascetic life excluded all material comforts."
+  },
+  {
+    "word": "assess",
+    "meaning": "evaluate",
+    "usage": "Signals systematic judgment or measurement",
+    "not_used_for": "gut feeling",
+    "example": "Researchers assessed the long-term impact of the policy."
+  },
+  {
+    "word": "assuage",
+    "meaning": "ease, relieve, soothe",
+    "usage": "Signals emotional or physical relief",
+    "not_used_for": "permanent cure",
+    "example": "Nothing could assuage her grief after the loss."
+  },
+  {
+    "word": "astute",
+    "meaning": "clever and perceptive",
+    "usage": "Signals sharp, practical intelligence",
+    "not_used_for": "book learning alone",
+    "example": "An astute investor, she anticipated the market shift."
+  },
+  {
+    "word": "atavistic",
+    "meaning": "reverting to earlier/primal traits",
+    "usage": "Signals regression to primitive behaviors",
+    "not_used_for": "merely old-fashioned",
+    "example": "The violence was described as an atavistic impulse."
+  },
+  {
+    "word": "attenuate",
+    "meaning": "weaken or reduce",
+    "usage": "Signals gradual thinning or weakening",
+    "not_used_for": "sudden elimination",
+    "example": "The signal attenuated over long distances."
+  },
+  {
+    "word": "audacity",
+    "meaning": "boldness; daring",
+    "usage": "Signals risky or shocking boldness",
+    "not_used_for": "careful planning",
+    "example": "She had the audacity to challenge the CEO publicly."
+  },
+  {
+    "word": "auspicious",
+    "meaning": "favorable; promising success",
+    "usage": "Signals positive omens or beginnings",
+    "not_used_for": "guaranteed success",
+    "example": "The project had an auspicious start with strong funding."
+  },
+  {
+    "word": "austere",
+    "meaning": "strict; plain; lacking comfort",
+    "usage": "Signals severity or disciplined simplicity",
+    "not_used_for": "ugly or unpleasant",
+    "example": "The austere décor reflected the institution's values."
+  },
+  {
+    "word": "authoritarian",
+    "meaning": "demanding strict obedience",
+    "usage": "Signals top-down control with limited freedom",
+    "not_used_for": "strong leadership",
+    "example": "The regime's authoritarian policies stifled dissent."
+  },
+  {
+    "word": "autarkic",
+    "meaning": "self-sufficient",
+    "usage": "Signals economic independence from trade",
+    "not_used_for": "isolationism in general",
+    "example": "The country pursued autarkic policies to reduce imports."
+  },
+  {
+    "word": "avarice",
+    "meaning": "extreme greed",
+    "usage": "Signals insatiable desire for wealth",
+    "not_used_for": "ambition or drive",
+    "example": "His avarice led him to exploit every opportunity for profit."
+  },
+  {
+    "word": "avaricious",
+    "meaning": "greedy",
+    "usage": "Signals habitual, excessive desire for wealth",
+    "not_used_for": "financially motivated",
+    "example": "The avaricious landlord raised rents without justification."
+  },
+  {
+    "word": "avant-garde",
+    "meaning": "new and experimental",
+    "usage": "Signals cutting-edge artistic innovation",
+    "not_used_for": "merely unusual",
+    "example": "The avant-garde film challenged traditional storytelling."
+  },
+  {
+    "word": "avert",
+    "meaning": "prevent or turn away",
+    "usage": "Signals successful avoidance of danger",
+    "not_used_for": "ignore",
+    "example": "Swift action averted a potential crisis."
+  },
+  {
+    "word": "awe",
+    "meaning": "wonder, amazement",
+    "usage": "Signals deep, often reverential wonder",
+    "not_used_for": "fear",
+    "example": "The audience watched in awe as the performance unfolded."
+  },
+  {
+    "word": "axiomatic",
+    "meaning": "self-evident; obvious truth",
+    "usage": "Signals foundational truth needing no proof",
+    "not_used_for": "proven by evidence",
+    "example": "It is axiomatic that supply and demand affect prices."
+  },
+  {
+    "word": "banal",
+    "meaning": "overused, unoriginal",
+    "usage": "Signals lack of originality or depth",
+    "not_used_for": "simple or plain",
+    "example": "The speech was filled with banal observations about unity."
+  },
+  {
+    "word": "bantering",
+    "meaning": "playful, light teasing talk",
+    "usage": "Signals friendly, non-hostile humor",
+    "not_used_for": "serious mockery",
+    "example": "Their bantering exchange lightened the mood at dinner."
+  },
+  {
+    "word": "belie",
+    "meaning": "contradict; give a false impression",
+    "usage": "Signals surface vs. reality mismatch",
+    "not_used_for": "intentional lying",
+    "example": "Her calm expression belied her inner turmoil."
+  },
+  {
+    "word": "belligerent",
+    "meaning": "hostile, aggressive, combative",
+    "usage": "Signals actively combative behavior",
+    "not_used_for": "assertiveness",
+    "example": "The belligerent tone of the letter shocked recipients."
+  },
+  {
+    "word": "bemused",
+    "meaning": "confused or puzzled (NOT amused)",
+    "usage": "Signals mild bewilderment",
+    "not_used_for": "entertainment or amusement",
+    "example": "He stared at the instructions with a bemused expression."
+  },
+  {
+    "word": "beneficial",
+    "meaning": "helpful, producing good results",
+    "usage": "Signals positive outcomes",
+    "not_used_for": "harmless (that's benign)",
+    "example": "Regular exercise is beneficial to mental health."
+  },
+  {
+    "word": "beneficent",
+    "meaning": "kind, charitable",
+    "usage": "Signals active generosity or kindness",
+    "not_used_for": "passive harmlessness",
+    "example": "The beneficent donor funded scholarships for decades."
+  },
+  {
+    "word": "benign",
+    "meaning": "harmless OR gentle/kind",
+    "usage": "Signals absence of threat or malice",
+    "not_used_for": "actively helpful",
+    "example": "The tumor was found to be benign."
+  },
+  {
+    "word": "berate",
+    "meaning": "scold angrily",
+    "usage": "Signals harsh, sustained verbal attack",
+    "not_used_for": "constructive criticism",
+    "example": "The manager berated the employee in front of the team."
+  },
+  {
+    "word": "betray",
+    "meaning": "reveal unintentionally OR be disloyal",
+    "usage": "Signals unintended exposure or disloyalty",
+    "not_used_for": "deliberate disclosure",
+    "example": "His trembling hands betrayed his nervousness."
+  },
+  {
+    "word": "biased",
+    "meaning": "unfairly favoring one side",
+    "usage": "Signals partiality that distorts judgment",
+    "not_used_for": "having a perspective",
+    "example": "The study was criticized for its biased methodology."
+  },
+  {
+    "word": "blunt",
+    "meaning": "direct, not tactful",
+    "usage": "Signals lack of diplomatic softening",
+    "not_used_for": "rude (though it can seem so)",
+    "example": "Her blunt assessment left no room for misunderstanding."
+  },
+  {
+    "word": "bolster",
+    "meaning": "support, strengthen",
+    "usage": "Signals reinforcing something already present",
+    "not_used_for": "creating from nothing",
+    "example": "New data bolstered the researcher's hypothesis."
+  },
+  {
+    "word": "bombastic",
+    "meaning": "pompous, overly showy language",
+    "usage": "Signals inflated, empty rhetoric",
+    "not_used_for": "eloquent or powerful speech",
+    "example": "The bombastic speech impressed no one."
+  },
+  {
+    "word": "bona fide",
+    "meaning": "genuine, authentic",
+    "usage": "Signals verified authenticity",
+    "not_used_for": "merely claimed",
+    "example": "She is a bona fide expert in the field."
+  },
+  {
+    "word": "bristle",
+    "meaning": "react with anger or defensiveness",
+    "usage": "Signals visible, immediate defensive reaction",
+    "not_used_for": "calm disagreement",
+    "example": "He bristled at the suggestion that he was unqualified."
+  },
+  {
+    "word": "brusque",
+    "meaning": "abrupt and unfriendly in manner",
+    "usage": "Signals curt, impatient interaction",
+    "not_used_for": "efficient communication",
+    "example": "The brusque receptionist barely acknowledged the visitor."
+  },
+  {
+    "word": "burgeon",
+    "meaning": "grow rapidly",
+    "usage": "Signals explosive, organic growth",
+    "not_used_for": "gradual, steady growth",
+    "example": "The tech industry burgeoned in the early 2000s."
+  },
+  {
+    "word": "bureaucratic",
+    "meaning": "rigid, rule-bound",
+    "usage": "Signals excessive procedural complexity",
+    "not_used_for": "organized or systematic",
+    "example": "Bureaucratic delays held up the project for months."
+  },
+  {
+    "word": "burdensome",
+    "meaning": "difficult to bear",
+    "usage": "Signals oppressive weight",
+    "not_used_for": "challenging in a rewarding way",
+    "example": "The burdensome regulations discouraged small businesses."
+  },
+  {
+    "word": "buttress",
+    "meaning": "support or strengthen",
+    "usage": "Signals structural or argumentative reinforcement",
+    "not_used_for": "create anew",
+    "example": "Historical records buttress the author's central thesis."
+  },
+  {
+    "word": "byzantine",
+    "meaning": "overly complex, confusing",
+    "usage": "Signals unnecessary, labyrinthine complexity",
+    "not_used_for": "sophisticated or nuanced",
+    "example": "The byzantine tax code confused even accountants."
+  },
+  {
+    "word": "candid",
+    "meaning": "honest, straightforward",
+    "usage": "Signals unfiltered, transparent communication",
+    "not_used_for": "tactless or rude",
+    "example": "Her candid remarks about the flaws were refreshing."
+  },
+  {
+    "word": "candor",
+    "meaning": "honesty, frankness",
+    "usage": "Signals openness and directness in speech",
+    "not_used_for": "bluntness without care",
+    "example": "His candor during the interview impressed the panel."
+  },
+  {
+    "word": "canonical",
+    "meaning": "officially accepted, standard",
+    "usage": "Signals authoritative status within a field",
+    "not_used_for": "popular or well-known",
+    "example": "Shakespeare's works are canonical in English literature."
+  },
+  {
+    "word": "cantankerous",
+    "meaning": "bad-tempered, argumentative",
+    "usage": "Signals habitual irritability",
+    "not_used_for": "occasionally grumpy",
+    "example": "The cantankerous professor challenged every argument."
+  },
+  {
+    "word": "capitulate",
+    "meaning": "surrender, give in",
+    "usage": "Signals complete yielding after resistance",
+    "not_used_for": "compromise",
+    "example": "After weeks, the union capitulated to management's demands."
+  },
+  {
+    "word": "captivating",
+    "meaning": "very engaging, charming",
+    "usage": "Signals powerful hold on attention",
+    "not_used_for": "merely pleasant",
+    "example": "The documentary was captivating from start to finish."
+  },
+  {
+    "word": "capricious",
+    "meaning": "unpredictable, impulsive",
+    "usage": "Signals erratic, whim-driven behavior",
+    "not_used_for": "creative spontaneity",
+    "example": "The capricious weather ruined their outdoor plans."
+  },
+  {
+    "word": "careless",
+    "meaning": "not careful; negligent",
+    "usage": "Signals lack of attention to duty",
+    "not_used_for": "relaxed or informal",
+    "example": "Careless errors undermined the credibility of the report."
+  },
+  {
+    "word": "castigate",
+    "meaning": "scold harshly",
+    "usage": "Signals severe verbal punishment",
+    "not_used_for": "mild correction",
+    "example": "The editorial castigated the government's handling of the crisis."
+  },
+  {
+    "word": "catalyze",
+    "meaning": "cause or speed up change",
+    "usage": "Signals initiating transformation",
+    "not_used_for": "gradual evolution",
+    "example": "The protest catalyzed a nationwide conversation about reform."
+  },
+  {
+    "word": "categorical",
+    "meaning": "absolute, without exception",
+    "usage": "Signals total, unqualified assertion",
+    "not_used_for": "emphatic but qualified",
+    "example": "She issued a categorical denial of the allegations."
+  },
+  {
+    "word": "casuistic",
+    "meaning": "using tricky reasoning to justify",
+    "usage": "Signals morally dubious logic",
+    "not_used_for": "nuanced reasoning",
+    "example": "His casuistic defense of the policy convinced no one."
+  },
+  {
+    "word": "caustic",
+    "meaning": "harshly critical, biting",
+    "usage": "Signals corrosive, destructive criticism",
+    "not_used_for": "constructive feedback",
+    "example": "Her caustic review left the author devastated."
+  },
+  {
+    "word": "cautious",
+    "meaning": "careful, avoiding risk",
+    "usage": "Signals deliberate risk-avoidance",
+    "not_used_for": "fearful or timid",
+    "example": "The cautious approach protected the firm from losses."
+  },
+  {
+    "word": "celebrate",
+    "meaning": "praise publicly",
+    "usage": "Signals joyful public recognition",
+    "not_used_for": "private appreciation",
+    "example": "The exhibition celebrates the artist's lifelong contributions."
+  },
+  {
+    "word": "censure",
+    "meaning": "officially criticize",
+    "usage": "Signals formal, institutional condemnation",
+    "not_used_for": "casual complaint",
+    "example": "The senator faced censure for ethical violations."
+  },
+  {
+    "word": "changeable",
+    "meaning": "variable, unstable",
+    "usage": "Signals lack of consistency",
+    "not_used_for": "adaptable",
+    "example": "His changeable moods made him difficult to work with."
+  },
+  {
+    "word": "chaotic",
+    "meaning": "disorderly, confused",
+    "usage": "Signals complete lack of structure",
+    "not_used_for": "busy or complex",
+    "example": "The chaotic rollout undermined public confidence."
+  },
+  {
+    "word": "characterize",
+    "meaning": "describe defining traits",
+    "usage": "Signals identifying essential qualities",
+    "not_used_for": "narrate events",
+    "example": "Critics characterized the novel as a masterpiece of realism."
+  },
+  {
+    "word": "chicanery",
+    "meaning": "trickery, deception",
+    "usage": "Signals underhanded manipulation",
+    "not_used_for": "honest strategy",
+    "example": "The deal was marred by legal chicanery."
+  },
+  {
+    "word": "chimerical",
+    "meaning": "unrealistic, imaginary",
+    "usage": "Signals fantasy disconnected from reality",
+    "not_used_for": "aspirational or visionary",
+    "example": "The plan was dismissed as chimerical by economists."
+  },
+  {
+    "word": "circumlocutory",
+    "meaning": "wordy, indirect",
+    "usage": "Signals evasive, roundabout speech",
+    "not_used_for": "detailed explanation",
+    "example": "His circumlocutory answer revealed nothing of substance."
+  },
+  {
+    "word": "circumspect",
+    "meaning": "cautious and careful",
+    "usage": "Signals prudent awareness of risks",
+    "not_used_for": "fearful or indecisive",
+    "example": "A circumspect leader, she weighed every option before acting."
+  },
+  {
+    "word": "clandestine",
+    "meaning": "secret, hidden",
+    "usage": "Signals deliberate concealment, often illicit",
+    "not_used_for": "private or personal",
+    "example": "The clandestine meeting was discovered by journalists."
+  },
+  {
+    "word": "clarify",
+    "meaning": "make clear",
+    "usage": "Signals removal of confusion",
+    "not_used_for": "oversimplify",
+    "example": "The professor clarified the distinction between the theories."
+  },
+  {
+    "word": "clichéd",
+    "meaning": "overused, unoriginal",
+    "usage": "Signals stale, worn-out expression",
+    "not_used_for": "simple or familiar",
+    "example": "The film relied on clichéd plot twists."
+  },
+  {
+    "word": "clientelist",
+    "meaning": "based on political favoritism",
+    "usage": "Signals patronage-driven political system",
+    "not_used_for": "merit-based governance",
+    "example": "The clientelist network distributed jobs to loyal supporters."
+  },
+  {
+    "word": "cogent",
+    "meaning": "convincing, logical",
+    "usage": "Signals persuasive clarity of argument",
+    "not_used_for": "merely loud or forceful",
+    "example": "She presented a cogent case for policy reform."
+  },
+  {
+    "word": "coherent",
+    "meaning": "logically connected",
+    "usage": "Signals internal consistency",
+    "not_used_for": "simple or brief",
+    "example": "The essay lacked a coherent thesis."
+  },
+  {
+    "word": "colloquial",
+    "meaning": "informal, everyday speech",
+    "usage": "Signals casual register",
+    "not_used_for": "slang or incorrect grammar",
+    "example": "The author's colloquial style made the book approachable."
+  },
+  {
+    "word": "commend",
+    "meaning": "praise",
+    "usage": "Signals formal or respectful approval",
+    "not_used_for": "casual compliment",
+    "example": "The committee commended her outstanding service."
+  },
+  {
+    "word": "compelling",
+    "meaning": "very convincing or interesting",
+    "usage": "Signals irresistible persuasive force",
+    "not_used_for": "merely interesting",
+    "example": "The evidence was compelling enough to change minds."
+  },
+  {
+    "word": "complacent",
+    "meaning": "self-satisfied, unaware of problems",
+    "usage": "Signals dangerous false comfort",
+    "not_used_for": "content or satisfied",
+    "example": "Success made the company complacent about innovation."
+  },
+  {
+    "word": "complicate",
+    "meaning": "make more complex",
+    "usage": "Signals adding difficulty or confusion",
+    "not_used_for": "enrich or deepen",
+    "example": "New regulations complicated an already difficult process."
+  },
+  {
+    "word": "compliance",
+    "meaning": "obedience, following rules",
+    "usage": "Signals adherence to external standards",
+    "not_used_for": "agreement or support",
+    "example": "The firm ensured compliance with all safety regulations."
+  },
+  {
+    "word": "compound",
+    "meaning": "combine; also worsen",
+    "usage": "Signals adding layers to an existing problem",
+    "not_used_for": "create anew",
+    "example": "Delays compounded the financial losses."
+  },
+  {
+    "word": "concede",
+    "meaning": "admit reluctantly",
+    "usage": "Signals grudging acknowledgment",
+    "not_used_for": "enthusiastic agreement",
+    "example": "He conceded that the evidence was against him."
+  },
+  {
+    "word": "conciliatory",
+    "meaning": "trying to calm conflict",
+    "usage": "Signals effort to restore peace",
+    "not_used_for": "submissive or weak",
+    "example": "Her conciliatory tone helped defuse the argument."
+  },
+  {
+    "word": "concise",
+    "meaning": "brief but complete",
+    "usage": "Signals economy of expression",
+    "not_used_for": "incomplete",
+    "example": "The report was concise yet comprehensive."
+  },
+  {
+    "word": "condemn",
+    "meaning": "strongly criticize",
+    "usage": "Signals severe moral disapproval",
+    "not_used_for": "mild concern",
+    "example": "World leaders condemned the attack in the strongest terms."
+  },
+  {
+    "word": "condone",
+    "meaning": "allow or approve wrongdoing",
+    "usage": "Signals tolerance of something objectionable",
+    "not_used_for": "endorse or celebrate",
+    "example": "The organization does not condone discriminatory practices."
+  },
+  {
+    "word": "conducive",
+    "meaning": "helpful in producing a result",
+    "usage": "Signals environmental support for an outcome",
+    "not_used_for": "causing directly",
+    "example": "A quiet environment is conducive to deep concentration."
+  },
+  {
+    "word": "congenial",
+    "meaning": "pleasant, friendly",
+    "usage": "Signals warmth and compatibility",
+    "not_used_for": "merely polite",
+    "example": "The congenial atmosphere made collaboration easy."
+  },
+  {
+    "word": "congruent",
+    "meaning": "in agreement, matching",
+    "usage": "Signals alignment or consistency",
+    "not_used_for": "identical",
+    "example": "Her actions were congruent with her stated values."
+  },
+  {
+    "word": "consequential",
+    "meaning": "important, significant",
+    "usage": "Signals meaningful impact",
+    "not_used_for": "dramatic or sensational",
+    "example": "The ruling was consequential for future cases."
+  },
+  {
+    "word": "consistent",
+    "meaning": "not changing, stable",
+    "usage": "Signals reliability over time",
+    "not_used_for": "rigid or inflexible",
+    "example": "Her consistent performance earned her the promotion."
+  },
+  {
+    "word": "consonant",
+    "meaning": "in harmony with",
+    "usage": "Signals alignment between elements",
+    "not_used_for": "identical",
+    "example": "The findings are consonant with previous research."
+  },
+  {
+    "word": "contentious",
+    "meaning": "causing argument",
+    "usage": "Signals divisive, debate-provoking quality",
+    "not_used_for": "merely controversial",
+    "example": "The contentious proposal split the committee."
+  },
+  {
+    "word": "contend",
+    "meaning": "argue or claim",
+    "usage": "Signals assertive argumentation",
+    "not_used_for": "prove conclusively",
+    "example": "The author contends that the theory is flawed."
+  },
+  {
+    "word": "contingent",
+    "meaning": "dependent on conditions",
+    "usage": "Signals conditional relationship",
+    "not_used_for": "guaranteed",
+    "example": "Success is contingent on adequate funding."
+  },
+  {
+    "word": "contradict",
+    "meaning": "state the opposite",
+    "usage": "Signals direct opposition",
+    "not_used_for": "merely disagree",
+    "example": "The new evidence contradicted earlier findings."
+  },
+  {
+    "word": "contrived",
+    "meaning": "artificial, forced",
+    "usage": "Signals lack of authenticity",
+    "not_used_for": "creative or inventive",
+    "example": "The plot twist felt contrived and unconvincing."
+  },
+  {
+    "word": "controvert",
+    "meaning": "argue against",
+    "usage": "Signals active disputation of claims",
+    "not_used_for": "casually question",
+    "example": "The findings were controverted by later studies."
+  },
+  {
+    "word": "conventional",
+    "meaning": "traditional, typical",
+    "usage": "Signals adherence to established norms",
+    "not_used_for": "boring or unimaginative",
+    "example": "She took a conventional approach to the problem."
+  },
+  {
+    "word": "convivial",
+    "meaning": "friendly, sociable",
+    "usage": "Signals festive warmth and sociability",
+    "not_used_for": "merely polite",
+    "example": "The convivial gathering lasted well past midnight."
+  },
+  {
+    "word": "convoluted",
+    "meaning": "overly complex",
+    "usage": "Signals unnecessarily tangled logic",
+    "not_used_for": "sophisticated",
+    "example": "The convoluted argument confused the jury."
+  },
+  {
+    "word": "cooperative",
+    "meaning": "willing to work together",
+    "usage": "Signals collaborative spirit",
+    "not_used_for": "submissive",
+    "example": "The cooperative effort produced remarkable results."
+  },
+  {
+    "word": "copious",
+    "meaning": "abundant",
+    "usage": "Signals large quantity",
+    "not_used_for": "excessive or wasteful",
+    "example": "She took copious notes during the lecture."
+  },
+  {
+    "word": "corroborate",
+    "meaning": "confirm with evidence",
+    "usage": "Signals independent verification",
+    "not_used_for": "repeat or agree",
+    "example": "Witnesses corroborated the victim's account."
+  },
+  {
+    "word": "correlative",
+    "meaning": "mutually related",
+    "usage": "Signals statistical or logical association",
+    "not_used_for": "causal relationship",
+    "example": "The study found a correlative link between diet and health."
+  },
+  {
+    "word": "corrupt",
+    "meaning": "dishonest; morally decayed",
+    "usage": "Signals systemic moral failure",
+    "not_used_for": "individual mistakes",
+    "example": "The corrupt officials diverted public funds."
+  },
+  {
+    "word": "cosmopolitan",
+    "meaning": "worldly, culturally diverse",
+    "usage": "Signals broad cultural awareness",
+    "not_used_for": "superficially sophisticated",
+    "example": "Her cosmopolitan outlook shaped her inclusive policies."
+  },
+  {
+    "word": "covert",
+    "meaning": "hidden",
+    "usage": "Signals deliberate secrecy in operations",
+    "not_used_for": "private or personal",
+    "example": "The agency ran covert operations in several countries."
+  },
+  {
+    "word": "coy",
+    "meaning": "deliberately shy or evasive",
+    "usage": "Signals calculated reluctance to reveal",
+    "not_used_for": "genuinely shy",
+    "example": "She was coy about her plans for the company."
+  },
+  {
+    "word": "credible",
+    "meaning": "believable",
+    "usage": "Signals sufficient basis for belief",
+    "not_used_for": "proven or certain",
+    "example": "The witness provided a credible account of events."
+  },
+  {
+    "word": "credulous",
+    "meaning": "too ready to believe",
+    "usage": "Signals naive, uncritical acceptance",
+    "not_used_for": "trusting positively",
+    "example": "The credulous audience accepted every claim at face value."
+  },
+  {
+    "word": "critical",
+    "meaning": "analytical; or very important",
+    "usage": "Signals rigorous evaluation or high stakes",
+    "not_used_for": "negative or hostile",
+    "example": "A critical analysis revealed several methodological flaws."
+  },
+  {
+    "word": "cryptic",
+    "meaning": "mysterious, hard to understand",
+    "usage": "Signals deliberately obscure communication",
+    "not_used_for": "complex but decipherable",
+    "example": "His cryptic response left everyone guessing."
+  },
+  {
+    "word": "cupidity",
+    "meaning": "greed",
+    "usage": "Signals intense desire for wealth",
+    "not_used_for": "ambition",
+    "example": "Her cupidity knew no bounds."
+  },
+  {
+    "word": "curt",
+    "meaning": "rudely brief",
+    "usage": "Signals abruptness bordering on rudeness",
+    "not_used_for": "concise or efficient",
+    "example": "His curt reply signaled his irritation."
+  },
+  {
+    "word": "cursory",
+    "meaning": "done quickly, superficial",
+    "usage": "Signals insufficient depth of examination",
+    "not_used_for": "efficient or quick",
+    "example": "A cursory glance at the data revealed nothing unusual."
+  },
+  {
+    "word": "curtail",
+    "meaning": "reduce, cut short",
+    "usage": "Signals deliberate restriction",
+    "not_used_for": "eliminate entirely",
+    "example": "Budget cuts curtailed the scope of the research."
+  },
+  {
+    "word": "cynical",
+    "meaning": "distrustful of motives",
+    "usage": "Signals distrust of sincerity",
+    "not_used_for": "skeptical or questioning",
+    "example": "His cynical view of politics alienated potential allies."
+  },
+  {
+    "word": "dearth",
+    "meaning": "scarcity, lack",
+    "usage": "Signals critical shortage",
+    "not_used_for": "total absence",
+    "example": "There is a dearth of qualified candidates for the position."
+  },
+  {
+    "word": "debunk",
+    "meaning": "expose as false",
+    "usage": "Signals active destruction of myths",
+    "not_used_for": "disprove with ambiguity",
+    "example": "Scientists debunked the popular myth about brain usage."
+  },
+  {
+    "word": "deceptive",
+    "meaning": "misleading",
+    "usage": "Signals intent to create false impressions",
+    "not_used_for": "honestly mistaken",
+    "example": "The deceptive advertising led to consumer complaints."
+  },
+  {
+    "word": "decisive",
+    "meaning": "firm, conclusive",
+    "usage": "Signals clear, definitive action",
+    "not_used_for": "hasty",
+    "example": "The decisive victory ended the campaign."
+  },
+  {
+    "word": "decline",
+    "meaning": "decrease; refuse",
+    "usage": "Signals downward trend or polite refusal",
+    "not_used_for": "collapse",
+    "example": "She politely declined the invitation."
+  },
+  {
+    "word": "defective",
+    "meaning": "flawed",
+    "usage": "Signals functional failure",
+    "not_used_for": "imperfect in a minor way",
+    "example": "The defective product was recalled immediately."
+  },
+  {
+    "word": "defend",
+    "meaning": "protect; argue in favor",
+    "usage": "Signals protective or advocating action",
+    "not_used_for": "attack preemptively",
+    "example": "She defended her thesis against all challenges."
+  },
+  {
+    "word": "deleterious",
+    "meaning": "harmful",
+    "usage": "Signals damaging effects, often gradual",
+    "not_used_for": "immediately dangerous",
+    "example": "The deleterious effects of pollution are well documented."
+  },
+  {
+    "word": "deliberate",
+    "meaning": "careful, intentional",
+    "usage": "Signals purposeful, thoughtful action",
+    "not_used_for": "slow or hesitant",
+    "example": "The deliberate pace of reform frustrated activists."
+  },
+  {
+    "word": "democratic",
+    "meaning": "based on equality/majority rule",
+    "usage": "Signals participatory governance",
+    "not_used_for": "permissive or chaotic",
+    "example": "The organization adopted democratic decision-making."
+  },
+  {
+    "word": "demonstrate",
+    "meaning": "show clearly",
+    "usage": "Signals making evidence visible",
+    "not_used_for": "merely claim",
+    "example": "The experiment demonstrated the treatment's effectiveness."
+  },
+  {
+    "word": "denigrate",
+    "meaning": "belittle, unfairly criticize",
+    "usage": "Signals unjust diminishing of value",
+    "not_used_for": "constructive criticism",
+    "example": "Critics denigrated the artist's later work as derivative."
+  },
+  {
+    "word": "denounce",
+    "meaning": "publicly condemn",
+    "usage": "Signals open, forceful condemnation",
+    "not_used_for": "private disapproval",
+    "example": "Activists denounced the policy as discriminatory."
+  },
+  {
+    "word": "deny",
+    "meaning": "refuse to admit",
+    "usage": "Signals rejection of a claim",
+    "not_used_for": "disprove",
+    "example": "The company denied any involvement in the scandal."
+  },
+  {
+    "word": "depict",
+    "meaning": "portray",
+    "usage": "Signals representation in art or media",
+    "not_used_for": "analyze or evaluate",
+    "example": "The mural depicts scenes from the city's history."
+  },
+  {
+    "word": "deplore",
+    "meaning": "strongly disapprove",
+    "usage": "Signals deep moral disappointment",
+    "not_used_for": "casual dislike",
+    "example": "Human rights groups deplored the government's actions."
+  },
+  {
+    "word": "derivative",
+    "meaning": "unoriginal; copied",
+    "usage": "Signals lack of creative independence",
+    "not_used_for": "inspired by",
+    "example": "Critics dismissed the novel as derivative of earlier works."
+  },
+  {
+    "word": "deride",
+    "meaning": "mock",
+    "usage": "Signals contemptuous ridicule",
+    "not_used_for": "constructive criticism",
+    "example": "Opponents derided the proposal as impractical."
+  },
+  {
+    "word": "describe",
+    "meaning": "explain in words",
+    "usage": "Signals neutral, factual account",
+    "not_used_for": "evaluate or judge",
+    "example": "The report describes the current state of the industry."
+  },
+  {
+    "word": "detached",
+    "meaning": "emotionally uninvolved",
+    "usage": "Signals deliberate emotional distance",
+    "not_used_for": "cold or uncaring",
+    "example": "Her detached analysis avoided personal bias."
+  },
+  {
+    "word": "détente",
+    "meaning": "easing of hostility",
+    "usage": "Signals diplomatic thaw",
+    "not_used_for": "full peace or alliance",
+    "example": "The détente reduced nuclear tensions between nations."
+  },
+  {
+    "word": "devolution",
+    "meaning": "transfer of power downward",
+    "usage": "Signals decentralization of authority",
+    "not_used_for": "revolution or overthrow",
+    "example": "Devolution gave local governments more autonomy."
+  },
+  {
+    "word": "dialectical",
+    "meaning": "involving opposing ideas",
+    "usage": "Signals productive tension between contradictions",
+    "not_used_for": "simple debate",
+    "example": "The dialectical process resolved the apparent contradiction."
+  },
+  {
+    "word": "dichotomy",
+    "meaning": "sharp division into two",
+    "usage": "Signals a binary split",
+    "not_used_for": "spectrum or nuance",
+    "example": "The dichotomy between theory and practice persists."
+  },
+  {
+    "word": "didactic",
+    "meaning": "intended to teach, often preachy",
+    "usage": "Signals instructional intent, sometimes excessive",
+    "not_used_for": "entertaining or engaging",
+    "example": "The novel's didactic tone alienated casual readers."
+  },
+  {
+    "word": "diffident",
+    "meaning": "shy, lacking confidence",
+    "usage": "Signals self-doubt or hesitancy",
+    "not_used_for": "modest by choice",
+    "example": "His diffident manner belied his expertise."
+  },
+  {
+    "word": "dignified",
+    "meaning": "calm and respectful",
+    "usage": "Signals composed, respectable bearing",
+    "not_used_for": "stiff or cold",
+    "example": "She maintained a dignified silence throughout the ordeal."
+  },
+  {
+    "word": "digression",
+    "meaning": "going off-topic",
+    "usage": "Signals temporary departure from main argument",
+    "not_used_for": "irrelevance",
+    "example": "The author's frequent digressions slowed the narrative."
+  },
+  {
+    "word": "dilatory",
+    "meaning": "causing delay",
+    "usage": "Signals intentional or habitual slowness",
+    "not_used_for": "thorough or careful",
+    "example": "The dilatory tactics frustrated the opposing counsel."
+  },
+  {
+    "word": "dirigiste",
+    "meaning": "state-controlled economy",
+    "usage": "Signals top-down government economic management",
+    "not_used_for": "authoritarian rule generally",
+    "example": "France's dirigiste model guided industrial policy."
+  },
+  {
+    "word": "disapprove",
+    "meaning": "think negatively of",
+    "usage": "Signals negative judgment",
+    "not_used_for": "condemn or punish",
+    "example": "Parents disapproved of the new curriculum changes."
+  },
+  {
+    "word": "disavow",
+    "meaning": "deny responsibility for",
+    "usage": "Signals formal rejection of association",
+    "not_used_for": "merely disagree",
+    "example": "The organization disavowed the controversial statement."
+  },
+  {
+    "word": "discernment",
+    "meaning": "good judgment",
+    "usage": "Signals ability to distinguish quality or truth",
+    "not_used_for": "mere knowledge",
+    "example": "Her discernment in choosing investments was remarkable."
+  },
+  {
+    "word": "discordant",
+    "meaning": "conflicting, not harmonious",
+    "usage": "Signals clashing elements",
+    "not_used_for": "merely different",
+    "example": "Discordant opinions within the team stalled progress."
+  },
+  {
+    "word": "discord",
+    "meaning": "disagreement",
+    "usage": "Signals active conflict or tension",
+    "not_used_for": "polite difference",
+    "example": "Discord among the leaders weakened the coalition."
+  },
+  {
+    "word": "discredit",
+    "meaning": "harm reputation; prove false",
+    "usage": "Signals undermining trust or validity",
+    "not_used_for": "simply disagree",
+    "example": "The scandal discredited the institution's leadership."
+  },
+  {
+    "word": "disenfranchise",
+    "meaning": "deprive of rights",
+    "usage": "Signals removal of political voice",
+    "not_used_for": "disadvantage generally",
+    "example": "Voter ID laws may disenfranchise marginalized communities."
+  },
+  {
+    "word": "disingenuous",
+    "meaning": "insincere, pretending honest",
+    "usage": "Signals calculated dishonesty behind sincerity",
+    "not_used_for": "merely wrong",
+    "example": "His apology seemed disingenuous given his past behavior."
+  },
+  {
+    "word": "disinterested",
+    "meaning": "impartial, unbiased",
+    "usage": "Signals objective neutrality",
+    "not_used_for": "uninterested or bored",
+    "example": "A disinterested judge is essential for a fair trial."
+  },
+  {
+    "word": "dismiss",
+    "meaning": "reject as unimportant",
+    "usage": "Signals casual or contemptuous rejection",
+    "not_used_for": "carefully reject",
+    "example": "The court dismissed the case for lack of evidence."
+  },
+  {
+    "word": "disparage",
+    "meaning": "speak poorly of",
+    "usage": "Signals belittling or undervaluing",
+    "not_used_for": "criticize constructively",
+    "example": "He disparaged his colleague's work in public."
+  },
+  {
+    "word": "disparate",
+    "meaning": "very different",
+    "usage": "Signals fundamental dissimilarity",
+    "not_used_for": "merely varied",
+    "example": "The study compared disparate cultural traditions."
+  },
+  {
+    "word": "dispassionate",
+    "meaning": "neutral, unemotional",
+    "usage": "Signals objectivity free from emotion",
+    "not_used_for": "cold or uncaring",
+    "example": "A dispassionate analysis revealed key trends."
+  },
+  {
+    "word": "displace",
+    "meaning": "force out of position",
+    "usage": "Signals involuntary removal",
+    "not_used_for": "replace by choice",
+    "example": "The flood displaced thousands of families."
+  },
+  {
+    "word": "dissemble",
+    "meaning": "hide true feelings",
+    "usage": "Signals deliberate concealment of emotions",
+    "not_used_for": "lie outright",
+    "example": "She dissembled her disappointment behind a polite smile."
+  },
+  {
+    "word": "dither",
+    "meaning": "hesitate indecisively",
+    "usage": "Signals unproductive wavering",
+    "not_used_for": "careful deliberation",
+    "example": "The committee dithered for weeks before deciding."
+  },
+  {
+    "word": "divisive",
+    "meaning": "causing division",
+    "usage": "Signals splitting into opposing camps",
+    "not_used_for": "controversial but unifying",
+    "example": "The divisive policy alienated half the electorate."
+  },
+  {
+    "word": "doggerel",
+    "meaning": "poor-quality poetry",
+    "usage": "Signals technically bad verse",
+    "not_used_for": "simple poetry",
+    "example": "The greeting card contained forgettable doggerel."
+  },
+  {
+    "word": "dogmatic",
+    "meaning": "stubbornly certain",
+    "usage": "Signals rigid adherence without evidence",
+    "not_used_for": "principled or firm",
+    "example": "His dogmatic insistence stifled innovation."
+  },
+  {
+    "word": "dogmatism",
+    "meaning": "rigid belief system",
+    "usage": "Signals inflexible intellectual framework",
+    "not_used_for": "conviction",
+    "example": "Dogmatism prevented productive academic discourse."
+  },
+  {
+    "word": "downplay",
+    "meaning": "minimize importance",
+    "usage": "Signals deliberate understatement",
+    "not_used_for": "ignore",
+    "example": "Officials downplayed the severity of the outbreak."
+  },
+  {
+    "word": "droll",
+    "meaning": "oddly humorous",
+    "usage": "Signals dry, quirky humor",
+    "not_used_for": "slapstick humor",
+    "example": "His droll observations kept the audience amused."
+  },
+  {
+    "word": "dubious",
+    "meaning": "doubtful",
+    "usage": "Signals reasonable suspicion",
+    "not_used_for": "proven false",
+    "example": "The claim's dubious origins raised red flags."
+  },
+  {
+    "word": "duplicitous",
+    "meaning": "deceitful, double-faced",
+    "usage": "Signals systematic dishonesty",
+    "not_used_for": "mistaken or confused",
+    "example": "The duplicitous advisor served both sides secretly."
+  },
+  {
+    "word": "duplicity",
+    "meaning": "deceitfulness",
+    "usage": "Signals betrayal through deception",
+    "not_used_for": "honest error",
+    "example": "His duplicity was exposed when the emails were leaked."
+  },
+  {
+    "word": "durable",
+    "meaning": "long-lasting",
+    "usage": "Signals resilience over time",
+    "not_used_for": "permanent or eternal",
+    "example": "The durable alliance withstood decades of political change."
+  },
+  {
+    "word": "eccentric",
+    "meaning": "unusual, odd",
+    "usage": "Signals harmless individuality",
+    "not_used_for": "mentally unstable",
+    "example": "The eccentric professor wore mismatched socks daily."
+  },
+  {
+    "word": "edifice",
+    "meaning": "large imposing building or system",
+    "usage": "Signals something grand and complex",
+    "not_used_for": "simple structure",
+    "example": "The legal edifice rested on centuries of precedent."
+  },
+  {
+    "word": "effacement",
+    "meaning": "erasing or making less noticeable",
+    "usage": "Signals deliberate self-minimization",
+    "not_used_for": "destruction",
+    "example": "Her self-effacement masked a formidable intellect."
+  },
+  {
+    "word": "efficacious",
+    "meaning": "effective, producing results",
+    "usage": "Signals proven capability",
+    "not_used_for": "efficient (about process)",
+    "example": "The treatment proved efficacious in clinical trials."
+  },
+  {
+    "word": "effusive",
+    "meaning": "overly emotional or enthusiastic",
+    "usage": "Signals excessive, gushing expression",
+    "not_used_for": "genuinely warm",
+    "example": "Her effusive praise embarrassed the modest recipient."
+  },
+  {
+    "word": "egalitarian",
+    "meaning": "believing in equality",
+    "usage": "Signals commitment to equal treatment",
+    "not_used_for": "uniform or identical",
+    "example": "The egalitarian reforms expanded access to education."
+  },
+  {
+    "word": "egregious",
+    "meaning": "shockingly bad",
+    "usage": "Signals extreme, conspicuous wrongdoing",
+    "not_used_for": "merely bad",
+    "example": "The egregious violation resulted in severe penalties."
+  },
+  {
+    "word": "elegiac",
+    "meaning": "mournful, sorrowful",
+    "usage": "Signals poetic grief or loss",
+    "not_used_for": "depressed (clinical)",
+    "example": "The elegiac tone of the memoir honored the deceased."
+  },
+  {
+    "word": "elucidate",
+    "meaning": "clarify, explain",
+    "usage": "Signals making something clear",
+    "not_used_for": "simplify or dumb down",
+    "example": "The professor elucidated the complex theorem step by step."
+  },
+  {
+    "word": "embellishment",
+    "meaning": "adding extra details",
+    "usage": "Signals decorative addition, not core content",
+    "not_used_for": "fabrication",
+    "example": "The story's embellishments made it more entertaining."
+  },
+  {
+    "word": "embrace",
+    "meaning": "accept willingly",
+    "usage": "Signals enthusiastic adoption",
+    "not_used_for": "tolerate reluctantly",
+    "example": "The company embraced new technology to stay competitive."
+  },
+  {
+    "word": "embryonic",
+    "meaning": "in early development",
+    "usage": "Signals potential not yet realized",
+    "not_used_for": "immature or failed",
+    "example": "The plan was still in its embryonic stages."
+  },
+  {
+    "word": "emerging",
+    "meaning": "becoming visible or known",
+    "usage": "Signals gradual appearance of something new",
+    "not_used_for": "established",
+    "example": "Emerging evidence challenged the prevailing theory."
+  },
+  {
+    "word": "empirical",
+    "meaning": "based on observation or data",
+    "usage": "Signals evidence-based methodology",
+    "not_used_for": "theoretical or speculative",
+    "example": "The claim lacked empirical support."
+  },
+  {
+    "word": "enable",
+    "meaning": "make possible",
+    "usage": "Signals removing barriers to action",
+    "not_used_for": "cause directly",
+    "example": "New funding enabled the expansion of the program."
+  },
+  {
+    "word": "encomium",
+    "meaning": "formal praise",
+    "usage": "Signals elevated, ceremonial praise",
+    "not_used_for": "casual compliment",
+    "example": "The encomium honored her decades of public service."
+  },
+  {
+    "word": "endemic",
+    "meaning": "native to a place; widespread",
+    "usage": "Signals embedded in a specific region",
+    "not_used_for": "epidemic (spreading rapidly)",
+    "example": "Corruption was endemic in the bureaucracy."
+  },
+  {
+    "word": "endorse",
+    "meaning": "support publicly",
+    "usage": "Signals official or public backing",
+    "not_used_for": "merely agree",
+    "example": "The organization endorsed the candidate's platform."
+  },
+  {
+    "word": "enduring",
+    "meaning": "long-lasting",
+    "usage": "Signals persistence through time",
+    "not_used_for": "permanent or unchanging",
+    "example": "Her enduring influence shaped generations of scholars."
+  },
+  {
+    "word": "energize",
+    "meaning": "give energy",
+    "usage": "Signals infusion of vitality",
+    "not_used_for": "merely encourage",
+    "example": "The speech energized the demoralized team."
+  },
+  {
+    "word": "enervate",
+    "meaning": "weaken, drain energy",
+    "usage": "Signals loss of vitality (NOT energize)",
+    "not_used_for": "relax",
+    "example": "The humid heat enervated even the most active travelers."
+  },
+  {
+    "word": "enfranchise",
+    "meaning": "give rights, esp. voting",
+    "usage": "Signals expansion of political participation",
+    "not_used_for": "empower generally",
+    "example": "The amendment enfranchised millions of excluded citizens."
+  },
+  {
+    "word": "engaging",
+    "meaning": "interesting, charming",
+    "usage": "Signals active hold on attention",
+    "not_used_for": "flashy or showy",
+    "example": "The lecturer's engaging style kept students attentive."
+  },
+  {
+    "word": "engender",
+    "meaning": "cause to arise",
+    "usage": "Signals bringing something into existence",
+    "not_used_for": "worsen or amplify",
+    "example": "The policy engendered widespread public debate."
+  },
+  {
+    "word": "enigma",
+    "meaning": "mystery",
+    "usage": "Signals something fundamentally puzzling",
+    "not_used_for": "merely unknown",
+    "example": "The artist remained an enigma even to close friends."
+  },
+  {
+    "word": "enmity",
+    "meaning": "hostility",
+    "usage": "Signals deep, sustained mutual hostility",
+    "not_used_for": "mild dislike",
+    "example": "The enmity between the families lasted generations."
+  },
+  {
+    "word": "entrenched",
+    "meaning": "firmly established",
+    "usage": "Signals deep resistance to change",
+    "not_used_for": "merely established",
+    "example": "Entrenched interests blocked the proposed reforms."
+  },
+  {
+    "word": "ephemeral",
+    "meaning": "short-lived",
+    "usage": "Signals naturally fleeting existence",
+    "not_used_for": "unimportant",
+    "example": "The ephemeral beauty of cherry blossoms inspires poets."
+  },
+  {
+    "word": "epiphenomenal",
+    "meaning": "secondary, not fundamental",
+    "usage": "Signals a byproduct, not a cause",
+    "not_used_for": "irrelevant",
+    "example": "The symptoms were epiphenomenal, not central."
+  },
+  {
+    "word": "epistemology",
+    "meaning": "study of knowledge",
+    "usage": "Signals inquiry into how we know",
+    "not_used_for": "mere opinion",
+    "example": "The paper raised fundamental epistemological questions."
+  },
+  {
+    "word": "equable",
+    "meaning": "calm, even-tempered",
+    "usage": "Signals steady emotional disposition",
+    "not_used_for": "indifferent",
+    "example": "Her equable temperament made her ideal for crises."
+  },
+  {
+    "word": "equanimity",
+    "meaning": "calmness under stress",
+    "usage": "Signals inner steadiness during adversity",
+    "not_used_for": "apathy",
+    "example": "She faced criticism with remarkable equanimity."
+  },
+  {
+    "word": "equitable",
+    "meaning": "fair",
+    "usage": "Signals just distribution or treatment",
+    "not_used_for": "equal (identical portions)",
+    "example": "An equitable solution addressed both parties' concerns."
+  },
+  {
+    "word": "equivocal",
+    "meaning": "unclear, ambiguous",
+    "usage": "Signals deliberately uncertain meaning",
+    "not_used_for": "wrong or false",
+    "example": "The equivocal results left researchers uncertain."
+  },
+  {
+    "word": "equivocate",
+    "meaning": "avoid commitment via vague language",
+    "usage": "Signals intentional evasion",
+    "not_used_for": "lie directly",
+    "example": "The politician equivocated when asked about tax reform."
+  },
+  {
+    "word": "eristic",
+    "meaning": "argumentative for the sake of winning",
+    "usage": "Signals debate aimed at victory, not truth",
+    "not_used_for": "passionate advocacy",
+    "example": "The eristic exchange produced heat but no light."
+  },
+  {
+    "word": "erode",
+    "meaning": "gradually wear away",
+    "usage": "Signals slow, progressive deterioration",
+    "not_used_for": "sudden destruction",
+    "example": "Public trust has eroded over decades."
+  },
+  {
+    "word": "erratic",
+    "meaning": "unpredictable",
+    "usage": "Signals irregular, inconsistent behavior",
+    "not_used_for": "creative or unconventional",
+    "example": "His erratic performance concerned his supervisors."
+  },
+  {
+    "word": "erudite",
+    "meaning": "very learned",
+    "usage": "Signals deep, scholarly knowledge",
+    "not_used_for": "well-read casually",
+    "example": "The erudite professor quoted in five languages."
+  },
+  {
+    "word": "erudition",
+    "meaning": "deep knowledge",
+    "usage": "Signals breadth and depth of learning",
+    "not_used_for": "information or data",
+    "example": "Her erudition was evident in every lecture."
+  },
+  {
+    "word": "esoteric",
+    "meaning": "understood by few",
+    "usage": "Signals specialist knowledge inaccessible to outsiders",
+    "not_used_for": "difficult but teachable",
+    "example": "The esoteric field attracted few practitioners."
+  },
+  {
+    "word": "ethical",
+    "meaning": "morally right",
+    "usage": "Signals conformity with moral principles",
+    "not_used_for": "legal",
+    "example": "The company adopted ethical sourcing practices."
+  },
+  {
+    "word": "eulogy",
+    "meaning": "speech praising someone after death",
+    "usage": "Signals formal tribute at funerals",
+    "not_used_for": "casual remembrance",
+    "example": "The eulogy captured the essence of her character."
+  },
+  {
+    "word": "evaluate",
+    "meaning": "judge or assess",
+    "usage": "Signals systematic appraisal",
+    "not_used_for": "describe neutrally",
+    "example": "The panel evaluated each proposal against strict criteria."
+  },
+  {
+    "word": "evasive",
+    "meaning": "avoiding direct answers",
+    "usage": "Signals deliberate avoidance of clarity",
+    "not_used_for": "diplomatically careful",
+    "example": "His evasive responses aroused suspicion."
+  },
+  {
+    "word": "evenhanded",
+    "meaning": "fair, impartial",
+    "usage": "Signals balanced treatment of all sides",
+    "not_used_for": "indifferent",
+    "example": "The judge's evenhanded ruling satisfied both parties."
+  },
+  {
+    "word": "exacerbate",
+    "meaning": "make worse",
+    "usage": "Signals worsening of existing condition",
+    "not_used_for": "create a new problem",
+    "example": "The drought exacerbated food shortages in the region."
+  },
+  {
+    "word": "exacting",
+    "meaning": "demanding high standards",
+    "usage": "Signals rigorous expectations",
+    "not_used_for": "unreasonable demands",
+    "example": "The exacting standards ensured product quality."
+  },
+  {
+    "word": "exalt",
+    "meaning": "praise highly",
+    "usage": "Signals elevation to honor",
+    "not_used_for": "merely acknowledge",
+    "example": "The ceremony exalted the contributions of workers."
+  },
+  {
+    "word": "excoriate",
+    "meaning": "criticize harshly",
+    "usage": "Signals severe, often public condemnation",
+    "not_used_for": "mild disapproval",
+    "example": "The editorial excoriated the administration's failures."
+  },
+  {
+    "word": "exemplify",
+    "meaning": "serve as example",
+    "usage": "Signals being a representative instance",
+    "not_used_for": "define or explain",
+    "example": "Her career exemplifies dedication to public service."
+  },
+  {
+    "word": "exegetical",
+    "meaning": "explaining or interpreting text",
+    "usage": "Signals scholarly textual analysis",
+    "not_used_for": "personal opinion",
+    "example": "The exegetical commentary illuminated obscure passages."
+  },
+  {
+    "word": "exigent",
+    "meaning": "urgent",
+    "usage": "Signals pressing need for immediate action",
+    "not_used_for": "merely important",
+    "example": "The exigent circumstances required swift intervention."
+  },
+  {
+    "word": "exonerate",
+    "meaning": "clear from blame",
+    "usage": "Signals formal removal of guilt",
+    "not_used_for": "forgive",
+    "example": "DNA evidence exonerated the wrongfully convicted man."
+  },
+  {
+    "word": "expedite",
+    "meaning": "speed up",
+    "usage": "Signals acceleration of a process",
+    "not_used_for": "rush carelessly",
+    "example": "The new system expedited the approval process."
+  },
+  {
+    "word": "explicit",
+    "meaning": "clear, direct",
+    "usage": "Signals leaving nothing to interpretation",
+    "not_used_for": "detailed or thorough",
+    "example": "The contract contained explicit terms about liability."
+  },
+  {
+    "word": "explicate",
+    "meaning": "explain in detail",
+    "usage": "Signals thorough, analytical explanation",
+    "not_used_for": "summarize",
+    "example": "The scholar explicated the poem's symbolic layers."
+  },
+  {
+    "word": "extol",
+    "meaning": "praise enthusiastically",
+    "usage": "Signals active, vocal celebration",
+    "not_used_for": "merely acknowledge",
+    "example": "The review extolled the film's visual artistry."
+  },
+  {
+    "word": "extrapolate",
+    "meaning": "infer beyond known data",
+    "usage": "Signals projection from existing evidence",
+    "not_used_for": "guess randomly",
+    "example": "Researchers extrapolated future trends from current data."
+  },
+  {
+    "word": "exuberant",
+    "meaning": "full of energy and enthusiasm",
+    "usage": "Signals overflowing vitality",
+    "not_used_for": "merely cheerful",
+    "example": "The exuberant crowd celebrated the victory."
+  },
+  {
+    "word": "facetious",
+    "meaning": "joking inappropriately",
+    "usage": "Signals humor in a serious context",
+    "not_used_for": "genuinely funny",
+    "example": "His facetious remark during the crisis was poorly received."
+  },
+  {
+    "word": "facilitate",
+    "meaning": "make easier",
+    "usage": "Signals enabling or smoothing a process",
+    "not_used_for": "do the work itself",
+    "example": "The mediator facilitated dialogue between the parties."
+  },
+  {
+    "word": "factional",
+    "meaning": "divided into rival groups",
+    "usage": "Signals internal division",
+    "not_used_for": "merely diverse",
+    "example": "Factional infighting weakened the political party."
+  },
+  {
+    "word": "fallacious",
+    "meaning": "based on false reasoning",
+    "usage": "Signals logical error in argument",
+    "not_used_for": "intentionally deceptive",
+    "example": "The argument was persuasive but ultimately fallacious."
+  },
+  {
+    "word": "far-fetched",
+    "meaning": "unlikely, implausible",
+    "usage": "Signals excessive improbability",
+    "not_used_for": "creative or imaginative",
+    "example": "The theory was dismissed as far-fetched."
+  },
+  {
+    "word": "fastidious",
+    "meaning": "very picky",
+    "usage": "Signals extreme attention to standards",
+    "not_used_for": "merely careful",
+    "example": "Her fastidious editing eliminated every error."
+  },
+  {
+    "word": "fatuous",
+    "meaning": "silly and pointless",
+    "usage": "Signals foolishness lacking substance",
+    "not_used_for": "naive or innocent",
+    "example": "The fatuous proposal wasted the committee's time."
+  },
+  {
+    "word": "fawning",
+    "meaning": "overly flattering, servile",
+    "usage": "Signals insincere, submissive praise",
+    "not_used_for": "genuine admiration",
+    "example": "The fawning courtiers competed for the king's favor."
+  },
+  {
+    "word": "feasible",
+    "meaning": "possible, workable",
+    "usage": "Signals practical achievability",
+    "not_used_for": "ideal or optimal",
+    "example": "The plan was ambitious but technically feasible."
+  },
+  {
+    "word": "feign",
+    "meaning": "pretend",
+    "usage": "Signals deliberate false display",
+    "not_used_for": "sincerely attempt",
+    "example": "She feigned surprise when the announcement was made."
+  },
+  {
+    "word": "felicitous",
+    "meaning": "well-suited; pleasingly appropriate",
+    "usage": "Signals apt, elegant fit",
+    "not_used_for": "merely pleasant",
+    "example": "His felicitous choice of words impressed the audience."
+  },
+  {
+    "word": "fervent",
+    "meaning": "intensely passionate",
+    "usage": "Signals deep, burning conviction",
+    "not_used_for": "merely interested",
+    "example": "Her fervent advocacy inspired legislative change."
+  },
+  {
+    "word": "feudal",
+    "meaning": "based on medieval hierarchy",
+    "usage": "Signals rigid, land-based stratification",
+    "not_used_for": "merely hierarchical",
+    "example": "The feudal system concentrated power in lords' hands."
+  },
+  {
+    "word": "fickle",
+    "meaning": "changing often, unreliable",
+    "usage": "Signals unreliable loyalty",
+    "not_used_for": "adaptable or open-minded",
+    "example": "The fickle public quickly forgot the scandal."
+  },
+  {
+    "word": "flamboyant",
+    "meaning": "showy, flashy",
+    "usage": "Signals bold, attention-seeking display",
+    "not_used_for": "confident or expressive",
+    "example": "His flamboyant style dominated the fashion show."
+  },
+  {
+    "word": "flawed",
+    "meaning": "imperfect, defective",
+    "usage": "Signals presence of significant errors",
+    "not_used_for": "imperfect trivially",
+    "example": "The study's flawed methodology undermined its conclusions."
+  },
+  {
+    "word": "fleeting",
+    "meaning": "short-lived",
+    "usage": "Signals brevity of experience",
+    "not_used_for": "unimportant",
+    "example": "She caught a fleeting glimpse of the sunset."
+  },
+  {
+    "word": "flexible",
+    "meaning": "adaptable",
+    "usage": "Signals capacity to adjust",
+    "not_used_for": "unprincipled",
+    "example": "A flexible approach allowed the team to pivot quickly."
+  },
+  {
+    "word": "flimsy",
+    "meaning": "weak, not sturdy",
+    "usage": "Signals insufficient substance",
+    "not_used_for": "lightweight physically",
+    "example": "The flimsy evidence did not support the case."
+  },
+  {
+    "word": "flippant",
+    "meaning": "disrespectfully casual",
+    "usage": "Signals inappropriate lightness",
+    "not_used_for": "humorous",
+    "example": "Her flippant response angered the interviewer."
+  },
+  {
+    "word": "florid",
+    "meaning": "overly elaborate or flowery",
+    "usage": "Signals excessive ornamentation",
+    "not_used_for": "vivid or colorful",
+    "example": "The florid prose obscured the author's argument."
+  },
+  {
+    "word": "flux",
+    "meaning": "constant change",
+    "usage": "Signals ongoing, unresolved transformation",
+    "not_used_for": "chaos",
+    "example": "The industry is in a state of flux."
+  },
+  {
+    "word": "foreboding",
+    "meaning": "sense of coming trouble",
+    "usage": "Signals ominous anticipation",
+    "not_used_for": "fear or anxiety",
+    "example": "A sense of foreboding preceded the announcement."
+  },
+  {
+    "word": "forestall",
+    "meaning": "prevent by acting early",
+    "usage": "Signals preemptive action",
+    "not_used_for": "merely delay",
+    "example": "The company forestalled a crisis with early intervention."
+  },
+  {
+    "word": "formulaic",
+    "meaning": "predictable, following a formula",
+    "usage": "Signals mechanical, uninspired approach",
+    "not_used_for": "structured",
+    "example": "The formulaic plot disappointed longtime fans."
+  },
+  {
+    "word": "forthright",
+    "meaning": "direct and honest",
+    "usage": "Signals transparent, upfront communication",
+    "not_used_for": "blunt or rude",
+    "example": "Her forthright manner earned her trust among colleagues."
+  },
+  {
+    "word": "foster",
+    "meaning": "encourage growth",
+    "usage": "Signals nurturing support over time",
+    "not_used_for": "create instantly",
+    "example": "The program fostered innovation among young researchers."
+  },
+  {
+    "word": "fractious",
+    "meaning": "irritable, unruly",
+    "usage": "Signals tendency toward internal conflict",
+    "not_used_for": "merely independent",
+    "example": "The fractious coalition struggled to agree on priorities."
+  },
+  {
+    "word": "fragile",
+    "meaning": "easily broken",
+    "usage": "Signals vulnerability to disruption",
+    "not_used_for": "weak in general",
+    "example": "The fragile ceasefire held for only three days."
+  },
+  {
+    "word": "frank",
+    "meaning": "honest, direct",
+    "usage": "Signals candid openness",
+    "not_used_for": "rude",
+    "example": "A frank discussion cleared up the misunderstanding."
+  },
+  {
+    "word": "frivolous",
+    "meaning": "not serious, trivial",
+    "usage": "Signals lack of substance",
+    "not_used_for": "lighthearted or fun",
+    "example": "The frivolous lawsuit was quickly dismissed."
+  },
+  {
+    "word": "furtive",
+    "meaning": "secretive, sneaky",
+    "usage": "Signals guilty concealment",
+    "not_used_for": "private or discreet",
+    "example": "His furtive glances suggested something to hide."
+  },
+  {
+    "word": "futile",
+    "meaning": "useless, producing no result",
+    "usage": "Signals hopelessness of effort",
+    "not_used_for": "difficult but possible",
+    "example": "Further resistance proved futile against the evidence."
+  },
+  {
+    "word": "galvanize",
+    "meaning": "shock or stimulate into action",
+    "usage": "Signals sudden motivation through impact",
+    "not_used_for": "gradually inspire",
+    "example": "The tragedy galvanized the community into action."
+  },
+  {
+    "word": "garrulous",
+    "meaning": "excessively talkative",
+    "usage": "Signals annoying over-talkativeness",
+    "not_used_for": "articulate or eloquent",
+    "example": "The garrulous neighbor dominated every conversation."
+  },
+  {
+    "word": "generate",
+    "meaning": "produce or create",
+    "usage": "Signals bringing something into existence",
+    "not_used_for": "discover",
+    "example": "The initiative generated significant public interest."
+  },
+  {
+    "word": "genial",
+    "meaning": "friendly and cheerful",
+    "usage": "Signals natural warmth and good humor",
+    "not_used_for": "artificially pleasant",
+    "example": "His genial personality made him a beloved host."
+  },
+  {
+    "word": "glib",
+    "meaning": "smooth-talking but insincere",
+    "usage": "Signals deceptive fluency lacking substance",
+    "not_used_for": "articulate or persuasive",
+    "example": "His glib promises masked a lack of commitment."
+  },
+  {
+    "word": "grandiloquent",
+    "meaning": "pompous, fancy language",
+    "usage": "Signals inflated speech meant to impress",
+    "not_used_for": "eloquent",
+    "example": "The grandiloquent speech failed to address real concerns."
+  },
+  {
+    "word": "gratuitous",
+    "meaning": "unnecessary, for show",
+    "usage": "Signals absence of justification",
+    "not_used_for": "generous (different meaning)",
+    "example": "The film's gratuitous violence drew criticism."
+  },
+  {
+    "word": "gregarious",
+    "meaning": "sociable, enjoying company",
+    "usage": "Signals natural love of social interaction",
+    "not_used_for": "friendly in general",
+    "example": "Her gregarious nature made networking effortless."
+  },
+  {
+    "word": "groove",
+    "meaning": "natural and flowing",
+    "usage": "Signals comfortable rhythm",
+    "not_used_for": "forced or stilted",
+    "example": "The band found its groove by the second set."
+  },
+  {
+    "word": "groundbreaking",
+    "meaning": "innovative",
+    "usage": "Signals paradigm-shifting novelty",
+    "not_used_for": "merely useful",
+    "example": "The groundbreaking study reshaped the field."
+  },
+  {
+    "word": "guarded",
+    "meaning": "cautious in speech",
+    "usage": "Signals deliberate withholding",
+    "not_used_for": "shy or reserved",
+    "example": "His guarded response suggested he knew more."
+  },
+  {
+    "word": "guileless",
+    "meaning": "innocent, without deceit",
+    "usage": "Signals genuine, transparent character",
+    "not_used_for": "naive or foolish",
+    "example": "Her guileless honesty disarmed even her critics."
+  },
+  {
+    "word": "gullible",
+    "meaning": "easily tricked",
+    "usage": "Signals susceptibility to deception",
+    "not_used_for": "trusting in a healthy way",
+    "example": "The gullible investors fell for the scheme."
+  },
+  {
+    "word": "hackneyed",
+    "meaning": "overused, unoriginal",
+    "usage": "Signals staleness from repetition",
+    "not_used_for": "classic or traditional",
+    "example": "The speech was full of hackneyed phrases."
+  },
+  {
+    "word": "hamper",
+    "meaning": "hinder, slow down",
+    "usage": "Signals obstruction of progress",
+    "not_used_for": "prevent completely",
+    "example": "Budget constraints hampered the research efforts."
+  },
+  {
+    "word": "haphazard",
+    "meaning": "random, lacking order",
+    "usage": "Signals absence of planning",
+    "not_used_for": "spontaneous or creative",
+    "example": "The haphazard approach led to inconsistent results."
+  },
+  {
+    "word": "harmonious",
+    "meaning": "in agreement, balanced",
+    "usage": "Signals pleasing unity",
+    "not_used_for": "identical or uniform",
+    "example": "The harmonious blend of cultures enriched the community."
+  },
+  {
+    "word": "hasten",
+    "meaning": "speed up",
+    "usage": "Signals acceleration toward a result",
+    "not_used_for": "rush carelessly",
+    "example": "Reforms hastened the country's economic recovery."
+  },
+  {
+    "word": "haughty",
+    "meaning": "arrogantly superior",
+    "usage": "Signals contemptuous pride",
+    "not_used_for": "confident",
+    "example": "Her haughty manner alienated potential collaborators."
+  },
+  {
+    "word": "hegemonic",
+    "meaning": "dominant, controlling influence",
+    "usage": "Signals cultural or political dominance",
+    "not_used_for": "merely influential",
+    "example": "The hegemonic power shaped regional politics for decades."
+  },
+  {
+    "word": "hermeneutic",
+    "meaning": "related to interpretation",
+    "usage": "Signals theory of textual interpretation",
+    "not_used_for": "casual reading",
+    "example": "The hermeneutic approach revealed hidden meaning."
+  },
+  {
+    "word": "heterodox",
+    "meaning": "against accepted beliefs",
+    "usage": "Signals departure from doctrine",
+    "not_used_for": "merely unusual",
+    "example": "Her heterodox views challenged the field's assumptions."
+  },
+  {
+    "word": "heuristic",
+    "meaning": "rule-of-thumb learning method",
+    "usage": "Signals practical problem solving",
+    "not_used_for": "algorithm or proof",
+    "example": "The heuristic approach helped develop intuition."
+  },
+  {
+    "word": "hierarchical",
+    "meaning": "arranged in levels of rank",
+    "usage": "Signals structured ranking",
+    "not_used_for": "merely organized",
+    "example": "The hierarchical organization slowed decisions."
+  },
+  {
+    "word": "hinder",
+    "meaning": "obstruct, make difficult",
+    "usage": "Signals impeding without stopping",
+    "not_used_for": "prevent entirely",
+    "example": "Red tape hindered the delivery of aid."
+  },
+  {
+    "word": "hindsight",
+    "meaning": "understanding after the event",
+    "usage": "Signals retrospective clarity",
+    "not_used_for": "foresight",
+    "example": "In hindsight, the warning signs were obvious."
+  },
+  {
+    "word": "hostile",
+    "meaning": "unfriendly, aggressive",
+    "usage": "Signals active antagonism",
+    "not_used_for": "firm or assertive",
+    "example": "The hostile reception discouraged further engagement."
+  },
+  {
+    "word": "hostility",
+    "meaning": "strong unfriendliness",
+    "usage": "Signals active opposition or anger",
+    "not_used_for": "mild dislike",
+    "example": "Hostility between the factions escalated rapidly."
+  },
+  {
+    "word": "humble",
+    "meaning": "modest, not arrogant",
+    "usage": "Signals genuine lack of pretension",
+    "not_used_for": "weak or submissive",
+    "example": "Despite achievements, she remained humble."
+  },
+  {
+    "word": "iconoclastic",
+    "meaning": "challenging traditional beliefs",
+    "usage": "Signals deliberate breaking of conventions",
+    "not_used_for": "merely unconventional",
+    "example": "His iconoclastic approach provoked strong reactions."
+  },
+  {
+    "word": "idiosyncratic",
+    "meaning": "peculiar to an individual",
+    "usage": "Signals unique personal characteristics",
+    "not_used_for": "weird or abnormal",
+    "example": "Her idiosyncratic teaching style was effective."
+  },
+  {
+    "word": "idolize",
+    "meaning": "admire excessively",
+    "usage": "Signals uncritical worship",
+    "not_used_for": "respect or admire",
+    "example": "Fans idolized the athlete beyond reason."
+  },
+  {
+    "word": "illicit",
+    "meaning": "illegal",
+    "usage": "Signals violation of law",
+    "not_used_for": "immoral (may be legal)",
+    "example": "The illicit trade was shut down by authorities."
+  },
+  {
+    "word": "illogical",
+    "meaning": "not reasonable",
+    "usage": "Signals failure of reasoning",
+    "not_used_for": "unconventional thinking",
+    "example": "The conclusion was illogical given the premises."
+  },
+  {
+    "word": "illusory",
+    "meaning": "based on illusion",
+    "usage": "Signals false perception of reality",
+    "not_used_for": "aspirational",
+    "example": "The sense of security proved illusory."
+  },
+  {
+    "word": "illuminate",
+    "meaning": "clarify; light up",
+    "usage": "Signals bringing understanding",
+    "not_used_for": "merely mention",
+    "example": "The documentary illuminated the struggles of migrants."
+  },
+  {
+    "word": "imitative",
+    "meaning": "copying others",
+    "usage": "Signals lack of originality",
+    "not_used_for": "inspired by",
+    "example": "The artwork was imitative of the Dutch masters."
+  },
+  {
+    "word": "immutable",
+    "meaning": "unchangeable",
+    "usage": "Signals absolute resistance to change",
+    "not_used_for": "stable or consistent",
+    "example": "The laws of physics are immutable."
+  },
+  {
+    "word": "impartial",
+    "meaning": "unbiased",
+    "usage": "Signals fair, balanced judgment",
+    "not_used_for": "indifferent or uncaring",
+    "example": "An impartial investigation was essential."
+  },
+  {
+    "word": "impasse",
+    "meaning": "deadlock; no progress possible",
+    "usage": "Signals complete stalemate",
+    "not_used_for": "difficulty or challenge",
+    "example": "Negotiations reached an impasse over wages."
+  },
+  {
+    "word": "impassive",
+    "meaning": "showing no emotion",
+    "usage": "Signals suppressed emotional display",
+    "not_used_for": "calm",
+    "example": "His impassive face revealed nothing during the trial."
+  },
+  {
+    "word": "impeccable",
+    "meaning": "flawless",
+    "usage": "Signals perfection in execution",
+    "not_used_for": "merely good",
+    "example": "Her impeccable record made her the ideal candidate."
+  },
+  {
+    "word": "impecunious",
+    "meaning": "poor, without money",
+    "usage": "Signals financial hardship",
+    "not_used_for": "frugal by choice",
+    "example": "The impecunious artist relied on patrons."
+  },
+  {
+    "word": "impede",
+    "meaning": "slow down, obstruct",
+    "usage": "Signals creating obstacles",
+    "not_used_for": "prevent entirely",
+    "example": "Bureaucratic hurdles impeded the reform process."
+  },
+  {
+    "word": "imperative",
+    "meaning": "absolutely necessary",
+    "usage": "Signals urgent, non-negotiable requirement",
+    "not_used_for": "merely important",
+    "example": "It is imperative that we act before the deadline."
+  },
+  {
+    "word": "imperious",
+    "meaning": "arrogant, commanding",
+    "usage": "Signals domineering authority",
+    "not_used_for": "authoritative or decisive",
+    "example": "Her imperious tone offended subordinates."
+  },
+  {
+    "word": "impetuous",
+    "meaning": "acting impulsively",
+    "usage": "Signals rash action without forethought",
+    "not_used_for": "spontaneous or bold",
+    "example": "His impetuous decision cost the company millions."
+  },
+  {
+    "word": "implacable",
+    "meaning": "unable to be appeased",
+    "usage": "Signals relentless hostility or force",
+    "not_used_for": "merely determined",
+    "example": "The implacable opponent refused every compromise."
+  },
+  {
+    "word": "implausible",
+    "meaning": "unlikely to be true",
+    "usage": "Signals straining credibility",
+    "not_used_for": "impossible",
+    "example": "The alibi was implausible but not disprovable."
+  },
+  {
+    "word": "impugn",
+    "meaning": "challenge as false",
+    "usage": "Signals attacking credibility",
+    "not_used_for": "merely question",
+    "example": "The attorney impugned the witness's motives."
+  },
+  {
+    "word": "inadvertent",
+    "meaning": "accidental",
+    "usage": "Signals unintentional action",
+    "not_used_for": "careless",
+    "example": "The inadvertent error was quickly corrected."
+  },
+  {
+    "word": "incendiary",
+    "meaning": "designed to cause anger",
+    "usage": "Signals deliberately provocative",
+    "not_used_for": "passionate or forceful",
+    "example": "The incendiary remarks inflamed the crowd."
+  },
+  {
+    "word": "inchoate",
+    "meaning": "not fully formed",
+    "usage": "Signals early, undeveloped state",
+    "not_used_for": "incomplete by neglect",
+    "example": "The inchoate plan needed further development."
+  },
+  {
+    "word": "incisive",
+    "meaning": "sharp, insightful",
+    "usage": "Signals penetrating clarity",
+    "not_used_for": "merely correct",
+    "example": "Her incisive critique exposed the argument's weakness."
+  },
+  {
+    "word": "incite",
+    "meaning": "provoke",
+    "usage": "Signals deliberate stirring of action",
+    "not_used_for": "inspire positively",
+    "example": "The speech was accused of inciting violence."
+  },
+  {
+    "word": "incoherent",
+    "meaning": "unclear, disorganized",
+    "usage": "Signals failure of logical connection",
+    "not_used_for": "complex but logical",
+    "example": "The incoherent proposal confused the committee."
+  },
+  {
+    "word": "incongruous",
+    "meaning": "out of place",
+    "usage": "Signals jarring mismatch",
+    "not_used_for": "merely unusual",
+    "example": "The modern sculpture looked incongruous in the square."
+  },
+  {
+    "word": "inconsequential",
+    "meaning": "unimportant",
+    "usage": "Signals negligible impact",
+    "not_used_for": "minor but meaningful",
+    "example": "The error was inconsequential to the final result."
+  },
+  {
+    "word": "incontrovertible",
+    "meaning": "impossible to deny",
+    "usage": "Signals evidence beyond dispute",
+    "not_used_for": "merely convincing",
+    "example": "The DNA evidence was incontrovertible."
+  },
+  {
+    "word": "incredulous",
+    "meaning": "unwilling to believe",
+    "usage": "Signals active disbelief",
+    "not_used_for": "skeptical as a trait",
+    "example": "She was incredulous at the absurd excuse."
+  },
+  {
+    "word": "indefatigable",
+    "meaning": "tireless",
+    "usage": "Signals relentless energy",
+    "not_used_for": "merely hardworking",
+    "example": "The indefatigable activist campaigned for decades."
+  },
+  {
+    "word": "indefensible",
+    "meaning": "impossible to justify",
+    "usage": "Signals moral or logical bankruptcy",
+    "not_used_for": "merely wrong",
+    "example": "The policy was regarded as indefensible."
+  },
+  {
+    "word": "indifferent",
+    "meaning": "not caring; neutral",
+    "usage": "Signals absence of interest",
+    "not_used_for": "impartial",
+    "example": "The public remained indifferent to the policy change."
+  },
+  {
+    "word": "ineffective",
+    "meaning": "not producing results",
+    "usage": "Signals failure to achieve outcomes",
+    "not_used_for": "unsuccessful attempt",
+    "example": "The medication proved ineffective against the virus."
+  },
+  {
+    "word": "inexorable",
+    "meaning": "unstoppable",
+    "usage": "Signals relentless, inevitable progress",
+    "not_used_for": "merely persistent",
+    "example": "The inexorable march of technology continued."
+  },
+  {
+    "word": "infer",
+    "meaning": "conclude from evidence",
+    "usage": "Signals reasoning from data",
+    "not_used_for": "guess or assume",
+    "example": "From the evidence, we can infer a connection."
+  },
+  {
+    "word": "inflame",
+    "meaning": "intensify anger",
+    "usage": "Signals deliberate provocation",
+    "not_used_for": "ignite (literal)",
+    "example": "The editorial inflamed public anger over the issue."
+  },
+  {
+    "word": "inflexible",
+    "meaning": "rigid",
+    "usage": "Signals unwillingness to adapt",
+    "not_used_for": "firm or principled",
+    "example": "The inflexible rules alienated many participants."
+  },
+  {
+    "word": "ingenuity",
+    "meaning": "cleverness",
+    "usage": "Signals creative, resourceful solving",
+    "not_used_for": "mere intelligence",
+    "example": "Her ingenuity transformed limited resources into success."
+  },
+  {
+    "word": "ingrained",
+    "meaning": "deeply established",
+    "usage": "Signals deep, unconscious embedding",
+    "not_used_for": "merely habitual",
+    "example": "Ingrained biases are difficult to overcome."
+  },
+  {
+    "word": "inhibit",
+    "meaning": "restrain",
+    "usage": "Signals suppression of action",
+    "not_used_for": "prevent entirely",
+    "example": "Fear of failure inhibited creative risk-taking."
+  },
+  {
+    "word": "inimical",
+    "meaning": "harmful; hostile",
+    "usage": "Signals active opposition or damage",
+    "not_used_for": "merely unfavorable",
+    "example": "Policies inimical to growth were gradually reversed."
+  },
+  {
+    "word": "innovative",
+    "meaning": "introducing new ideas",
+    "usage": "Signals creative novelty with impact",
+    "not_used_for": "merely different",
+    "example": "The innovative design won international awards."
+  },
+  {
+    "word": "inscrutable",
+    "meaning": "impossible to understand",
+    "usage": "Signals impenetrability of expression",
+    "not_used_for": "mysterious or intriguing",
+    "example": "His inscrutable expression gave nothing away."
+  },
+  {
+    "word": "insipid",
+    "meaning": "dull, tasteless",
+    "usage": "Signals blandness that fails to engage",
+    "not_used_for": "simple or plain",
+    "example": "The insipid dialogue weakened the film."
+  },
+  {
+    "word": "instigate",
+    "meaning": "start, usually trouble",
+    "usage": "Signals provoking action",
+    "not_used_for": "inspire positively",
+    "example": "He was accused of instigating the confrontation."
+  },
+  {
+    "word": "insubstantial",
+    "meaning": "lacking strength or reality",
+    "usage": "Signals insufficient basis",
+    "not_used_for": "lightweight physically",
+    "example": "The evidence was insubstantial and unconvincing."
+  },
+  {
+    "word": "insular",
+    "meaning": "narrow-minded; isolated",
+    "usage": "Signals cultural or intellectual isolation",
+    "not_used_for": "private or introverted",
+    "example": "The insular community resisted outside influence."
+  },
+  {
+    "word": "intelligible",
+    "meaning": "understandable",
+    "usage": "Signals clarity of communication",
+    "not_used_for": "simple or dumbed down",
+    "example": "The explanation was intelligible even to newcomers."
+  },
+  {
+    "word": "intensify",
+    "meaning": "make stronger",
+    "usage": "Signals escalation of severity",
+    "not_used_for": "create",
+    "example": "Pressure on the government intensified after the report."
+  },
+  {
+    "word": "intermittent",
+    "meaning": "occurring at irregular intervals",
+    "usage": "Signals inconsistent, on-off pattern",
+    "not_used_for": "occasional",
+    "example": "Intermittent outages disrupted service throughout the week."
+  },
+  {
+    "word": "interregnum",
+    "meaning": "gap between periods of rule",
+    "usage": "Signals a power vacuum",
+    "not_used_for": "transition",
+    "example": "The interregnum created uncertainty in the government."
+  },
+  {
+    "word": "intransigent",
+    "meaning": "unwilling to compromise",
+    "usage": "Signals absolute refusal to negotiate",
+    "not_used_for": "principled",
+    "example": "The intransigent negotiator derailed the peace talks."
+  },
+  {
+    "word": "intrepid",
+    "meaning": "fearless",
+    "usage": "Signals courageous action facing danger",
+    "not_used_for": "reckless",
+    "example": "The intrepid journalist reported from the conflict zone."
+  },
+  {
+    "word": "intricate",
+    "meaning": "complex in detail",
+    "usage": "Signals richness of interconnected elements",
+    "not_used_for": "complicated or confusing",
+    "example": "The intricate design required exceptional craftsmanship."
+  },
+  {
+    "word": "invalidate",
+    "meaning": "prove wrong",
+    "usage": "Signals undermining basis of a claim",
+    "not_used_for": "merely question",
+    "example": "New findings invalidated the earlier hypothesis."
+  },
+  {
+    "word": "inventive",
+    "meaning": "creative",
+    "usage": "Signals originality in design",
+    "not_used_for": "merely productive",
+    "example": "Her inventive approach solved the engineering challenge."
+  },
+  {
+    "word": "invigorate",
+    "meaning": "energize",
+    "usage": "Signals infusion of new vitality",
+    "not_used_for": "merely encourage",
+    "example": "The new leadership invigorated the organization."
+  },
+  {
+    "word": "invidious",
+    "meaning": "unfairly harmful or offensive",
+    "usage": "Signals discriminatory treatment",
+    "not_used_for": "merely unfair",
+    "example": "The invidious comparison demoralized the team."
+  },
+  {
+    "word": "ironic",
+    "meaning": "involving unexpected contrast",
+    "usage": "Signals gap between expectation and reality",
+    "not_used_for": "sarcastic (though related)",
+    "example": "It was ironic that the fire station burned down."
+  },
+  {
+    "word": "irreverent",
+    "meaning": "disrespectful",
+    "usage": "Signals disregard for authority",
+    "not_used_for": "merely casual",
+    "example": "The comedian's irreverent humor targeted sacred cows."
+  },
+  {
+    "word": "irredentist",
+    "meaning": "seeking return of lost territory",
+    "usage": "Signals nationalist territorial claims",
+    "not_used_for": "expansionist generally",
+    "example": "The irredentist movement demanded reunification."
+  },
+  {
+    "word": "jejune",
+    "meaning": "dull, simplistic, immature",
+    "usage": "Signals intellectual shallowness",
+    "not_used_for": "young or youthful",
+    "example": "The jejune analysis failed to address complexity."
+  },
+  {
+    "word": "jovial",
+    "meaning": "cheerful and friendly",
+    "usage": "Signals hearty, warm good humor",
+    "not_used_for": "merely polite",
+    "example": "His jovial demeanor put everyone at ease."
+  },
+  {
+    "word": "judicious",
+    "meaning": "showing good judgment",
+    "usage": "Signals wise, careful decision-making",
+    "not_used_for": "merely cautious",
+    "example": "Judicious use of resources maximized impact."
+  },
+  {
+    "word": "kleptocratic",
+    "meaning": "government ruled by thieves",
+    "usage": "Signals systemic corruption at highest level",
+    "not_used_for": "merely corrupt",
+    "example": "The kleptocratic regime drained the national treasury."
+  },
+  {
+    "word": "labyrinthine",
+    "meaning": "extremely complex",
+    "usage": "Signals maze-like complexity",
+    "not_used_for": "merely detailed",
+    "example": "The labyrinthine bureaucracy frustrated applicants."
+  },
+  {
+    "word": "lackluster",
+    "meaning": "dull, uninspiring",
+    "usage": "Signals disappointing lack of quality",
+    "not_used_for": "simple or modest",
+    "example": "The lackluster performance disappointed critics."
+  },
+  {
+    "word": "laconic",
+    "meaning": "using very few words",
+    "usage": "Signals deliberate brevity",
+    "not_used_for": "inarticulate",
+    "example": "His laconic replies revealed nothing about his plans."
+  },
+  {
+    "word": "lamentable",
+    "meaning": "deserving criticism or regret",
+    "usage": "Signals something sadly deplorable",
+    "not_used_for": "merely unfortunate",
+    "example": "The lamentable state of infrastructure demanded attention."
+  },
+  {
+    "word": "lambaste",
+    "meaning": "criticize harshly",
+    "usage": "Signals vigorous public condemnation",
+    "not_used_for": "mild rebuke",
+    "example": "The press lambasted the government's response."
+  },
+  {
+    "word": "languish",
+    "meaning": "weaken; suffer from neglect",
+    "usage": "Signals slow deterioration from inattention",
+    "not_used_for": "actively decline",
+    "example": "The project languished without adequate funding."
+  },
+  {
+    "word": "largesse",
+    "meaning": "generosity in giving",
+    "usage": "Signals notable, conspicuous generosity",
+    "not_used_for": "charity obligation",
+    "example": "The billionaire's largesse funded new community centers."
+  },
+  {
+    "word": "latent",
+    "meaning": "present but hidden",
+    "usage": "Signals dormant potential",
+    "not_used_for": "absent",
+    "example": "The latent tensions erupted into open conflict."
+  },
+  {
+    "word": "laud",
+    "meaning": "praise",
+    "usage": "Signals formal, public commendation",
+    "not_used_for": "casual compliment",
+    "example": "Critics lauded the director's bold vision."
+  },
+  {
+    "word": "laudable",
+    "meaning": "deserving praise",
+    "usage": "Signals meritorious quality",
+    "not_used_for": "merely acceptable",
+    "example": "Her laudable commitment to fairness set a standard."
+  },
+  {
+    "word": "lax",
+    "meaning": "not strict, careless",
+    "usage": "Signals insufficient rigor",
+    "not_used_for": "relaxed or easy-going",
+    "example": "Lax oversight allowed the fraud to continue."
+  },
+  {
+    "word": "limpid",
+    "meaning": "clear, transparent",
+    "usage": "Signals beautiful clarity",
+    "not_used_for": "merely simple",
+    "example": "Her limpid prose made complex ideas accessible."
+  },
+  {
+    "word": "lionize",
+    "meaning": "treat as a celebrity",
+    "usage": "Signals elevating to hero status",
+    "not_used_for": "merely respect",
+    "example": "The media lionized the young entrepreneur."
+  },
+  {
+    "word": "logorrhea",
+    "meaning": "excessive talkativeness",
+    "usage": "Signals pathological verbal overflow",
+    "not_used_for": "eloquence",
+    "example": "The senator's logorrhea tried the audience's patience."
+  },
+  {
+    "word": "loquacious",
+    "meaning": "very talkative",
+    "usage": "Signals habitual talkativeness",
+    "not_used_for": "articulate",
+    "example": "The loquacious guest monopolized the conversation."
+  },
+  {
+    "word": "lucid",
+    "meaning": "clear and easy to understand",
+    "usage": "Signals transparent clarity",
+    "not_used_for": "simple or basic",
+    "example": "The textbook provided a lucid explanation."
+  },
+  {
+    "word": "lugubrious",
+    "meaning": "overly sad or mournful",
+    "usage": "Signals excessively gloomy manner",
+    "not_used_for": "genuinely grieving",
+    "example": "His lugubrious expression seemed performative."
+  },
+  {
+    "word": "magnanimous",
+    "meaning": "generous and forgiving",
+    "usage": "Signals nobility in victory",
+    "not_used_for": "merely nice",
+    "example": "The magnanimous gesture surprised his rivals."
+  },
+  {
+    "word": "maintain",
+    "meaning": "continue; assert",
+    "usage": "Signals persistence or ongoing claim",
+    "not_used_for": "prove or demonstrate",
+    "example": "She maintained her innocence throughout the trial."
+  },
+  {
+    "word": "malevolent",
+    "meaning": "wishing harm",
+    "usage": "Signals active desire to cause suffering",
+    "not_used_for": "merely angry",
+    "example": "The malevolent scheme targeted vulnerable populations."
+  },
+  {
+    "word": "malice",
+    "meaning": "desire to harm",
+    "usage": "Signals intentional cruelty",
+    "not_used_for": "anger or frustration",
+    "example": "The act was committed with clear malice."
+  },
+  {
+    "word": "malign",
+    "meaning": "speak badly of; harmful",
+    "usage": "Signals damaging characterization",
+    "not_used_for": "criticize constructively",
+    "example": "Opponents maligned her reputation with false accusations."
+  },
+  {
+    "word": "malleable",
+    "meaning": "easily shaped or influenced",
+    "usage": "Signals receptiveness to shaping",
+    "not_used_for": "weak-willed",
+    "example": "The malleable policy adapted to new evidence."
+  },
+  {
+    "word": "manifest",
+    "meaning": "clear and obvious",
+    "usage": "Signals undeniable visibility",
+    "not_used_for": "proven or documented",
+    "example": "The flaws in the plan were manifest to everyone."
+  },
+  {
+    "word": "maverick",
+    "meaning": "independent thinker",
+    "usage": "Signals bold departure from norms",
+    "not_used_for": "rebel or troublemaker",
+    "example": "The maverick scientist challenged orthodox assumptions."
+  },
+  {
+    "word": "mawkish",
+    "meaning": "overly sentimental",
+    "usage": "Signals nauseating emotional excess",
+    "not_used_for": "genuinely moving",
+    "example": "The mawkish ending undermined a strong film."
+  },
+  {
+    "word": "meandering",
+    "meaning": "wandering without clear direction",
+    "usage": "Signals unfocused movement",
+    "not_used_for": "exploratory or open-ended",
+    "example": "The meandering essay lacked a clear thesis."
+  },
+  {
+    "word": "measured",
+    "meaning": "controlled, careful",
+    "usage": "Signals deliberate, calibrated response",
+    "not_used_for": "slow or hesitant",
+    "example": "Her measured response calmed the tense situation."
+  },
+  {
+    "word": "mellifluous",
+    "meaning": "sweet-sounding",
+    "usage": "Signals pleasing quality of voice",
+    "not_used_for": "merely clear",
+    "example": "His mellifluous voice captivated the audience."
+  },
+  {
+    "word": "mercenary",
+    "meaning": "motivated by money",
+    "usage": "Signals self-interest over principle",
+    "not_used_for": "financially prudent",
+    "example": "The mercenary consultant served whoever paid most."
+  },
+  {
+    "word": "mercurial",
+    "meaning": "unpredictable, changeable",
+    "usage": "Signals rapid temperamental shifts",
+    "not_used_for": "versatile or dynamic",
+    "example": "The mercurial leader kept advisors off-balance."
+  },
+  {
+    "word": "mercantilist",
+    "meaning": "favoring government trade control",
+    "usage": "Signals state-managed trade policy",
+    "not_used_for": "protectionist generally",
+    "example": "Mercantilist policies restricted imports."
+  },
+  {
+    "word": "meritorious",
+    "meaning": "deserving praise or reward",
+    "usage": "Signals earned distinction",
+    "not_used_for": "merely competent",
+    "example": "Her meritorious service was recognized with an award."
+  },
+  {
+    "word": "methodical",
+    "meaning": "systematic, orderly",
+    "usage": "Signals step-by-step approach",
+    "not_used_for": "slow or rigid",
+    "example": "His methodical approach ensured no detail overlooked."
+  },
+  {
+    "word": "meticulous",
+    "meaning": "extremely careful about details",
+    "usage": "Signals painstaking precision",
+    "not_used_for": "obsessive or anxious",
+    "example": "The meticulous researcher double-checked every point."
+  },
+  {
+    "word": "minimize",
+    "meaning": "make seem less important",
+    "usage": "Signals deliberate reduction of significance",
+    "not_used_for": "eliminate",
+    "example": "Officials sought to minimize the scandal's impact."
+  },
+  {
+    "word": "miserliness",
+    "meaning": "extreme stinginess",
+    "usage": "Signals pathological unwillingness to spend",
+    "not_used_for": "frugality",
+    "example": "His miserliness extended to basic necessities."
+  },
+  {
+    "word": "mock",
+    "meaning": "make fun of",
+    "usage": "Signals contemptuous ridicule",
+    "not_used_for": "tease playfully",
+    "example": "Critics mocked the proposal as unworkable."
+  },
+  {
+    "word": "mollify",
+    "meaning": "calm or soothe anger",
+    "usage": "Signals reducing anger or anxiety",
+    "not_used_for": "resolve the problem",
+    "example": "The apology did little to mollify outraged customers."
+  },
+  {
+    "word": "moribund",
+    "meaning": "near death; declining",
+    "usage": "Signals terminal decline",
+    "not_used_for": "merely struggling",
+    "example": "The moribund industry resisted modernization."
+  },
+  {
+    "word": "morose",
+    "meaning": "gloomy, sullen",
+    "usage": "Signals persistent, sulky sadness",
+    "not_used_for": "thoughtful or serious",
+    "example": "His morose demeanor dampened the celebration."
+  },
+  {
+    "word": "muddle",
+    "meaning": "confusion; mix up",
+    "usage": "Signals creating a confused state",
+    "not_used_for": "complicate intentionally",
+    "example": "Contradictory instructions muddled the process."
+  },
+  {
+    "word": "mundane",
+    "meaning": "ordinary, dull",
+    "usage": "Signals lack of excitement",
+    "not_used_for": "simple or practical",
+    "example": "The mundane routine left her craving adventure."
+  },
+  {
+    "word": "munificent",
+    "meaning": "very generous",
+    "usage": "Signals exceptional generosity",
+    "not_used_for": "merely giving",
+    "example": "The munificent donation transformed the program."
+  },
+  {
+    "word": "murky",
+    "meaning": "unclear, obscure",
+    "usage": "Signals suspicious lack of clarity",
+    "not_used_for": "dark (literal only)",
+    "example": "The murky details of the deal raised concerns."
+  },
+  {
+    "word": "mutable",
+    "meaning": "able to change",
+    "usage": "Signals capacity for transformation",
+    "not_used_for": "unstable",
+    "example": "Cultural norms are mutable across generations."
+  },
+  {
+    "word": "naive",
+    "meaning": "lacking experience",
+    "usage": "Signals innocence leading to poor judgment",
+    "not_used_for": "optimistic or hopeful",
+    "example": "Her naive trust in the system was soon tested."
+  },
+  {
+    "word": "nascent",
+    "meaning": "just beginning to develop",
+    "usage": "Signals early-stage emergence",
+    "not_used_for": "immature or failed",
+    "example": "The nascent democracy faced enormous challenges."
+  },
+  {
+    "word": "nebulous",
+    "meaning": "unclear, vague",
+    "usage": "Signals formless uncertainty",
+    "not_used_for": "abstract or theoretical",
+    "example": "The proposal remained nebulous, lacking details."
+  },
+  {
+    "word": "nefarious",
+    "meaning": "wicked, criminal",
+    "usage": "Signals evil intent or action",
+    "not_used_for": "merely wrong",
+    "example": "The nefarious plot was uncovered by investigators."
+  },
+  {
+    "word": "negligent",
+    "meaning": "careless in duty",
+    "usage": "Signals failure to meet standards of care",
+    "not_used_for": "accidentally mistaken",
+    "example": "The negligent oversight led to a safety violation."
+  },
+  {
+    "word": "negligible",
+    "meaning": "too small to matter",
+    "usage": "Signals inconsequential magnitude",
+    "not_used_for": "nonexistent",
+    "example": "The difference in results was negligible."
+  },
+  {
+    "word": "non sequitur",
+    "meaning": "conclusion that doesn't follow",
+    "usage": "Signals logical disconnect",
+    "not_used_for": "random statement",
+    "example": "The argument's conclusion was a non sequitur."
+  },
+  {
+    "word": "nostalgic",
+    "meaning": "longing for the past",
+    "usage": "Signals sentimental yearning",
+    "not_used_for": "historically minded",
+    "example": "The film had a nostalgic charm."
+  },
+  {
+    "word": "notable",
+    "meaning": "worthy of attention",
+    "usage": "Signals distinction worth remarking",
+    "not_used_for": "famous",
+    "example": "The notable exception proved the rule."
+  },
+  {
+    "word": "novel",
+    "meaning": "new, original",
+    "usage": "Signals fresh, unprecedented quality",
+    "not_used_for": "merely different",
+    "example": "The novel approach solved a longstanding problem."
+  },
+  {
+    "word": "nuance",
+    "meaning": "complex and subtle",
+    "usage": "Signals fine distinction requiring care",
+    "not_used_for": "complication",
+    "example": "The critic appreciated the nuance of the performance."
+  },
+  {
+    "word": "objective",
+    "meaning": "unbiased; based on facts",
+    "usage": "Signals freedom from personal bias",
+    "not_used_for": "cold or detached",
+    "example": "The objective analysis considered all evidence."
+  },
+  {
+    "word": "obdurate",
+    "meaning": "stubborn, refusing to change",
+    "usage": "Signals hardened, unyielding resistance",
+    "not_used_for": "firm or principled",
+    "example": "The obdurate negotiator refused all concessions."
+  },
+  {
+    "word": "obscure",
+    "meaning": "unclear; little known",
+    "usage": "Signals difficulty of access",
+    "not_used_for": "hidden deliberately",
+    "example": "The reference was too obscure for most readers."
+  },
+  {
+    "word": "obsequious",
+    "meaning": "overly submissive",
+    "usage": "Signals degrading, excessive deference",
+    "not_used_for": "respectful or polite",
+    "example": "The obsequious assistant agreed with everything."
+  },
+  {
+    "word": "obsolete",
+    "meaning": "outdated, no longer used",
+    "usage": "Signals having been superseded",
+    "not_used_for": "old or classic",
+    "example": "The technology became obsolete within a decade."
+  },
+  {
+    "word": "obstinacy",
+    "meaning": "stubbornness",
+    "usage": "Signals persistent, unreasonable refusal",
+    "not_used_for": "determination",
+    "example": "His obstinacy prevented any productive negotiation."
+  },
+  {
+    "word": "obstruct",
+    "meaning": "block, hinder",
+    "usage": "Signals active creation of barriers",
+    "not_used_for": "slow down",
+    "example": "Legal challenges obstructed the implementation."
+  },
+  {
+    "word": "obtuse",
+    "meaning": "slow to understand",
+    "usage": "Signals intellectual dullness",
+    "not_used_for": "uninformed",
+    "example": "His obtuse response missed the point entirely."
+  },
+  {
+    "word": "obviate",
+    "meaning": "prevent or make unnecessary",
+    "usage": "Signals preemptive elimination of need",
+    "not_used_for": "solve after the fact",
+    "example": "Early planning can obviate many common problems."
+  },
+  {
+    "word": "odious",
+    "meaning": "hateful, disgusting",
+    "usage": "Signals extreme moral repugnance",
+    "not_used_for": "merely unpleasant",
+    "example": "The odious practice was universally condemned."
+  },
+  {
+    "word": "oligarchic",
+    "meaning": "ruled by a small elite",
+    "usage": "Signals concentrated power among few",
+    "not_used_for": "merely wealthy",
+    "example": "The oligarchic structure excluded most citizens."
+  },
+  {
+    "word": "ominous",
+    "meaning": "threatening",
+    "usage": "Signals foreboding signs of danger",
+    "not_used_for": "merely negative",
+    "example": "The ominous clouds signaled an approaching storm."
+  },
+  {
+    "word": "onerous",
+    "meaning": "burdensome",
+    "usage": "Signals oppressive difficulty",
+    "not_used_for": "difficult but rewarding",
+    "example": "The onerous regulations burdened small businesses."
+  },
+  {
+    "word": "ontology",
+    "meaning": "study of existence/being",
+    "usage": "Signals inquiry into nature of being",
+    "not_used_for": "religion or spirituality",
+    "example": "The paper explored ontological questions."
+  },
+  {
+    "word": "opaque",
+    "meaning": "not transparent; hard to understand",
+    "usage": "Signals resistance to clarity",
+    "not_used_for": "complex but decipherable",
+    "example": "The opaque contract language confused buyers."
+  },
+  {
+    "word": "ornate",
+    "meaning": "highly decorated",
+    "usage": "Signals excessive elaboration",
+    "not_used_for": "elegant or refined",
+    "example": "The ornate prose distracted from the argument."
+  },
+  {
+    "word": "orthodox",
+    "meaning": "traditional, accepted belief",
+    "usage": "Signals conformity with doctrine",
+    "not_used_for": "conservative politically",
+    "example": "The orthodox interpretation dominated for decades."
+  },
+  {
+    "word": "ossified",
+    "meaning": "rigid, no longer changing",
+    "usage": "Signals harmful rigidity",
+    "not_used_for": "stable or enduring",
+    "example": "The ossified institution resisted all reform."
+  },
+  {
+    "word": "outspoken",
+    "meaning": "direct, frank",
+    "usage": "Signals bold public expression",
+    "not_used_for": "rude or aggressive",
+    "example": "The outspoken critic challenged the status quo."
+  },
+  {
+    "word": "overt",
+    "meaning": "open, not hidden",
+    "usage": "Signals visible, undisguised action",
+    "not_used_for": "obvious",
+    "example": "The overt hostility was impossible to ignore."
+  },
+  {
+    "word": "overwrought",
+    "meaning": "overly emotional",
+    "usage": "Signals excessive, strained intensity",
+    "not_used_for": "passionate or detailed",
+    "example": "The overwrought prose exhausted the reader."
+  },
+  {
+    "word": "pacify",
+    "meaning": "calm down",
+    "usage": "Signals restoring peace",
+    "not_used_for": "resolve the cause",
+    "example": "Authorities pacified the crowd with reassurances."
+  },
+  {
+    "word": "panegyric",
+    "meaning": "formal speech of high praise",
+    "usage": "Signals ceremonial tribute",
+    "not_used_for": "casual compliment",
+    "example": "The panegyric honored the founder's legacy."
+  },
+  {
+    "word": "paradigm",
+    "meaning": "model or typical example",
+    "usage": "Signals foundational framework",
+    "not_used_for": "mere example",
+    "example": "The discovery prompted a paradigm shift."
+  },
+  {
+    "word": "paradigmatic",
+    "meaning": "serving as a model",
+    "usage": "Signals exemplary status",
+    "not_used_for": "typical",
+    "example": "The case is paradigmatic of corporate overreach."
+  },
+  {
+    "word": "paradox",
+    "meaning": "seeming contradiction revealing truth",
+    "usage": "Signals tension between opposites",
+    "not_used_for": "simple contradiction",
+    "example": "The paradox of choice limits satisfaction."
+  },
+  {
+    "word": "parochial",
+    "meaning": "narrow-minded",
+    "usage": "Signals restricting vision to familiar",
+    "not_used_for": "focused or specialized",
+    "example": "The parochial perspective ignored global implications."
+  },
+  {
+    "word": "parsimony",
+    "meaning": "extreme unwillingness to spend",
+    "usage": "Signals excessive frugality",
+    "not_used_for": "thrift or budgeting",
+    "example": "His parsimony extended to refusing basic supplies."
+  },
+  {
+    "word": "parsimonious",
+    "meaning": "stingy",
+    "usage": "Signals habitual tightfistedness",
+    "not_used_for": "economical",
+    "example": "The parsimonious employer refused raises."
+  },
+  {
+    "word": "partisan",
+    "meaning": "biased toward one side",
+    "usage": "Signals loyalty over objectivity",
+    "not_used_for": "passionate about a cause",
+    "example": "Partisan coverage undermined journalistic credibility."
+  },
+  {
+    "word": "patrimonial",
+    "meaning": "based on inherited power",
+    "usage": "Signals personalized authority",
+    "not_used_for": "traditional",
+    "example": "The patrimonial system treated resources as private."
+  },
+  {
+    "word": "paucity",
+    "meaning": "scarcity, lack",
+    "usage": "Signals insufficient quantity",
+    "not_used_for": "complete absence",
+    "example": "The paucity of evidence weakened the case."
+  },
+  {
+    "word": "pedestrian",
+    "meaning": "dull, ordinary",
+    "usage": "Signals uninspired mediocrity",
+    "not_used_for": "simple or accessible",
+    "example": "The pedestrian writing failed to hold attention."
+  },
+  {
+    "word": "pedantic",
+    "meaning": "overly concerned with details",
+    "usage": "Signals annoying fixation on rules",
+    "not_used_for": "thorough or precise",
+    "example": "His pedantic corrections irritated colleagues."
+  },
+  {
+    "word": "peevish",
+    "meaning": "irritable",
+    "usage": "Signals habitual, petty annoyance",
+    "not_used_for": "angry",
+    "example": "Her peevish complaints wore on everyone's patience."
+  },
+  {
+    "word": "pejorative",
+    "meaning": "expressing disapproval",
+    "usage": "Signals negative connotation",
+    "not_used_for": "merely descriptive",
+    "example": "The term was used in a pejorative sense."
+  },
+  {
+    "word": "pellucid",
+    "meaning": "very clear",
+    "usage": "Signals exceptional clarity",
+    "not_used_for": "merely understandable",
+    "example": "Her pellucid writing made concepts accessible."
+  },
+  {
+    "word": "perceptive",
+    "meaning": "insightful",
+    "usage": "Signals ability to notice subtlety",
+    "not_used_for": "merely observant",
+    "example": "The perceptive critic identified deeper themes."
+  },
+  {
+    "word": "perfidy",
+    "meaning": "betrayal",
+    "usage": "Signals treacherous violation of trust",
+    "not_used_for": "disloyalty",
+    "example": "The general's perfidy shocked even enemies."
+  },
+  {
+    "word": "perfunctory",
+    "meaning": "done with little effort",
+    "usage": "Signals going through motions",
+    "not_used_for": "efficient or quick",
+    "example": "The perfunctory review missed critical errors."
+  },
+  {
+    "word": "peripheral",
+    "meaning": "not central",
+    "usage": "Signals marginality to main issue",
+    "not_used_for": "related or relevant",
+    "example": "Peripheral concerns were set aside during triage."
+  },
+  {
+    "word": "pernicious",
+    "meaning": "harmful, damaging",
+    "usage": "Signals insidious, gradual destruction",
+    "not_used_for": "immediately dangerous",
+    "example": "Pernicious misinformation eroded public trust."
+  },
+  {
+    "word": "perpetual",
+    "meaning": "continuing forever",
+    "usage": "Signals unending duration",
+    "not_used_for": "merely long",
+    "example": "The perpetual conflict drained national resources."
+  },
+  {
+    "word": "perspicacious",
+    "meaning": "very perceptive",
+    "usage": "Signals extraordinary sharpness",
+    "not_used_for": "merely smart",
+    "example": "The perspicacious analyst anticipated the crash."
+  },
+  {
+    "word": "perspicuous",
+    "meaning": "clearly expressed",
+    "usage": "Signals transparent clarity",
+    "not_used_for": "simple or dumbed down",
+    "example": "Her perspicuous explanation impressed skeptics."
+  },
+  {
+    "word": "pervasive",
+    "meaning": "spread throughout",
+    "usage": "Signals thorough penetration",
+    "not_used_for": "common or frequent",
+    "example": "Social media's pervasive influence reshaped politics."
+  },
+  {
+    "word": "petulant",
+    "meaning": "childishly irritable",
+    "usage": "Signals immature behavior",
+    "not_used_for": "assertive",
+    "example": "His petulant outburst embarrassed the delegation."
+  },
+  {
+    "word": "phlegmatic",
+    "meaning": "calm, unemotional",
+    "usage": "Signals steady temperament",
+    "not_used_for": "lazy or indifferent",
+    "example": "Her phlegmatic response calmed the team."
+  },
+  {
+    "word": "pillory",
+    "meaning": "publicly criticize",
+    "usage": "Signals humiliating exposure",
+    "not_used_for": "private reprimand",
+    "example": "The media pilloried the official for the scandal."
+  },
+  {
+    "word": "pivotal",
+    "meaning": "critically important",
+    "usage": "Signals turning-point significance",
+    "not_used_for": "merely important",
+    "example": "The pivotal decision shaped the company's future."
+  },
+  {
+    "word": "placate",
+    "meaning": "calm someone's anger",
+    "usage": "Signals reducing hostility",
+    "not_used_for": "resolve the issue",
+    "example": "The offer was meant to placate angry shareholders."
+  },
+  {
+    "word": "placatory",
+    "meaning": "intended to calm",
+    "usage": "Signals conciliatory purpose",
+    "not_used_for": "submissive",
+    "example": "The placatory gesture eased the tension."
+  },
+  {
+    "word": "placid",
+    "meaning": "calm, peaceful",
+    "usage": "Signals serene, undisturbed state",
+    "not_used_for": "boring or dull",
+    "example": "The placid lake reflected the mountains perfectly."
+  },
+  {
+    "word": "platitudinous",
+    "meaning": "full of unoriginal remarks",
+    "usage": "Signals empty moral statements",
+    "not_used_for": "thoughtful",
+    "example": "The platitudinous speech failed to inspire."
+  },
+  {
+    "word": "plausible",
+    "meaning": "believable",
+    "usage": "Signals sufficient credibility",
+    "not_used_for": "proven or certain",
+    "example": "The explanation was plausible but unverified."
+  },
+  {
+    "word": "pliant",
+    "meaning": "flexible, easily influenced",
+    "usage": "Signals susceptibility to shaping",
+    "not_used_for": "adaptable by choice",
+    "example": "The pliant board approved every proposal."
+  },
+  {
+    "word": "pluralistic",
+    "meaning": "involving many groups",
+    "usage": "Signals coexistence of diversity",
+    "not_used_for": "unified or homogeneous",
+    "example": "A pluralistic society values diverse viewpoints."
+  },
+  {
+    "word": "polarized",
+    "meaning": "divided into extremes",
+    "usage": "Signals sharp binary division",
+    "not_used_for": "merely divided",
+    "example": "The polarized electorate left no room for compromise."
+  },
+  {
+    "word": "polemical",
+    "meaning": "strongly argumentative",
+    "usage": "Signals aggressive rhetoric",
+    "not_used_for": "analytical or critical",
+    "example": "The polemical essay attacked the opposition."
+  },
+  {
+    "word": "pompous",
+    "meaning": "self-important",
+    "usage": "Signals inflated self-significance",
+    "not_used_for": "confident or authoritative",
+    "example": "The pompous speech alienated the audience."
+  },
+  {
+    "word": "pontificate",
+    "meaning": "speak in a pompous way",
+    "usage": "Signals lecturing with unearned authority",
+    "not_used_for": "explain or teach",
+    "example": "He pontificated about ethics while ignoring his own."
+  },
+  {
+    "word": "portentous",
+    "meaning": "signaling something serious",
+    "usage": "Signals ominous significance",
+    "not_used_for": "merely dramatic",
+    "example": "The portentous report alarmed investors."
+  },
+  {
+    "word": "posit",
+    "meaning": "state as a fact",
+    "usage": "Signals asserting for discussion",
+    "not_used_for": "prove",
+    "example": "The researcher posited a new explanation."
+  },
+  {
+    "word": "pragmatic",
+    "meaning": "practical, results-focused",
+    "usage": "Signals prioritizing what works",
+    "not_used_for": "cynical or unprincipled",
+    "example": "A pragmatic approach guided the reform."
+  },
+  {
+    "word": "precarious",
+    "meaning": "unstable, risky",
+    "usage": "Signals dangerous instability",
+    "not_used_for": "merely uncertain",
+    "example": "The precarious situation demanded immediate action."
+  },
+  {
+    "word": "precipitate",
+    "meaning": "cause suddenly; also hasty",
+    "usage": "Signals triggering rapid action",
+    "not_used_for": "gradual development",
+    "example": "The scandal precipitated the CEO's resignation."
+  },
+  {
+    "word": "preclude",
+    "meaning": "prevent from happening",
+    "usage": "Signals making something impossible",
+    "not_used_for": "merely discourage",
+    "example": "The agreement precluded further litigation."
+  },
+  {
+    "word": "precocious",
+    "meaning": "unusually advanced for age",
+    "usage": "Signals early development beyond expected",
+    "not_used_for": "gifted in general",
+    "example": "The precocious child read at college level by ten."
+  },
+  {
+    "word": "prescience",
+    "meaning": "ability to know beforehand",
+    "usage": "Signals extraordinary foresight",
+    "not_used_for": "mere prediction",
+    "example": "Her prescience about market trends was uncanny."
+  },
+  {
+    "word": "preserve",
+    "meaning": "keep safe",
+    "usage": "Signals protecting from change",
+    "not_used_for": "freeze in time",
+    "example": "The organization preserves endangered ecosystems."
+  },
+  {
+    "word": "presuppose",
+    "meaning": "assume beforehand",
+    "usage": "Signals hidden or foundational assumption",
+    "not_used_for": "prove or establish",
+    "example": "The argument presupposes all participants are rational."
+  },
+  {
+    "word": "pretentious",
+    "meaning": "trying to appear important",
+    "usage": "Signals false display of sophistication",
+    "not_used_for": "ambitious or aspiring",
+    "example": "The pretentious décor tried too hard to impress."
+  },
+  {
+    "word": "prevaricate",
+    "meaning": "avoid giving a direct answer",
+    "usage": "Signals evasive, truth-avoiding speech",
+    "not_used_for": "lie outright",
+    "example": "The witness prevaricated under cross-examination."
+  },
+  {
+    "word": "principled",
+    "meaning": "guided by strong values",
+    "usage": "Signals ethical consistency",
+    "not_used_for": "rigid or inflexible",
+    "example": "Her principled stance earned respect from opponents."
+  },
+  {
+    "word": "pristine",
+    "meaning": "pure, untouched",
+    "usage": "Signals original, uncorrupted condition",
+    "not_used_for": "merely clean",
+    "example": "The pristine wilderness attracted conservation efforts."
+  },
+  {
+    "word": "probative",
+    "meaning": "providing proof",
+    "usage": "Signals evidential value",
+    "not_used_for": "conclusive",
+    "example": "The probative evidence strengthened the case."
+  },
+  {
+    "word": "profuse",
+    "meaning": "abundant",
+    "usage": "Signals overflowing quantity",
+    "not_used_for": "excessive harmfully",
+    "example": "She received profuse apologies for the error."
+  },
+  {
+    "word": "progressive",
+    "meaning": "favoring reform",
+    "usage": "Signals forward-looking change",
+    "not_used_for": "liberal politically",
+    "example": "Progressive policies expanded healthcare access."
+  },
+  {
+    "word": "proliferate",
+    "meaning": "increase rapidly",
+    "usage": "Signals rapid multiplication",
+    "not_used_for": "gradual growth",
+    "example": "Misinformation proliferated across social media."
+  },
+  {
+    "word": "prolix",
+    "meaning": "wordy, tediously long-winded",
+    "usage": "Signals annoying verbosity",
+    "not_used_for": "detailed or thorough",
+    "example": "The prolix report could have been half as long."
+  },
+  {
+    "word": "propitious",
+    "meaning": "favorable",
+    "usage": "Signals conditions favorable for success",
+    "not_used_for": "guaranteed",
+    "example": "The propitious timing aided the product launch."
+  },
+  {
+    "word": "prosaic",
+    "meaning": "dull, ordinary",
+    "usage": "Signals uninspired quality",
+    "not_used_for": "simple or practical",
+    "example": "The prosaic explanation disappointed drama-seekers."
+  },
+  {
+    "word": "protract",
+    "meaning": "prolong",
+    "usage": "Signals unnecessary extension",
+    "not_used_for": "extend productively",
+    "example": "The protracted negotiations tested everyone's patience."
+  },
+  {
+    "word": "provoke",
+    "meaning": "cause anger or reaction",
+    "usage": "Signals deliberately triggering response",
+    "not_used_for": "inspire or motivate",
+    "example": "The decision provoked widespread public outrage."
+  },
+  {
+    "word": "provincial",
+    "meaning": "narrow in outlook",
+    "usage": "Signals limited worldview",
+    "not_used_for": "rural or regional",
+    "example": "His provincial attitudes clashed with the cosmopolitan team."
+  },
+  {
+    "word": "prudent",
+    "meaning": "wise, careful",
+    "usage": "Signals risk-aware judgment",
+    "not_used_for": "timid",
+    "example": "A prudent investor diversifies their portfolio."
+  },
+  {
+    "word": "pugnacious",
+    "meaning": "eager to argue or fight",
+    "usage": "Signals combative temperament",
+    "not_used_for": "assertive",
+    "example": "The pugnacious debater relished confrontation."
+  },
+  {
+    "word": "qualified",
+    "meaning": "limited or modified",
+    "usage": "Signals conditional, hedged assertion",
+    "not_used_for": "uncertain or weak",
+    "example": "The endorsement was qualified by several reservations."
+  },
+  {
+    "word": "quell",
+    "meaning": "suppress or put an end to",
+    "usage": "Signals forceful cessation",
+    "not_used_for": "resolve peacefully",
+    "example": "Police moved to quell the unrest."
+  },
+  {
+    "word": "querulous",
+    "meaning": "complaining in a whining way",
+    "usage": "Signals habitual, petty complaining",
+    "not_used_for": "assertive criticism",
+    "example": "The querulous tone annoyed the recipient."
+  },
+  {
+    "word": "quirky",
+    "meaning": "unusual in an interesting way",
+    "usage": "Signals charming unconventionality",
+    "not_used_for": "weird or bizarre",
+    "example": "Her quirky humor distinguished her writing."
+  },
+  {
+    "word": "quixotic",
+    "meaning": "unrealistic and impractical",
+    "usage": "Signals noble but foolish idealism",
+    "not_used_for": "visionary or ambitious",
+    "example": "The quixotic campaign had little chance of success."
+  },
+  {
+    "word": "rancor",
+    "meaning": "deep bitterness",
+    "usage": "Signals lasting, corrosive resentment",
+    "not_used_for": "anger or frustration",
+    "example": "Years of rancor remained unresolved."
+  },
+  {
+    "word": "rapprochement",
+    "meaning": "restoration of friendly relations",
+    "usage": "Signals diplomatic reconciliation",
+    "not_used_for": "full alliance",
+    "example": "The rapprochement surprised analysts."
+  },
+  {
+    "word": "reactionary",
+    "meaning": "strongly opposed to change",
+    "usage": "Signals backward-looking resistance",
+    "not_used_for": "conservative",
+    "example": "Reactionary forces opposed every modernization."
+  },
+  {
+    "word": "rebuke",
+    "meaning": "criticize sharply",
+    "usage": "Signals stern, authoritative correction",
+    "not_used_for": "casual disapproval",
+    "example": "The judge rebuked the attorney for misconduct."
+  },
+  {
+    "word": "rebut",
+    "meaning": "argue against",
+    "usage": "Signals formal counter-argument",
+    "not_used_for": "merely disagree",
+    "example": "The defense rebutted every prosecution point."
+  },
+  {
+    "word": "recondite",
+    "meaning": "very difficult to understand",
+    "usage": "Signals obscurity for specialists only",
+    "not_used_for": "merely complex",
+    "example": "The recondite subject attracted few scholars."
+  },
+  {
+    "word": "reconcile",
+    "meaning": "restore harmony; make consistent",
+    "usage": "Signals resolving contradictions",
+    "not_used_for": "compromise",
+    "example": "The historian reconciled conflicting accounts."
+  },
+  {
+    "word": "reductionist",
+    "meaning": "oversimplifying complex issues",
+    "usage": "Signals harmful oversimplification",
+    "not_used_for": "concise or focused",
+    "example": "The reductionist approach ignored crucial variables."
+  },
+  {
+    "word": "refute",
+    "meaning": "prove wrong",
+    "usage": "Signals definitive disproof",
+    "not_used_for": "merely challenge",
+    "example": "The study refuted the long-held assumption."
+  },
+  {
+    "word": "regressive",
+    "meaning": "moving backward",
+    "usage": "Signals harmful reversal of progress",
+    "not_used_for": "conservative",
+    "example": "The regressive policy rolled back decades of reform."
+  },
+  {
+    "word": "reify",
+    "meaning": "treat an abstract idea as real",
+    "usage": "Signals falsely concretizing abstractions",
+    "not_used_for": "define or operationalize",
+    "example": "We should not reify intelligence as a fixed trait."
+  },
+  {
+    "word": "relegated",
+    "meaning": "assigned to a lower position",
+    "usage": "Signals demotion or marginalization",
+    "not_used_for": "placed neutrally",
+    "example": "The issue was relegated to a footnote."
+  },
+  {
+    "word": "relentless",
+    "meaning": "persistent, unyielding",
+    "usage": "Signals tireless, overwhelming pressure",
+    "not_used_for": "merely consistent",
+    "example": "The relentless criticism took a toll on morale."
+  },
+  {
+    "word": "remarkable",
+    "meaning": "worthy of attention",
+    "usage": "Signals standing out from ordinary",
+    "not_used_for": "sensational or extreme",
+    "example": "Her remarkable achievement inspired a generation."
+  },
+  {
+    "word": "renounce",
+    "meaning": "formally give up",
+    "usage": "Signals deliberate, public abandonment",
+    "not_used_for": "quietly stop",
+    "example": "He renounced his citizenship in a dramatic gesture."
+  },
+  {
+    "word": "reproach",
+    "meaning": "express disappointment",
+    "usage": "Signals moral disapproval",
+    "not_used_for": "punish",
+    "example": "Her behavior was beyond reproach."
+  },
+  {
+    "word": "repudiate",
+    "meaning": "reject strongly",
+    "usage": "Signals forceful rejection",
+    "not_used_for": "merely decline",
+    "example": "The leader repudiated the extremist ideology."
+  },
+  {
+    "word": "reserved",
+    "meaning": "emotionally restrained",
+    "usage": "Signals controlled personality",
+    "not_used_for": "unfriendly or cold",
+    "example": "His reserved manner hid a passionate intellect."
+  },
+  {
+    "word": "resigned",
+    "meaning": "accepting something unpleasant",
+    "usage": "Signals passive acceptance",
+    "not_used_for": "content or happy",
+    "example": "She was resigned to the slow pace of change."
+  },
+  {
+    "word": "resilient",
+    "meaning": "able to recover quickly",
+    "usage": "Signals capacity to bounce back",
+    "not_used_for": "merely strong",
+    "example": "The resilient economy recovered faster than expected."
+  },
+  {
+    "word": "restrained",
+    "meaning": "controlled, not extreme",
+    "usage": "Signals deliberate moderation",
+    "not_used_for": "suppressed or repressed",
+    "example": "Her restrained response was praised as diplomatic."
+  },
+  {
+    "word": "reticent",
+    "meaning": "reserved, not talkative",
+    "usage": "Signals reluctance to speak",
+    "not_used_for": "shy (often conflated)",
+    "example": "He was reticent about his personal life."
+  },
+  {
+    "word": "reverent",
+    "meaning": "showing deep respect",
+    "usage": "Signals solemn admiration",
+    "not_used_for": "fearful",
+    "example": "The reverent audience listened in silence."
+  },
+  {
+    "word": "revere",
+    "meaning": "respect greatly",
+    "usage": "Signals deep, lasting admiration",
+    "not_used_for": "worship",
+    "example": "Scholars revere her contributions to the field."
+  },
+  {
+    "word": "revisionist",
+    "meaning": "reinterpreting established views",
+    "usage": "Signals challenging accepted narratives",
+    "not_used_for": "revisionary editing",
+    "example": "The revisionist historian reexamined war causes."
+  },
+  {
+    "word": "rigorous",
+    "meaning": "thorough, exact",
+    "usage": "Signals demanding precision",
+    "not_used_for": "harsh or punishing",
+    "example": "Rigorous testing ensured the product's reliability."
+  },
+  {
+    "word": "robust",
+    "meaning": "strong and healthy",
+    "usage": "Signals vigor and resistance",
+    "not_used_for": "merely adequate",
+    "example": "The robust economy withstood external shocks."
+  },
+  {
+    "word": "rudimentary",
+    "meaning": "basic, not fully developed",
+    "usage": "Signals primitive, foundational level",
+    "not_used_for": "incomplete by design",
+    "example": "His rudimentary understanding was evident."
+  },
+  {
+    "word": "sagacious",
+    "meaning": "wise, insightful",
+    "usage": "Signals deep practical wisdom",
+    "not_used_for": "merely smart",
+    "example": "The sagacious advisor anticipated every obstacle."
+  },
+  {
+    "word": "salient",
+    "meaning": "most noticeable or important",
+    "usage": "Signals what stands out as key",
+    "not_used_for": "complete or comprehensive",
+    "example": "The salient point was often overlooked."
+  },
+  {
+    "word": "salubrious",
+    "meaning": "health-giving",
+    "usage": "Signals promoting well-being",
+    "not_used_for": "merely pleasant",
+    "example": "The salubrious climate attracted retirees."
+  },
+  {
+    "word": "salutary",
+    "meaning": "beneficial",
+    "usage": "Signals positive, corrective effect",
+    "not_used_for": "pleasant or enjoyable",
+    "example": "The experience had a salutary effect on her attitude."
+  },
+  {
+    "word": "sanction",
+    "meaning": "approve officially; OR penalize",
+    "usage": "Signals authorization or punishment (context)",
+    "not_used_for": "ignore",
+    "example": "The government sanctioned the agreement."
+  },
+  {
+    "word": "sanctimonious",
+    "meaning": "pretending moral superiority",
+    "usage": "Signals hypocritical moral posturing",
+    "not_used_for": "genuinely principled",
+    "example": "His sanctimonious lectures irritated peers."
+  },
+  {
+    "word": "sanguine",
+    "meaning": "optimistic",
+    "usage": "Signals confident hopefulness",
+    "not_used_for": "naively optimistic",
+    "example": "Investors remained sanguine despite volatility."
+  },
+  {
+    "word": "sardonic",
+    "meaning": "mocking, cynical humor",
+    "usage": "Signals dark, contemptuous humor",
+    "not_used_for": "playful teasing",
+    "example": "His sardonic commentary spared no one."
+  },
+  {
+    "word": "satirical",
+    "meaning": "using humor to criticize",
+    "usage": "Signals social critique through wit",
+    "not_used_for": "merely funny",
+    "example": "The satirical essay skewered political hypocrisy."
+  },
+  {
+    "word": "scrupulous",
+    "meaning": "very careful; strong morals",
+    "usage": "Signals painstaking integrity",
+    "not_used_for": "obsessive",
+    "example": "The scrupulous researcher verified every source."
+  },
+  {
+    "word": "sectarian",
+    "meaning": "narrowly devoted to a group",
+    "usage": "Signals divisive factional loyalty",
+    "not_used_for": "merely religious",
+    "example": "Sectarian violence tore the community apart."
+  },
+  {
+    "word": "seditious",
+    "meaning": "encouraging rebellion",
+    "usage": "Signals incitement against authority",
+    "not_used_for": "merely critical",
+    "example": "The pamphlet was deemed seditious by authorities."
+  },
+  {
+    "word": "sententious",
+    "meaning": "moralizing, preachy",
+    "usage": "Signals pompous moral instruction",
+    "not_used_for": "wise or insightful",
+    "example": "His sententious advice tested everyone's patience."
+  },
+  {
+    "word": "servile",
+    "meaning": "overly submissive",
+    "usage": "Signals degrading, excessive obedience",
+    "not_used_for": "respectful or compliant",
+    "example": "The servile assistant never challenged an order."
+  },
+  {
+    "word": "shrewd",
+    "meaning": "clever, sharp in judgment",
+    "usage": "Signals practical intelligence",
+    "not_used_for": "cunning or dishonest",
+    "example": "A shrewd negotiator, she secured favorable terms."
+  },
+  {
+    "word": "simmering",
+    "meaning": "quietly building",
+    "usage": "Signals suppressed tension",
+    "not_used_for": "calm",
+    "example": "Simmering resentment threatened to boil over."
+  },
+  {
+    "word": "sincere",
+    "meaning": "genuine",
+    "usage": "Signals authentic expression",
+    "not_used_for": "merely polite",
+    "example": "Her sincere gratitude moved the audience."
+  },
+  {
+    "word": "skeptical",
+    "meaning": "doubtful",
+    "usage": "Signals healthy questioning",
+    "not_used_for": "cynical or dismissive",
+    "example": "Scientists remained skeptical of unverified findings."
+  },
+  {
+    "word": "slapdash",
+    "meaning": "careless and hurried",
+    "usage": "Signals hasty, low-quality work",
+    "not_used_for": "quick or efficient",
+    "example": "The slapdash report was riddled with errors."
+  },
+  {
+    "word": "slander",
+    "meaning": "false spoken statement",
+    "usage": "Signals defamatory falsehood",
+    "not_used_for": "honest criticism",
+    "example": "The allegations amounted to slander."
+  },
+  {
+    "word": "sober",
+    "meaning": "serious, not emotional",
+    "usage": "Signals clear-headed gravity",
+    "not_used_for": "boring or dull",
+    "example": "A sober assessment of the risks was needed."
+  },
+  {
+    "word": "solemn",
+    "meaning": "serious and formal",
+    "usage": "Signals gravity and ceremony",
+    "not_used_for": "sad or gloomy",
+    "example": "The solemn ceremony honored fallen soldiers."
+  },
+  {
+    "word": "sonorous",
+    "meaning": "deep and resonant",
+    "usage": "Signals rich vocal quality",
+    "not_used_for": "merely loud",
+    "example": "His sonorous voice filled the auditorium."
+  },
+  {
+    "word": "soporific",
+    "meaning": "causing sleep; dull",
+    "usage": "Signals mind-numbing boredom",
+    "not_used_for": "relaxing",
+    "example": "The soporific lecture emptied the hall."
+  },
+  {
+    "word": "sophisticated",
+    "meaning": "complex, refined",
+    "usage": "Signals intellectual advancement",
+    "not_used_for": "pretentious",
+    "example": "The sophisticated analysis impressed reviewers."
+  },
+  {
+    "word": "sound",
+    "meaning": "sensible; in good condition",
+    "usage": "Signals logical validity",
+    "not_used_for": "perfect",
+    "example": "The argument was sound but not airtight."
+  },
+  {
+    "word": "spare",
+    "meaning": "simple, minimal",
+    "usage": "Signals elegant simplicity",
+    "not_used_for": "incomplete",
+    "example": "Her spare writing style conveyed maximum impact."
+  },
+  {
+    "word": "spartan",
+    "meaning": "very plain, simple",
+    "usage": "Signals austere simplicity by principle",
+    "not_used_for": "uncomfortable",
+    "example": "The spartan quarters suited the monks."
+  },
+  {
+    "word": "specious",
+    "meaning": "misleadingly attractive",
+    "usage": "Signals deceptive surface plausibility",
+    "not_used_for": "genuinely wrong",
+    "example": "The specious argument fooled many listeners."
+  },
+  {
+    "word": "speculative",
+    "meaning": "based on guesswork",
+    "usage": "Signals unproven reasoning",
+    "not_used_for": "imaginative",
+    "example": "The theory remained speculative without data."
+  },
+  {
+    "word": "sporadic",
+    "meaning": "happening irregularly",
+    "usage": "Signals scattered occurrence",
+    "not_used_for": "rare",
+    "example": "Sporadic protests continued throughout the month."
+  },
+  {
+    "word": "spurious",
+    "meaning": "false, fake",
+    "usage": "Signals fraudulent quality",
+    "not_used_for": "mistaken",
+    "example": "The spurious claim was quickly debunked."
+  },
+  {
+    "word": "spur",
+    "meaning": "stimulate, encourage",
+    "usage": "Signals motivating push",
+    "not_used_for": "cause directly",
+    "example": "The crisis spurred innovation in the industry."
+  },
+  {
+    "word": "stagnate",
+    "meaning": "stop developing",
+    "usage": "Signals harmful standstill",
+    "not_used_for": "stabilize",
+    "example": "Wages stagnated despite rising productivity."
+  },
+  {
+    "word": "stealthy",
+    "meaning": "secretive",
+    "usage": "Signals quiet, hidden approach",
+    "not_used_for": "careful or cautious",
+    "example": "The stealthy operation avoided detection."
+  },
+  {
+    "word": "stentorian",
+    "meaning": "very loud and powerful",
+    "usage": "Signals commanding vocal volume",
+    "not_used_for": "harsh or unpleasant",
+    "example": "His stentorian voice silenced the crowd."
+  },
+  {
+    "word": "stereotypical",
+    "meaning": "predictable, not complex",
+    "usage": "Signals lack of individuality",
+    "not_used_for": "representative",
+    "example": "The stereotypical portrayal drew criticism."
+  },
+  {
+    "word": "stilted",
+    "meaning": "stiff, unnatural, forced",
+    "usage": "Signals awkward artificiality",
+    "not_used_for": "formal or elevated",
+    "example": "The stilted dialogue undermined the film's realism."
+  },
+  {
+    "word": "stingy",
+    "meaning": "unwilling to give",
+    "usage": "Signals habitual tightfistedness",
+    "not_used_for": "frugal or budget-conscious",
+    "example": "The stingy employer denied even modest raises."
+  },
+  {
+    "word": "stochastic",
+    "meaning": "involving randomness",
+    "usage": "Signals probabilistic modeling",
+    "not_used_for": "chaotic",
+    "example": "The stochastic model accounted for variability."
+  },
+  {
+    "word": "stoic",
+    "meaning": "unemotional, enduring quietly",
+    "usage": "Signals dignified acceptance",
+    "not_used_for": "cold or uncaring",
+    "example": "She remained stoic throughout the ordeal."
+  },
+  {
+    "word": "strident",
+    "meaning": "loud and harsh",
+    "usage": "Signals aggressively forceful expression",
+    "not_used_for": "merely loud",
+    "example": "Strident criticism alienated potential allies."
+  },
+  {
+    "word": "subversive",
+    "meaning": "trying to undermine authority",
+    "usage": "Signals covert challenge to power",
+    "not_used_for": "merely critical",
+    "example": "Subversive ideas threatened the regime's stability."
+  },
+  {
+    "word": "subvert",
+    "meaning": "overthrow or undermine",
+    "usage": "Signals active dismantling of authority",
+    "not_used_for": "merely challenge",
+    "example": "The movement sought to subvert traditional hierarchies."
+  },
+  {
+    "word": "succinct",
+    "meaning": "brief and clear",
+    "usage": "Signals economy of expression",
+    "not_used_for": "vague or incomplete",
+    "example": "The succinct summary captured key findings."
+  },
+  {
+    "word": "superficial",
+    "meaning": "shallow, not deep",
+    "usage": "Signals insufficient depth",
+    "not_used_for": "brief or concise",
+    "example": "The superficial treatment disappointed scholars."
+  },
+  {
+    "word": "superfluous",
+    "meaning": "unnecessary",
+    "usage": "Signals excess beyond need",
+    "not_used_for": "abundant or generous",
+    "example": "The superfluous regulations were eliminated."
+  },
+  {
+    "word": "supercilious",
+    "meaning": "arrogant, condescending",
+    "usage": "Signals contemptuous superiority",
+    "not_used_for": "confident",
+    "example": "His supercilious manner alienated colleagues."
+  },
+  {
+    "word": "supersede",
+    "meaning": "replace",
+    "usage": "Signals formal replacement",
+    "not_used_for": "supplement",
+    "example": "The new guidelines superseded the previous edition."
+  },
+  {
+    "word": "supplant",
+    "meaning": "take the place of",
+    "usage": "Signals displacement, often forceful",
+    "not_used_for": "supplement",
+    "example": "Digital media supplanted traditional print journalism."
+  },
+  {
+    "word": "surfeit",
+    "meaning": "excessive amount",
+    "usage": "Signals harmful overabundance",
+    "not_used_for": "abundance or plenty",
+    "example": "A surfeit of options overwhelmed consumers."
+  },
+  {
+    "word": "surreptitious",
+    "meaning": "secret, stealthy",
+    "usage": "Signals covert action suggesting wrongdoing",
+    "not_used_for": "private or discreet",
+    "example": "The surreptitious recording violated privacy laws."
+  },
+  {
+    "word": "sycophant",
+    "meaning": "person who flatters for gain",
+    "usage": "Signals parasitic flattery",
+    "not_used_for": "genuine admirer",
+    "example": "The sycophant praised every decision."
+  },
+  {
+    "word": "syncretic",
+    "meaning": "combining different beliefs",
+    "usage": "Signals blending of traditions",
+    "not_used_for": "unified or homogeneous",
+    "example": "The syncretic religion incorporated multiple faiths."
+  },
+  {
+    "word": "systematic",
+    "meaning": "methodical, organized",
+    "usage": "Signals structured approach",
+    "not_used_for": "rigid or inflexible",
+    "example": "A systematic review of evidence was conducted."
+  },
+  {
+    "word": "taciturn",
+    "meaning": "quiet, speaking little",
+    "usage": "Signals habitual silence",
+    "not_used_for": "shy or socially anxious",
+    "example": "The taciturn observer said little but noticed everything."
+  },
+  {
+    "word": "tangential",
+    "meaning": "only slightly related",
+    "usage": "Signals peripheral relevance",
+    "not_used_for": "irrelevant",
+    "example": "The tangential remark distracted from the argument."
+  },
+  {
+    "word": "tarnished",
+    "meaning": "damaged in reputation",
+    "usage": "Signals loss of respect",
+    "not_used_for": "destroyed",
+    "example": "The scandal tarnished the institution's reputation."
+  },
+  {
+    "word": "tautological",
+    "meaning": "repeating the same idea",
+    "usage": "Signals circular, redundant logic",
+    "not_used_for": "merely repetitive",
+    "example": "The argument was tautological, proving nothing."
+  },
+  {
+    "word": "taxonomy",
+    "meaning": "system of classification",
+    "usage": "Signals organized categorization",
+    "not_used_for": "hierarchy",
+    "example": "The taxonomy organized species by shared traits."
+  },
+  {
+    "word": "teleological",
+    "meaning": "explaining by purpose",
+    "usage": "Signals purpose-driven explanation",
+    "not_used_for": "causal or mechanistic",
+    "example": "The teleological argument posits design in nature."
+  },
+  {
+    "word": "temerity",
+    "meaning": "reckless boldness",
+    "usage": "Signals audacity without caution",
+    "not_used_for": "courage or bravery",
+    "example": "He had the temerity to challenge the board."
+  },
+  {
+    "word": "temperate",
+    "meaning": "moderate, not extreme",
+    "usage": "Signals balanced restraint",
+    "not_used_for": "lukewarm or uncommitted",
+    "example": "Her temperate response avoided inflammatory language."
+  },
+  {
+    "word": "tenacious",
+    "meaning": "persistent, not giving up",
+    "usage": "Signals admirable determination",
+    "not_used_for": "stubborn",
+    "example": "The tenacious researcher pursued the lead for years."
+  },
+  {
+    "word": "tendentious",
+    "meaning": "biased, pushing a viewpoint",
+    "usage": "Signals promoting an agenda",
+    "not_used_for": "opinionated",
+    "example": "The tendentious report skewed data to support its thesis."
+  },
+  {
+    "word": "tentative",
+    "meaning": "hesitant; not final",
+    "usage": "Signals preliminary status",
+    "not_used_for": "weak or uncertain",
+    "example": "A tentative agreement was reached pending review."
+  },
+  {
+    "word": "tenuous",
+    "meaning": "weak, not well supported",
+    "usage": "Signals fragile connection",
+    "not_used_for": "nonexistent",
+    "example": "The tenuous link was unconvincing."
+  },
+  {
+    "word": "tepid",
+    "meaning": "lukewarm; lacking enthusiasm",
+    "usage": "Signals weak response",
+    "not_used_for": "hostile or cold",
+    "example": "The proposal received only tepid reception."
+  },
+  {
+    "word": "terse",
+    "meaning": "brief and to the point",
+    "usage": "Signals extreme brevity",
+    "not_used_for": "clear or concise",
+    "example": "His terse reply ended the discussion."
+  },
+  {
+    "word": "thorough",
+    "meaning": "complete and careful",
+    "usage": "Signals exhaustive attention",
+    "not_used_for": "slow",
+    "example": "A thorough investigation uncovered the truth."
+  },
+  {
+    "word": "thwart",
+    "meaning": "prevent",
+    "usage": "Signals active frustration of plans",
+    "not_used_for": "merely hinder",
+    "example": "Security measures thwarted the attempted breach."
+  },
+  {
+    "word": "token",
+    "meaning": "symbolic, not substantial",
+    "usage": "Signals hollow gesture",
+    "not_used_for": "meaningful",
+    "example": "The token gesture failed to address systemic problems."
+  },
+  {
+    "word": "tractable",
+    "meaning": "easy to control or deal with",
+    "usage": "Signals manageability",
+    "not_used_for": "submissive",
+    "example": "The tractable problem yielded to standard methods."
+  },
+  {
+    "word": "transparent",
+    "meaning": "clear, easy to understand",
+    "usage": "Signals openness without hidden meaning",
+    "not_used_for": "invisible",
+    "example": "The transparent process built public confidence."
+  },
+  {
+    "word": "transient",
+    "meaning": "short-lived",
+    "usage": "Signals temporary nature",
+    "not_used_for": "trivial",
+    "example": "The transient population made community building difficult."
+  },
+  {
+    "word": "trenchant",
+    "meaning": "sharp and effective",
+    "usage": "Signals incisive criticism",
+    "not_used_for": "merely harsh",
+    "example": "Her trenchant analysis exposed weaknesses."
+  },
+  {
+    "word": "trepidation",
+    "meaning": "fear, anxiety, nervousness",
+    "usage": "Signals apprehension about future",
+    "not_used_for": "panic or terror",
+    "example": "She approached the podium with visible trepidation."
+  },
+  {
+    "word": "trite",
+    "meaning": "overused, unoriginal",
+    "usage": "Signals staleness from repetition",
+    "not_used_for": "simple or straightforward",
+    "example": "The trite metaphor weakened the poem."
+  },
+  {
+    "word": "truculent",
+    "meaning": "aggressively defiant",
+    "usage": "Signals fierce, combative resistance",
+    "not_used_for": "merely assertive",
+    "example": "The truculent response escalated the confrontation."
+  },
+  {
+    "word": "turgid",
+    "meaning": "overly complicated or pompous",
+    "usage": "Signals bloated, pretentious prose",
+    "not_used_for": "detailed or rich",
+    "example": "The turgid academic prose discouraged readers."
+  },
+  {
+    "word": "ubiquitous",
+    "meaning": "present everywhere",
+    "usage": "Signals pervasive presence",
+    "not_used_for": "common or popular",
+    "example": "Smartphones have become ubiquitous in modern life."
+  },
+  {
+    "word": "unanimous",
+    "meaning": "fully in agreement",
+    "usage": "Signals complete consensus",
+    "not_used_for": "majority",
+    "example": "The unanimous decision demonstrated strong unity."
+  },
+  {
+    "word": "unassuming",
+    "meaning": "modest, not showing off",
+    "usage": "Signals genuine humility",
+    "not_used_for": "shy or weak",
+    "example": "The unassuming leader earned respect through actions."
+  },
+  {
+    "word": "unconscionable",
+    "meaning": "shockingly unfair",
+    "usage": "Signals extreme moral transgression",
+    "not_used_for": "merely unfair",
+    "example": "The unconscionable treatment drew condemnation."
+  },
+  {
+    "word": "underscore",
+    "meaning": "emphasize",
+    "usage": "Signals drawing attention to key points",
+    "not_used_for": "overstate",
+    "example": "The report underscored the need for reform."
+  },
+  {
+    "word": "undermine",
+    "meaning": "weaken gradually",
+    "usage": "Signals slow erosion of foundation",
+    "not_used_for": "attack directly",
+    "example": "Constant criticism undermined her confidence."
+  },
+  {
+    "word": "understated",
+    "meaning": "expressed subtly",
+    "usage": "Signals deliberate restraint in expression",
+    "not_used_for": "vague or unclear",
+    "example": "The understated elegance of the design impressed critics."
+  },
+  {
+    "word": "underhanded",
+    "meaning": "secretive and dishonest",
+    "usage": "Signals covert dishonesty",
+    "not_used_for": "strategically indirect",
+    "example": "The underhanded tactics were eventually exposed."
+  },
+  {
+    "word": "unequivocal",
+    "meaning": "completely clear",
+    "usage": "Signals leaving no room for doubt",
+    "not_used_for": "emphatic",
+    "example": "The evidence was unequivocal."
+  },
+  {
+    "word": "unexceptionable",
+    "meaning": "not open to objection",
+    "usage": "Signals being acceptable to all",
+    "not_used_for": "exceptional or remarkable",
+    "example": "The unexceptionable proposal passed without debate."
+  },
+  {
+    "word": "unfair",
+    "meaning": "not just",
+    "usage": "Signals violation of fairness",
+    "not_used_for": "wrong or incorrect",
+    "example": "The unfair distribution of resources sparked protest."
+  },
+  {
+    "word": "unified",
+    "meaning": "joined together",
+    "usage": "Signals cohesive integration",
+    "not_used_for": "uniform or identical",
+    "example": "A unified response was essential to the crisis."
+  },
+  {
+    "word": "unprecedented",
+    "meaning": "never happened before",
+    "usage": "Signals complete novelty",
+    "not_used_for": "merely unusual",
+    "example": "The unprecedented move surprised all observers."
+  },
+  {
+    "word": "unorthodox",
+    "meaning": "unconventional",
+    "usage": "Signals departure from standard practice",
+    "not_used_for": "wrong or incorrect",
+    "example": "His unorthodox methods produced surprising results."
+  },
+  {
+    "word": "untenable",
+    "meaning": "impossible to defend",
+    "usage": "Signals position that cannot be maintained",
+    "not_used_for": "merely weak",
+    "example": "The argument became untenable after new evidence emerged."
+  },
+  {
+    "word": "uphold",
+    "meaning": "support or maintain",
+    "usage": "Signals sustaining a principle or decision",
+    "not_used_for": "create or establish",
+    "example": "The court upheld the original ruling."
+  },
+  {
+    "word": "upright",
+    "meaning": "honest, moral",
+    "usage": "Signals ethical integrity",
+    "not_used_for": "rigid or inflexible",
+    "example": "She was known as an upright public servant."
+  },
+  {
+    "word": "utopian",
+    "meaning": "idealistic but unrealistic",
+    "usage": "Signals impractical perfection",
+    "not_used_for": "aspirational or visionary",
+    "example": "The utopian plan ignored practical constraints."
+  },
+  {
+    "word": "vacillate",
+    "meaning": "waver between choices",
+    "usage": "Signals unproductive indecision",
+    "not_used_for": "deliberate weighing",
+    "example": "She vacillated between options for weeks."
+  },
+  {
+    "word": "valid",
+    "meaning": "logically sound",
+    "usage": "Signals legitimacy and correctness",
+    "not_used_for": "true in all cases",
+    "example": "The concern was valid and deserved attention."
+  },
+  {
+    "word": "validate",
+    "meaning": "confirm as true",
+    "usage": "Signals formal or empirical verification",
+    "not_used_for": "agree with",
+    "example": "The experiment validated the hypothesis."
+  },
+  {
+    "word": "vapid",
+    "meaning": "dull, lacking interest",
+    "usage": "Signals emptiness of substance",
+    "not_used_for": "simple or quiet",
+    "example": "The vapid conversation bored everyone."
+  },
+  {
+    "word": "vehement",
+    "meaning": "intensely forceful",
+    "usage": "Signals passionate intensity",
+    "not_used_for": "merely strong",
+    "example": "Her vehement objection halted the proceedings."
+  },
+  {
+    "word": "veneer",
+    "meaning": "superficial appearance",
+    "usage": "Signals thin covering hiding reality",
+    "not_used_for": "genuine surface",
+    "example": "The veneer of politeness concealed deep hostility."
+  },
+  {
+    "word": "venerable",
+    "meaning": "worthy of respect",
+    "usage": "Signals dignified age or tradition",
+    "not_used_for": "merely old",
+    "example": "The venerable institution celebrated its bicentennial."
+  },
+  {
+    "word": "venerate",
+    "meaning": "regard with deep respect",
+    "usage": "Signals reverence for achievements",
+    "not_used_for": "idolize uncritically",
+    "example": "Scholars venerate her groundbreaking research."
+  },
+  {
+    "word": "verbose",
+    "meaning": "using too many words",
+    "usage": "Signals unnecessary wordiness",
+    "not_used_for": "detailed or thorough",
+    "example": "The verbose report needed heavy editing."
+  },
+  {
+    "word": "verisimilitude",
+    "meaning": "appearance of being true",
+    "usage": "Signals believable authenticity",
+    "not_used_for": "actual truth",
+    "example": "The novel's verisimilitude immersed readers in the world."
+  },
+  {
+    "word": "viable",
+    "meaning": "capable of working",
+    "usage": "Signals practical potential for success",
+    "not_used_for": "ideal",
+    "example": "The plan was viable but not optimal."
+  },
+  {
+    "word": "vicissitude",
+    "meaning": "change in circumstances",
+    "usage": "Signals unpredictable ups and downs",
+    "not_used_for": "simple change",
+    "example": "The vicissitudes of fortune tested her resolve."
+  },
+  {
+    "word": "vilify",
+    "meaning": "speak badly of; slander",
+    "usage": "Signals malicious defamation",
+    "not_used_for": "criticize fairly",
+    "example": "Opponents vilified the candidate with false claims."
+  },
+  {
+    "word": "vindicate",
+    "meaning": "clear from blame; justify",
+    "usage": "Signals proving someone right after doubt",
+    "not_used_for": "forgive",
+    "example": "Later events vindicated her controversial decision."
+  },
+  {
+    "word": "vindictive",
+    "meaning": "seeking revenge",
+    "usage": "Signals personal, retaliatory hostility",
+    "not_used_for": "firm or tough",
+    "example": "The vindictive response went far beyond justice."
+  },
+  {
+    "word": "vitriolic",
+    "meaning": "filled with bitter hatred",
+    "usage": "Signals corrosive, venomous expression",
+    "not_used_for": "merely critical",
+    "example": "The vitriolic attack shocked observers."
+  },
+  {
+    "word": "vivid",
+    "meaning": "bright, intense, striking",
+    "usage": "Signals powerful sensory or emotional impact",
+    "not_used_for": "merely colorful",
+    "example": "The vivid description brought the scene to life."
+  },
+  {
+    "word": "vociferous",
+    "meaning": "loud and forceful",
+    "usage": "Signals aggressive vocal expression",
+    "not_used_for": "merely loud",
+    "example": "The vociferous opposition disrupted the meeting."
+  },
+  {
+    "word": "volatile",
+    "meaning": "unpredictable; easily changing",
+    "usage": "Signals dangerous instability",
+    "not_used_for": "dynamic or energetic",
+    "example": "The volatile situation required careful handling."
+  },
+  {
+    "word": "voluble",
+    "meaning": "very talkative",
+    "usage": "Signals flowing, abundant speech",
+    "not_used_for": "articulate",
+    "example": "The voluble guest dominated the conversation."
+  },
+  {
+    "word": "vulnerable",
+    "meaning": "open to harm",
+    "usage": "Signals susceptibility to damage",
+    "not_used_for": "weak",
+    "example": "The vulnerable population needed additional support."
+  },
+  {
+    "word": "wane",
+    "meaning": "decrease gradually",
+    "usage": "Signals slow decline",
+    "not_used_for": "disappear suddenly",
+    "example": "Public interest in the story began to wane."
+  },
+  {
+    "word": "wary",
+    "meaning": "cautious, watchful",
+    "usage": "Signals alert caution based on experience",
+    "not_used_for": "paranoid or fearful",
+    "example": "Investors remained wary of the new market."
+  },
+  {
+    "word": "weak",
+    "meaning": "lacking strength",
+    "usage": "Signals insufficient force or substance",
+    "not_used_for": "flawed",
+    "example": "The weak argument failed to persuade anyone."
+  },
+  {
+    "word": "whimsical",
+    "meaning": "playfully unusual",
+    "usage": "Signals charming, fanciful quality",
+    "not_used_for": "erratic or unreliable",
+    "example": "The whimsical illustrations delighted children."
+  },
+  {
+    "word": "wry",
+    "meaning": "dry, slightly ironic humor",
+    "usage": "Signals understated, twisted wit",
+    "not_used_for": "openly funny",
+    "example": "She offered a wry observation about the situation."
+  },
+  {
+    "word": "yielding",
+    "meaning": "giving in easily",
+    "usage": "Signals lack of resistance",
+    "not_used_for": "flexible or adaptable",
+    "example": "The yielding stance cost them leverage in talks."
+  },
+  {
+    "word": "zealous",
+    "meaning": "intense enthusiasm or devotion",
+    "usage": "Signals passionate commitment to a cause",
+    "not_used_for": "obsessive or extreme",
+    "example": "The zealous advocate fought tirelessly for reform."
+  }
+]
