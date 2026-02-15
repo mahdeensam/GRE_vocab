@@ -37,7 +37,10 @@ CONCEPT_GROUPS = load_concept_groups()
 
 @app.route('/')
 def index():
-    return render_template('index.html', total=len(WORDS))
+    hook_count = sum(1 for w in WORDS if w.get('memory_hook'))
+    return render_template('index.html', total=len(WORDS),
+                           concept_group_count=len(CONCEPT_GROUPS),
+                           hook_count=hook_count)
 
 @app.route('/api/words')
 def api_words():

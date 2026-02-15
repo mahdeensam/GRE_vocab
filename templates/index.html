@@ -8,6 +8,48 @@
 </head>
 <body>
 
+<section id="hero">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">GRE Preparation Tool</div>
+    <h1 class="hero-title">Master GRE Vocabulary</h1>
+    <p class="hero-tagline">Flashcards, concept groups, and Bengali memory hooks — everything you need to conquer the GRE verbal section.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="{{ total }}">0</div>
+        <div class="hero-stat-label">Words</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="{{ concept_group_count }}">0</div>
+        <div class="hero-stat-label">Concept Groups</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-target="{{ hook_count }}">0</div>
+        <div class="hero-stat-label">Memory Hooks</div>
+      </div>
+    </div>
+    <div class="hero-features">
+      <div class="hero-feature">
+        <div class="hero-feature-icon">&#127183;</div>
+        <div class="hero-feature-title">Flashcards</div>
+        <div class="hero-feature-desc">Flip through curated decks with spaced repetition tracking</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">&#128218;</div>
+        <div class="hero-feature-title">Word List</div>
+        <div class="hero-feature-desc">Search, filter, and tag every word — learned, confused, or hard</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">&#129504;</div>
+        <div class="hero-feature-title">Concept Groups</div>
+        <div class="hero-feature-desc">Words grouped by meaning with Bengali translations</div>
+      </div>
+    </div>
+    <button class="hero-cta" id="hero-cta">Start Learning &rarr;</button>
+    <div class="hero-attribution">A production gift from <strong>Sameernetwork.com</strong></div>
+  </div>
+</section>
+
 <nav>
   <div class="nav-brand">GRE Vocab Master</div>
   <div class="nav-links">
@@ -133,6 +175,53 @@
 </section>
 
 <script>
+// --- Hero ---
+function enterApp() {
+  const hero = document.getElementById('hero');
+  hero.classList.add('hero-exiting');
+  setTimeout(() => {
+    document.body.classList.add('app-mode');
+    sessionStorage.setItem('greHeroSeen', '1');
+    loadDeck();
+  }, 450);
+}
+
+// Count-up animation for hero stats
+function animateCounters() {
+  document.querySelectorAll('.hero-stat-number[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target, 10);
+    if (!target) return;
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+
+// CTA button with ripple effect
+document.getElementById('hero-cta').addEventListener('click', function(e) {
+  const rect = this.getBoundingClientRect();
+  const ripple = document.createElement('span');
+  ripple.className = 'ripple';
+  ripple.style.left = (e.clientX - rect.left) + 'px';
+  ripple.style.top = (e.clientY - rect.top) + 'px';
+  this.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 600);
+  enterApp();
+});
+
+// Skip hero if already seen this session
+if (sessionStorage.getItem('greHeroSeen')) {
+  document.body.classList.add('app-mode');
+} else {
+  animateCounters();
+}
+
 // --- Theme ---
 const savedTheme = localStorage.getItem('greTheme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
@@ -538,8 +627,17 @@ document.getElementById('concepts-search').addEventListener('input', (e) => {
   conceptSearchTimeout = setTimeout(() => renderConceptGroups(e.target.value), 300);
 });
 
+// --- Nav brand returns to hero ---
+document.querySelector('.nav-brand').addEventListener('click', () => {
+  document.body.classList.remove('app-mode');
+  sessionStorage.removeItem('greHeroSeen');
+  animateCounters();
+});
+
 // --- Init ---
-loadDeck();
+if (document.body.classList.contains('app-mode')) {
+  loadDeck();
+}
 </script>
 </body>
 </html>
