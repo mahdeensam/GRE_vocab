@@ -1,6 +1,25 @@
+databases:
+  - name: gre-vocab-db
+    plan: free
+    databaseName: gre_vocab
+    user: gre_vocab_user
+
 services:
   - type: web
     name: gre-vocab-master
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: gre-vocab-db
+          property: connectionString
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        value: https://gre-vocab.onrender.com/auth/callback

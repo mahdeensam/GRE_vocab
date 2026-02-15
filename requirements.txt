@@ -1,2 +1,7 @@
 flask
 gunicorn
+flask-sqlalchemy
+flask-login
+requests
+psycopg2-binary
+python-dotenv

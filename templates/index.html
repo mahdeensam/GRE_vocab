@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRE Vocab Master</title>
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -59,6 +60,7 @@
   </div>
   <div class="nav-right">
     <div class="nav-stats">{{ total }} words</div>
+    <div id="auth-section"></div>
     <button class="theme-toggle" id="theme-toggle" title="Toggle theme">&#9790;</button>
   </div>
 </nav>
@@ -380,8 +382,16 @@ let activeFilter = 'all';
 let compactMode = false;
 let originalWords = [];
 
+let currentUser = null;
+let syncTimeout = null;
+let syncBannerShown = false;
+
 function saveTags() {
   localStorage.setItem('greWordTags', JSON.stringify(wordTags));
+  if (currentUser) {
+    clearTimeout(syncTimeout);
+    syncTimeout = setTimeout(() => pushProgress(), 500);
+  }
 }
 
 async function loadWordList(q = '') {
@@ -627,6 +637,101 @@ document.getElementById('concepts-search').addEventListener('input', (e) => {
   conceptSearchTimeout = setTimeout(() => renderConceptGroups(e.target.value), 300);
 });
 
+// --- Auth & Sync ---
+async function checkAuth() {
+  try {
+    const res = await fetch('/auth/me');
+    const data = await res.json();
+    currentUser = data.user;
+    renderAuthUI();
+    if (currentUser) syncProgress();
+  } catch (e) {
+    currentUser = null;
+    renderAuthUI();
+  }
+}
+
+function renderAuthUI() {
+  const section = document.getElementById('auth-section');
+  if (!currentUser) {
+    section.innerHTML = '<a href="/auth/google" class="sign-in-btn">Sign In</a>';
+    return;
+  }
+  const pic = currentUser.picture
+    ? `<img src="${currentUser.picture}" alt="" class="user-avatar" referrerpolicy="no-referrer">`
+    : `<div class="user-avatar user-avatar-placeholder">${currentUser.name ? currentUser.name[0].toUpperCase() : '?'}</div>`;
+  section.innerHTML = `
+    <div class="user-menu" id="user-menu">
+      ${pic}
+      <span class="user-name">${currentUser.name || currentUser.email}</span>
+      <div class="user-dropdown" id="user-dropdown">
+        <div class="user-dropdown-email">${currentUser.email}</div>
+        <a href="/auth/logout" class="user-dropdown-item">Sign Out</a>
+      </div>
+    </div>`;
+  document.getElementById('user-menu').addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.getElementById('user-dropdown').classList.toggle('show');
+  });
+  document.addEventListener('click', () => {
+    const dd = document.getElementById('user-dropdown');
+    if (dd) dd.classList.remove('show');
+  });
+}
+
+async function syncProgress() {
+  try {
+    const res = await fetch('/api/progress');
+    const data = await res.json();
+    const serverTags = data.tags || {};
+
+    // Merge: local wins for conflicts, server fills gaps
+    const localTags = { ...wordTags };
+    const merged = { ...serverTags, ...localTags };
+
+    wordTags = merged;
+    localStorage.setItem('greWordTags', JSON.stringify(wordTags));
+
+    // Push merged to server
+    await pushProgress();
+
+    // Re-render if word list is loaded
+    if (allWords.length > 0) renderWordList();
+  } catch (e) {
+    // Silently fall back to localStorage
+  }
+}
+
+async function pushProgress() {
+  if (!currentUser) return;
+  try {
+    await fetch('/api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tags: wordTags }),
+    });
+  } catch (e) {
+    // Silently fail — localStorage still has the data
+  }
+}
+
+function showSyncBanner() {
+  if (syncBannerShown || currentUser) return;
+  syncBannerShown = true;
+  const banner = document.createElement('div');
+  banner.className = 'sync-banner';
+  banner.innerHTML = '<span>Sign in to save your progress across devices</span><a href="/auth/google" class="sync-banner-btn">Sign In</a><button class="sync-banner-close" onclick="this.parentElement.remove()">&#10005;</button>';
+  document.body.appendChild(banner);
+  setTimeout(() => banner.classList.add('show'), 10);
+}
+
+// Show banner on first tag when not logged in
+const origToggleTag = toggleTag;
+toggleTag = function(word, tag) {
+  origToggleTag(word, tag);
+  if (!currentUser && !syncBannerShown) showSyncBanner();
+};
+
 // --- Nav brand returns to hero ---
 document.querySelector('.nav-brand').addEventListener('click', () => {
   document.body.classList.remove('app-mode');
@@ -635,6 +740,7 @@ document.querySelector('.nav-brand').addEventListener('click', () => {
 });
 
 // --- Init ---
+checkAuth();
 if (document.body.classList.contains('app-mode')) {
   loadDeck();
 }
