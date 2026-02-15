@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="50%" stop-color="#1a1040"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle glow circles -->
+  <circle cx="200" cy="300" r="250" fill="#6c63ff" opacity="0.06"/>
+  <circle cx="1000" cy="350" r="200" fill="#a78bfa" opacity="0.05"/>
+
+  <!-- Flashcard stack (right side) -->
+  <g transform="translate(820, 160)">
+    <!-- Back card -->
+    <rect x="20" y="10" width="220" height="300" rx="16" fill="#222240" stroke="#2a2a4a" stroke-width="2" transform="rotate(8 130 160)"/>
+    <!-- Middle card -->
+    <rect x="10" y="5" width="220" height="300" rx="16" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="2" transform="rotate(4 120 155)"/>
+    <!-- Front card -->
+    <rect x="0" y="0" width="220" height="300" rx="16" fill="#1a1a2e" stroke="#6c63ff" stroke-width="2"/>
+    <!-- Card content -->
+    <text x="110" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="42" font-weight="800" fill="#6c63ff" text-anchor="middle">abate</text>
+    <line x1="40" y1="155" x2="180" y2="155" stroke="#2a2a4a" stroke-width="1.5"/>
+    <text x="110" y="185" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#8888aa" text-anchor="middle">to reduce in intensity</text>
+    <!-- Learned badge -->
+    <rect x="55" y="220" width="110" height="30" rx="15" fill="#2ecc71" opacity="0.15"/>
+    <text x="110" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2ecc71" text-anchor="middle">Learned</text>
+  </g>
+
+  <!-- Badge -->
+  <rect x="80" y="140" width="200" height="32" rx="16" fill="#6c63ff" opacity="0.15" stroke="#6c63ff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="180" y="162" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#6c63ff" text-anchor="middle" letter-spacing="1.5">GRE PREPARATION</text>
+
+  <!-- Title -->
+  <text x="80" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="900" fill="url(#accent)">GRE Vocab</text>
+  <text x="80" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="56" font-weight="900" fill="#e8e8f0">Master</text>
+
+  <!-- Tagline -->
+  <text x="80" y="360" font-family="system-ui,-apple-system,sans-serif" font-size="20" fill="#8888aa">Flashcards, concept groups, and</text>
+  <text x="80" y="388" font-family="system-ui,-apple-system,sans-serif" font-size="20" fill="#8888aa">Bengali memory hooks</text>
+
+  <!-- Stats row -->
+  <g transform="translate(80, 430)">
+    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="900" fill="#6c63ff">716</text>
+    <text x="0" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#8888aa" letter-spacing="1">WORDS</text>
+
+    <line x1="100" y1="-20" x2="100" y2="28" stroke="#2a2a4a" stroke-width="1"/>
+
+    <text x="130" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="900" fill="#6c63ff">44</text>
+    <text x="130" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#8888aa" letter-spacing="1">GROUPS</text>
+
+    <line x1="220" y1="-20" x2="220" y2="28" stroke="#2a2a4a" stroke-width="1"/>
+
+    <text x="250" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="900" fill="#a78bfa">716</text>
+    <text x="250" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#8888aa" letter-spacing="1">HOOKS</text>
+  </g>
+
+  <!-- Bottom attribution -->
+  <text x="80" y="560" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8888aa">A production gift from</text>
+  <text x="266" y="560" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#6c63ff">Sameernetwork.com</text>
+</svg>
