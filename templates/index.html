@@ -83,12 +83,20 @@
       <span id="unknown-count" class="badge red">0 Learning</span>
     </div>
     <div class="deck-actions">
+      <select id="deck-filter" title="Filter deck by tag">
+        <option value="all">All Words</option>
+        <option value="learned">Learned Only</option>
+        <option value="confused">Confused Only</option>
+        <option value="hard">Hard Only</option>
+        <option value="unmarked">Unmarked Only</option>
+      </select>
       <label for="batch-size">Cards:</label>
       <select id="batch-size">
         <option value="10">10</option>
         <option value="20" selected>20</option>
         <option value="50">50</option>
         <option value="100">100</option>
+        <option value="all">All</option>
       </select>
       <button id="new-deck-btn" class="btn btn-primary">New Deck</button>
     </div>
@@ -129,6 +137,13 @@
     </div>
 
     <button class="arrow-btn" id="next-btn">&rarr;</button>
+  </div>
+
+  <div class="flashcard-tag-bar" id="flashcard-tag-bar">
+    <span class="flashcard-tag-label">Tag:</span>
+    <button class="tag-btn tag-learned" id="fc-tag-learned" onclick="tagFlashcard('learned')">Learned</button>
+    <button class="tag-btn tag-confused" id="fc-tag-confused" onclick="tagFlashcard('confused')">Confused</button>
+    <button class="tag-btn tag-hard" id="fc-tag-hard" onclick="tagFlashcard('hard')">Hard</button>
   </div>
 
   <div class="flashcard-actions">
@@ -274,9 +289,43 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 
 // --- Flashcard Logic ---
 async function loadDeck() {
-  const count = document.getElementById('batch-size').value;
-  const res = await fetch(`/api/flashcards/batch?count=${count}`);
-  deck = await res.json();
+  const filter = document.getElementById('deck-filter').value;
+  const batchVal = document.getElementById('batch-size').value;
+
+  // Fetch all words, then filter client-side
+  const res = await fetch('/api/words');
+  let pool = await res.json();
+
+  if (filter !== 'all') {
+    if (filter === 'unmarked') {
+      pool = pool.filter(w => !wordTags[w.word]);
+    } else {
+      pool = pool.filter(w => wordTags[w.word] === filter);
+    }
+  }
+
+  if (pool.length === 0) {
+    deck = [];
+    currentIndex = 0;
+    known = new Set();
+    learning = new Set();
+    document.getElementById('card-word').textContent = 'No words found';
+    document.querySelector('.card-hint').textContent = `No ${filter === 'all' ? '' : filter + ' '}words to study`;
+    document.getElementById('card-counter').textContent = '0 / 0';
+    document.getElementById('progress-bar').style.width = '0%';
+    updateFlashcardTags();
+    return;
+  }
+
+  const count = batchVal === 'all' ? pool.length : Math.min(parseInt(batchVal), pool.length);
+
+  // Shuffle and pick
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  deck = pool.slice(0, count);
+
   currentIndex = 0;
   known = new Set();
   learning = new Set();
@@ -315,6 +364,8 @@ function showCard() {
 
   const pct = ((known.size + learning.size) / deck.length) * 100;
   document.getElementById('progress-bar').style.width = pct + '%';
+
+  updateFlashcardTags();
 }
 
 function flipCard() {
@@ -365,6 +416,28 @@ function showSummary() {
 function updateStats() {
   document.getElementById('known-count').textContent = `${known.size} Known`;
   document.getElementById('unknown-count').textContent = `${learning.size} Learning`;
+}
+
+function tagFlashcard(tag) {
+  if (deck.length === 0) return;
+  const word = deck[currentIndex].word;
+  if (wordTags[word] === tag) {
+    delete wordTags[word];
+  } else {
+    wordTags[word] = tag;
+  }
+  saveTags();
+  updateFlashcardTags();
+  if (!currentUser && !syncBannerShown) showSyncBanner();
+}
+
+function updateFlashcardTags() {
+  const word = deck.length > 0 ? deck[currentIndex].word : null;
+  const tag = word ? (wordTags[word] || '') : '';
+  ['learned', 'confused', 'hard'].forEach(t => {
+    const btn = document.getElementById('fc-tag-' + t);
+    btn.classList.toggle('active', tag === t);
+  });
 }
 
 document.getElementById('prev-btn').addEventListener('click', () => {

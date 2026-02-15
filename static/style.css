@@ -521,6 +521,7 @@ body.app-mode #hero { display: none; }
   transition: border-color 0.3s;
 }
 .deck-actions select:focus { border-color: var(--primary); outline: none; }
+#deck-filter { font-weight: 600; }
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -741,6 +742,26 @@ body.app-mode #hero { display: none; }
 
 .text-muted { color: var(--red); font-style: italic; }
 .text-italic { font-style: italic; color: var(--text-muted); }
+
+/* ===== FLASHCARD TAG BAR ===== */
+.flashcard-tag-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.6s ease 0.25s both;
+}
+.flashcard-tag-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.flashcard-tag-bar .tag-btn {
+  padding: 6px 18px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+}
 
 /* ===== FLASHCARD ACTIONS ===== */
 .flashcard-actions {
@@ -1556,4 +1577,6 @@ body.app-mode #hero { display: none; }
   .deck-actions { flex-wrap: wrap; justify-content: center; }
   .flashcard-area { gap: 12px; }
   .flashcard-actions { gap: 12px; }
+  .flashcard-tag-bar .tag-btn { padding: 8px 14px; min-height: 44px; flex: 1; }
+  .flashcard-tag-label { display: none; }
 }
