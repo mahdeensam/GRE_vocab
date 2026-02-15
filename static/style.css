@@ -1349,6 +1349,44 @@ body.app-mode #hero { display: none; }
   font-weight: 500;
 }
 
+/* CONCEPT TAG BUTTONS */
+.col-tag { width: 110px; white-space: nowrap; }
+.concept-tag-btns {
+  display: flex;
+  gap: 4px;
+}
+.ctag-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ctag-btn:hover { transform: translateY(-1px); }
+.ctag-btn:active { transform: scale(0.9); }
+
+.ctag-learned:hover { background: rgba(46, 204, 113, 0.1); color: var(--green); border-color: var(--green); }
+.ctag-learned.active { background: var(--green); color: white; border-color: var(--green); box-shadow: 0 2px 8px var(--green-glow); }
+
+.ctag-confused:hover { background: rgba(243, 156, 18, 0.1); color: #f39c12; border-color: #f39c12; }
+.ctag-confused.active { background: #f39c12; color: white; border-color: #f39c12; box-shadow: 0 2px 8px rgba(243, 156, 18, 0.25); }
+
+.ctag-hard:hover { background: rgba(231, 76, 60, 0.1); color: var(--red); border-color: var(--red); }
+.ctag-hard.active { background: var(--red); color: white; border-color: var(--red); box-shadow: 0 2px 8px var(--red-glow); }
+
+/* Concept row tag highlights */
+.concept-tagged-learned .col-word { color: var(--green) !important; }
+.concept-tagged-confused .col-word { color: #f39c12 !important; }
+.concept-tagged-hard .col-word { color: var(--red) !important; }
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -1543,7 +1581,7 @@ body.app-mode #hero { display: none; }
   .list-actions { flex-direction: column; align-items: stretch; }
   .list-actions-left, .list-actions-right { justify-content: center; }
   .concept-group-body { overflow-x: auto; }
-  .concept-table { min-width: 500px; }
+  .concept-table { min-width: 580px; }
   .concept-table th, .concept-table td { padding: 9px 12px; font-size: 0.82rem; }
   .concept-table .col-num { width: 30px; }
   .search-bar input, .concepts-search-bar input { padding-left: 44px; }

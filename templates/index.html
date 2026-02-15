@@ -663,16 +663,26 @@ function renderConceptGroups(filter = '') {
               <th class="col-word">Word</th>
               <th class="col-meaning">Meaning</th>
               <th class="col-bengali">Bengali (বাংলা)</th>
+              <th class="col-tag">Tag</th>
             </tr>
           </thead>
           <tbody>
-            ${filtered.map(([word, info], i) => `
-            <tr>
+            ${filtered.map(([word, info], i) => {
+              const wTag = wordTags[word] || '';
+              return `
+            <tr class="${wTag ? 'concept-tagged-' + wTag : ''}">
               <td class="col-num">${i + 1}</td>
               <td class="col-word">${word}</td>
               <td class="col-meaning">${info.meaning}</td>
               <td class="col-bengali">${info.bengali}</td>
-            </tr>`).join('')}
+              <td class="col-tag">
+                <div class="concept-tag-btns">
+                  <button class="ctag-btn ctag-learned ${wTag === 'learned' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'learned')" title="Learned">L</button>
+                  <button class="ctag-btn ctag-confused ${wTag === 'confused' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'confused')" title="Confused">C</button>
+                  <button class="ctag-btn ctag-hard ${wTag === 'hard' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'hard')" title="Hard">H</button>
+                </div>
+              </td>
+            </tr>`}).join('')}
           </tbody>
         </table>
       </div>
@@ -681,6 +691,19 @@ function renderConceptGroups(filter = '') {
 
   container.innerHTML = html || '<div class="empty-state">No matching groups found</div>';
   document.getElementById('concepts-stats').textContent = `${totalGroups} groups \u00B7 ${totalWords} words`;
+}
+
+function tagConceptWord(word, tag) {
+  if (wordTags[word] === tag) {
+    delete wordTags[word];
+  } else {
+    wordTags[word] = tag;
+  }
+  saveTags();
+  // Re-render concept groups with current search filter
+  const searchVal = document.getElementById('concepts-search').value || '';
+  renderConceptGroups(searchVal);
+  if (!currentUser && !syncBannerShown) showSyncBanner();
 }
 
 function toggleGroup(header, groupName) {
