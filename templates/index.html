@@ -48,7 +48,7 @@
       <div class="hero-feature" data-target="list" role="button" tabindex="0">
         <div class="hero-feature-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
         <div class="hero-feature-title">Word List</div>
-        <div class="hero-feature-desc">Search, filter, and tag every word — learned, confused, or hard</div>
+        <div class="hero-feature-desc">Search, filter, and tag every word — learning, learned, confused, or hard</div>
       </div>
       <div class="hero-feature" data-target="concepts" role="button" tabindex="0">
         <div class="hero-feature-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 1 7 7c0 3-2.5 5-5 6.5S12 18 12 22"/><path d="M12 2a7 7 0 0 0-7 7c0 3 2.5 5 5 6.5S12 18 12 22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
@@ -99,6 +99,7 @@
     <div class="deck-actions">
       <select id="deck-filter" title="Filter deck by tag">
         <option value="all">All Words</option>
+        <option value="learning">Learning Only</option>
         <option value="learned">Learned Only</option>
         <option value="confused">Confused Only</option>
         <option value="hard">Hard Only</option>
@@ -156,6 +157,7 @@
 
   <div class="flashcard-tag-bar" id="flashcard-tag-bar">
     <span class="flashcard-tag-label">Tag:</span>
+    <button class="tag-btn tag-learning" id="fc-tag-learning" onclick="tagFlashcard('learning')">Learning</button>
     <button class="tag-btn tag-learned" id="fc-tag-learned" onclick="tagFlashcard('learned')">Learned</button>
     <button class="tag-btn tag-confused" id="fc-tag-confused" onclick="tagFlashcard('confused')">Confused</button>
     <button class="tag-btn tag-hard" id="fc-tag-hard" onclick="tagFlashcard('hard')">Hard</button>
@@ -179,6 +181,7 @@
     </div>
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All <span id="count-all" class="filter-count">0</span></button>
+      <button class="filter-btn" data-filter="learning">Learning <span id="count-learning" class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="learned">Learned <span id="count-learned" class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="confused">Confused <span id="count-confused" class="filter-count">0</span></button>
       <button class="filter-btn" data-filter="hard">Hard <span id="count-hard" class="filter-count">0</span></button>
@@ -189,6 +192,7 @@
         <select id="sort-select" class="action-select" onchange="sortWords(this.value)">
           <option value="default">Default Order</option>
           <option value="alpha">A &rarr; Z</option>
+          <option value="learning">Learning First</option>
           <option value="learned">Learned First</option>
           <option value="confused">Confused First</option>
           <option value="hard">Hard First</option>
@@ -497,7 +501,7 @@ function tagFlashcard(tag) {
 function updateFlashcardTags() {
   const word = deck.length > 0 ? deck[currentIndex].word : null;
   const tag = word ? (wordTags[word] || '') : '';
-  ['learned', 'confused', 'hard'].forEach(t => {
+  ['learning', 'learned', 'confused', 'hard'].forEach(t => {
     const btn = document.getElementById('fc-tag-' + t);
     btn.classList.toggle('active', tag === t);
   });
@@ -582,13 +586,14 @@ function getFilteredWords() {
 }
 
 function updateFilterCounts() {
-  const counts = { all: allWords.length, learned: 0, confused: 0, hard: 0, unmarked: 0 };
+  const counts = { all: allWords.length, learning: 0, learned: 0, confused: 0, hard: 0, unmarked: 0 };
   allWords.forEach(w => {
     const tag = wordTags[w.word];
     if (tag) counts[tag] = (counts[tag] || 0) + 1;
     else counts.unmarked++;
   });
   document.getElementById('count-all').textContent = counts.all;
+  document.getElementById('count-learning').textContent = counts.learning;
   document.getElementById('count-learned').textContent = counts.learned;
   document.getElementById('count-confused').textContent = counts.confused;
   document.getElementById('count-hard').textContent = counts.hard;
@@ -633,6 +638,7 @@ function renderWordList() {
           <div class="word-row-header">
             <div class="word-row-title">${w.word}</div>
             <div class="word-row-toggles">
+              <button class="tag-btn tag-learning ${tag === 'learning' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'learning')">Learning</button>
               <button class="tag-btn tag-learned ${tag === 'learned' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'learned')">Learned</button>
               <button class="tag-btn tag-confused ${tag === 'confused' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'confused')">Confused</button>
               <button class="tag-btn tag-hard ${tag === 'hard' ? 'active' : ''}" onclick="toggleTag('${w.word}', 'hard')">Hard</button>
@@ -768,6 +774,7 @@ function renderConceptGroups(filter = '') {
               <td class="col-bengali">${info.bengali}</td>
               <td class="col-tag">
                 <div class="concept-tag-btns">
+                  <button class="ctag-btn ctag-learning ${wTag === 'learning' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'learning')" title="Learning">&#9733;</button>
                   <button class="ctag-btn ctag-learned ${wTag === 'learned' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'learned')" title="Learned">L</button>
                   <button class="ctag-btn ctag-confused ${wTag === 'confused' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'confused')" title="Confused">C</button>
                   <button class="ctag-btn ctag-hard ${wTag === 'hard' ? 'active' : ''}" onclick="tagConceptWord('${word.replace(/'/g, "\\'")}', 'hard')" title="Hard">H</button>

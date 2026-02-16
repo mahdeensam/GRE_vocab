@@ -1024,6 +1024,7 @@ body.app-mode #hero { display: none; }
   box-shadow: 0 4px 12px var(--primary-glow);
 }
 
+.word-chip.chip-learning { border-left: 3px solid #3498db; }
 .word-chip.chip-learned { border-left: 3px solid var(--green); }
 .word-chip.chip-confused { border-left: 3px solid var(--yellow); }
 .word-chip.chip-hard { border-left: 3px solid var(--red); }
@@ -1065,6 +1066,7 @@ body.app-mode #hero { display: none; }
 .word-row:nth-child(10) { animation-delay: 0.20s; }
 
 /* Tag highlight strips */
+.word-row.tagged-learning { border-left: 3px solid #3498db; }
 .word-row.tagged-learned { border-left: 3px solid var(--green); }
 .word-row.tagged-confused { border-left: 3px solid var(--yellow); }
 .word-row.tagged-hard { border-left: 3px solid var(--red); }
@@ -1118,6 +1120,15 @@ body.app-mode #hero { display: none; }
 }
 .tag-btn:hover { transform: translateY(-2px); }
 .tag-btn:active { transform: scale(0.92); }
+
+.tag-btn.tag-learning { border-color: rgba(52, 152, 219, 0.3); }
+.tag-btn.tag-learning:hover { background: rgba(52, 152, 219, 0.1); color: #3498db; border-color: #3498db; }
+.tag-btn.tag-learning.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.25);
+}
 
 .tag-btn.tag-learned { border-color: rgba(46, 204, 113, 0.3); }
 .tag-btn.tag-learned:hover { background: rgba(46, 204, 113, 0.1); color: var(--green); border-color: var(--green); }
@@ -1440,6 +1451,9 @@ body.app-mode #hero { display: none; }
 .ctag-btn:hover { transform: translateY(-1px); }
 .ctag-btn:active { transform: scale(0.9); }
 
+.ctag-learning:hover { background: rgba(52, 152, 219, 0.1); color: #3498db; border-color: #3498db; }
+.ctag-learning.active { background: #3498db; color: white; border-color: #3498db; box-shadow: 0 2px 8px rgba(52, 152, 219, 0.25); }
+
 .ctag-learned:hover { background: rgba(46, 204, 113, 0.1); color: var(--green); border-color: var(--green); }
 .ctag-learned.active { background: var(--green); color: white; border-color: var(--green); box-shadow: 0 2px 8px var(--green-glow); }
 
@@ -1450,6 +1464,7 @@ body.app-mode #hero { display: none; }
 .ctag-hard.active { background: var(--red); color: white; border-color: var(--red); box-shadow: 0 2px 8px var(--red-glow); }
 
 /* Concept row tag highlights */
+.concept-tagged-learning .col-word { color: #3498db !important; }
 .concept-tagged-learned .col-word { color: var(--green) !important; }
 .concept-tagged-confused .col-word { color: #f39c12 !important; }
 .concept-tagged-hard .col-word { color: var(--red) !important; }
