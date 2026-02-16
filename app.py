@@ -282,7 +282,7 @@ def save_progress():
     # Full replace: delete all existing, insert new
     UserWordProgress.query.filter_by(user_id=current_user.id).delete()
     for word, tag in incoming_tags.items():
-        if tag in ('learned', 'confused', 'hard'):
+        if tag in ('learning', 'learned', 'confused', 'hard'):
             db.session.add(UserWordProgress(
                 user_id=current_user.id,
                 word=word,
