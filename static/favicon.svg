@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6c63ff"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#a78bfa"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="8" fill="url(#g)"/>
-  <!-- Back card shadow -->
-  <rect x="9" y="4" width="14" height="19" rx="2" fill="rgba(255,255,255,0.18)" transform="rotate(7 16 13.5)"/>
-  <!-- Front card -->
-  <rect x="9" y="5" width="14" height="19" rx="2" fill="white"/>
-  <!-- G letter -->
-  <text x="16" y="19.5" font-family="system-ui,sans-serif" font-size="13" font-weight="900" fill="#6c63ff" text-anchor="middle" dominant-baseline="central">G</text>
-  <!-- Small accent line -->
-  <rect x="11" y="23" width="10" height="1.2" rx="0.6" fill="rgba(255,255,255,0.5)"/>
+  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
+  <!-- Bold G drawn as path (not text) so it renders reliably in favicons -->
+  <path d="M22.5 11.4 A8 8 0 1 0 24 16 H16.5"
+        fill="none" stroke="white" stroke-width="3.8"
+        stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
