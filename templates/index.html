@@ -56,6 +56,7 @@
       </div>
     </div>
     <button class="hero-cta" id="hero-cta">Start Learning &rarr;</button>
+    <div id="hero-auth" class="hero-auth"></div>
     <div class="hero-attribution">A production gift from <strong>Sameernetwork.com</strong></div>
   </div>
 </section>
@@ -760,15 +761,23 @@ async function checkAuth() {
 }
 
 function renderAuthUI() {
-  const section = document.getElementById('auth-section');
+  const navSection = document.getElementById('auth-section');
+  const heroSection = document.getElementById('hero-auth');
+
   if (!currentUser) {
-    section.innerHTML = '<a href="/auth/google" class="sign-in-btn">Sign In</a>';
+    navSection.innerHTML = '<a href="/auth/google" class="sign-in-btn">Sign In</a>';
+    if (heroSection) heroSection.innerHTML = '<a href="/auth/google" class="hero-sign-in">Sign in with Google to save progress</a>';
     return;
   }
+
+  // Hero: show signed-in state
+  if (heroSection) heroSection.innerHTML = `<div class="hero-signed-in">Signed in as <strong>${currentUser.name || currentUser.email}</strong></div>`;
+
+  // Nav: avatar + dropdown
   const pic = currentUser.picture
     ? `<img src="${currentUser.picture}" alt="" class="user-avatar" referrerpolicy="no-referrer">`
     : `<div class="user-avatar user-avatar-placeholder">${currentUser.name ? currentUser.name[0].toUpperCase() : '?'}</div>`;
-  section.innerHTML = `
+  navSection.innerHTML = `
     <div class="user-menu" id="user-menu">
       ${pic}
       <span class="user-name">${currentUser.name || currentUser.email}</span>
