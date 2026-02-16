@@ -4,6 +4,7 @@ load_dotenv()
 from flask import Flask, render_template, jsonify, request, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from werkzeug.middleware.proxy_fix import ProxyFix
 from datetime import datetime
 import random
 import json
@@ -11,6 +12,9 @@ import os
 import secrets
 
 app = Flask(__name__)
+
+# Tell Flask it's behind Render's reverse proxy (HTTPS termination)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
 # --- Config ---
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-change-me')
@@ -33,6 +37,8 @@ if database_url.startswith('postgresql://'):
 # Session cookie config
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_SECURE'] = not os.environ.get('FLASK_DEBUG')
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 
 # Google OAuth config
 app.config['GOOGLE_CLIENT_ID'] = os.environ.get('GOOGLE_CLIENT_ID', '')

@@ -56,7 +56,7 @@
       </div>
     </div>
     <button class="hero-cta" id="hero-cta">Start Learning &rarr;</button>
-    <div id="hero-auth" class="hero-auth"><a href="/auth/google" class="hero-sign-in">Sign in with Google to save progress</a></div>
+    <div id="hero-auth" class="hero-auth">{% if current_user.is_authenticated %}<div class="hero-signed-in">Signed in as <strong>{{ current_user.name or current_user.email }}</strong></div>{% else %}<a href="/auth/google" class="hero-sign-in">Sign in with Google to save progress</a>{% endif %}</div>
     <div class="hero-attribution">A production gift from <strong>Sameernetwork.com</strong></div>
   </div>
 </section>
@@ -70,7 +70,7 @@
   </div>
   <div class="nav-right">
     <div class="nav-stats">{{ total }} words</div>
-    <div id="auth-section"><a href="/auth/google" class="sign-in-btn">Sign In</a></div>
+    <div id="auth-section">{% if current_user.is_authenticated %}<div class="user-menu" id="user-menu">{% if current_user.picture %}<img src="{{ current_user.picture }}" alt="" class="user-avatar" referrerpolicy="no-referrer">{% else %}<div class="user-avatar user-avatar-placeholder">{{ current_user.name[0]|upper if current_user.name else '?' }}</div>{% endif %}<span class="user-name">{{ current_user.name or current_user.email }}</span><div class="user-dropdown" id="user-dropdown"><div class="user-dropdown-email">{{ current_user.email }}</div><a href="/auth/logout" class="user-dropdown-item">Sign Out</a></div></div>{% else %}<a href="/auth/google" class="sign-in-btn">Sign In</a>{% endif %}</div>
     <button class="theme-toggle" id="theme-toggle" title="Toggle theme"></button>
   </div>
 </nav>
@@ -885,6 +885,19 @@ document.querySelector('.nav-brand').addEventListener('click', () => {
 });
 
 // --- Init ---
+// Wire up server-rendered user menu dropdown (if present)
+const ssrMenu = document.getElementById('user-menu');
+if (ssrMenu) {
+  ssrMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.getElementById('user-dropdown').classList.toggle('show');
+  });
+}
+document.addEventListener('click', () => {
+  const dd = document.getElementById('user-dropdown');
+  if (dd) dd.classList.remove('show');
+});
+
 checkAuth();
 if (document.body.classList.contains('app-mode')) {
   loadDeck();
