@@ -15,6 +15,7 @@
 <meta name="twitter:image" content="https://gre-vocab.onrender.com/static/og-image.png">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 <link rel="stylesheet" href="/static/style.css">
+<script src="/static/math-data.js" defer></script>
 </head>
 <body>
 
@@ -54,6 +55,11 @@
         <div class="hero-feature-title">Concept Groups</div>
         <div class="hero-feature-desc">Words grouped by meaning with Bengali translations</div>
       </div>
+      <div class="hero-feature" data-target="math" role="button" tabindex="0">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="7" y1="8" x2="17" y2="8"/><line x1="12" y1="5" x2="12" y2="11"/><line x1="7" y1="16" x2="17" y2="16"/><line x1="7" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="17" y2="13"/></svg></div>
+        <div class="hero-feature-title">GRE Math</div>
+        <div class="hero-feature-desc">Arithmetic, algebra, geometry, data analysis &amp; QC strategies</div>
+      </div>
     </div>
     <button class="hero-cta" id="hero-cta">Start Learning &rarr;</button>
     <div id="hero-auth" class="hero-auth">{% if current_user.is_authenticated %}<div class="hero-signed-in">Signed in as <strong>{{ current_user.name or current_user.email }}</strong></div>{% else %}<a href="/auth/google" class="hero-sign-in">Sign in with Google to save progress</a>{% endif %}</div>
@@ -73,6 +79,7 @@
     <button class="nav-btn active" data-view="flashcard">Flashcards</button>
     <button class="nav-btn" data-view="list">Word List</button>
     <button class="nav-btn" data-view="concepts">Concept Groups</button>
+    <button class="nav-btn" data-view="math">Math</button>
   </div>
   <div class="nav-right">
     <div class="nav-stats">{{ total }} words</div>
@@ -208,6 +215,16 @@
   <div class="concepts-container" id="concepts-container"></div>
 </section>
 
+<!-- MATH VIEW -->
+<section id="math-view" class="view">
+  <div class="math-header">
+    <h2 class="math-title">GRE Quantitative Reasoning</h2>
+    <div class="math-chapter-tabs" id="math-chapter-tabs"></div>
+    <div class="math-progress-summary" id="math-progress-summary"></div>
+  </div>
+  <div class="math-content" id="math-content"></div>
+</section>
+
 <script>
 // --- Hero ---
 function enterApp() {
@@ -263,6 +280,11 @@ document.querySelectorAll('.hero-feature[data-target]').forEach(card => {
       document.getElementById(target + '-view').classList.add('active');
       if (target === 'list') loadWordList();
       if (target === 'concepts' && !conceptsLoaded) loadConceptGroups();
+      if (target === 'math' && !mathLoaded) {
+        renderMathChapterTabs();
+        renderMathContent();
+        mathLoaded = true;
+      }
     }, 460);
   });
   card.addEventListener('keydown', (e) => {
@@ -316,6 +338,11 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     document.getElementById(btn.dataset.view + '-view').classList.add('active');
     if (btn.dataset.view === 'list' && allWords.length === 0) loadWordList();
     if (btn.dataset.view === 'concepts' && !conceptsLoaded) loadConceptGroups();
+    if (btn.dataset.view === 'math' && !mathLoaded) {
+      renderMathChapterTabs();
+      renderMathContent();
+      mathLoaded = true;
+    }
   });
 });
 
@@ -929,6 +956,107 @@ document.addEventListener('click', () => {
   const dd = document.getElementById('user-dropdown');
   if (dd) dd.classList.remove('show');
 });
+
+// --- Math Section ---
+let mathStudied = JSON.parse(localStorage.getItem('greMathStudied') || '{}');
+let activeMathChapter = 'arithmetic';
+
+function renderMathChapterTabs() {
+  const tabs = document.getElementById('math-chapter-tabs');
+  tabs.innerHTML = MATH_DATA.map(ch =>
+    `<button class="math-chapter-tab ${ch.id === activeMathChapter ? 'active' : ''}" data-chapter="${ch.id}" style="--ch-color:${ch.color}">
+      <span class="math-tab-emoji">${ch.emoji}</span> ${ch.title}
+    </button>`
+  ).join('');
+  tabs.querySelectorAll('.math-chapter-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeMathChapter = btn.dataset.chapter;
+      renderMathChapterTabs();
+      renderMathContent();
+    });
+  });
+}
+
+function renderMathContent() {
+  const chapter = MATH_DATA.find(c => c.id === activeMathChapter);
+  if (!chapter) return;
+  const container = document.getElementById('math-content');
+
+  const studiedCount = chapter.sections.filter(s => mathStudied[s.id]).length;
+  document.getElementById('math-progress-summary').textContent =
+    `${studiedCount} / ${chapter.sections.length} topics studied`;
+
+  container.innerHTML = chapter.sections.map(sec => {
+    const studied = mathStudied[sec.id];
+    return `
+    <div class="math-topic ${studied ? 'math-topic-studied' : ''}" id="math-${sec.id}">
+      <div class="math-topic-header" onclick="toggleMathTopic('${sec.id}')">
+        <div class="math-topic-title-row">
+          <span class="math-collapse-icon">+</span>
+          <span class="math-topic-title">${sec.title}</span>
+        </div>
+        <div class="math-topic-meta">
+          <span class="math-topic-count">${sec.questions.length} Q</span>
+          <button class="math-studied-btn ${studied ? 'active' : ''}" onclick="event.stopPropagation(); toggleMathStudied('${sec.id}')" title="${studied ? 'Studied' : 'Mark as studied'}">
+            ${studied ? '&#10003; Studied' : 'Mark Studied'}
+          </button>
+        </div>
+      </div>
+      <div class="math-topic-body" style="display:none">
+        ${sec.concepts.length ? `<div class="math-section-block">
+          <div class="math-section-label">Key Concepts</div>
+          <ul class="math-concept-list">${sec.concepts.map(c => `<li>${c}</li>`).join('')}</ul>
+        </div>` : ''}
+        ${sec.formulas.length ? `<div class="math-section-block math-formula-block">
+          <div class="math-section-label">Formulas</div>
+          <ul class="math-formula-list">${sec.formulas.map(f => `<li>${f}</li>`).join('')}</ul>
+        </div>` : ''}
+        ${sec.tips.length ? `<div class="math-section-block math-tips-block">
+          <div class="math-section-label">Tips &amp; Traps</div>
+          <ul class="math-tips-list">${sec.tips.map(t => `<li>${t}</li>`).join('')}</ul>
+        </div>` : ''}
+        ${sec.questions.length ? `<div class="math-section-block">
+          <div class="math-section-label">Practice Questions</div>
+          <div class="math-questions">${sec.questions.map((qa, i) => `
+            <div class="math-qa">
+              <div class="math-q" onclick="this.nextElementSibling.classList.toggle('show')">
+                <span class="math-q-num">Q${i+1}</span> ${qa.q}
+                <span class="math-reveal-hint">tap to reveal</span>
+              </div>
+              <div class="math-a"><span class="math-a-label">Answer:</span> ${qa.a}</div>
+            </div>`).join('')}
+          </div>
+        </div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleMathTopic(secId) {
+  const el = document.getElementById('math-' + secId);
+  const body = el.querySelector('.math-topic-body');
+  const icon = el.querySelector('.math-collapse-icon');
+  if (body.style.display === 'none') {
+    body.style.display = '';
+    icon.textContent = '\u2212';
+  } else {
+    body.style.display = 'none';
+    icon.textContent = '+';
+  }
+}
+
+function toggleMathStudied(secId) {
+  if (mathStudied[secId]) {
+    delete mathStudied[secId];
+  } else {
+    mathStudied[secId] = true;
+  }
+  localStorage.setItem('greMathStudied', JSON.stringify(mathStudied));
+  renderMathContent();
+}
+
+// Load math on nav switch
+let mathLoaded = false;
 
 checkAuth();
 if (document.body.classList.contains('app-mode')) {
