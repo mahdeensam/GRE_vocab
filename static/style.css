@@ -289,6 +289,7 @@ body {
   border-radius: var(--radius);
   padding: 24px 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 [data-theme="light"] .hero-feature {
   background: rgba(255, 255, 255, 0.6);
@@ -386,6 +387,15 @@ body.app-mode #hero { display: none; }
 .nav-brand { cursor: pointer; }
 
 .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.brand-text {
   font-size: 1.4rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--primary), #a78bfa, var(--primary));
@@ -437,14 +447,18 @@ body.app-mode #hero { display: none; }
 .nav-btn.active::after { display: none; }
 .nav-btn:active { transform: scale(0.96); }
 
-.nav-right { display: flex; align-items: center; gap: 10px; }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface2);
+  border-radius: 24px;
+  padding: 4px 6px 4px 14px;
+}
 
 .nav-stats {
   font-size: 0.85rem;
   color: var(--text-muted);
-  background: var(--surface2);
-  padding: 6px 16px;
-  border-radius: 20px;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.3s;
@@ -467,12 +481,10 @@ body.app-mode #hero { display: none; }
 }
 .theme-toggle:hover {
   border-color: var(--primary);
-  background: var(--primary);
-  color: white;
-  transform: rotate(180deg) scale(1.1);
-  box-shadow: 0 4px 15px var(--primary-glow);
+  transform: rotate(30deg) scale(1.08);
+  box-shadow: 0 0 12px var(--primary-glow);
 }
-.theme-toggle:active { transform: rotate(180deg) scale(0.9); }
+.theme-toggle:active { transform: rotate(30deg) scale(0.9); }
 
 /* ===== VIEWS ===== */
 .view { display: none; padding: 28px 32px; max-width: 1200px; margin: 0 auto; }
@@ -481,15 +493,40 @@ body.app-mode #hero { display: none; }
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* View-specific accent colors */
+.nav-btn[data-view="flashcard"].active { --view-accent: var(--primary); }
+.nav-btn[data-view="list"].active {
+  background: #0d9488;
+  border-color: #0d9488;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+}
+.nav-btn[data-view="concepts"].active {
+  background: #d97706;
+  border-color: #d97706;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+#list-view .search-bar input:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.2);
+}
+#concepts-view .concepts-search-bar input:focus {
+  border-color: #d97706;
+  box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.2);
+}
+
 /* ===== FLASHCARD CONTROLS ===== */
 .flashcard-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
   gap: 12px;
   animation: fadeIn 0.6s ease 0.1s both;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
 }
 
 .deck-info { display: flex; gap: 12px; align-items: center; }
@@ -585,6 +622,23 @@ body.app-mode #hero { display: none; }
   box-shadow: 0 6px 25px var(--red-glow);
 }
 .btn-danger:active { transform: translateY(0) scale(0.97); }
+
+/* ===== DECK PROGRESS BAR ===== */
+.deck-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.deck-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #a78bfa);
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* ===== FLASHCARD AREA ===== */
 .flashcard-area {
@@ -1648,7 +1702,7 @@ body.app-mode #hero { display: none; }
     transform: none;
   }
   .nav-right { order: 2; }
-  .nav-brand { font-size: 1.1rem; }
+  .brand-text { font-size: 1.1rem; }
   .view { padding: 16px; }
   .hero-title { font-size: 2.4rem; }
   .hero-tagline { font-size: 1rem; margin-bottom: 28px; }
@@ -1711,7 +1765,7 @@ body.app-mode #hero { display: none; }
 
 /* --- Phone (480px) --- */
 @media (max-width: 480px) {
-  .nav-brand { display: none; }
+  .brand-text { display: none; }
   .nav-stats { display: none; }
   .user-name { display: none; }
   .sign-in-btn { padding: 8px 14px; font-size: 0.82rem; }
