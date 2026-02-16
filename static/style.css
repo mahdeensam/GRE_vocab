@@ -42,6 +42,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* Disable double-tap zoom delay on interactive elements */
+button, a, select, .flashcard, .nav-btn, .filter-btn, .tag-btn, .ctag-btn, .arrow-btn {
+  touch-action: manipulation;
+}
+
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: var(--bg);
@@ -1612,7 +1617,34 @@ body.app-mode #hero { display: none; }
 /* --- Small Tablet (640px) --- */
 @media (max-width: 640px) {
   nav { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
-  .nav-links { order: 3; width: 100%; justify-content: center; }
+  /* Segmented control nav */
+  .nav-links {
+    order: 3;
+    width: 100%;
+    background: var(--surface2);
+    border-radius: 12px;
+    padding: 3px;
+    gap: 0;
+  }
+  .nav-links .nav-btn {
+    flex: 1;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 8px;
+    font-size: 0.82rem;
+    background: transparent;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+  }
+  .nav-links .nav-btn::after { display: none; }
+  .nav-links .nav-btn:hover { transform: none; }
+  .nav-links .nav-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 2px 8px var(--primary-glow);
+    transform: none;
+  }
   .nav-right { order: 2; }
   .view { padding: 16px; }
   .hero-features { grid-template-columns: 1fr; }
@@ -1627,10 +1659,43 @@ body.app-mode #hero { display: none; }
   .word-row-details { flex-direction: column; gap: 4px; }
   .list-actions { flex-direction: column; align-items: stretch; }
   .list-actions-left, .list-actions-right { justify-content: center; }
-  .concept-group-body { overflow-x: auto; }
-  .concept-table { min-width: 580px; }
-  .concept-table th, .concept-table td { padding: 9px 12px; font-size: 0.82rem; }
-  .concept-table .col-num { width: 30px; }
+  /* Concept table → card layout on mobile */
+  .concept-table thead { display: none; }
+  .concept-table, .concept-table tbody { display: block; }
+  .concept-table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .concept-table tbody tr:last-child { border-bottom: none; }
+  .concept-table td { display: block; padding: 0; border: none; }
+  .concept-table .col-num {
+    width: auto;
+    font-size: 0.75rem;
+    opacity: 0.4;
+  }
+  .concept-table .col-word {
+    min-width: auto;
+    font-size: 0.95rem;
+  }
+  .concept-table .col-tag { width: auto; order: 3; }
+  .concept-table .col-meaning {
+    width: 100%;
+    order: 4;
+    min-width: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+  .concept-table .col-bengali {
+    width: 100%;
+    order: 5;
+    min-width: auto;
+    font-size: 0.88rem;
+  }
   .search-bar input, .concepts-search-bar input { padding-left: 44px; }
   .nav-brand { font-size: 1.2rem; }
 }
@@ -1665,4 +1730,6 @@ body.app-mode #hero { display: none; }
   .flashcard-actions { gap: 12px; }
   .flashcard-tag-bar .tag-btn { padding: 8px 14px; min-height: 44px; flex: 1; }
   .flashcard-tag-label { display: none; }
+  /* Prevent iOS auto-zoom on input focus */
+  input, select, textarea { font-size: 16px !important; }
 }

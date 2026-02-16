@@ -461,6 +461,34 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowDown') { markCard(false); }
 });
 
+// --- Swipe gestures for flashcards ---
+(function() {
+  const area = document.querySelector('.flashcard-area');
+  let startX, startY, startTime;
+  area.addEventListener('touchstart', function(e) {
+    const t = e.changedTouches[0];
+    startX = t.clientX;
+    startY = t.clientY;
+    startTime = Date.now();
+  }, { passive: true });
+  area.addEventListener('touchend', function(e) {
+    if (!startX) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    const elapsed = Date.now() - startTime;
+    startX = null;
+    if (elapsed > 500) return;
+    if (Math.abs(dx) < 50) return;
+    if (Math.abs(dy) > Math.abs(dx)) return;
+    if (dx < 0 && currentIndex < deck.length - 1) {
+      lastDirection = 'right'; currentIndex++; showCard();
+    } else if (dx > 0 && currentIndex > 0) {
+      lastDirection = 'left'; currentIndex--; showCard();
+    }
+  }, { passive: true });
+})();
+
 // --- Word List ---
 let searchTimeout;
 let wordTags = JSON.parse(localStorage.getItem('greWordTags') || '{}');
