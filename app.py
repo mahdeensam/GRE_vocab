@@ -72,9 +72,25 @@ def load_user(user_id):
     return db.session.get(User, int(user_id))
 
 
-# Create tables
-with app.app_context():
-    db.create_all()
+# Create tables (retry-safe — won't crash app if DB is still starting)
+def init_db():
+    try:
+        with app.app_context():
+            db.create_all()
+            app.logger.info('Database tables created.')
+    except Exception as e:
+        app.logger.warning(f'Could not create tables on startup: {e}')
+
+init_db()
+
+@app.before_request
+def ensure_tables():
+    if not getattr(app, '_db_ready', False):
+        try:
+            db.create_all()
+            app._db_ready = True
+        except Exception:
+            pass
 
 
 # --- Word data ---
