@@ -155,55 +155,75 @@ def auth_google():
 @app.route('/auth/callback')
 def auth_callback():
     from google_auth import GoogleOAuthManager, GoogleOAuthError
+    import traceback
 
     # Validate state
     state = request.args.get('state')
-    if not state or state != session.pop('oauth_state', None):
-        return redirect('/')
+    saved_state = session.pop('oauth_state', None)
+    if not state or state != saved_state:
+        app.logger.error(f'OAuth state mismatch: got={state}, saved={saved_state}')
+        return f'Auth error: state mismatch (got={state is not None}, saved={saved_state is not None})', 400
 
     code = request.args.get('code')
     if not code:
-        return redirect('/')
+        return 'Auth error: no code from Google', 400
 
     try:
         oauth = GoogleOAuthManager()
         token_data = oauth.exchange_code_for_tokens(code)
         access_token = token_data.get('access_token')
         if not access_token:
-            return redirect('/')
+            app.logger.error(f'No access_token in response: {token_data}')
+            return 'Auth error: no access token', 400
 
         user_info = oauth.get_user_info(access_token)
-    except (GoogleOAuthError, Exception):
-        return redirect('/')
+    except Exception as e:
+        app.logger.error(f'OAuth exchange failed: {traceback.format_exc()}')
+        return f'Auth error: {e}', 500
 
     google_sub = user_info.get('sub')
     if not google_sub:
-        return redirect('/')
+        return f'Auth error: no sub in user info: {user_info}', 400
 
-    # Find or create user
-    user = User.query.filter_by(google_sub=google_sub).first()
-    if user:
-        user.email = user_info.get('email', user.email)
-        user.name = user_info.get('name', user.name)
-        user.picture = user_info.get('picture', user.picture)
-        user.last_login = datetime.utcnow()
-    else:
-        user = User(
-            google_sub=google_sub,
-            email=user_info.get('email', ''),
-            name=user_info.get('name', ''),
-            picture=user_info.get('picture', ''),
-        )
-        db.session.add(user)
+    try:
+        # Find or create user
+        user = User.query.filter_by(google_sub=google_sub).first()
+        if user:
+            user.email = user_info.get('email', user.email)
+            user.name = user_info.get('name', user.name)
+            user.picture = user_info.get('picture', user.picture)
+            user.last_login = datetime.utcnow()
+        else:
+            user = User(
+                google_sub=google_sub,
+                email=user_info.get('email', ''),
+                name=user_info.get('name', ''),
+                picture=user_info.get('picture', ''),
+            )
+            db.session.add(user)
 
-    db.session.commit()
-    login_user(user, remember=True)
+        db.session.commit()
+        login_user(user, remember=True)
+    except Exception as e:
+        app.logger.error(f'DB/login failed: {traceback.format_exc()}')
+        return f'Auth error (DB): {e}', 500
+
     return redirect('/')
 
 @app.route('/auth/logout')
 def auth_logout():
     logout_user()
     return redirect('/')
+
+@app.route('/auth/debug')
+def auth_debug():
+    return jsonify({
+        'has_client_id': bool(app.config.get('GOOGLE_CLIENT_ID')),
+        'has_client_secret': bool(app.config.get('GOOGLE_CLIENT_SECRET')),
+        'redirect_uri': app.config.get('GOOGLE_REDIRECT_URI'),
+        'database_url_type': 'postgresql' if 'postgresql' in app.config.get('SQLALCHEMY_DATABASE_URI', '') else 'sqlite',
+        'has_secret_key': bool(app.config.get('SECRET_KEY')),
+    })
 
 @app.route('/auth/me')
 def auth_me():
