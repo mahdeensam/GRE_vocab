@@ -619,7 +619,7 @@ body.app-mode #hero { display: none; }
   box-shadow: 0 4px 15px var(--primary-glow);
 }
 .arrow-btn:active:not(:disabled) { transform: scale(0.95); }
-.arrow-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+.arrow-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
 /* ===== FLASHCARD ===== */
 .flashcard-container {
@@ -1608,8 +1608,10 @@ body.app-mode #hero { display: none; }
 @media (max-width: 768px) {
   nav { padding: 14px 20px; }
   .view { padding: 20px; }
-  .hero-title { font-size: 3rem; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-features { grid-template-columns: repeat(2, 1fr); }
   .hero-feature { padding: 18px 16px; }
+  .hero-feature:last-child { grid-column: 1 / -1; }
   .hero-stat { padding: 0 24px; }
   .hero-stat-number { font-size: 1.8rem; }
 }
@@ -1646,11 +1648,19 @@ body.app-mode #hero { display: none; }
     transform: none;
   }
   .nav-right { order: 2; }
+  .nav-brand { font-size: 1.1rem; }
   .view { padding: 16px; }
+  .hero-title { font-size: 2.4rem; }
+  .hero-tagline { font-size: 1rem; margin-bottom: 28px; }
   .hero-features { grid-template-columns: 1fr; }
+  .hero-feature:last-child { grid-column: auto; }
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .hero-stat { padding: 0 20px; }
   .hero-stat:not(:last-child)::after { display: none; }
+  .hero-cta { width: 100%; padding: 16px 32px; }
+  .flashcard-controls { justify-content: center; }
+  .deck-info { width: 100%; justify-content: center; }
+  .deck-actions { width: 100%; justify-content: center; flex-wrap: wrap; }
   .flashcard { min-height: 300px; }
   .flashcard-front, .flashcard-back { min-height: 300px; padding: 28px; }
   .word-row { flex-direction: column; gap: 8px; }
@@ -1697,27 +1707,30 @@ body.app-mode #hero { display: none; }
     font-size: 0.88rem;
   }
   .search-bar input, .concepts-search-bar input { padding-left: 44px; }
-  .nav-brand { font-size: 1.2rem; }
 }
 
 /* --- Phone (480px) --- */
 @media (max-width: 480px) {
+  .nav-brand { display: none; }
   .nav-stats { display: none; }
   .user-name { display: none; }
   .sign-in-btn { padding: 8px 14px; font-size: 0.82rem; }
   .sync-banner { white-space: normal; text-align: center; flex-wrap: wrap; justify-content: center; left: 12px; right: 12px; transform: none; }
-  .nav-btn { padding: 10px 16px; min-height: 44px; font-size: 0.85rem; }
   .hero-title { font-size: 2rem; }
-  .hero-tagline { font-size: 1rem; }
+  .hero-tagline { font-size: 0.95rem; margin-bottom: 24px; }
   .hero-content { padding: 32px 16px; }
-  .hero-cta { width: 100%; padding: 16px 24px; }
   .hero-badge { font-size: 0.7rem; padding: 5px 14px; }
-  .hero-stat-number { font-size: 1.5rem; }
-  .hero-stat-label { font-size: 0.7rem; }
+  .hero-stat { padding: 0 14px; }
+  .hero-stat-number { font-size: 1.4rem; }
+  .hero-stat-label { font-size: 0.68rem; }
+  .hero-feature-title { font-size: 0.92rem; }
+  .hero-feature-desc { font-size: 0.78rem; }
   .card-word { font-size: 2rem; }
   .flashcard { min-height: 260px; }
   .flashcard-front, .flashcard-back { min-height: 260px; padding: 24px; }
-  .arrow-btn { width: 44px; height: 44px; font-size: 1rem; }
+  /* Hide arrows on phone — swipe gestures handle navigation */
+  .arrow-btn { display: none; }
+  .flashcard-container { max-width: 100%; }
   .btn { padding: 12px 20px; min-height: 44px; }
   .filter-btn { padding: 10px 16px; min-height: 44px; }
   .tag-btn { padding: 8px 14px; min-height: 44px; width: 100%; }
@@ -1726,7 +1739,7 @@ body.app-mode #hero { display: none; }
   .view { padding: 12px; }
   .flashcard-controls { gap: 8px; }
   .deck-actions { flex-wrap: wrap; justify-content: center; }
-  .flashcard-area { gap: 12px; }
+  .flashcard-area { gap: 0; }
   .flashcard-actions { gap: 12px; }
   .flashcard-tag-bar .tag-btn { padding: 8px 14px; min-height: 44px; flex: 1; }
   .flashcard-tag-label { display: none; }
