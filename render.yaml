@@ -1,7 +1,7 @@
 databases:
-  - name: gre-vocab-db
+  - name: gre-vocab-cheap
     plan: free
-    databaseName: gre_vocab
+    databaseName: gredbname
     user: gre_vocab_user
 
 services:
@@ -15,7 +15,7 @@ services:
         generateValue: true
       - key: DATABASE_URL
         fromDatabase:
-          name: gre-vocab-db
+          name: gre-vocab-cheap
           property: connectionString
       - key: GOOGLE_CLIENT_ID
         sync: false
