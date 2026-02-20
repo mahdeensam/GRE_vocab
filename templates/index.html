@@ -390,6 +390,15 @@ let known = new Set();
 let learning = new Set();
 let allWords = [];
 
+// Shared word cache — fetch once, reuse everywhere
+let _wordsCache = null;
+async function fetchWords() {
+  if (_wordsCache) return _wordsCache;
+  const res = await fetch('/api/words');
+  _wordsCache = await res.json();
+  return _wordsCache;
+}
+
 function saveDeckState() {
   sessionStorage.setItem('greDeck', JSON.stringify({
     words: deck.map(w => w.word),
@@ -457,9 +466,7 @@ async function loadDeck() {
   btn.textContent = 'Loading...';
 
   try {
-    const res = await fetch('/api/words');
-    if (!res.ok) throw new Error('Failed to load words');
-    let pool = await res.json();
+    let pool = [...await fetchWords()];
 
     if (filter !== 'all') {
       if (filter === 'unmarked') {
@@ -727,8 +734,12 @@ function saveTags() {
 }
 
 async function loadWordList(q = '') {
-  const res = await fetch(`/api/words?q=${encodeURIComponent(q)}`);
-  allWords = await res.json();
+  if (q) {
+    const res = await fetch(`/api/words?q=${encodeURIComponent(q)}`);
+    allWords = await res.json();
+  } else {
+    allWords = [...await fetchWords()];
+  }
   originalWords = [...allWords];
   document.getElementById('sort-select').value = 'default';
   renderWordList();
@@ -1204,8 +1215,7 @@ let sleepAudio = null;
 let sleepLoaded = false;
 
 async function loadSleepWords(filter) {
-  const res = await fetch('/api/words');
-  let pool = await res.json();
+  let pool = [...await fetchWords()];
 
   if (filter === 'unmarked') {
     pool = pool.filter(w => !wordTags[w.word]);
@@ -1474,8 +1484,7 @@ checkAuth();
 if (document.body.classList.contains('app-mode')) {
   // Try to restore previous deck; fall back to new deck
   (async () => {
-    const res = await fetch('/api/words');
-    const pool = await res.json();
+    const pool = await fetchWords();
     if (!restoreDeck(pool)) loadDeck();
   })();
 }
