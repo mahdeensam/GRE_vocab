@@ -1,10 +1,11 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, render_template, jsonify, request, redirect, session, url_for
+from flask import Flask, render_template, jsonify, request, redirect, session, url_for, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.middleware.proxy_fix import ProxyFix
+from openai import OpenAI
 from datetime import datetime
 import random
 import json
@@ -294,6 +295,37 @@ def save_progress():
     rows = UserWordProgress.query.filter_by(user_id=current_user.id).all()
     tags = {r.word: r.tag for r in rows}
     return jsonify({'tags': tags})
+
+
+# --- TTS API ---
+openai_client = None
+def get_openai():
+    global openai_client
+    if openai_client is None:
+        api_key = os.environ.get('OPENAI_API_KEY')
+        if not api_key:
+            return None
+        openai_client = OpenAI(api_key=api_key)
+    return openai_client
+
+@app.route('/api/tts', methods=['POST'])
+def tts():
+    client = get_openai()
+    if not client:
+        return jsonify({'error': 'TTS not configured'}), 503
+
+    data = request.get_json()
+    text = data.get('text', '')[:1000]  # limit length
+    if not text:
+        return jsonify({'error': 'No text'}), 400
+
+    response = client.audio.speech.create(
+        model='tts-1',
+        voice='nova',
+        input=text,
+    )
+
+    return Response(response.content, mimetype='audio/mpeg')
 
 
 if __name__ == '__main__':

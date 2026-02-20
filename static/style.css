@@ -752,6 +752,40 @@ body.app-mode #hero { display: none; }
   transition: all 0.3s;
 }
 
+.voice-btn {
+  margin-top: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.voice-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+.voice-btn.loading {
+  opacity: 0.5;
+  pointer-events: none;
+  animation: pulse 1s ease-in-out infinite;
+}
+.voice-btn.playing {
+  background: var(--primary);
+  color: #fff;
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
 .card-hint {
   margin-top: 18px;
   color: var(--text-muted);

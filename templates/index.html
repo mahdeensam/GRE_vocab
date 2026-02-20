@@ -127,6 +127,9 @@
       <div class="flashcard" id="flashcard" onclick="flipCard()">
         <div class="flashcard-front">
           <div class="card-word" id="card-word">Loading...</div>
+          <button class="voice-btn" id="voice-btn" onclick="event.stopPropagation(); speakCard()" title="Listen">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
           <div class="card-hint">Tap to flip &middot; Swipe to navigate</div>
         </div>
         <div class="flashcard-back">
@@ -439,6 +442,50 @@ function showCard() {
 
 function flipCard() {
   document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+/* Voice / TTS */
+let ttsAudio = null;
+
+async function speakCard() {
+  if (deck.length === 0) return;
+  const btn = document.getElementById('voice-btn');
+  const card = deck[currentIndex];
+
+  // If already playing, stop
+  if (ttsAudio && !ttsAudio.paused) {
+    ttsAudio.pause();
+    ttsAudio = null;
+    btn.classList.remove('playing');
+    return;
+  }
+
+  const text = `${card.word}. ${card.meaning}. Usage: ${card.usage}. Example: ${card.example}`;
+
+  btn.classList.add('loading');
+  try {
+    const res = await fetch('/api/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+    if (!res.ok) throw new Error('TTS failed');
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    ttsAudio = new Audio(url);
+    btn.classList.remove('loading');
+    btn.classList.add('playing');
+    ttsAudio.play();
+    ttsAudio.onended = () => {
+      btn.classList.remove('playing');
+      URL.revokeObjectURL(url);
+      ttsAudio = null;
+    };
+  } catch (e) {
+    btn.classList.remove('loading');
+    console.error('TTS error:', e);
+  }
 }
 
 function markCard(isKnown) {

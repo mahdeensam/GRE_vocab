@@ -5,3 +5,4 @@ flask-login
 requests
 psycopg2-binary
 python-dotenv
+openai
