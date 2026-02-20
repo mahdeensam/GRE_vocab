@@ -429,8 +429,15 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById(btn.dataset.view + '-view').classList.add('active');
-    if (btn.dataset.view === 'list' && allWords.length === 0) loadWordList();
-    if (btn.dataset.view === 'concepts' && !conceptsLoaded) loadConceptGroups();
+    if (btn.dataset.view === 'list') {
+      if (allWords.length === 0) loadWordList();
+      else renderWordList();
+    }
+    if (btn.dataset.view === 'concepts') {
+      if (!conceptsLoaded) loadConceptGroups();
+      else renderConceptGroups(document.getElementById('concepts-search')?.value || '');
+    }
+    if (btn.dataset.view === 'flashcard' && deck.length > 0) updateFlashcardTags();
     if (btn.dataset.view !== 'sleep' && typeof stopSleepAudio === 'function') stopSleepAudio();
     if (btn.dataset.view === 'math' && !mathLoaded) {
       renderMathChapterTabs();
