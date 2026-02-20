@@ -81,6 +81,7 @@
     <button class="nav-btn active" data-view="flashcard">Flashcards</button>
     <button class="nav-btn" data-view="list">Word List</button>
     <button class="nav-btn" data-view="concepts">Concept Groups</button>
+    <button class="nav-btn" data-view="sleep">Sleep-time Words</button>
     <button class="nav-btn" data-view="math">Math</button>
   </div>
   <div class="nav-right">
@@ -225,6 +226,57 @@
 </section>
 
 <!-- MATH VIEW -->
+<!-- SLEEP-TIME WORDS -->
+<section id="sleep-view" class="view">
+  <div class="sleep-container">
+    <div class="sleep-header">
+      <div class="sleep-icon">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      </div>
+      <h2 class="sleep-title">Sleep-time Words</h2>
+      <p class="sleep-subtitle">Pick a category, close your eyes, and let the words sink in</p>
+    </div>
+
+    <div class="sleep-filters">
+      <button class="sleep-filter-btn" data-sleep-filter="all">All</button>
+      <button class="sleep-filter-btn sleep-filter-learning" data-sleep-filter="learning">Learning</button>
+      <button class="sleep-filter-btn sleep-filter-learned" data-sleep-filter="learned">Learned</button>
+      <button class="sleep-filter-btn sleep-filter-confused" data-sleep-filter="confused">Confused</button>
+      <button class="sleep-filter-btn sleep-filter-hard" data-sleep-filter="hard">Hard</button>
+      <button class="sleep-filter-btn" data-sleep-filter="unmarked">Unmarked</button>
+    </div>
+
+    <div class="sleep-player" id="sleep-player" style="display:none">
+      <div class="sleep-now-playing">
+        <div class="sleep-word-num" id="sleep-word-num">1 / 20</div>
+        <div class="sleep-word" id="sleep-word">acquiesce</div>
+        <div class="sleep-meaning" id="sleep-meaning">to accept something reluctantly but without protest</div>
+        <div class="sleep-example" id="sleep-example"></div>
+      </div>
+
+      <div class="sleep-progress-bar">
+        <div class="sleep-progress-fill" id="sleep-progress"></div>
+      </div>
+
+      <div class="sleep-controls">
+        <button class="sleep-ctrl-btn" id="sleep-prev" title="Previous">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="sleep-ctrl-btn sleep-play-btn" id="sleep-play" title="Pause">
+          <svg class="sleep-icon-pause" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+          <svg class="sleep-icon-play" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="display:none"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="sleep-ctrl-btn" id="sleep-next" title="Next">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
+        </button>
+        <button class="sleep-ctrl-btn" id="sleep-stop" title="Stop">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="math-view" class="view">
   <div class="math-header">
     <h2 class="math-title">GRE Quantitative Reasoning</h2>
@@ -379,6 +431,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
     document.getElementById(btn.dataset.view + '-view').classList.add('active');
     if (btn.dataset.view === 'list' && allWords.length === 0) loadWordList();
     if (btn.dataset.view === 'concepts' && !conceptsLoaded) loadConceptGroups();
+    if (btn.dataset.view !== 'sleep' && typeof stopSleepAudio === 'function') stopSleepAudio();
     if (btn.dataset.view === 'math' && !mathLoaded) {
       renderMathChapterTabs();
       renderMathContent();
@@ -1121,6 +1174,149 @@ if (ssrMenu) {
 document.addEventListener('click', () => {
   const dd = document.getElementById('user-dropdown');
   if (dd) dd.classList.remove('show');
+});
+
+// --- Sleep-time Words ---
+let sleepDeck = [];
+let sleepIndex = 0;
+let sleepPlaying = false;
+let sleepAudio = null;
+let sleepLoaded = false;
+
+async function loadSleepWords(filter) {
+  const res = await fetch('/api/words');
+  let pool = await res.json();
+
+  if (filter === 'unmarked') {
+    pool = pool.filter(w => !wordTags[w.word]);
+  } else if (filter !== 'all') {
+    pool = pool.filter(w => wordTags[w.word] === filter);
+  }
+
+  if (pool.length === 0) {
+    alert('No words found for this filter.');
+    return;
+  }
+
+  // Shuffle
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  sleepDeck = pool;
+  sleepIndex = 0;
+  document.getElementById('sleep-player').style.display = '';
+  sleepPlaying = true;
+  updateSleepUI();
+  playSleepWord();
+}
+
+function updateSleepUI() {
+  if (sleepDeck.length === 0) return;
+  const w = sleepDeck[sleepIndex];
+  document.getElementById('sleep-word-num').textContent = `${sleepIndex + 1} / ${sleepDeck.length}`;
+  document.getElementById('sleep-word').textContent = w.word;
+  document.getElementById('sleep-meaning').textContent = w.meaning;
+  document.getElementById('sleep-example').textContent = `"${w.example}"`;
+  document.getElementById('sleep-progress').style.width = ((sleepIndex + 1) / sleepDeck.length * 100) + '%';
+
+  // Play/pause icon
+  document.querySelector('.sleep-icon-pause').style.display = sleepPlaying ? '' : 'none';
+  document.querySelector('.sleep-icon-play').style.display = sleepPlaying ? 'none' : '';
+}
+
+async function playSleepWord() {
+  if (!sleepPlaying || sleepIndex >= sleepDeck.length) {
+    sleepPlaying = false;
+    updateSleepUI();
+    return;
+  }
+
+  const w = sleepDeck[sleepIndex];
+  updateSleepUI();
+
+  const text = `${w.word}. ... ${w.meaning}. ... Usage: ${w.usage}. ... Example: ${w.example}`;
+
+  try {
+    const res = await fetch('/api/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+    if (!res.ok) throw new Error('TTS failed');
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    sleepAudio = new Audio(url);
+    sleepAudio.play();
+    sleepAudio.onended = () => {
+      URL.revokeObjectURL(url);
+      sleepAudio = null;
+      if (sleepPlaying && sleepIndex < sleepDeck.length - 1) {
+        sleepIndex++;
+        setTimeout(() => playSleepWord(), 1500); // pause between words
+      } else {
+        sleepPlaying = false;
+        updateSleepUI();
+      }
+    };
+  } catch (e) {
+    console.error('Sleep TTS error:', e);
+    sleepPlaying = false;
+    updateSleepUI();
+  }
+}
+
+function stopSleepAudio() {
+  sleepPlaying = false;
+  if (sleepAudio) { sleepAudio.pause(); sleepAudio = null; }
+  updateSleepUI();
+}
+
+// Filter buttons
+document.querySelectorAll('.sleep-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sleep-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    stopSleepAudio();
+    loadSleepWords(btn.dataset.sleepFilter);
+  });
+});
+
+// Player controls
+document.getElementById('sleep-play').addEventListener('click', () => {
+  if (sleepDeck.length === 0) return;
+  if (sleepPlaying) {
+    stopSleepAudio();
+  } else {
+    sleepPlaying = true;
+    updateSleepUI();
+    playSleepWord();
+  }
+});
+
+document.getElementById('sleep-prev').addEventListener('click', () => {
+  if (sleepIndex > 0) {
+    stopSleepAudio();
+    sleepIndex--;
+    sleepPlaying = true;
+    playSleepWord();
+  }
+});
+
+document.getElementById('sleep-next').addEventListener('click', () => {
+  if (sleepIndex < sleepDeck.length - 1) {
+    stopSleepAudio();
+    sleepIndex++;
+    sleepPlaying = true;
+    playSleepWord();
+  }
+});
+
+document.getElementById('sleep-stop').addEventListener('click', () => {
+  stopSleepAudio();
+  document.getElementById('sleep-player').style.display = 'none';
 });
 
 // --- Math Section ---
