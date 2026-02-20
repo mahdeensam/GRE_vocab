@@ -1246,6 +1246,32 @@ function updateSleepUI() {
   document.querySelector('.sleep-icon-play').style.display = sleepPlaying ? 'none' : '';
 }
 
+let sleepNextBlob = null; // prefetched audio for next word
+
+function sleepTtsText(w) {
+  return `${w.word} ... ${w.word} ... It means: ${w.meaning} ... You would use it to describe: ${w.usage} ... For example: ${w.example}`;
+}
+
+async function fetchSleepAudio(text) {
+  const res = await fetch('/api/tts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text })
+  });
+  if (!res.ok) throw new Error('TTS failed');
+  return await res.blob();
+}
+
+function prefetchNextSleep() {
+  sleepNextBlob = null;
+  if (sleepIndex + 1 < sleepDeck.length) {
+    const next = sleepDeck[sleepIndex + 1];
+    fetchSleepAudio(sleepTtsText(next))
+      .then(blob => { sleepNextBlob = blob; })
+      .catch(() => { sleepNextBlob = null; });
+  }
+}
+
 async function playSleepWord() {
   if (!sleepPlaying || sleepIndex >= sleepDeck.length) {
     sleepPlaying = false;
@@ -1256,26 +1282,29 @@ async function playSleepWord() {
   const w = sleepDeck[sleepIndex];
   updateSleepUI();
 
-  const text = `${w.word} ... ${w.word} ... It means: ${w.meaning} ... You would use it to describe: ${w.usage} ... For example: ${w.example}`;
-
   try {
-    const res = await fetch('/api/tts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text })
-    });
-    if (!res.ok) throw new Error('TTS failed');
+    // Use prefetched audio if available, otherwise fetch now
+    let blob;
+    if (sleepNextBlob && sleepIndex > 0) {
+      blob = sleepNextBlob;
+      sleepNextBlob = null;
+    } else {
+      blob = await fetchSleepAudio(sleepTtsText(w));
+    }
 
-    const blob = await res.blob();
     const url = URL.createObjectURL(blob);
     sleepAudio = new Audio(url);
     sleepAudio.play();
+
+    // Start prefetching the next word immediately
+    prefetchNextSleep();
+
     sleepAudio.onended = () => {
       URL.revokeObjectURL(url);
       sleepAudio = null;
       if (sleepPlaying && sleepIndex < sleepDeck.length - 1) {
         sleepIndex++;
-        setTimeout(() => playSleepWord(), 1500); // pause between words
+        setTimeout(() => playSleepWord(), 500);
       } else {
         sleepPlaying = false;
         updateSleepUI();
@@ -1290,6 +1319,7 @@ async function playSleepWord() {
 
 function stopSleepAudio() {
   sleepPlaying = false;
+  sleepNextBlob = null;
   if (sleepAudio) { sleepAudio.pause(); sleepAudio = null; }
   updateSleepUI();
 }
