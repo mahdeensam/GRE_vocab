@@ -559,7 +559,7 @@ async function speakCard() {
     return;
   }
 
-  const text = `${card.word}. ${card.meaning}. Usage: ${card.usage}. Example: ${card.example}`;
+  const text = `${card.word} ... ${card.word} ... It means: ${card.meaning} ... You would use it to describe: ${card.usage} ... For example: ${card.example}`;
 
   btn.classList.add('loading');
   try {
@@ -1249,7 +1249,7 @@ async function playSleepWord() {
   const w = sleepDeck[sleepIndex];
   updateSleepUI();
 
-  const text = `${w.word}. ... ${w.meaning}. ... Usage: ${w.usage}. ... Example: ${w.example}`;
+  const text = `${w.word} ... ${w.word} ... It means: ${w.meaning} ... You would use it to describe: ${w.usage} ... For example: ${w.example}`;
 
   try {
     const res = await fetch('/api/tts', {

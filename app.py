@@ -320,9 +320,10 @@ def tts():
         return jsonify({'error': 'No text'}), 400
 
     response = client.audio.speech.create(
-        model='tts-1',
-        voice='nova',
+        model='tts-1-hd',
+        voice='fable',
         input=text,
+        speed=0.85,
     )
 
     return Response(response.content, mimetype='audio/mpeg')
