@@ -442,49 +442,62 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 
 // --- Flashcard Logic ---
 async function loadDeck() {
+  const btn = document.getElementById('new-deck-btn');
   const filter = document.getElementById('deck-filter').value;
   const batchVal = document.getElementById('batch-size').value;
 
-  // Fetch all words, then filter client-side
-  const res = await fetch('/api/words');
-  let pool = await res.json();
+  btn.disabled = true;
+  btn.textContent = 'Loading...';
 
-  if (filter !== 'all') {
-    if (filter === 'unmarked') {
-      pool = pool.filter(w => !wordTags[w.word]);
-    } else {
-      pool = pool.filter(w => wordTags[w.word] === filter);
+  try {
+    const res = await fetch('/api/words');
+    if (!res.ok) throw new Error('Failed to load words');
+    let pool = await res.json();
+
+    if (filter !== 'all') {
+      if (filter === 'unmarked') {
+        pool = pool.filter(w => !wordTags[w.word]);
+      } else {
+        pool = pool.filter(w => wordTags[w.word] === filter);
+      }
     }
-  }
 
-  if (pool.length === 0) {
-    deck = [];
+    if (pool.length === 0) {
+      deck = [];
+      currentIndex = 0;
+      known = new Set();
+      learning = new Set();
+      document.getElementById('card-word').textContent = 'No words found';
+      document.querySelector('.card-hint').textContent = `No ${filter === 'all' ? '' : filter + ' '}words to study`;
+      document.getElementById('card-counter').textContent = '0 / 0';
+      document.getElementById('progress-bar').style.width = '0%';
+      updateFlashcardTags();
+      return;
+    }
+
+    const count = batchVal === 'all' ? pool.length : Math.min(parseInt(batchVal), pool.length);
+
+    // Shuffle and pick
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    deck = pool.slice(0, count);
+
     currentIndex = 0;
     known = new Set();
     learning = new Set();
-    document.getElementById('card-word').textContent = 'No words found';
-    document.querySelector('.card-hint').textContent = `No ${filter === 'all' ? '' : filter + ' '}words to study`;
-    document.getElementById('card-counter').textContent = '0 / 0';
-    document.getElementById('progress-bar').style.width = '0%';
-    updateFlashcardTags();
-    return;
+    showCard();
+    updateStats();
+    saveDeckState();
+  } catch (e) {
+    console.error('loadDeck error:', e);
+    document.getElementById('card-word').textContent = 'Connection error';
+    document.querySelector('.card-hint').textContent = 'Check your connection and try again';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'New Deck';
   }
-
-  const count = batchVal === 'all' ? pool.length : Math.min(parseInt(batchVal), pool.length);
-
-  // Shuffle and pick
-  for (let i = pool.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [pool[i], pool[j]] = [pool[j], pool[i]];
-  }
-  deck = pool.slice(0, count);
-
-  currentIndex = 0;
-  known = new Set();
-  learning = new Set();
-  showCard();
-  updateStats();
-  saveDeckState();
 }
 
 let lastDirection = 'right';
