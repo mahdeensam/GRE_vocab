@@ -612,6 +612,82 @@ function toggleTag(word, tag) {
   renderWordList();
 }
 
+/* Compact-mode hover popover */
+let chipPopover = null;
+let chipPopoverTimeout = null;
+
+function getOrCreatePopover() {
+  if (!chipPopover) {
+    chipPopover = document.createElement('div');
+    chipPopover.className = 'chip-popover';
+    document.body.appendChild(chipPopover);
+    chipPopover.addEventListener('mouseenter', () => clearTimeout(chipPopoverTimeout));
+    chipPopover.addEventListener('mouseleave', hideChipPopover);
+  }
+  return chipPopover;
+}
+
+function showChipPopover(chip) {
+  clearTimeout(chipPopoverTimeout);
+  const wordName = chip.dataset.word;
+  const w = allWords.find(x => x.word === wordName);
+  if (!w) return;
+
+  const pop = getOrCreatePopover();
+  const tag = wordTags[w.word] || '';
+  const esc = w.word.replace(/'/g, "\\'");
+  pop.innerHTML = `
+    <div class="chip-popover-word">${w.word}</div>
+    <div class="chip-popover-meaning">${w.meaning}</div>
+    ${w.memory_hook ? `<div class="chip-popover-hook">\u{1f4a1} ${w.memory_hook}</div>` : ''}
+    <div class="chip-popover-example">"${w.example}"</div>
+    <div class="chip-popover-tags">
+      <button class="tag-btn tag-learning ${tag === 'learning' ? 'active' : ''}" onclick="popoverTag('${esc}','learning')" title="Learning">&#9733;</button>
+      <button class="tag-btn tag-learned ${tag === 'learned' ? 'active' : ''}" onclick="popoverTag('${esc}','learned')" title="Learned">L</button>
+      <button class="tag-btn tag-confused ${tag === 'confused' ? 'active' : ''}" onclick="popoverTag('${esc}','confused')" title="Confused">C</button>
+      <button class="tag-btn tag-hard ${tag === 'hard' ? 'active' : ''}" onclick="popoverTag('${esc}','hard')" title="Hard">H</button>
+    </div>`;
+
+  // Position relative to chip
+  const rect = chip.getBoundingClientRect();
+  pop.style.left = rect.left + 'px';
+  pop.style.top = (rect.bottom + 8) + 'px';
+
+  // Adjust if overflowing right
+  const popW = 320;
+  if (rect.left + popW > window.innerWidth - 16) {
+    pop.style.left = Math.max(16, window.innerWidth - popW - 16) + 'px';
+  }
+  // Adjust if overflowing bottom
+  pop.classList.add('visible');
+  requestAnimationFrame(() => {
+    const popRect = pop.getBoundingClientRect();
+    if (popRect.bottom > window.innerHeight - 16) {
+      pop.style.top = (rect.top - popRect.height - 8) + 'px';
+    }
+  });
+}
+
+function hideChipPopover() {
+  chipPopoverTimeout = setTimeout(() => {
+    if (chipPopover) chipPopover.classList.remove('visible');
+  }, 150);
+}
+
+function popoverTag(word, tag) {
+  toggleTag(word, tag);
+  // Re-render popover with updated tag
+  const chip = document.querySelector(`.word-chip[data-word="${word}"]`);
+  if (chip) showChipPopover(chip);
+}
+
+function initChipPopovers() {
+  document.querySelectorAll('.word-chip').forEach(chip => {
+    chip.addEventListener('mouseenter', () => showChipPopover(chip));
+    chip.addEventListener('mouseleave', hideChipPopover);
+  });
+}
+
 function renderWordList() {
   updateFilterCounts();
   const words = getFilteredWords();
@@ -626,8 +702,9 @@ function renderWordList() {
     list.classList.add('compact');
     list.innerHTML = words.map(w => {
       const tag = wordTags[w.word] || '';
-      return `<div class="word-chip ${tag ? 'chip-' + tag : ''}" title="${w.meaning}">${w.word}</div>`;
+      return `<div class="word-chip ${tag ? 'chip-' + tag : ''}" data-word="${w.word}">${w.word}</div>`;
     }).join('');
+    initChipPopovers();
   } else {
     list.classList.remove('compact');
     list.innerHTML = words.map((w, i) => {

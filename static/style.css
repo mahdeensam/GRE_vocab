@@ -1007,6 +1007,7 @@ body.app-mode #hero { display: none; }
 }
 
 .word-chip {
+  position: relative;
   padding: 8px 16px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1028,6 +1029,80 @@ body.app-mode #hero { display: none; }
 .word-chip.chip-learned { border-left: 3px solid var(--green); }
 .word-chip.chip-confused { border-left: 3px solid var(--yellow); }
 .word-chip.chip-hard { border-left: 3px solid var(--red); }
+
+/* COMPACT HOVER POPOVER */
+.chip-popover {
+  position: fixed;
+  z-index: 1000;
+  width: 320px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.chip-popover.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.chip-popover-word {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+.chip-popover-meaning {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+.chip-popover-hook {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.chip-popover-example {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.chip-popover-tags {
+  display: flex;
+  gap: 6px;
+}
+.chip-popover-tags .tag-btn {
+  flex: 1;
+  padding: 5px 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.chip-popover-tags .tag-btn:hover {
+  transform: translateY(-1px);
+}
+.chip-popover-tags .tag-learning { color: #3498db; }
+.chip-popover-tags .tag-learning.active,
+.chip-popover-tags .tag-learning:hover { background: #3498db; color: #fff; border-color: #3498db; }
+.chip-popover-tags .tag-learned { color: var(--green); }
+.chip-popover-tags .tag-learned.active,
+.chip-popover-tags .tag-learned:hover { background: var(--green); color: #fff; border-color: var(--green); }
+.chip-popover-tags .tag-confused { color: #f39c12; }
+.chip-popover-tags .tag-confused.active,
+.chip-popover-tags .tag-confused:hover { background: #f39c12; color: #fff; border-color: #f39c12; }
+.chip-popover-tags .tag-hard { color: var(--red); }
+.chip-popover-tags .tag-hard.active,
+.chip-popover-tags .tag-hard:hover { background: var(--red); color: #fff; border-color: var(--red); }
 
 /* NUMBERED WORD LIST */
 .word-list {
