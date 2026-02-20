@@ -338,6 +338,38 @@ let known = new Set();
 let learning = new Set();
 let allWords = [];
 
+function saveDeckState() {
+  sessionStorage.setItem('greDeck', JSON.stringify({
+    words: deck.map(w => w.word),
+    index: currentIndex,
+    known: [...known],
+    learning: [...learning],
+    filter: document.getElementById('deck-filter').value,
+    batch: document.getElementById('batch-size').value
+  }));
+}
+
+function restoreDeck(wordPool) {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem('greDeck'));
+    if (!saved || !saved.words || saved.words.length === 0) return false;
+    // Restore filter & batch UI
+    document.getElementById('deck-filter').value = saved.filter || 'all';
+    document.getElementById('batch-size').value = saved.batch || '20';
+    // Rebuild deck from saved word order
+    const wordMap = {};
+    wordPool.forEach(w => wordMap[w.word] = w);
+    deck = saved.words.map(name => wordMap[name]).filter(Boolean);
+    if (deck.length === 0) return false;
+    currentIndex = Math.min(saved.index || 0, deck.length - 1);
+    known = new Set(saved.known || []);
+    learning = new Set(saved.learning || []);
+    showCard();
+    updateStats();
+    return true;
+  } catch { return false; }
+}
+
 // --- Navigation ---
 document.querySelectorAll('.nav-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -399,6 +431,7 @@ async function loadDeck() {
   learning = new Set();
   showCard();
   updateStats();
+  saveDeckState();
 }
 
 let lastDirection = 'right';
@@ -514,7 +547,7 @@ function markCard(isKnown) {
 
   lastDirection = 'right';
   if (currentIndex < deck.length - 1) {
-    setTimeout(() => { currentIndex++; showCard(); }, 200);
+    setTimeout(() => { currentIndex++; showCard(); saveDeckState(); }, 200);
   } else {
     setTimeout(() => showSummary(), 200);
   }
@@ -557,10 +590,10 @@ function updateFlashcardTags() {
 }
 
 document.getElementById('prev-btn').addEventListener('click', () => {
-  if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); }
+  if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); saveDeckState(); }
 });
 document.getElementById('next-btn').addEventListener('click', () => {
-  if (currentIndex < deck.length - 1) { lastDirection = 'right'; currentIndex++; showCard(); }
+  if (currentIndex < deck.length - 1) { lastDirection = 'right'; currentIndex++; showCard(); saveDeckState(); }
 });
 document.getElementById('new-deck-btn').addEventListener('click', loadDeck);
 
@@ -568,7 +601,7 @@ document.getElementById('new-deck-btn').addEventListener('click', loadDeck);
 document.addEventListener('keydown', (e) => {
   if (document.activeElement.tagName === 'INPUT') return;
   if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
-  if (e.key === 'ArrowLeft') { if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); } }
+  if (e.key === 'ArrowLeft') { if (currentIndex > 0) { lastDirection = 'left'; currentIndex--; showCard(); saveDeckState(); } }
   if (e.key === 'ArrowRight') { markCard(true); }
   if (e.key === 'ArrowDown') { markCard(false); }
 });
@@ -1193,7 +1226,12 @@ let mathLoaded = false;
 
 checkAuth();
 if (document.body.classList.contains('app-mode')) {
-  loadDeck();
+  // Try to restore previous deck; fall back to new deck
+  (async () => {
+    const res = await fetch('/api/words');
+    const pool = await res.json();
+    if (!restoreDeck(pool)) loadDeck();
+  })();
 }
 </script>
 </body>
