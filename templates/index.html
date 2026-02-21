@@ -617,6 +617,14 @@ function markCard(isKnown) {
     learning.add(word);
     known.delete(word);
   }
+
+  // Persist as tag so it shows in Word List & other views
+  const newTag = isKnown ? 'learned' : 'learning';
+  if (wordTags[word] !== newTag) {
+    wordTags[word] = newTag;
+    saveTags();
+  }
+
   updateStats();
 
   // Badge pop animation
