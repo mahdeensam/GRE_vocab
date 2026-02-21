@@ -83,6 +83,7 @@
     <button class="nav-btn" data-view="concepts">Concept Groups</button>
     <button class="nav-btn" data-view="sleep">Sleep-time Words</button>
     <button class="nav-btn" data-view="math">Math</button>
+    <button class="nav-btn" data-view="lookalikes">Look-alikes</button>
   </div>
   <div class="nav-right">
     <div class="nav-stats">{{ total }} words</div>
@@ -221,8 +222,22 @@
       <input type="text" id="concepts-search" placeholder="Search groups or words..." autocomplete="off">
     </div>
     <div class="concepts-stats" id="concepts-stats"></div>
+    <button class="concepts-lookalike-link" onclick="switchToLookalikes()">Look-alikes &rarr;</button>
   </div>
   <div class="concepts-container" id="concepts-container"></div>
+</section>
+
+<!-- LOOK-ALIKES VIEW -->
+<section id="lookalikes-view" class="view">
+  <div class="lookalikes-header">
+    <h2 class="lookalikes-title">Look-alike Words</h2>
+    <p class="lookalikes-subtitle">Words that look almost the same but mean very different things</p>
+    <div class="lookalikes-search-bar">
+      <input type="text" id="lookalikes-search" placeholder="Search look-alike words..." autocomplete="off">
+    </div>
+    <div class="lookalikes-stats" id="lookalikes-stats"></div>
+  </div>
+  <div class="lookalikes-container" id="lookalikes-container"></div>
 </section>
 
 <!-- MATH VIEW -->
@@ -452,6 +467,9 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
       renderMathChapterTabs();
       renderMathContent();
       mathLoaded = true;
+    }
+    if (btn.dataset.view === 'lookalikes') {
+      if (!lookalikesLoaded) loadLookalikes();
     }
   });
 });
@@ -1089,6 +1107,130 @@ let conceptSearchTimeout;
 document.getElementById('concepts-search').addEventListener('input', (e) => {
   clearTimeout(conceptSearchTimeout);
   conceptSearchTimeout = setTimeout(() => renderConceptGroups(e.target.value), 300);
+});
+
+// --- Look-alikes ---
+let lookalikesLoaded = false;
+let lookalikesData = [];
+let lookalikesCollapsed = JSON.parse(localStorage.getItem('greLookalikesCollapsed') || '{}');
+
+function switchToLookalikes() {
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const btn = document.querySelector('.nav-btn[data-view="lookalikes"]');
+  if (btn) btn.classList.add('active');
+  document.getElementById('lookalikes-view').classList.add('active');
+  if (!lookalikesLoaded) loadLookalikes();
+}
+
+async function loadLookalikes() {
+  const res = await fetch('/api/lookalikes');
+  lookalikesData = await res.json();
+  lookalikesLoaded = true;
+  renderLookalikes();
+}
+
+function renderLookalikes(filter = '') {
+  const container = document.getElementById('lookalikes-container');
+  const q = filter.toLowerCase();
+  let totalGroups = 0;
+  let totalWords = 0;
+  let html = '';
+
+  lookalikesData.forEach((group, gi) => {
+    const words = group.words;
+    if (q) {
+      const match = words.some(w =>
+        w.word.toLowerCase().includes(q) ||
+        w.meaning.toLowerCase().includes(q)
+      ) || group.title.toLowerCase().includes(q);
+      if (!match) return;
+    }
+
+    totalGroups++;
+    totalWords += words.length;
+    const isCollapsed = lookalikesCollapsed[gi] && !q;
+
+    html += `
+    <div class="lookalike-group">
+      <div class="lookalike-group-header" onclick="toggleLookalike(this, ${gi})">
+        <div class="lookalike-group-title">
+          <span class="collapse-icon">${isCollapsed ? '+' : '-'}</span>
+          ${group.title}
+        </div>
+        <span class="lookalike-group-count">${words.length} words</span>
+      </div>
+      <div class="lookalike-group-body" style="${isCollapsed ? 'display:none' : ''}">
+        <div class="lookalike-cards">
+          ${words.map(w => {
+            const wTag = wordTags[w.word] || '';
+            return `
+          <div class="lookalike-card ${wTag ? 'lookalike-tagged-' + wTag : ''}">
+            <div class="lookalike-word">${w.word}</div>
+            <div class="lookalike-meaning">${w.meaning}</div>
+            <div class="lookalike-tag-btns">
+              <button class="ctag-btn ctag-learning ${wTag === 'learning' ? 'active' : ''}" onclick="tagLookalike('${w.word.replace(/'/g, "\\'")}', 'learning')" title="Learning">&#9733;</button>
+              <button class="ctag-btn ctag-learned ${wTag === 'learned' ? 'active' : ''}" onclick="tagLookalike('${w.word.replace(/'/g, "\\'")}', 'learned')" title="Learned">L</button>
+              <button class="ctag-btn ctag-confused ${wTag === 'confused' ? 'active' : ''}" onclick="tagLookalike('${w.word.replace(/'/g, "\\'")}', 'confused')" title="Confused">C</button>
+              <button class="ctag-btn ctag-hard ${wTag === 'hard' ? 'active' : ''}" onclick="tagLookalike('${w.word.replace(/'/g, "\\'")}', 'hard')" title="Hard">H</button>
+            </div>
+          </div>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>`;
+  });
+
+  container.innerHTML = html || '<div class="empty-state">No matching look-alikes found</div>';
+  document.getElementById('lookalikes-stats').textContent = `${totalGroups} groups \u00B7 ${totalWords} words`;
+}
+
+function tagLookalike(word, tag) {
+  if (wordTags[word] === tag) {
+    delete wordTags[word];
+  } else {
+    wordTags[word] = tag;
+  }
+  saveTags();
+  const searchVal = document.getElementById('lookalikes-search').value || '';
+  renderLookalikes(searchVal);
+  if (!currentUser && !syncBannerShown) showSyncBanner();
+}
+
+function toggleLookalike(header, groupIndex) {
+  const body = header.nextElementSibling;
+  const icon = header.querySelector('.collapse-icon');
+  if (body.style.display === 'none') {
+    body.style.display = '';
+    body.style.overflow = 'hidden';
+    body.style.maxHeight = '0';
+    requestAnimationFrame(() => {
+      body.style.transition = 'max-height 0.4s ease, opacity 0.3s ease';
+      body.style.maxHeight = body.scrollHeight + 'px';
+      body.style.opacity = '1';
+    });
+    setTimeout(() => { body.style.maxHeight = 'none'; body.style.overflow = ''; }, 450);
+    icon.textContent = '-';
+    delete lookalikesCollapsed[groupIndex];
+  } else {
+    body.style.overflow = 'hidden';
+    body.style.maxHeight = body.scrollHeight + 'px';
+    requestAnimationFrame(() => {
+      body.style.transition = 'max-height 0.35s ease, opacity 0.25s ease';
+      body.style.maxHeight = '0';
+      body.style.opacity = '0';
+    });
+    setTimeout(() => { body.style.display = 'none'; body.style.opacity = '1'; }, 350);
+    icon.textContent = '+';
+    lookalikesCollapsed[groupIndex] = true;
+  }
+  localStorage.setItem('greLookalikesCollapsed', JSON.stringify(lookalikesCollapsed));
+}
+
+let lookalikesSearchTimeout;
+document.getElementById('lookalikes-search').addEventListener('input', (e) => {
+  clearTimeout(lookalikesSearchTimeout);
+  lookalikesSearchTimeout = setTimeout(() => renderLookalikes(e.target.value), 300);
 });
 
 // --- Auth & Sync ---

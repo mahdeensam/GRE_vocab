@@ -131,6 +131,13 @@ def load_concept_groups():
 
 CONCEPT_GROUPS = load_concept_groups()
 
+def load_lookalikes():
+    path = os.path.join(os.path.dirname(__file__), 'lookalikes.json')
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+LOOKALIKES = load_lookalikes()
+
 
 # --- Page routes ---
 @app.route('/')
@@ -163,6 +170,10 @@ def api_flashcard_batch():
 @app.route('/api/concept-groups')
 def api_concept_groups():
     return jsonify(CONCEPT_GROUPS)
+
+@app.route('/api/lookalikes')
+def api_lookalikes():
+    return jsonify(LOOKALIKES)
 
 
 # --- Auth routes ---
