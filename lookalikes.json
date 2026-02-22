@@ -212,5 +212,378 @@
       { "word": "insure", "meaning": "to provide financial coverage against loss" },
       { "word": "assure", "meaning": "to tell someone confidently to remove doubt" }
     ]
+  },
+  {
+    "title": "abstract vs. abstruse",
+    "words": [
+      { "word": "abstract", "meaning": "theoretical, not concrete" },
+      { "word": "abstruse", "meaning": "difficult to understand" }
+    ]
+  },
+  {
+    "title": "accent vs. accept",
+    "words": [
+      { "word": "accent", "meaning": "emphasize" },
+      { "word": "accept", "meaning": "receive or agree to" }
+    ]
+  },
+  {
+    "title": "accentuate vs. attenuate",
+    "words": [
+      { "word": "accentuate", "meaning": "make more noticeable" },
+      { "word": "attenuate", "meaning": "weaken or reduce" }
+    ]
+  },
+  {
+    "title": "acerbic vs. ascetic",
+    "words": [
+      { "word": "acerbic", "meaning": "sharp and bitter in tone" },
+      { "word": "ascetic", "meaning": "self-denying; avoiding luxury" }
+    ]
+  },
+  {
+    "title": "affable vs. amenable vs. amiable",
+    "words": [
+      { "word": "affable", "meaning": "friendly and easy to talk to" },
+      { "word": "amenable", "meaning": "open to suggestion" },
+      { "word": "amiable", "meaning": "friendly and pleasant" }
+    ]
+  },
+  {
+    "title": "appease vs. appraise",
+    "words": [
+      { "word": "appease", "meaning": "calm or satisfy" },
+      { "word": "appraise", "meaning": "evaluate" }
+    ]
+  },
+  {
+    "title": "avert vs. overt vs. covert",
+    "words": [
+      { "word": "avert", "meaning": "prevent or turn away" },
+      { "word": "overt", "meaning": "open, not hidden" },
+      { "word": "covert", "meaning": "hidden" }
+    ]
+  },
+  {
+    "title": "beneficent vs. beneficial",
+    "words": [
+      { "word": "beneficent", "meaning": "kind, charitable" },
+      { "word": "beneficial", "meaning": "helpful, producing good results" }
+    ]
+  },
+  {
+    "title": "bolster vs. foster",
+    "words": [
+      { "word": "bolster", "meaning": "support, strengthen" },
+      { "word": "foster", "meaning": "encourage growth" }
+    ]
+  },
+  {
+    "title": "castigate vs. instigate",
+    "words": [
+      { "word": "castigate", "meaning": "scold harshly" },
+      { "word": "instigate", "meaning": "start, usually trouble" }
+    ]
+  },
+  {
+    "title": "complacent vs. compliance vs. complicate",
+    "words": [
+      { "word": "complacent", "meaning": "self-satisfied, unaware of problems" },
+      { "word": "compliance", "meaning": "obedience, following rules" },
+      { "word": "complicate", "meaning": "make more complex" }
+    ]
+  },
+  {
+    "title": "concede vs. concise",
+    "words": [
+      { "word": "concede", "meaning": "admit reluctantly" },
+      { "word": "concise", "meaning": "brief but complete" }
+    ]
+  },
+  {
+    "title": "contentious vs. sententious vs. tendentious",
+    "words": [
+      { "word": "contentious", "meaning": "causing argument" },
+      { "word": "sententious", "meaning": "moralizing, preachy" },
+      { "word": "tendentious", "meaning": "biased, pushing a viewpoint" }
+    ]
+  },
+  {
+    "title": "contingent vs. contentious",
+    "words": [
+      { "word": "contingent", "meaning": "dependent on conditions" },
+      { "word": "contentious", "meaning": "causing argument" }
+    ]
+  },
+  {
+    "title": "deceptive vs. perceptive",
+    "words": [
+      { "word": "deceptive", "meaning": "misleading" },
+      { "word": "perceptive", "meaning": "insightful" }
+    ]
+  },
+  {
+    "title": "decisive vs. incisive vs. divisive",
+    "words": [
+      { "word": "decisive", "meaning": "firm, conclusive" },
+      { "word": "incisive", "meaning": "sharp, insightful" },
+      { "word": "divisive", "meaning": "causing division" }
+    ]
+  },
+  {
+    "title": "denounce vs. renounce",
+    "words": [
+      { "word": "denounce", "meaning": "publicly condemn" },
+      { "word": "renounce", "meaning": "formally give up" }
+    ]
+  },
+  {
+    "title": "disparage vs. disparate",
+    "words": [
+      { "word": "disparage", "meaning": "speak poorly of" },
+      { "word": "disparate", "meaning": "very different" }
+    ]
+  },
+  {
+    "title": "dogmatic vs. pragmatic",
+    "words": [
+      { "word": "dogmatic", "meaning": "stubbornly certain" },
+      { "word": "pragmatic", "meaning": "practical, results-focused" }
+    ]
+  },
+  {
+    "title": "energize vs. enervate",
+    "words": [
+      { "word": "energize", "meaning": "give energy" },
+      { "word": "enervate", "meaning": "weaken, drain energy" }
+    ]
+  },
+  {
+    "title": "equable vs. equitable",
+    "words": [
+      { "word": "equable", "meaning": "calm, even-tempered" },
+      { "word": "equitable", "meaning": "fair" }
+    ]
+  },
+  {
+    "title": "equivocal vs. equivocate",
+    "words": [
+      { "word": "equivocal", "meaning": "unclear, ambiguous" },
+      { "word": "equivocate", "meaning": "avoid commitment via vague language" }
+    ]
+  },
+  {
+    "title": "explicate vs. explicit",
+    "words": [
+      { "word": "explicate", "meaning": "explain in detail" },
+      { "word": "explicit", "meaning": "clear, direct" }
+    ]
+  },
+  {
+    "title": "facetious vs. fractious",
+    "words": [
+      { "word": "facetious", "meaning": "joking inappropriately" },
+      { "word": "fractious", "meaning": "irritable, unruly" }
+    ]
+  },
+  {
+    "title": "garrulous vs. querulous",
+    "words": [
+      { "word": "garrulous", "meaning": "excessively talkative" },
+      { "word": "querulous", "meaning": "complaining in a whining way" }
+    ]
+  },
+  {
+    "title": "generate vs. venerate",
+    "words": [
+      { "word": "generate", "meaning": "produce or create" },
+      { "word": "venerate", "meaning": "regard with deep respect" }
+    ]
+  },
+  {
+    "title": "impasse vs. impassive",
+    "words": [
+      { "word": "impasse", "meaning": "deadlock; no progress possible" },
+      { "word": "impassive", "meaning": "showing no emotion" }
+    ]
+  },
+  {
+    "title": "impeccable vs. implacable",
+    "words": [
+      { "word": "impeccable", "meaning": "flawless" },
+      { "word": "implacable", "meaning": "unable to be appeased" }
+    ]
+  },
+  {
+    "title": "imperious vs. impetuous vs. impecunious",
+    "words": [
+      { "word": "imperious", "meaning": "arrogant, commanding" },
+      { "word": "impetuous", "meaning": "acting impulsively" },
+      { "word": "impecunious", "meaning": "poor, without money" }
+    ]
+  },
+  {
+    "title": "implacable vs. implausible",
+    "words": [
+      { "word": "implacable", "meaning": "unable to be appeased" },
+      { "word": "implausible", "meaning": "unlikely to be true" }
+    ]
+  },
+  {
+    "title": "incredulous vs. credulous",
+    "words": [
+      { "word": "incredulous", "meaning": "unwilling to believe" },
+      { "word": "credulous", "meaning": "too ready to believe" }
+    ]
+  },
+  {
+    "title": "lucid vs. pellucid vs. placid",
+    "words": [
+      { "word": "lucid", "meaning": "clear and easy to understand" },
+      { "word": "pellucid", "meaning": "very clear" },
+      { "word": "placid", "meaning": "calm, peaceful" }
+    ]
+  },
+  {
+    "title": "mutable vs. immutable",
+    "words": [
+      { "word": "mutable", "meaning": "able to change" },
+      { "word": "immutable", "meaning": "unchangeable" }
+    ]
+  },
+  {
+    "title": "onerous vs. sonorous",
+    "words": [
+      { "word": "onerous", "meaning": "burdensome" },
+      { "word": "sonorous", "meaning": "deep and resonant" }
+    ]
+  },
+  {
+    "title": "paradigm vs. paradox",
+    "words": [
+      { "word": "paradigm", "meaning": "model or typical example" },
+      { "word": "paradox", "meaning": "seeming contradiction revealing truth" }
+    ]
+  },
+  {
+    "title": "pedantic vs. pedestrian",
+    "words": [
+      { "word": "pedantic", "meaning": "overly concerned with details" },
+      { "word": "pedestrian", "meaning": "dull, ordinary" }
+    ]
+  },
+  {
+    "title": "perspicacious vs. perspicuous",
+    "words": [
+      { "word": "perspicacious", "meaning": "very perceptive" },
+      { "word": "perspicuous", "meaning": "clearly expressed" }
+    ]
+  },
+  {
+    "title": "placate vs. placid vs. placatory",
+    "words": [
+      { "word": "placate", "meaning": "calm someone's anger" },
+      { "word": "placid", "meaning": "calm, peaceful" },
+      { "word": "placatory", "meaning": "intended to calm" }
+    ]
+  },
+  {
+    "title": "portentous vs. pretentious",
+    "words": [
+      { "word": "portentous", "meaning": "signaling something serious" },
+      { "word": "pretentious", "meaning": "trying to appear important" }
+    ]
+  },
+  {
+    "title": "precarious vs. precocious",
+    "words": [
+      { "word": "precarious", "meaning": "unstable, risky" },
+      { "word": "precocious", "meaning": "unusually advanced for age" }
+    ]
+  },
+  {
+    "title": "progressive vs. regressive",
+    "words": [
+      { "word": "progressive", "meaning": "favoring reform" },
+      { "word": "regressive", "meaning": "moving backward" }
+    ]
+  },
+  {
+    "title": "prolix vs. prosaic",
+    "words": [
+      { "word": "prolix", "meaning": "wordy, tediously long-winded" },
+      { "word": "prosaic", "meaning": "dull, ordinary" }
+    ]
+  },
+  {
+    "title": "rebuke vs. rebut",
+    "words": [
+      { "word": "rebuke", "meaning": "criticize sharply" },
+      { "word": "rebut", "meaning": "argue against" }
+    ]
+  },
+  {
+    "title": "reconcile vs. recondite",
+    "words": [
+      { "word": "reconcile", "meaning": "restore harmony; make consistent" },
+      { "word": "recondite", "meaning": "very difficult to understand" }
+    ]
+  },
+  {
+    "title": "specious vs. spurious",
+    "words": [
+      { "word": "specious", "meaning": "misleadingly attractive" },
+      { "word": "spurious", "meaning": "false, fake" }
+    ]
+  },
+  {
+    "title": "supercilious vs. superfluous",
+    "words": [
+      { "word": "supercilious", "meaning": "arrogant, condescending" },
+      { "word": "superfluous", "meaning": "unnecessary" }
+    ]
+  },
+  {
+    "title": "tepid vs. vapid",
+    "words": [
+      { "word": "tepid", "meaning": "lukewarm; lacking enthusiasm" },
+      { "word": "vapid", "meaning": "dull, lacking interest" }
+    ]
+  },
+  {
+    "title": "transient vs. transparent",
+    "words": [
+      { "word": "transient", "meaning": "short-lived" },
+      { "word": "transparent", "meaning": "clear, easy to understand" }
+    ]
+  },
+  {
+    "title": "valid vs. vapid vs. vivid",
+    "words": [
+      { "word": "valid", "meaning": "logically sound" },
+      { "word": "vapid", "meaning": "dull, lacking interest" },
+      { "word": "vivid", "meaning": "bright, intense, striking" }
+    ]
+  },
+  {
+    "title": "venerable vs. vulnerable",
+    "words": [
+      { "word": "venerable", "meaning": "worthy of respect" },
+      { "word": "vulnerable", "meaning": "open to harm" }
+    ]
+  },
+  {
+    "title": "vindicate vs. vindictive",
+    "words": [
+      { "word": "vindicate", "meaning": "clear from blame; justify" },
+      { "word": "vindictive", "meaning": "seeking revenge" }
+    ]
+  },
+  {
+    "title": "volatile vs. voluble",
+    "words": [
+      { "word": "volatile", "meaning": "unpredictable; easily changing" },
+      { "word": "voluble", "meaning": "very talkative" }
+    ]
   }
 ]
