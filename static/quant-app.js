@@ -635,7 +635,7 @@ function initAssessmentHub() {
   html += '<div class="deck-group"><h2 class="deck-group-title">By Category</h2><div class="deck-grid">';
   ALL_CATEGORIES.forEach(function(cat) {
     var count = index.filter(function(item) { return item.topic.category === cat.id; }).length;
-    html += assessDeckCard(cat.icon, cat.name, Math.min(count, 50) + ' questions', '/assessment/test?deck=category&id=' + cat.id);
+    html += assessDeckCard(cat.icon, cat.name, Math.min(count, 50) + ' questions', '/quant/assessment/test?deck=category&id=' + cat.id);
   });
   html += '</div></div>';
 
@@ -649,7 +649,7 @@ function initAssessmentHub() {
   ];
   typeDecks.forEach(function(td) {
     var count = index.filter(function(item) { return item.qType === td.key; }).length;
-    html += assessDeckCard(td.icon, td.name, Math.min(count, 50) + ' questions', '/assessment/test?deck=type&id=' + td.key);
+    html += assessDeckCard(td.icon, td.name, Math.min(count, 50) + ' questions', '/quant/assessment/test?deck=type&id=' + td.key);
   });
   html += '</div></div>';
 
@@ -660,10 +660,10 @@ function initAssessmentHub() {
     return a && (a.level === 'shaky' || a.level === 'study');
   }).length;
   html += '<div class="deck-group"><h2 class="deck-group-title">Smart Decks</h2><div class="deck-grid">';
-  html += assessDeckCard('&#10067;', 'Unassessed Only', unassessedCount + ' remaining', '/assessment/test?deck=unassessed');
-  html += assessDeckCard('&#128260;', 'Reassess Weak', weakCount + ' to reassess', '/assessment/test?deck=reassess');
-  html += assessDeckCard('&#127922;', 'Random Mix', '50 questions', '/assessment/test?deck=random');
-  html += assessDeckCard('&#128221;', 'Full Assessment', total + ' questions', '/assessment/test?deck=full');
+  html += assessDeckCard('&#10067;', 'Unassessed Only', unassessedCount + ' remaining', '/quant/assessment/test?deck=unassessed');
+  html += assessDeckCard('&#128260;', 'Reassess Weak', weakCount + ' to reassess', '/quant/assessment/test?deck=reassess');
+  html += assessDeckCard('&#127922;', 'Random Mix', '50 questions', '/quant/assessment/test?deck=random');
+  html += assessDeckCard('&#128221;', 'Full Assessment', total + ' questions', '/quant/assessment/test?deck=full');
   html += '</div></div>';
 
   // ── Knowledge Map ──
