@@ -154,9 +154,33 @@ LOOKALIKES = load_lookalikes()
 
 
 # ═══════════════════════════════════════════════
-# QUANT DATA
+# QUANT DATA (lazy-loaded to avoid worker boot crash on constrained hosts)
 # ═══════════════════════════════════════════════
-from quant_data import TOPICS as QUANT_TOPICS, CATEGORIES as QUANT_CATEGORIES, _build_topics_json, _build_categories_json
+_quant_loaded = False
+QUANT_TOPICS = []
+QUANT_CATEGORIES = []
+
+def _ensure_quant():
+    global _quant_loaded, QUANT_TOPICS, QUANT_CATEGORIES
+    if _quant_loaded:
+        return
+    try:
+        from quant_data import TOPICS, CATEGORIES
+        QUANT_TOPICS.extend(TOPICS)
+        QUANT_CATEGORIES.extend(CATEGORIES)
+        _quant_loaded = True
+    except Exception as e:
+        app.logger.error(f'Failed to load quant data: {e}')
+
+def _build_topics_json():
+    _ensure_quant()
+    from quant_data import _build_topics_json as _btj
+    return _btj()
+
+def _build_categories_json():
+    _ensure_quant()
+    from quant_data import _build_categories_json as _bcj
+    return _bcj()
 
 
 # ═══════════════════════════════════════════════
@@ -164,6 +188,7 @@ from quant_data import TOPICS as QUANT_TOPICS, CATEGORIES as QUANT_CATEGORIES, _
 # ═══════════════════════════════════════════════
 @app.route('/')
 def landing():
+    _ensure_quant()
     verbal_hook_count = sum(1 for w in WORDS if w.get('memory_hook'))
     quant_q_count = sum(sum(len(s['questions']) for s in t['sections']) for t in QUANT_TOPICS)
     return render_template('landing.html',
@@ -220,6 +245,7 @@ def api_lookalikes():
 @app.route('/quant')
 @app.route('/quant/')
 def quant_index():
+    _ensure_quant()
     cat_counts = {}
     total_q = 0
     for c in QUANT_CATEGORIES:
@@ -234,6 +260,7 @@ def quant_index():
 
 @app.route('/quant/topic/<topic_id>')
 def quant_topic(topic_id):
+    _ensure_quant()
     t = next((t for t in QUANT_TOPICS if t['id'] == topic_id), None)
     if t is None:
         return 'Topic not found', 404
@@ -241,12 +268,14 @@ def quant_topic(topic_id):
 
 @app.route('/quant/favorites')
 def quant_favorites():
+    _ensure_quant()
     topics_data = _build_topics_json()
     return render_template('quant/favorites.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
                            topics_json=json.dumps(topics_data))
 
 @app.route('/quant/flashcards')
 def quant_flashcards():
+    _ensure_quant()
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/flashcards.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
@@ -255,6 +284,7 @@ def quant_flashcards():
 
 @app.route('/quant/flashcards/study')
 def quant_flashcard_study():
+    _ensure_quant()
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/study.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
@@ -263,6 +293,7 @@ def quant_flashcard_study():
 
 @app.route('/quant/dashboard')
 def quant_dashboard():
+    _ensure_quant()
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/dashboard.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
@@ -271,6 +302,7 @@ def quant_dashboard():
 
 @app.route('/quant/assessment')
 def quant_assessment():
+    _ensure_quant()
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/assessment.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
@@ -279,6 +311,7 @@ def quant_assessment():
 
 @app.route('/quant/assessment/test')
 def quant_assessment_test():
+    _ensure_quant()
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/assessment_test.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
