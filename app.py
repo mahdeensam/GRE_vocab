@@ -62,6 +62,7 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     last_login = db.Column(db.DateTime, default=datetime.utcnow)
     progress = db.relationship('UserWordProgress', backref='user', lazy='dynamic', cascade='all, delete-orphan')
+    quant_progress = db.relationship('UserQuantProgress', backref='user', lazy='dynamic', cascade='all, delete-orphan')
 
 
 class UserWordProgress(db.Model):
@@ -72,6 +73,17 @@ class UserWordProgress(db.Model):
     tag = db.Column(db.String(20), nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     __table_args__ = (db.UniqueConstraint('user_id', 'word', name='uq_user_word'),)
+
+
+class UserQuantProgress(db.Model):
+    __tablename__ = 'user_quant_progress'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    question_key = db.Column(db.String(200), nullable=False)
+    data_type = db.Column(db.String(20), nullable=False)  # 'favorite', 'learned', 'rating', 'assessment'
+    value = db.Column(db.String(50), nullable=False)       # e.g. 'true', 'easy', 'hard', 'know', 'shaky'
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    __table_args__ = (db.UniqueConstraint('user_id', 'question_key', 'data_type', name='uq_user_quant'),)
 
 
 @login_manager.user_loader
@@ -100,7 +112,9 @@ def ensure_tables():
             pass
 
 
-# --- Word data ---
+# ═══════════════════════════════════════════════
+# VERBAL DATA
+# ═══════════════════════════════════════════════
 def load_memory_hooks():
     path = os.path.join(os.path.dirname(__file__), 'memory_hooks.json')
     if os.path.exists(path):
@@ -139,9 +153,33 @@ def load_lookalikes():
 LOOKALIKES = load_lookalikes()
 
 
-# --- Page routes ---
+# ═══════════════════════════════════════════════
+# QUANT DATA
+# ═══════════════════════════════════════════════
+from quant_data import TOPICS as QUANT_TOPICS, CATEGORIES as QUANT_CATEGORIES, _build_topics_json, _build_categories_json
+
+
+# ═══════════════════════════════════════════════
+# LANDING PAGE
+# ═══════════════════════════════════════════════
 @app.route('/')
-def index():
+def landing():
+    verbal_hook_count = sum(1 for w in WORDS if w.get('memory_hook'))
+    quant_q_count = sum(sum(len(s['questions']) for s in t['sections']) for t in QUANT_TOPICS)
+    return render_template('landing.html',
+                           verbal_word_count=len(WORDS),
+                           verbal_group_count=len(CONCEPT_GROUPS),
+                           verbal_hook_count=verbal_hook_count,
+                           quant_question_count=quant_q_count,
+                           quant_topic_count=len(QUANT_TOPICS),
+                           quant_category_count=len(QUANT_CATEGORIES))
+
+
+# ═══════════════════════════════════════════════
+# VERBAL ROUTES
+# ═══════════════════════════════════════════════
+@app.route('/verbal')
+def verbal():
     hook_count = sum(1 for w in WORDS if w.get('memory_hook'))
     return render_template('index.html', total=len(WORDS),
                            concept_group_count=len(CONCEPT_GROUPS),
@@ -176,7 +214,81 @@ def api_lookalikes():
     return jsonify(LOOKALIKES)
 
 
-# --- Auth routes ---
+# ═══════════════════════════════════════════════
+# QUANT ROUTES
+# ═══════════════════════════════════════════════
+@app.route('/quant')
+@app.route('/quant/')
+def quant_index():
+    cat_counts = {}
+    total_q = 0
+    for c in QUANT_CATEGORIES:
+        cat_counts[c['id']] = {'topics': 0, 'questions': 0}
+    for t in QUANT_TOPICS:
+        qc = sum(len(s['questions']) for s in t['sections'])
+        total_q += qc
+        cat_counts[t['category']]['topics'] += 1
+        cat_counts[t['category']]['questions'] += qc
+    return render_template('quant/index.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           cat_counts=cat_counts, total_q=total_q)
+
+@app.route('/quant/topic/<topic_id>')
+def quant_topic(topic_id):
+    t = next((t for t in QUANT_TOPICS if t['id'] == topic_id), None)
+    if t is None:
+        return 'Topic not found', 404
+    return render_template('quant/topic.html', topic=t, topics=QUANT_TOPICS, categories=QUANT_CATEGORIES)
+
+@app.route('/quant/favorites')
+def quant_favorites():
+    topics_data = _build_topics_json()
+    return render_template('quant/favorites.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data))
+
+@app.route('/quant/flashcards')
+def quant_flashcards():
+    topics_data = _build_topics_json()
+    categories_data = _build_categories_json()
+    return render_template('quant/flashcards.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+@app.route('/quant/flashcards/study')
+def quant_flashcard_study():
+    topics_data = _build_topics_json()
+    categories_data = _build_categories_json()
+    return render_template('quant/study.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+@app.route('/quant/dashboard')
+def quant_dashboard():
+    topics_data = _build_topics_json()
+    categories_data = _build_categories_json()
+    return render_template('quant/dashboard.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+@app.route('/quant/assessment')
+def quant_assessment():
+    topics_data = _build_topics_json()
+    categories_data = _build_categories_json()
+    return render_template('quant/assessment.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+@app.route('/quant/assessment/test')
+def quant_assessment_test():
+    topics_data = _build_topics_json()
+    categories_data = _build_categories_json()
+    return render_template('quant/assessment_test.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+
+# ═══════════════════════════════════════════════
+# AUTH ROUTES
+# ═══════════════════════════════════════════════
 @app.route('/auth/google')
 def auth_google():
     from google_auth import GoogleOAuthManager
@@ -271,7 +383,9 @@ def auth_me():
     return jsonify({'user': None})
 
 
-# --- Progress API ---
+# ═══════════════════════════════════════════════
+# VERBAL PROGRESS API
+# ═══════════════════════════════════════════════
 @app.route('/api/progress')
 def get_progress():
     if not current_user.is_authenticated:
@@ -308,7 +422,69 @@ def save_progress():
     return jsonify({'tags': tags})
 
 
-# --- TTS API ---
+# ═══════════════════════════════════════════════
+# QUANT PROGRESS API
+# ═══════════════════════════════════════════════
+@app.route('/api/quant/progress')
+def get_quant_progress():
+    if not current_user.is_authenticated:
+        return jsonify({'favorites': [], 'learned': [], 'ratings': {}, 'assessment': {}})
+
+    rows = UserQuantProgress.query.filter_by(user_id=current_user.id).all()
+    favorites = []
+    learned = []
+    ratings = {}
+    assessment = {}
+    for r in rows:
+        if r.data_type == 'favorite':
+            favorites.append(r.question_key)
+        elif r.data_type == 'learned':
+            learned.append(r.question_key)
+        elif r.data_type == 'rating':
+            ratings[r.question_key] = json.loads(r.value)
+        elif r.data_type == 'assessment':
+            assessment[r.question_key] = json.loads(r.value)
+    return jsonify({'favorites': favorites, 'learned': learned, 'ratings': ratings, 'assessment': assessment})
+
+@app.route('/api/quant/progress', methods=['POST'])
+def save_quant_progress():
+    if not current_user.is_authenticated:
+        return jsonify({'error': 'Not authenticated'}), 401
+
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'Missing data'}), 400
+
+    # Full replace: delete all existing, insert new
+    UserQuantProgress.query.filter_by(user_id=current_user.id).delete()
+
+    for qkey in data.get('favorites', []):
+        db.session.add(UserQuantProgress(
+            user_id=current_user.id, question_key=qkey,
+            data_type='favorite', value='true'))
+
+    for qkey in data.get('learned', []):
+        db.session.add(UserQuantProgress(
+            user_id=current_user.id, question_key=qkey,
+            data_type='learned', value='true'))
+
+    for qkey, val in data.get('ratings', {}).items():
+        db.session.add(UserQuantProgress(
+            user_id=current_user.id, question_key=qkey,
+            data_type='rating', value=json.dumps(val)))
+
+    for qkey, val in data.get('assessment', {}).items():
+        db.session.add(UserQuantProgress(
+            user_id=current_user.id, question_key=qkey,
+            data_type='assessment', value=json.dumps(val)))
+
+    db.session.commit()
+    return jsonify({'ok': True})
+
+
+# ═══════════════════════════════════════════════
+# TTS API
+# ═══════════════════════════════════════════════
 openai_client = None
 def get_openai():
     global openai_client

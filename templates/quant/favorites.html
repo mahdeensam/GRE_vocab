@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites — GRE Quant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quant-style.css') }}">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      startup: { typeset: false }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">&#9776;</button>
+
+  <!-- Sidebar nav — grouped by category -->
+  <nav class="sidebar" id="sidebar">
+    <a href="{{ url_for('landing') }}" class="sidebar-home" style="font-size:.85rem;opacity:.75;">&#8592; Back to Home</a>
+    <a href="{{ url_for('quant_index') }}" class="sidebar-home">&#8592; GRE Quant</a>
+
+    {% for cat in categories %}
+    <div class="sidebar-group">
+      <button class="sidebar-cat" onclick="toggleSidebarGroup(this)">
+        <span class="sidebar-cat-icon">{{ cat.icon }}</span>
+        <span class="sidebar-cat-name">{{ cat.name }}</span>
+        <span class="sidebar-chevron">&#8250;</span>
+      </button>
+      <div class="sidebar-items">
+        {% for t in topics if t.category == cat.id %}
+        <a href="{{ url_for('quant_topic', topic_id=t.id) }}" class="sidebar-link">
+          <span class="sidebar-icon">{{ t.icon }}</span> {{ t.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <a href="{{ url_for('quant_favorites') }}" class="sidebar-link fav-sidebar active">
+      <span class="sidebar-icon" style="background:rgba(248,113,113,.15);color:#f87171;">&#9829;</span> Favorites
+    </a>
+    <a href="{{ url_for('quant_flashcards') }}" class="sidebar-link sidebar-link-flashcards">
+      <span class="sidebar-icon" style="background:rgba(108,99,255,.15);color:var(--accent2);">&#9881;</span> Flashcards
+    </a>
+    <a href="{{ url_for('quant_assessment') }}" class="sidebar-link sidebar-link-assessment">
+      <span class="sidebar-icon" style="background:rgba(56,189,248,.15);color:#38bdf8;">&#9733;</span> What I Know
+    </a>
+    <a href="{{ url_for('quant_dashboard') }}" class="sidebar-link sidebar-link-dashboard">
+      <span class="sidebar-icon" style="background:rgba(52,211,153,.15);color:var(--green);">&#9776;</span> Dashboard
+    </a>
+  </nav>
+
+  <!-- Overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+  <main class="content">
+    <nav class="breadcrumb">
+      <a href="{{ url_for('quant_index') }}">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">My Favorites</span>
+    </nav>
+
+    <header class="topic-header">
+      <h1><span class="topic-badge" style="background:linear-gradient(135deg,#f87171,#ef4444);">&#9829;</span> My Favorites</h1>
+      <p class="topic-meta" id="fav-count">Loading...</p>
+    </header>
+
+    <div id="favorites-container">
+      <div class="empty-state">
+        <div class="empty-icon">&#9825;</div>
+        <h2>Loading...</h2>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>GRE Quant Practice &mdash; Every question, zero fluff.</p>
+    </div>
+  </footer>
+
+  <!-- Pass all topics data as JSON for client-side filtering -->
+  <script>
+    window.ALL_TOPICS = {{ topics_json|safe }};
+  </script>
+  <script src="{{ url_for('static', filename='quant-app.js') }}"></script>
+</body>
+</html>

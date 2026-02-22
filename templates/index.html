@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GRE Vocab Master</title>
+<title>GRE Verbal — GRE Master</title>
 <meta name="description" content="Master GRE vocabulary with flashcards, concept groups, and Bengali memory hooks. Track your progress across devices.">
 <meta property="og:title" content="GRE Vocab Master">
 <meta property="og:description" content="Flashcards, concept groups, and Bengali memory hooks — everything you need to conquer the GRE verbal section.">
@@ -24,7 +24,7 @@
 <section id="hero">
   <div class="hero-bg-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">GRE Preparation Tool</div>
+    <div class="hero-badge">GRE Master — Verbal Section</div>
     <h1 class="hero-title">Master GRE Vocabulary</h1>
     <p class="hero-tagline">Flashcards, concept groups, and Bengali memory hooks — everything you need to conquer the GRE verbal section.</p>
     <div class="hero-stats">
@@ -70,12 +70,13 @@
 </section>
 
 <nav>
-  <div class="nav-brand">
+  <div class="nav-brand" style="gap:.5rem">
+    <a href="/" style="color:var(--muted);text-decoration:none;font-size:.8rem;padding:4px 10px;border:1px solid var(--border);border-radius:6px;transition:all .2s;white-space:nowrap" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">&larr; Home</a>
     <svg class="brand-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
       <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
     </svg>
-    <span class="brand-text">GRE Vocab Master</span>
+    <span class="brand-text">GRE Verbal</span>
   </div>
   <div class="nav-links">
     <button class="nav-btn active" data-view="flashcard">Flashcards</button>
@@ -423,6 +424,7 @@ let _wordsCache = null;
 async function fetchWords() {
   if (_wordsCache) return _wordsCache;
   const res = await fetch('/api/words');
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
   _wordsCache = await res.json();
   return _wordsCache;
 }
@@ -773,15 +775,28 @@ function saveTags() {
 }
 
 async function loadWordList(q = '') {
-  if (q) {
-    const res = await fetch(`/api/words?q=${encodeURIComponent(q)}`);
-    allWords = await res.json();
-  } else {
-    allWords = [...await fetchWords()];
+  const list = document.getElementById('word-list');
+  list.innerHTML = '<div class="empty-state">Loading words...</div>';
+  try {
+    if (q) {
+      const res = await fetch(`/api/words?q=${encodeURIComponent(q)}`);
+      allWords = await res.json();
+    } else {
+      allWords = [...await fetchWords()];
+    }
+    originalWords = [...allWords];
+    // Auto-compact on mobile for performance (716 full rows = ~12k DOM nodes)
+    if (window.innerWidth <= 640 && !compactMode && allWords.length > 100) {
+      compactMode = true;
+      const btn = document.getElementById('compact-toggle');
+      if (btn) { btn.textContent = 'Full View'; btn.classList.add('active'); }
+    }
+    document.getElementById('sort-select').value = 'default';
+    renderWordList();
+  } catch (e) {
+    console.error('loadWordList error:', e);
+    list.innerHTML = '<div class="empty-state">Failed to load words. Check your connection and try again.</div>';
   }
-  originalWords = [...allWords];
-  document.getElementById('sort-select').value = 'default';
-  renderWordList();
 }
 
 function getFilteredWords() {

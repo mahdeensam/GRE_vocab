@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ topic.title }} — GRE Quant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quant-style.css') }}">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      startup: { typeset: true }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <!-- Mobile menu toggle -->
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">&#9776;</button>
+
+  <!-- Sidebar nav — grouped by category -->
+  <nav class="sidebar" id="sidebar">
+    <a href="{{ url_for('landing') }}" class="sidebar-home" style="font-size:.85rem;opacity:.75;">&#8592; Back to Home</a>
+    <a href="{{ url_for('quant_index') }}" class="sidebar-home">&#8592; GRE Quant</a>
+
+    {% for cat in categories %}
+    {% set is_current_cat = topic.category == cat.id %}
+    <div class="sidebar-group {% if is_current_cat %}open{% endif %}">
+      <button class="sidebar-cat" onclick="toggleSidebarGroup(this)">
+        <span class="sidebar-cat-icon">{{ cat.icon }}</span>
+        <span class="sidebar-cat-name">{{ cat.name }}</span>
+        <span class="sidebar-chevron">&#8250;</span>
+      </button>
+      <div class="sidebar-items">
+        {% for t in topics if t.category == cat.id %}
+        <a href="{{ url_for('quant_topic', topic_id=t.id) }}"
+           class="sidebar-link {% if t.id == topic.id %}active{% endif %}">
+          <span class="sidebar-icon">{{ t.icon }}</span> {{ t.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <a href="{{ url_for('quant_favorites') }}" class="sidebar-link fav-sidebar">
+      <span class="sidebar-icon" style="background:rgba(248,113,113,.15);color:#f87171;">&#9829;</span> Favorites
+    </a>
+    <a href="{{ url_for('quant_flashcards') }}" class="sidebar-link sidebar-link-flashcards">
+      <span class="sidebar-icon" style="background:rgba(108,99,255,.15);color:var(--accent2);">&#9881;</span> Flashcards
+    </a>
+    <a href="{{ url_for('quant_assessment') }}" class="sidebar-link sidebar-link-assessment">
+      <span class="sidebar-icon" style="background:rgba(56,189,248,.15);color:#38bdf8;">&#9733;</span> What I Know
+    </a>
+    <a href="{{ url_for('quant_dashboard') }}" class="sidebar-link sidebar-link-dashboard">
+      <span class="sidebar-icon" style="background:rgba(52,211,153,.15);color:var(--green);">&#9776;</span> Dashboard
+    </a>
+  </nav>
+
+  <!-- Overlay for mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMobileMenu()"></div>
+
+  <main class="content">
+    <!-- Breadcrumb -->
+    {% for cat in categories if cat.id == topic.category %}
+    <nav class="breadcrumb">
+      <a href="{{ url_for('quant_index') }}">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <a href="{{ url_for('quant_index') }}#{{ cat.id }}">{{ cat.name }}</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">{{ topic.title }}</span>
+    </nav>
+    {% endfor %}
+
+    <header class="topic-header">
+      <h1><span class="topic-badge">{{ topic.icon }}</span> {{ topic.title }}</h1>
+      {% set ns = namespace(count=0) %}
+      {% for s in topic.sections %}
+        {% set ns.count = ns.count + s.questions|length %}
+      {% endfor %}
+      <p class="topic-meta">{{ ns.count }} questions across {{ topic.sections|length }} sections</p>
+    </header>
+
+    {% set si = namespace(idx=0) %}
+    {% for section in topic.sections %}
+    <section class="question-section">
+      <h2 class="section-title">{{ section.type }}</h2>
+      <p class="section-instructions">{{ section.instructions|safe }}</p>
+
+      {% for q in section.questions %}
+      {% set qkey = topic.id ~ '_' ~ si.idx ~ '_' ~ q.id %}
+      <div class="question-card" id="q{{ q.id }}">
+        <button class="fav-btn" data-qkey="{{ qkey }}" onclick="toggleFav('{{ qkey }}')" title="Toggle favorite">&#9829;</button>
+        <button class="learned-btn" data-qkey="{{ qkey }}" onclick="toggleLearned('{{ qkey }}')" title="Mark as learned">&#10003;</button>
+        <div class="q-number">Q{{ q.id }}</div>
+        <div class="q-body">
+          {% if q.stem %}
+          <div class="q-stem">{{ q.stem|safe }}</div>
+          {% endif %}
+
+          {# QC layout #}
+          {% if q.qtyA is defined %}
+          <table class="qc-table">
+            <thead><tr><th>Quantity A</th><th>Quantity B</th></tr></thead>
+            <tbody><tr><td>{{ q.qtyA|safe }}</td><td>{{ q.qtyB|safe }}</td></tr></tbody>
+          </table>
+          {% endif %}
+
+          {# Choices #}
+          {% if q.choices is defined %}
+          <ul class="choices">
+            {% for c in q.choices %}
+            <li>{{ c|safe }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {# Numeric entry placeholder #}
+          {% if q.qtyA is not defined and q.choices is not defined %}
+          <div class="numeric-entry">
+            <label>Your answer: <input type="text" class="entry-box" placeholder="___"></label>
+          </div>
+          {% endif %}
+
+          {# Answer reveal #}
+          {% if q.answer is defined %}
+          <button class="reveal-btn" onclick="toggleAnswer('{{ qkey }}')">Show Answer</button>
+          <div class="answer-box" id="ans-{{ qkey }}">
+            <div class="answer-text">Answer: {{ q.answer|safe }}</div>
+            {% if q.explanation is defined %}
+            <div class="explanation-text">{{ q.explanation|safe }}</div>
+            {% endif %}
+            {% if q.common_mistake is defined %}
+            <div class="mistake-box">&#9888; Common Mistake: {{ q.common_mistake|safe }}</div>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% set si.idx = si.idx + 1 %}
+    {% endfor %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>GRE Quant Practice &mdash; Every question, zero fluff.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='quant-app.js') }}"></script>
+</body>
+</html>

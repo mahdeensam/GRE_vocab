@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRE Quant — Question Bank</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='quant-style.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>GRE Quant</h1>
+
+      <p class="subtitle">{{ total_q }}+ Questions &bull; {{ topics|length }} Topics &bull; {{ categories|length }} Chapters</p>
+
+      <div class="hero-nav">
+        <a href="{{ url_for('landing') }}" class="category-btn" style="border:2px solid rgba(255,255,255,.3);">
+          <span class="category-icon">&#8592;</span>
+          <div>
+            <div class="category-label">Back to Home</div>
+            <div class="category-count">GRE Master App</div>
+          </div>
+        </a>
+        {% for cat in categories %}
+        <a href="#{{ cat.id }}" class="category-btn">
+          <span class="category-icon">{{ cat.icon }}</span>
+          <div>
+            <div class="category-label">{{ cat.name }}</div>
+            <div class="category-count">{{ cat_counts[cat.id]['topics'] }} topics &bull; {{ cat_counts[cat.id]['questions'] }} questions</div>
+          </div>
+        </a>
+        {% endfor %}
+        <a href="{{ url_for('quant_favorites') }}" class="category-btn category-btn-fav">
+          <span class="category-icon category-icon-fav">&#9829;</span>
+          <div>
+            <div class="category-label">My Favorites</div>
+            <div class="category-count" id="home-fav-count">0 saved</div>
+          </div>
+        </a>
+        <a href="{{ url_for('quant_flashcards') }}" class="category-btn category-btn-flash">
+          <span class="category-icon category-icon-flash">&#9881;</span>
+          <div>
+            <div class="category-label">Flashcards</div>
+            <div class="category-count">Study decks</div>
+          </div>
+        </a>
+        <a href="{{ url_for('quant_assessment') }}" class="category-btn category-btn-assess">
+          <span class="category-icon category-icon-assess">&#9733;</span>
+          <div>
+            <div class="category-label">What I Know</div>
+            <div class="category-count">Self-assessment</div>
+          </div>
+        </a>
+        <a href="{{ url_for('quant_dashboard') }}" class="category-btn category-btn-dash">
+          <span class="category-icon category-icon-dash">&#9776;</span>
+          <div>
+            <div class="category-label">Dashboard</div>
+            <div class="category-count">Gap analysis</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    {% for cat in categories %}
+    <section class="category-section">
+      <h2 class="category-header" id="{{ cat.id }}">
+        <span class="category-header-icon">{{ cat.icon }}</span>
+        {{ cat.name }}
+        <span class="category-header-count">{{ cat_counts[cat.id]['topics'] }} topics &bull; {{ cat_counts[cat.id]['questions'] }} questions</span>
+      </h2>
+      <div class="topic-grid">
+        {% for t in topics if t.category == cat.id %}
+        {% set ns = namespace(count=0) %}
+        {% for s in t.sections %}
+          {% set ns.count = ns.count + s.questions|length %}
+        {% endfor %}
+        <a href="{{ url_for('quant_topic', topic_id=t.id) }}" class="topic-card" data-topic-id="{{ t.id }}" data-total="{{ ns.count }}">
+          <span class="topic-icon">{{ t.icon }}</span>
+          <h2>{{ t.title }}</h2>
+          <p class="meta">{{ t.sections|length }} sections &bull; {{ ns.count }} questions</p>
+          <div class="topic-progress"></div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>GRE Quant Practice &mdash; Every question, zero fluff.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='quant-app.js') }}"></script>
+</body>
+</html>
