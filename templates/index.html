@@ -296,6 +296,19 @@
   <div class="math-header">
     <h2 class="math-title">GRE Quantitative Reasoning</h2>
     <div class="math-chapter-tabs" id="math-chapter-tabs"></div>
+    <div class="math-toolbar">
+      <div class="math-search-bar">
+        <input type="text" id="math-search" placeholder="Search topics..." autocomplete="off">
+      </div>
+      <div class="math-toolbar-actions">
+        <button class="math-toolbar-btn" onclick="toggleAllMathTopics(true)">Expand All</button>
+        <button class="math-toolbar-btn" onclick="toggleAllMathTopics(false)">Collapse All</button>
+        <button class="math-toolbar-btn" id="math-show-answers-btn" onclick="toggleAllMathAnswers()">Show Answers</button>
+      </div>
+    </div>
+    <div class="math-progress-bar-wrap">
+      <div class="math-progress-bar" id="math-progress-bar"></div>
+    </div>
     <div class="math-progress-summary" id="math-progress-summary"></div>
   </div>
   <div class="math-content" id="math-content"></div>
@@ -1535,6 +1548,10 @@ let activeMathChapter = 'arithmetic';
 
 function renderMathChapterTabs() {
   const tabs = document.getElementById('math-chapter-tabs');
+  const activeChapter = MATH_DATA.find(c => c.id === activeMathChapter);
+  if (activeChapter) {
+    document.getElementById('math-view').style.setProperty('--math-active-color', activeChapter.color);
+  }
   tabs.innerHTML = MATH_DATA.map(ch =>
     `<button class="math-chapter-tab ${ch.id === activeMathChapter ? 'active' : ''}" data-chapter="${ch.id}" style="--ch-color:${ch.color}">
       <span class="math-tab-emoji">${ch.emoji}</span> ${ch.title}
@@ -1555,13 +1572,15 @@ function renderMathContent() {
   const container = document.getElementById('math-content');
 
   const studiedCount = chapter.sections.filter(s => mathStudied[s.id]).length;
+  const pct = chapter.sections.length ? Math.round((studiedCount / chapter.sections.length) * 100) : 0;
+  document.getElementById('math-progress-bar').style.width = pct + '%';
   document.getElementById('math-progress-summary').textContent =
     `${studiedCount} / ${chapter.sections.length} topics studied`;
 
   container.innerHTML = chapter.sections.map(sec => {
     const studied = mathStudied[sec.id];
     return `
-    <div class="math-topic ${studied ? 'math-topic-studied' : ''}" id="math-${sec.id}">
+    <div class="math-topic ${studied ? 'math-topic-studied' : ''}" id="math-${sec.id}" data-title="${sec.title.toLowerCase()}">
       <div class="math-topic-header" onclick="toggleMathTopic('${sec.id}')">
         <div class="math-topic-title-row">
           <span class="math-collapse-icon">+</span>
@@ -1575,7 +1594,7 @@ function renderMathContent() {
         </div>
       </div>
       <div class="math-topic-body" style="display:none">
-        ${sec.concepts.length ? `<div class="math-section-block">
+        ${sec.concepts.length ? `<div class="math-section-block math-concept-block">
           <div class="math-section-label">Key Concepts</div>
           <ul class="math-concept-list">${sec.concepts.map(c => `<li>${c}</li>`).join('')}</ul>
         </div>` : ''}
@@ -1587,7 +1606,7 @@ function renderMathContent() {
           <div class="math-section-label">Tips &amp; Traps</div>
           <ul class="math-tips-list">${sec.tips.map(t => `<li>${t}</li>`).join('')}</ul>
         </div>` : ''}
-        ${sec.questions.length ? `<div class="math-section-block">
+        ${sec.questions.length ? `<div class="math-section-block math-questions-block">
           <div class="math-section-label">Practice Questions</div>
           <div class="math-questions">${sec.questions.map((qa, i) => `
             <div class="math-qa">
@@ -1625,6 +1644,69 @@ function toggleMathStudied(secId) {
   }
   localStorage.setItem('greMathStudied', JSON.stringify(mathStudied));
   renderMathContent();
+}
+
+function toggleAllMathTopics(expand) {
+  document.querySelectorAll('#math-content .math-topic').forEach(topic => {
+    const body = topic.querySelector('.math-topic-body');
+    const icon = topic.querySelector('.math-collapse-icon');
+    if (expand) {
+      body.style.display = '';
+      icon.textContent = '\u2212';
+    } else {
+      body.style.display = 'none';
+      icon.textContent = '+';
+    }
+  });
+}
+
+let mathAnswersShown = false;
+function toggleAllMathAnswers() {
+  mathAnswersShown = !mathAnswersShown;
+  const btn = document.getElementById('math-show-answers-btn');
+  btn.textContent = mathAnswersShown ? 'Hide Answers' : 'Show Answers';
+  if (mathAnswersShown) btn.classList.add('active');
+  else btn.classList.remove('active');
+  document.querySelectorAll('#math-content .math-a').forEach(a => {
+    if (mathAnswersShown) a.classList.add('show');
+    else a.classList.remove('show');
+  });
+}
+
+// Math search with debounce
+(function() {
+  let timer;
+  document.getElementById('math-search').addEventListener('input', function() {
+    clearTimeout(timer);
+    const q = this.value;
+    timer = setTimeout(() => filterMathTopics(q), 200);
+  });
+})();
+
+function filterMathTopics(query) {
+  const q = query.trim().toLowerCase();
+  const topics = document.querySelectorAll('#math-content .math-topic');
+  let visible = 0;
+  topics.forEach(t => {
+    if (!q || t.dataset.title.includes(q)) {
+      t.classList.remove('math-hidden');
+      visible++;
+    } else {
+      t.classList.add('math-hidden');
+    }
+  });
+  let countEl = document.getElementById('math-search-count');
+  if (q) {
+    if (!countEl) {
+      countEl = document.createElement('div');
+      countEl.id = 'math-search-count';
+      countEl.className = 'math-search-count';
+      document.getElementById('math-content').before(countEl);
+    }
+    countEl.textContent = `${visible} matching topic${visible !== 1 ? 's' : ''}`;
+  } else if (countEl) {
+    countEl.remove();
+  }
 }
 
 // Load math on nav switch
