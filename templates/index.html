@@ -62,6 +62,11 @@
         <div class="hero-feature-title">GRE Math</div>
         <div class="hero-feature-desc">Arithmetic, algebra, geometry, data analysis &amp; QC strategies</div>
       </div>
+      <div class="hero-feature" data-target="verbal-practice" role="button" tabindex="0">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
+        <div class="hero-feature-title">Practice Questions</div>
+        <div class="hero-feature-desc">TC, SE &amp; RC — high-band verbal practice with answer explanations</div>
+      </div>
     </div>
     <button class="hero-cta" id="hero-cta">Start Learning &rarr;</button>
     <div id="hero-auth" class="hero-auth">{% if current_user.is_authenticated %}<div class="hero-signed-in">Signed in as <strong>{{ current_user.name or current_user.email }}</strong></div>{% else %}<a href="/auth/google" class="hero-sign-in">Sign in with Google to save progress</a>{% endif %}</div>
@@ -374,6 +379,10 @@ document.querySelectorAll('.hero-feature[data-target]').forEach(card => {
         renderMathChapterTabs();
         renderMathContent();
         mathLoaded = true;
+      }
+      if (target === 'verbal-practice') {
+        window.location.href = '/verbal/practice';
+        return;
       }
     }, 460);
   });

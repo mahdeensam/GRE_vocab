@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRE Verbal — Practice Questions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='verbal-practice.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>GRE Verbal Practice</h1>
+      <p class="subtitle">{{ total_q }}+ Questions &bull; {{ topics|length }} Topics &bull; {{ categories|length }} Categories</p>
+
+      <div class="hero-nav">
+        <a href="{{ url_for('verbal') }}" class="category-btn" style="border:2px solid rgba(255,255,255,.3);">
+          <span class="category-icon">&#8592;</span>
+          <div>
+            <div class="category-label">Back to Verbal</div>
+            <div class="category-count">Vocab &amp; Flashcards</div>
+          </div>
+        </a>
+        {% for cat in categories %}
+        <a href="#{{ cat.id }}" class="category-btn">
+          <span class="category-icon">{{ cat.icon }}</span>
+          <div>
+            <div class="category-label">{{ cat.name }}</div>
+            <div class="category-count">{{ cat_counts[cat.id]['topics'] }} topics &bull; {{ cat_counts[cat.id]['questions'] }} questions</div>
+          </div>
+        </a>
+        {% endfor %}
+        <a href="{{ url_for('verbal_practice_assessment') }}" class="category-btn category-btn-assess">
+          <span class="category-icon category-icon-assess">&#9733;</span>
+          <div>
+            <div class="category-label">What I Know</div>
+            <div class="category-count">Self-assessment</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    {% for cat in categories %}
+    <section class="category-section">
+      <h2 class="category-header" id="{{ cat.id }}">
+        <span class="category-header-icon">{{ cat.icon }}</span>
+        {{ cat.name }}
+        <span class="category-header-count">{{ cat_counts[cat.id]['topics'] }} topics &bull; {{ cat_counts[cat.id]['questions'] }} questions</span>
+      </h2>
+      <div class="topic-grid">
+        {% for t in topics if t.category == cat.id %}
+        {% set ns = namespace(count=0) %}
+        {% for s in t.sections %}
+          {% set ns.count = ns.count + s.questions|length %}
+        {% endfor %}
+        <a href="{{ url_for('verbal_practice_topic', topic_id=t.id) }}" class="topic-card" data-topic-id="{{ t.id }}" data-total="{{ ns.count }}">
+          <span class="topic-icon">{{ t.icon }}</span>
+          <h2>{{ t.title }}</h2>
+          <p class="meta">{{ t.sections|length }} sections &bull; {{ ns.count }} questions</p>
+          <div class="topic-progress"></div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>GRE Verbal Practice &mdash; High-band difficulty questions.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='verbal-practice.js') }}"></script>
+</body>
+</html>

@@ -184,6 +184,36 @@ def _build_categories_json():
 
 
 # ═══════════════════════════════════════════════
+# VERBAL PRACTICE DATA (lazy-loaded like quant)
+# ═══════════════════════════════════════════════
+_verbal_practice_loaded = False
+VERBAL_TOPICS = []
+VERBAL_CATEGORIES = []
+
+def _ensure_verbal_practice():
+    global _verbal_practice_loaded, VERBAL_TOPICS, VERBAL_CATEGORIES
+    if _verbal_practice_loaded:
+        return
+    try:
+        from verbal_data import VERBAL_TOPICS as VT, VERBAL_CATEGORIES as VC
+        VERBAL_TOPICS.extend(VT)
+        VERBAL_CATEGORIES.extend(VC)
+        _verbal_practice_loaded = True
+    except Exception as e:
+        app.logger.error(f'Failed to load verbal practice data: {e}')
+
+def _build_verbal_topics_json():
+    _ensure_verbal_practice()
+    from verbal_data import _build_verbal_topics_json as _bvtj
+    return _bvtj()
+
+def _build_verbal_categories_json():
+    _ensure_verbal_practice()
+    from verbal_data import _build_verbal_categories_json as _bvcj
+    return _bvcj()
+
+
+# ═══════════════════════════════════════════════
 # LANDING PAGE
 # ═══════════════════════════════════════════════
 @app.route('/')
@@ -315,6 +345,52 @@ def quant_assessment_test():
     topics_data = _build_topics_json()
     categories_data = _build_categories_json()
     return render_template('quant/assessment_test.html', topics=QUANT_TOPICS, categories=QUANT_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+
+# ═══════════════════════════════════════════════
+# VERBAL PRACTICE ROUTES
+# ═══════════════════════════════════════════════
+@app.route('/verbal/practice')
+@app.route('/verbal/practice/')
+def verbal_practice_index():
+    _ensure_verbal_practice()
+    cat_counts = {}
+    total_q = 0
+    for c in VERBAL_CATEGORIES:
+        cat_counts[c['id']] = {'topics': 0, 'questions': 0}
+    for t in VERBAL_TOPICS:
+        qc = sum(len(s['questions']) for s in t['sections'])
+        total_q += qc
+        cat_counts[t['category']]['topics'] += 1
+        cat_counts[t['category']]['questions'] += qc
+    return render_template('verbal/practice_index.html', topics=VERBAL_TOPICS, categories=VERBAL_CATEGORIES,
+                           cat_counts=cat_counts, total_q=total_q)
+
+@app.route('/verbal/practice/topic/<topic_id>')
+def verbal_practice_topic(topic_id):
+    _ensure_verbal_practice()
+    t = next((t for t in VERBAL_TOPICS if t['id'] == topic_id), None)
+    if t is None:
+        return 'Topic not found', 404
+    return render_template('verbal/practice_topic.html', topic=t, topics=VERBAL_TOPICS, categories=VERBAL_CATEGORIES)
+
+@app.route('/verbal/practice/assessment')
+def verbal_practice_assessment():
+    _ensure_verbal_practice()
+    topics_data = _build_verbal_topics_json()
+    categories_data = _build_verbal_categories_json()
+    return render_template('verbal/practice_assessment.html', topics=VERBAL_TOPICS, categories=VERBAL_CATEGORIES,
+                           topics_json=json.dumps(topics_data),
+                           categories_json=json.dumps(categories_data))
+
+@app.route('/verbal/practice/assessment/test')
+def verbal_practice_assessment_test():
+    _ensure_verbal_practice()
+    topics_data = _build_verbal_topics_json()
+    categories_data = _build_verbal_categories_json()
+    return render_template('verbal/practice_assessment_test.html', topics=VERBAL_TOPICS, categories=VERBAL_CATEGORIES,
                            topics_json=json.dumps(topics_data),
                            categories_json=json.dumps(categories_data))
 
