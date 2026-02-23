@@ -807,13 +807,24 @@ function buildAssessmentDeck(type, id) {
   var index = buildQuestionIndex();
   var assess = getAssessment();
 
+  // Helper: prioritise unassessed questions, then fill with assessed (no repeats)
+  function prioritiseUnassessed(pool, limit) {
+    var unseen = pool.filter(function(item) { return !assess[item.qKey]; });
+    var seen   = pool.filter(function(item) { return !!assess[item.qKey]; });
+    var deck   = shuffle(unseen);
+    if (deck.length < limit) {
+      deck = deck.concat(shuffle(seen).slice(0, limit - deck.length));
+    }
+    return deck.slice(0, limit);
+  }
+
   if (type === 'category') {
     var filtered = index.filter(function(item) { return item.topic.category === id; });
-    return shuffle(filtered).slice(0, 50);
+    return prioritiseUnassessed(filtered, 50);
   }
   if (type === 'type') {
     var filtered = index.filter(function(item) { return item.qType === id; });
-    return shuffle(filtered).slice(0, 50);
+    return prioritiseUnassessed(filtered, 50);
   }
   if (type === 'unassessed') {
     var filtered = index.filter(function(item) { return !assess[item.qKey]; });
@@ -827,10 +838,10 @@ function buildAssessmentDeck(type, id) {
     return shuffle(filtered).slice(0, 50);
   }
   if (type === 'random') {
-    return shuffle(index).slice(0, 50);
+    return prioritiseUnassessed(index, 50);
   }
   if (type === 'full') {
-    return shuffle(index);
+    return prioritiseUnassessed(index, index.length);
   }
   return [];
 }
