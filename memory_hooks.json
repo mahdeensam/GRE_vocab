@@ -7,6 +7,14 @@
     "hook": "A BULL smashes through and eliminates everything",
     "type": "imagery"
   },
+  "abrogate": {
+    "hook": "A-BROKE-ATE: broke and ate the contract - abolished it",
+    "type": "wordplay"
+  },
+  "abrupt": {
+    "hook": "A-RUPT(ure) - a sudden rupture with no warning",
+    "type": "wordplay"
+  },
   "absolve": {
     "hook": "AB-SOLVE: solve away the guilt completely",
     "type": "wordplay"
@@ -23,18 +31,6 @@
     "hook": "Sounds like OBTUSE - too dense to understand",
     "type": "sound"
   },
-  "abrupt": {
-    "hook": "A-RUPT(ure) - a sudden rupture with no warning",
-    "type": "wordplay"
-  },
-  "accessible": {
-    "hook": "ACCESS + ABLE = easy to approach and understand",
-    "type": "wordplay"
-  },
-  "acclaim": {
-    "hook": "A-CLAIM of greatness - public praise",
-    "type": "wordplay"
-  },
   "accent": {
     "hook": "Put the ACCENT on that syllable - emphasize it!",
     "type": "wordplay"
@@ -47,20 +43,24 @@
     "hook": "A-CEPT (take in Latin) - just take it, receive it",
     "type": "wordplay"
   },
+  "accessible": {
+    "hook": "ACCESS + ABLE = easy to approach and understand",
+    "type": "wordplay"
+  },
+  "acclaim": {
+    "hook": "A-CLAIM of greatness - public praise",
+    "type": "wordplay"
+  },
+  "accolade": {
+    "hook": "A COLA-ADE drink served as a prize - an honor!",
+    "type": "imagery"
+  },
   "accord": {
     "hook": "A CHORD played in perfect harmony - agreement",
     "type": "sound"
   },
   "acerbic": {
     "hook": "ACID + HERB - tastes sharp and bitter on your tongue",
-    "type": "sound"
-  },
-  "acrid": {
-    "hook": "ACID with an R - bitter, harsh, irritating smell",
-    "type": "sound"
-  },
-  "acrimony": {
-    "hook": "A-CRIME-ON-Y: feels like a crime, so much bitterness",
     "type": "sound"
   },
   "acquiesce": {
@@ -71,6 +71,18 @@
     "hook": "A-QUIT: quit the charges - declared not guilty!",
     "type": "wordplay"
   },
+  "acrid": {
+    "hook": "ACID with an R - bitter, harsh, irritating smell",
+    "type": "sound"
+  },
+  "acrimonious": {
+    "hook": "ACRI-MONEY-OUS: fighting over money - bitter and sharp",
+    "type": "wordplay"
+  },
+  "acrimony": {
+    "hook": "A-CRIME-ON-Y: feels like a crime, so much bitterness",
+    "type": "sound"
+  },
   "acumen": {
     "hook": "ACE-MEN have ace-level sharp judgment",
     "type": "wordplay"
@@ -79,13 +91,21 @@
     "hook": "ADAM the ANT - tiny but absolutely refuses to budge",
     "type": "wordplay"
   },
-  "adopt": {
-    "hook": "A-DOPT: pick it up and drop it into your life - accept",
+  "adapt": {
+    "hook": "A-DAPT: apt to change - adjust to new conditions",
     "type": "wordplay"
   },
   "admonish": {
     "hook": "ADD A MONISH-ing tone: gently scold with warning",
     "type": "sound"
+  },
+  "adopt": {
+    "hook": "A-DOPT: pick it up and drop it into your life - accept",
+    "type": "wordplay"
+  },
+  "adulate": {
+    "hook": "ADULT-ATE: adults who ate up everything a celebrity did - excessive praise",
+    "type": "wordplay"
   },
   "adulation": {
     "hook": "ADULT-ation: adults fawning over you with excessive praise",
@@ -95,12 +115,24 @@
     "hook": "ADVERSE + RIVAL = opposing and conflicting",
     "type": "wordplay"
   },
+  "aesthetic": {
+    "hook": "A-STATIC beautiful painting you stare at - relating to beauty",
+    "type": "imagery"
+  },
   "affable": {
     "hook": "A-FAB-le: FABulously friendly and easy to talk to",
     "type": "wordplay"
   },
   "affirm": {
     "hook": "A-FIRM statement: stated firmly as true",
+    "type": "wordplay"
+  },
+  "affluent": {
+    "hook": "A-FLUENT flow of money - wealthy and abundant",
+    "type": "wordplay"
+  },
+  "aggrandize": {
+    "hook": "A-GRAND-SIZE: making yourself grand-sized - inflating importance",
     "type": "wordplay"
   },
   "aggravate": {
@@ -131,6 +163,14 @@
     "hook": "ALL-TRUE-ISTIC: it's all true, they genuinely care for others",
     "type": "wordplay"
   },
+  "ambiguous": {
+    "hook": "AMBI (both) + GUOUS: could go both ways",
+    "type": "wordplay"
+  },
+  "ambivalent": {
+    "hook": "AMBI (both) + VALENT: pulled in both directions at once",
+    "type": "wordplay"
+  },
   "ameliorate": {
     "hook": "A-MELIORATE: make things MELLOWER and better",
     "type": "sound"
@@ -143,16 +183,16 @@
     "hook": "AMI (friend in French) + ABLE: able to be a friend",
     "type": "wordplay"
   },
-  "ambiguous": {
-    "hook": "AMBI (both) + GUOUS: could go both ways",
-    "type": "wordplay"
-  },
-  "ambivalent": {
-    "hook": "AMBI (both) + VALENT: pulled in both directions at once",
+  "amicable": {
+    "hook": "AMI-CABLE: like a friendly cable connecting two people",
     "type": "wordplay"
   },
   "amplify": {
     "hook": "AMP it up! Crank the amplifier - make it stronger",
+    "type": "wordplay"
+  },
+  "anachronistic": {
+    "hook": "ANA-CHRONIC: chronically out of time - belonging to wrong era",
     "type": "wordplay"
   },
   "analogous": {
@@ -167,6 +207,10 @@
     "hook": "ANIME villain radiating pure hostility and ill will",
     "type": "sound"
   },
+  "annul": {
+    "hook": "A-NULL: make it null and void - declare invalid",
+    "type": "wordplay"
+  },
   "anodyne": {
     "hook": "A-NO-DYNE (pain): no pain here, just soothing relief",
     "type": "wordplay"
@@ -179,8 +223,24 @@
     "hook": "ANT-AGONISTIC: two ants fighting - hostile and opposed",
     "type": "wordplay"
   },
+  "antagonize": {
+    "hook": "ANT-AGONIZE: an ant that agonizes you - provokes hostility",
+    "type": "imagery"
+  },
   "antipathy": {
     "hook": "ANTI-PATHY (feeling): feeling AGAINST something - strong dislike",
+    "type": "wordplay"
+  },
+  "antiquated": {
+    "hook": "ANTIQUE-ATED: turned into an antique - outdated and old",
+    "type": "wordplay"
+  },
+  "antithetical": {
+    "hook": "ANTI-THESIS: against the thesis - directly opposed",
+    "type": "wordplay"
+  },
+  "apathetic": {
+    "hook": "A-PATH-ETIC: too pathetic to care - showing no interest",
     "type": "wordplay"
   },
   "apodictic": {
@@ -191,13 +251,17 @@
     "hook": "A-PEACE: bring about PEACE - calm and satisfy",
     "type": "sound"
   },
+  "applied": {
+    "hook": "APPLIED to real life - practical, not just theory",
+    "type": "wordplay"
+  },
   "appraise": {
     "hook": "A-PRAISE with a PRICE: evaluate its worth",
     "type": "sound"
   },
-  "applied": {
-    "hook": "APPLIED to real life - practical, not just theory",
-    "type": "wordplay"
+  "apprehensive": {
+    "hook": "APPRE-HENSIVE: like a hen nervously pecking - anxious about future",
+    "type": "imagery"
   },
   "approve": {
     "hook": "A-PROVE: prove you agree and support it",
@@ -219,6 +283,10 @@
     "hook": "ARSON is ARDENT - burning with passionate fire",
     "type": "sound"
   },
+  "arrogant": {
+    "hook": "ARROW-GANT: shooting arrows of ego at everyone - excessive pride",
+    "type": "imagery"
+  },
   "articulate": {
     "hook": "ART-ICULATE: it's an ART to express clearly",
     "type": "wordplay"
@@ -227,8 +295,16 @@
     "hook": "A-SKEPTIC of luxury - avoids all comfort and pleasure",
     "type": "sound"
   },
+  "assent": {
+    "hook": "A-SENT nod: sent your agreement - formal approval",
+    "type": "wordplay"
+  },
   "assess": {
     "hook": "AS-SESS: sit in SESSION and evaluate carefully",
+    "type": "wordplay"
+  },
+  "assiduous": {
+    "hook": "ASS-I-DO-US: I do, I do! Working your butt off - persistent effort",
     "type": "wordplay"
   },
   "assuage": {
@@ -251,6 +327,10 @@
     "hook": "AUDIO-CITY: city so LOUD with boldness and daring",
     "type": "sound"
   },
+  "augment": {
+    "hook": "AUG-MENT: August meant bigger harvests - increase and grow",
+    "type": "wordplay"
+  },
   "auspicious": {
     "hook": "AU (gold) + SPICIOUS: suspiciously golden - favorable!",
     "type": "wordplay"
@@ -259,12 +339,20 @@
     "hook": "Bare as the Australian OUTBACK - strict and plain",
     "type": "imagery"
   },
+  "autarkic": {
+    "hook": "AUTO-ARK: Noah's ark runs on its own - self-sufficient",
+    "type": "wordplay"
+  },
   "authoritarian": {
     "hook": "AUTHOR demands you follow every word - strict obedience",
     "type": "wordplay"
   },
-  "autarkic": {
-    "hook": "AUTO-ARK: Noah's ark runs on its own - self-sufficient",
+  "autocratic": {
+    "hook": "AUTO-CRATIC: automatic rule by one - absolute power",
+    "type": "wordplay"
+  },
+  "avant-garde": {
+    "hook": "AVANT (before) + GUARD: the front guard, leading edge",
     "type": "wordplay"
   },
   "avarice": {
@@ -274,10 +362,6 @@
   "avaricious": {
     "hook": "AVA-RICIOUS: sounds VICIOUS about grabbing money",
     "type": "sound"
-  },
-  "avant-garde": {
-    "hook": "AVANT (before) + GUARD: the front guard, leading edge",
-    "type": "wordplay"
   },
   "avert": {
     "hook": "A-VERT: diVERT away - prevent or turn away",
@@ -299,9 +383,17 @@
     "hook": "BANTER-ING: light playful teasing back and forth",
     "type": "wordplay"
   },
+  "beguile": {
+    "hook": "BE-GUILE: be full of guile - charm with deception",
+    "type": "wordplay"
+  },
   "belie": {
     "hook": "BE-LIE: it's a LIE about what's really underneath",
     "type": "wordplay"
+  },
+  "bellicose": {
+    "hook": "BELLY-CLOSE: getting belly-to-belly close for a fight - warlike",
+    "type": "imagery"
   },
   "belligerent": {
     "hook": "BELL-IGERENT: ringing the war BELL - hostile and combative",
@@ -311,12 +403,16 @@
     "hook": "BE-MUSED: NOT amused, just confused and puzzled",
     "type": "wordplay"
   },
+  "beneficent": {
+    "hook": "BENE (good) + FICENT: actively doing GOOD - charitable",
+    "type": "wordplay"
+  },
   "beneficial": {
     "hook": "BENEFIT-CIAL: packed full of BENEFITS - helpful",
     "type": "wordplay"
   },
-  "beneficent": {
-    "hook": "BENE (good) + FICENT: actively doing GOOD - charitable",
+  "benevolent": {
+    "hook": "BENE-VOLENT: bene means good - good-willed and kind",
     "type": "wordplay"
   },
   "benign": {
@@ -325,6 +421,10 @@
   },
   "berate": {
     "hook": "BE-RATE: RATE someone harshly - scold with anger",
+    "type": "wordplay"
+  },
+  "bereft": {
+    "hook": "BE-LEFT: left behind with nothing - deprived and lacking",
     "type": "wordplay"
   },
   "betray": {
@@ -359,17 +459,21 @@
     "hook": "Rough as a BRUSH scraping - abrupt and unfriendly",
     "type": "sound"
   },
-  "burgeon": {
-    "hook": "BURGER joints are BOOMING - growing rapidly everywhere",
-    "type": "sound"
+  "buoyant": {
+    "hook": "BUOY-ANT: like a buoy floating on water - cheerful and uplifted",
+    "type": "imagery"
+  },
+  "burdensome": {
+    "hook": "BURDEN-SOME: it's quite a heavy BURDEN to bear",
+    "type": "wordplay"
   },
   "bureaucratic": {
     "hook": "The BUREAU runs on rigid rules and red tape",
     "type": "wordplay"
   },
-  "burdensome": {
-    "hook": "BURDEN-SOME: it's quite a heavy BURDEN to bear",
-    "type": "wordplay"
+  "burgeon": {
+    "hook": "BURGER joints are BOOMING - growing rapidly everywhere",
+    "type": "sound"
   },
   "buttress": {
     "hook": "Your BUTT RESTS against a support wall - strengthen",
@@ -377,6 +481,10 @@
   },
   "byzantine": {
     "hook": "Byzantine Empire politics - overly complex and confusing",
+    "type": "imagery"
+  },
+  "camaraderie": {
+    "hook": "CAMERA-DERIE: friends taking camera selfies - mutual trust and warmth",
     "type": "imagery"
   },
   "candid": {
@@ -399,12 +507,12 @@
     "hook": "The CAPITAL city waves a white flag and surrenders",
     "type": "imagery"
   },
-  "captivating": {
-    "hook": "It CAPTUREs you like a captive - very engaging",
-    "type": "wordplay"
-  },
   "capricious": {
     "hook": "Weather in CAPRI changes every minute - unpredictable",
+    "type": "wordplay"
+  },
+  "captivating": {
+    "hook": "It CAPTUREs you like a captive - very engaging",
     "type": "wordplay"
   },
   "careless": {
@@ -415,6 +523,10 @@
     "hook": "CAST harsh words at the GATE - scold severely",
     "type": "wordplay"
   },
+  "casuistic": {
+    "hook": "CASUAL-looking logic that's actually tricky reasoning",
+    "type": "sound"
+  },
   "catalyze": {
     "hook": "A chemistry CATALYST speeds up the reaction",
     "type": "wordplay"
@@ -422,10 +534,6 @@
   "categorical": {
     "hook": "Put in a definite CATEGORY - absolute, no exceptions",
     "type": "wordplay"
-  },
-  "casuistic": {
-    "hook": "CASUAL-looking logic that's actually tricky reasoning",
-    "type": "sound"
   },
   "caustic": {
     "hook": "CAUSTIC soda BURNS - like biting harsh criticism",
@@ -455,12 +563,32 @@
     "hook": "Define the CHARACTER of something - describe its traits",
     "type": "wordplay"
   },
+  "charitable": {
+    "hook": "CHAR-IT-ABLE: able to share - generous and kind",
+    "type": "wordplay"
+  },
+  "charlatan": {
+    "hook": "CHAR-LATIN: charring your trust with fake Latin - a fraud",
+    "type": "wordplay"
+  },
+  "chastise": {
+    "hook": "CHASE-TIES: chasing someone to tie them up and scold them",
+    "type": "imagery"
+  },
   "chicanery": {
     "hook": "She CAN trick everyone - deception and trickery",
     "type": "sound"
   },
   "chimerical": {
     "hook": "Like a CHIMERA - fantasy creature that's unrealistic",
+    "type": "wordplay"
+  },
+  "chronic": {
+    "hook": "CHRONIC clock that never stops ticking - persisting endlessly",
+    "type": "imagery"
+  },
+  "circumlocution": {
+    "hook": "CIRCUM-LOCUTION: circling around the location of the point - roundabout speech",
     "type": "wordplay"
   },
   "circumlocutory": {
@@ -479,6 +607,10 @@
     "hook": "CLEAR-IFY: make it crystal CLEAR",
     "type": "wordplay"
   },
+  "clement": {
+    "hook": "Sounds like GENTLE-MENT: gentle treatment - mild and merciful",
+    "type": "sound"
+  },
   "clichéd": {
     "hook": "CLI-SHED: time to shed these worn-out overused phrases",
     "type": "sound"
@@ -487,9 +619,21 @@
     "hook": "Favoring certain CLIENTS politically - favoritism",
     "type": "wordplay"
   },
+  "cloistered": {
+    "hook": "CLOISTER: closed in a cloister monastery - sheltered from the world",
+    "type": "imagery"
+  },
+  "coerce": {
+    "hook": "CO-FORCE: forcing someone to cooperate - compulsion through pressure",
+    "type": "wordplay"
+  },
   "cogent": {
     "hook": "CO-GENT: a gentleman's cooperation with logic - convincing",
     "type": "wordplay"
+  },
+  "cognizant": {
+    "hook": "COG-NIZANT: cogs turning in your brain - aware and knowing",
+    "type": "imagery"
   },
   "coherent": {
     "hook": "CO-HERE: ideas sticking HERE together logically",
@@ -503,6 +647,10 @@
     "hook": "COME + MEND: come and mend things with praise",
     "type": "wordplay"
   },
+  "compatible": {
+    "hook": "COM-PAT-IBLE: able to pat each other's backs - working well together",
+    "type": "wordplay"
+  },
   "compelling": {
     "hook": "It COMPELS you to listen - irresistibly convincing",
     "type": "wordplay"
@@ -511,12 +659,12 @@
     "hook": "Comfortable in your PLACE - too self-satisfied to notice danger",
     "type": "wordplay"
   },
-  "complicate": {
-    "hook": "Add COMPLEX layers - make it more tangled",
-    "type": "wordplay"
-  },
   "compliance": {
     "hook": "COMPLY-ANCE: tendency to COMPLY and follow rules",
+    "type": "wordplay"
+  },
+  "complicate": {
+    "hook": "Add COMPLEX layers - make it more tangled",
     "type": "wordplay"
   },
   "compound": {
@@ -535,9 +683,17 @@
     "hook": "CON-CISE: make an incision, CUT it short - brief but complete",
     "type": "wordplay"
   },
+  "concur": {
+    "hook": "CON-CUR: 'con' together + 'cur' run = running together in agreement",
+    "type": "wordplay"
+  },
   "condemn": {
     "hook": "CON-DEMN: DAMN strongly and publicly criticize",
     "type": "sound"
+  },
+  "condescending": {
+    "hook": "CON-DESCENDING: descending to talk down to people - patronizing",
+    "type": "wordplay"
   },
   "condone": {
     "hook": "CON-DONE: it's DONE, let it slide - allow wrongdoing",
@@ -555,6 +711,14 @@
     "hook": "CON-GRUENT: GROOVing together in agreement",
     "type": "sound"
   },
+  "conjecture": {
+    "hook": "CON-LECTURE: lecturing without facts - opinion without evidence",
+    "type": "wordplay"
+  },
+  "consensus": {
+    "hook": "CON-SENSE-US: a common sense among us - general agreement",
+    "type": "wordplay"
+  },
   "consequential": {
     "hook": "Has big CONSEQUENCES - therefore important",
     "type": "wordplay"
@@ -563,16 +727,28 @@
     "hook": "CON-SIST-ENT: it PERSISTS the same way - stable",
     "type": "wordplay"
   },
+  "consolidate": {
+    "hook": "CON-SOLID-ATE: making things solid together - combine and strengthen",
+    "type": "wordplay"
+  },
   "consonant": {
     "hook": "CON-SONANT: sounds harmonizing together",
     "type": "wordplay"
   },
-  "contentious": {
-    "hook": "Nobody's CONTENT - everyone's arguing about it",
+  "consternation": {
+    "hook": "CON-STAR-NATION: a nation of stars in shock - dismay and anxiety",
+    "type": "imagery"
+  },
+  "contemptuous": {
+    "hook": "CONTEMPT-U-OUS: full of contempt for you - deeply disrespectful",
     "type": "wordplay"
   },
   "contend": {
     "hook": "CON-TEND: TEND to enter the contest and argue your point",
+    "type": "wordplay"
+  },
+  "contentious": {
+    "hook": "Nobody's CONTENT - everyone's arguing about it",
     "type": "wordplay"
   },
   "contingent": {
@@ -581,6 +757,14 @@
   },
   "contradict": {
     "hook": "CONTRA-DICT: speak (dict) AGAINST (contra) what was said",
+    "type": "wordplay"
+  },
+  "contrarian": {
+    "hook": "CONTRARY-AN: a person who is always contrary - opposes all views",
+    "type": "wordplay"
+  },
+  "contravene": {
+    "hook": "CONTRA-VENE: contra means against, vene like venue - go against the rules",
     "type": "wordplay"
   },
   "contrived": {
@@ -611,13 +795,13 @@
     "hook": "COPY-OUS: so much you could copy endlessly - abundant",
     "type": "wordplay"
   },
-  "corroborate": {
-    "hook": "Two CO-ROBBERs confirm each other's alibi with evidence",
-    "type": "story"
-  },
   "correlative": {
     "hook": "CO-RELATIVE: like RELATIVES - mutually connected",
     "type": "wordplay"
+  },
+  "corroborate": {
+    "hook": "Two CO-ROBBERs confirm each other's alibi with evidence",
+    "type": "story"
   },
   "corrupt": {
     "hook": "COR-RUPT: morally RUPTURED and dishonest",
@@ -635,6 +819,10 @@
     "hook": "KOI fish hiding behind rocks - deliberately shy and evasive",
     "type": "imagery"
   },
+  "cozen": {
+    "hook": "COUSIN who COZENs you out of your inheritance - deceive and swindle",
+    "type": "wordplay"
+  },
   "credible": {
     "hook": "Has CRED (street credibility) - believable",
     "type": "wordplay"
@@ -651,17 +839,21 @@
     "hook": "Hidden in a CRYPT - mysterious and hard to decode",
     "type": "wordplay"
   },
+  "culpable": {
+    "hook": "CULPRIT-ABLE: able to be the culprit - deserving blame",
+    "type": "wordplay"
+  },
   "cupidity": {
     "hook": "CUPID shot you with greed arrows instead of love",
     "type": "imagery"
   },
-  "curt": {
-    "hook": "CUT short rudely - like CURTains slamming shut",
-    "type": "sound"
-  },
   "cursory": {
     "hook": "Moving the CURSOR quickly - just skimming the surface",
     "type": "wordplay"
+  },
+  "curt": {
+    "hook": "CUT short rudely - like CURTains slamming shut",
+    "type": "sound"
   },
   "curtail": {
     "hook": "CUT the TAIL short - reduce and limit",
@@ -674,6 +866,10 @@
   "dearth": {
     "hook": "Sounds like DEATH of supply - extreme scarcity",
     "type": "sound"
+  },
+  "debilitate": {
+    "hook": "DE-ABILITY-TATE: taking away your abilities - weaken severely",
+    "type": "wordplay"
   },
   "debunk": {
     "hook": "DE-BUNK: remove the BUNK (nonsense) - expose as false",
@@ -691,12 +887,28 @@
     "hook": "Going down the INCLINE - decrease or refuse",
     "type": "wordplay"
   },
+  "decry": {
+    "hook": "DE-CRY: cry out against something - publicly condemn",
+    "type": "wordplay"
+  },
   "defective": {
     "hook": "Has a DEFECT - flawed and not working right",
     "type": "wordplay"
   },
   "defend": {
     "hook": "Put up a FENCE (de-fend) to protect and argue for",
+    "type": "wordplay"
+  },
+  "defer": {
+    "hook": "DE-FER: 'fer' means carry - carry it to later, or carry respect to someone",
+    "type": "wordplay"
+  },
+  "deferential": {
+    "hook": "DEFER-ENTIAL: essential to defer - showing respectful submission",
+    "type": "wordplay"
+  },
+  "defunct": {
+    "hook": "DE-FUNCT: no longer functioning - dead and gone",
     "type": "wordplay"
   },
   "deleterious": {
@@ -715,6 +927,10 @@
     "hook": "DEMO-NSTRATE: give a DEMO to show something clearly",
     "type": "wordplay"
   },
+  "demure": {
+    "hook": "Sounds like DE-MURE: quietly mured (walled) in - modest and reserved",
+    "type": "sound"
+  },
   "denigrate": {
     "hook": "DE-NEGATE: make someone NEGATIVE - unfairly criticize",
     "type": "sound"
@@ -731,29 +947,49 @@
     "hook": "DE-PICT: create a PICTURE - portray visually",
     "type": "wordplay"
   },
-  "deplore": {
-    "hook": "DE-PLORE: imPLORE against something - strongly disapprove",
+  "deplete": {
+    "hook": "DE-PLETE: de-complete - use up until empty",
     "type": "wordplay"
   },
-  "derivative": {
-    "hook": "DERIVED from somewhere else - a copy, unoriginal",
+  "deplore": {
+    "hook": "DE-PLORE: imPLORE against something - strongly disapprove",
     "type": "wordplay"
   },
   "deride": {
     "hook": "DE-RIDE: take someone for a RIDE and mock them",
     "type": "wordplay"
   },
+  "derivative": {
+    "hook": "DERIVED from somewhere else - a copy, unoriginal",
+    "type": "wordplay"
+  },
   "describe": {
     "hook": "A SCRIBE writes to explain - that's what you do",
+    "type": "wordplay"
+  },
+  "desolate": {
+    "hook": "DE-SOLE-ATE: the sole person left eating alone - barren and bleak",
+    "type": "wordplay"
+  },
+  "despondent": {
+    "hook": "DE-SPONDENT: a sponge drained of water - in low spirits, hope drained",
+    "type": "imagery"
+  },
+  "destitute": {
+    "hook": "DE-STITUTE: de-instituted from having anything - extremely poor",
     "type": "wordplay"
   },
   "detached": {
     "hook": "DE-TACHED: emotionally un-ATTACHED and uninvolved",
     "type": "wordplay"
   },
-  "détente": {
-    "hook": "Day of no TAUNTING - tensions ease between rivals",
-    "type": "sound"
+  "detrimental": {
+    "hook": "DE-TRIM-ENTAL: trimming away the good - causing harm",
+    "type": "wordplay"
+  },
+  "deviate": {
+    "hook": "DE-VIA-ATE: taking a different via (road) - depart from the course",
+    "type": "wordplay"
   },
   "devolution": {
     "hook": "DE-VOLUTION: reverse of EVOLUTION - power going downward",
@@ -779,6 +1015,10 @@
     "hook": "Filled with DIGNITY - calm and respectful bearing",
     "type": "wordplay"
   },
+  "digress": {
+    "hook": "DI-GRESS: grass growing in different directions - straying from topic",
+    "type": "imagery"
+  },
   "digression": {
     "hook": "DI-GRESSION: wandering off in a different direction from the topic",
     "type": "wordplay"
@@ -786,6 +1026,14 @@
   "dilatory": {
     "hook": "Sounds like DELAY-TORY: causing annoying delays",
     "type": "sound"
+  },
+  "diligent": {
+    "hook": "DILL-I-GENT: a gentle dill farmer carefully tending herbs - persistent effort",
+    "type": "imagery"
+  },
+  "diminish": {
+    "hook": "DIM-IN-ISH: light getting dim-ish - becoming smaller and less",
+    "type": "wordplay"
   },
   "dirigiste": {
     "hook": "The state DIRECTS the economy with a firm hand",
@@ -799,20 +1047,36 @@
     "hook": "DIS-AVOW: take back your VOW - deny responsibility",
     "type": "wordplay"
   },
+  "discerning": {
+    "hook": "DIS-CERNING: concerning yourself with distinctions - showing good judgment",
+    "type": "wordplay"
+  },
   "discernment": {
     "hook": "DISCERN-MENT: ability to DISCERN right from wrong",
     "type": "wordplay"
   },
-  "discordant": {
-    "hook": "DIS-CORD: the musical CHORD is broken - not harmonious",
+  "disconsolate": {
+    "hook": "DIS-CONSOLE-ATE: cannot be consoled - deeply unhappy beyond comfort",
     "type": "wordplay"
   },
   "discord": {
     "hook": "DIS-CHORD: a broken CHORD - disagreement and conflict",
     "type": "wordplay"
   },
+  "discordant": {
+    "hook": "DIS-CORD: the musical CHORD is broken - not harmonious",
+    "type": "wordplay"
+  },
   "discredit": {
     "hook": "DIS-CREDIT: strip away someone's CREDIT and reputation",
+    "type": "wordplay"
+  },
+  "discreet": {
+    "hook": "DIS-CREET: keeping things on the down-low on Crete island - avoiding attention",
+    "type": "imagery"
+  },
+  "disdain": {
+    "hook": "DIS-STAIN: treating someone like a stain - contempt for the unworthy",
     "type": "wordplay"
   },
   "disenfranchise": {
@@ -847,17 +1111,37 @@
     "hook": "DIS-PLACE: forced out of your PLACE - removed",
     "type": "wordplay"
   },
+  "dispute": {
+    "hook": "DIS-PUTE: putting up a 'dis' - arguing and challenging",
+    "type": "wordplay"
+  },
   "dissemble": {
     "hook": "DIS-SEMBLE: things are not what they SEEM - hiding truth",
+    "type": "wordplay"
+  },
+  "dissent": {
+    "hook": "DIS-SENT: sending a 'dis' to authority - principled disagreement",
     "type": "wordplay"
   },
   "dither": {
     "hook": "DIDN'T pick EITHER - can't decide, hesitating endlessly",
     "type": "wordplay"
   },
+  "diverge": {
+    "hook": "DI-VERGE: two verges going different ways - separate and split apart",
+    "type": "imagery"
+  },
   "divisive": {
     "hook": "DIVIDE-SIVE: it DIVIDES people into opposing camps",
     "type": "wordplay"
+  },
+  "doctrinaire": {
+    "hook": "DOCTRINE-AIRE: all air and doctrine - rigidly committed to theory",
+    "type": "wordplay"
+  },
+  "dogged": {
+    "hook": "Like a DOG with a bone - stubbornly persistent and tenacious",
+    "type": "imagery"
   },
   "doggerel": {
     "hook": "Poetry so bad even a DOG wouldn't wag its tail",
@@ -869,6 +1153,14 @@
   },
   "dogmatism": {
     "hook": "DOG + MATISM: a DOG that never drops its bone of rigid belief",
+    "type": "imagery"
+  },
+  "doleful": {
+    "hook": "DOLE-FUL: full of dole (sorrow) - expressing mournful sadness",
+    "type": "wordplay"
+  },
+  "dormant": {
+    "hook": "DORM-ANT: an ant sleeping in its dorm - inactive but ready to wake",
     "type": "imagery"
   },
   "downplay": {
@@ -895,13 +1187,37 @@
     "hook": "DURA means hard - built to last, long-lasting",
     "type": "wordplay"
   },
+  "dwindle": {
+    "hook": "D-WIND-LE: wind blowing things away little by little - gradually diminish",
+    "type": "imagery"
+  },
+  "détente": {
+    "hook": "Day of no TAUNTING - tensions ease between rivals",
+    "type": "sound"
+  },
+  "ebb": {
+    "hook": "EBB tide: ocean water pulling back - gradually declining",
+    "type": "imagery"
+  },
+  "ebullient": {
+    "hook": "E-BULL-IENT: a bull bursting with energy - overflowing enthusiasm",
+    "type": "imagery"
+  },
   "eccentric": {
     "hook": "EX-CENTRIC: off-CENTER - unusual and odd behavior",
+    "type": "wordplay"
+  },
+  "eclectic": {
+    "hook": "E-COLLECT-IC: collecting from everywhere - drawing from varied sources",
     "type": "wordplay"
   },
   "edifice": {
     "hook": "An EDIF-ICE palace - a large imposing building of ice",
     "type": "imagery"
+  },
+  "efface": {
+    "hook": "E-FACE: erasing the face - make disappear or make oneself invisible",
+    "type": "wordplay"
   },
   "effacement": {
     "hook": "E-FACE-MENT: erasing the FACE - making less noticeable",
@@ -923,13 +1239,25 @@
     "hook": "E-GREG-IOUS: GREG did something SO shockingly bad",
     "type": "story"
   },
+  "elated": {
+    "hook": "E-LATE-D: elevated so high you're late getting down - ecstatically happy",
+    "type": "wordplay"
+  },
   "elegiac": {
     "hook": "Like an ELEGY at a funeral - mournful and sorrowful",
     "type": "wordplay"
   },
+  "eloquent": {
+    "hook": "ELO-QUENT: speaking with the flow of a queen - fluent and persuasive",
+    "type": "imagery"
+  },
   "elucidate": {
     "hook": "E-LUCID-ATE: make it LUCID and clear - explain",
     "type": "wordplay"
+  },
+  "embellish": {
+    "hook": "EM-BELL-ISH: adding bells to make it prettier - decorate or exaggerate",
+    "type": "imagery"
   },
   "embellishment": {
     "hook": "Adding BELLS and whistles - extra decorative details",
@@ -991,9 +1319,17 @@
     "hook": "EN-GENDER: GENERATE or give birth to something new",
     "type": "wordplay"
   },
+  "enhance": {
+    "hook": "EN-HANCE: enhancing your chance - improve and make better",
+    "type": "wordplay"
+  },
   "enigma": {
     "hook": "Like the ENIGMA code machine - wrapped in mystery",
     "type": "imagery"
+  },
+  "enigmatic": {
+    "hook": "ENIGMA-TIC: full of enigma - mysterious and puzzling",
+    "type": "wordplay"
   },
   "enmity": {
     "hook": "ENEMY-TY: the quality of being ENEMIES - hostility",
@@ -1035,6 +1371,10 @@
     "hook": "EQUI-VOCATE: speak equally vague on both sides to avoid commitment",
     "type": "wordplay"
   },
+  "eradicate": {
+    "hook": "E-RAD-ICATE: radically remove - destroy completely at the root",
+    "type": "wordplay"
+  },
   "eristic": {
     "hook": "ER-ISTIC: an aggressive debate-ISTIC style - arguing to win",
     "type": "sound"
@@ -1055,20 +1395,40 @@
     "hook": "An EDITION packed with deep scholarly knowledge",
     "type": "sound"
   },
+  "escalate": {
+    "hook": "ESCALAT-OR going up - increasing in intensity step by step",
+    "type": "imagery"
+  },
   "esoteric": {
     "hook": "ESO (inner): only the INNER circle gets it - understood by few",
+    "type": "wordplay"
+  },
+  "estrange": {
+    "hook": "E-STRANGE: becoming strange to each other - alienate and drive apart",
     "type": "wordplay"
   },
   "ethical": {
     "hook": "Following the ETHICS code - morally right behavior",
     "type": "wordplay"
   },
+  "eulogize": {
+    "hook": "EU-LOG-IZE: logging the good (eu=good) things about someone - praise highly",
+    "type": "wordplay"
+  },
   "eulogy": {
     "hook": "EU (good) + LOGY (words): good words spoken about the deceased",
     "type": "wordplay"
   },
+  "euphoria": {
+    "hook": "EU-PHORIA: phoria (carrying) good feelings - intense happiness",
+    "type": "wordplay"
+  },
   "evaluate": {
     "hook": "E-VALUE-ATE: determine the VALUE of something carefully",
+    "type": "wordplay"
+  },
+  "evanescent": {
+    "hook": "EVAN-ESCENT: Evan's scent vanishing quickly - fleeting and fading",
     "type": "wordplay"
   },
   "evasive": {
@@ -1077,6 +1437,10 @@
   },
   "evenhanded": {
     "hook": "Both HANDS are EVEN on the scale - perfectly fair",
+    "type": "wordplay"
+  },
+  "evolve": {
+    "hook": "E-VOLVE: revolving through changes - develop gradually over time",
     "type": "wordplay"
   },
   "exacerbate": {
@@ -1095,12 +1459,12 @@
     "hook": "EX-CORE: tear out the CORE - criticize so harshly it strips skin",
     "type": "wordplay"
   },
-  "exemplify": {
-    "hook": "Be the EXAMPLE - serve as the model to follow",
-    "type": "wordplay"
-  },
   "exegetical": {
     "hook": "EXIT the surface, dig into the TEXT - explaining deeply",
+    "type": "wordplay"
+  },
+  "exemplify": {
+    "hook": "Be the EXAMPLE - serve as the model to follow",
     "type": "wordplay"
   },
   "exigent": {
@@ -1111,16 +1475,28 @@
     "hook": "EX-ON-ERATE: get OFF the hook - cleared from all blame",
     "type": "wordplay"
   },
+  "exorbitant": {
+    "hook": "EX-ORBIT-ANT: prices out of orbit - unreasonably high",
+    "type": "imagery"
+  },
   "expedite": {
     "hook": "Put your FOOT (ped) on the gas pedal - speed things up",
+    "type": "wordplay"
+  },
+  "explicate": {
+    "hook": "UN-PLICATE (unfold): unfold and explain every detail",
     "type": "wordplay"
   },
   "explicit": {
     "hook": "EX-PLICIT: laid out PLAINLY for all to see - no confusion",
     "type": "wordplay"
   },
-  "explicate": {
-    "hook": "UN-PLICATE (unfold): unfold and explain every detail",
+  "expunge": {
+    "hook": "EX-SPONGE: sponging out completely - erase and remove",
+    "type": "imagery"
+  },
+  "extirpate": {
+    "hook": "EX-STIR-PATE: stirring up and throwing out - root out and destroy",
     "type": "wordplay"
   },
   "extol": {
@@ -1129,6 +1505,10 @@
   },
   "extrapolate": {
     "hook": "Go EXTRA beyond the data to INTERPOLATE what comes next",
+    "type": "wordplay"
+  },
+  "extravagant": {
+    "hook": "EXTRA-VAGA-NT: extra vagrant spending - excessively costly",
     "type": "wordplay"
   },
   "exuberant": {
@@ -1145,6 +1525,10 @@
   },
   "factional": {
     "hook": "Split into rival FACTIONS fighting each other",
+    "type": "wordplay"
+  },
+  "factious": {
+    "hook": "FACT-IOUS: a group splitting into factions - prone to internal dissent",
     "type": "wordplay"
   },
   "fallacious": {
@@ -1191,6 +1575,10 @@
     "hook": "Like a PICKLE that changes flavor - unreliable and changeable",
     "type": "sound"
   },
+  "flagrant": {
+    "hook": "FLAG-RANT: waving a flag while ranting about a wrong - shockingly obvious",
+    "type": "imagery"
+  },
   "flamboyant": {
     "hook": "A FLAME-BOY on fire - showy, flashy, impossible to miss",
     "type": "wordplay"
@@ -1219,6 +1607,10 @@
     "hook": "FLOR (flower): overflowing with flowery decoration",
     "type": "wordplay"
   },
+  "fluctuate": {
+    "hook": "FLUX-TUATE: in constant flux - rising and falling irregularly",
+    "type": "wordplay"
+  },
   "flux": {
     "hook": "Everything is in FLOW and FLUX - constant change",
     "type": "sound"
@@ -1231,6 +1623,10 @@
     "hook": "Build a FOREST wall BEFORE trouble arrives - prevent early",
     "type": "imagery"
   },
+  "forlorn": {
+    "hook": "FOR-LORN: torn apart and left alone - pitifully sad and lonely",
+    "type": "wordplay"
+  },
   "formulaic": {
     "hook": "Follows a fixed FORMULA every time - predictable",
     "type": "wordplay"
@@ -1238,6 +1634,10 @@
   "forthright": {
     "hook": "Comes FORTH with what's RIGHT - direct and honest",
     "type": "wordplay"
+  },
+  "fortify": {
+    "hook": "FORT-IFY: building a fort - strengthen against attack",
+    "type": "imagery"
   },
   "foster": {
     "hook": "A FOSTER parent who encourages growth and development",
@@ -1258,6 +1658,10 @@
   "frivolous": {
     "hook": "FRIVolity everywhere - not serious at all, totally trivial",
     "type": "wordplay"
+  },
+  "frugal": {
+    "hook": "FRU-GAL: a gal who saves her fruits - sparing and thrifty",
+    "type": "imagery"
   },
   "furtive": {
     "hook": "Sneaking around in FUR like a cat - secretive and sly",
@@ -1287,6 +1691,10 @@
     "hook": "GLIB = GLoss on the LIPs - smooth-talking but insincere",
     "type": "wordplay"
   },
+  "glut": {
+    "hook": "GLUT-ton of supply - so much it overflows and loses value",
+    "type": "wordplay"
+  },
   "grandiloquent": {
     "hook": "GRAND + ELOQUENT: using fancy GRAND words to sound pompous",
     "type": "wordplay"
@@ -1310,6 +1718,10 @@
   "guarded": {
     "hook": "Has a GUARD up at all times - cautious in speech",
     "type": "wordplay"
+  },
+  "guile": {
+    "hook": "GUI-LE: a guileful smile hiding tricks - sly cunning",
+    "type": "imagery"
   },
   "guileless": {
     "hook": "GUILE-LESS: zero GUILE - innocent and without deceit",
@@ -1347,6 +1759,14 @@
     "hook": "HE holds the GEM of power - dominant controlling influence",
     "type": "wordplay"
   },
+  "hegemony": {
+    "hook": "HE-GEM-ONLY: he's the only gem - dominance of one over all others",
+    "type": "wordplay"
+  },
+  "heighten": {
+    "hook": "HEIGHT-EN: making the height bigger - increase and intensify",
+    "type": "wordplay"
+  },
   "hermeneutic": {
     "hook": "HERMES the messenger god interprets divine messages",
     "type": "wordplay"
@@ -1358,6 +1778,10 @@
   "heuristic": {
     "hook": "HEY, try this TRICK to learn! - a rule-of-thumb method",
     "type": "sound"
+  },
+  "hidebound": {
+    "hook": "HIDE-BOUND: bound in a dried hide - stiff and unwilling to change",
+    "type": "imagery"
   },
   "hierarchical": {
     "hook": "Arranged in HIER-TIERS of rank - levels of power",
@@ -1379,9 +1803,17 @@
     "hook": "HOST-ILITY: a HOST showing ILL will toward guests",
     "type": "wordplay"
   },
+  "hubris": {
+    "hook": "HU-BRIS: huge bris(tle) of ego - excessive pride before a fall",
+    "type": "wordplay"
+  },
   "humble": {
     "hook": "A HUMBLE bumble bee - small, modest, not arrogant",
     "type": "imagery"
+  },
+  "hypothetical": {
+    "hook": "HYPO-THETICAL: hypothesis, not thesis - assumed, not proven",
+    "type": "wordplay"
   },
   "iconoclastic": {
     "hook": "ICON + CLASTIC (breaking): smashing sacred ICONS of tradition",
@@ -1403,12 +1835,12 @@
     "hook": "IL-LOGICAL: NOT following LOGIC at all",
     "type": "wordplay"
   },
-  "illusory": {
-    "hook": "Based on an ILLUSION - not real, just a mirage",
-    "type": "wordplay"
-  },
   "illuminate": {
     "hook": "Bring LIGHT (lumin) to darkness - clarify everything",
+    "type": "wordplay"
+  },
+  "illusory": {
+    "hook": "Based on an ILLUSION - not real, just a mirage",
     "type": "wordplay"
   },
   "imitative": {
@@ -1463,6 +1895,14 @@
     "hook": "IM-PLAUSIBLE: NOT PLAUSIBLE - unlikely to be true",
     "type": "wordplay"
   },
+  "implicate": {
+    "hook": "IM-PLICATE: folded into the plot - shown to be involved in wrongdoing",
+    "type": "wordplay"
+  },
+  "impoverished": {
+    "hook": "IM-POVERTY-SHED: pushed into the poverty shed - reduced to extreme need",
+    "type": "wordplay"
+  },
   "impugn": {
     "hook": "IM-PUGN: take a PUGnacious swing at someone's honesty",
     "type": "wordplay"
@@ -1473,6 +1913,10 @@
   },
   "incendiary": {
     "hook": "IN-CEND: lights a fire that SENDS anger spreading everywhere",
+    "type": "wordplay"
+  },
+  "incessant": {
+    "hook": "IN-CESSANT: never ceasing - continuing without any pause",
     "type": "wordplay"
   },
   "inchoate": {
@@ -1507,6 +1951,10 @@
     "hook": "IN-CRED-ULOUS: gives NO CREDIT to what they hear - won't believe",
     "type": "wordplay"
   },
+  "incriminate": {
+    "hook": "IN-CRIME-INATE: put into the crime - make appear guilty",
+    "type": "wordplay"
+  },
   "indefatigable": {
     "hook": "IN-DE-FATIGABLE: NEVER gets FATIGUED - absolutely tireless",
     "type": "wordplay"
@@ -1515,12 +1963,32 @@
     "hook": "IN-DEFENSIBLE: can NOT be DEFENDED - impossible to justify",
     "type": "wordplay"
   },
+  "indelible": {
+    "hook": "IN-DELETE-IBLE: impossible to delete - permanent and unforgettable",
+    "type": "wordplay"
+  },
+  "indict": {
+    "hook": "IN-DICT: dictated into court records - formally charged with a crime",
+    "type": "wordplay"
+  },
   "indifferent": {
     "hook": "Makes NO DIFFERENCE to them - they simply don't care",
     "type": "wordplay"
   },
+  "indigent": {
+    "hook": "IN-DIG-ENT: digging in dirt for food - extremely poor and needy",
+    "type": "imagery"
+  },
+  "indolent": {
+    "hook": "IN-DOLE-NT: on the dole, not working - lazy and avoiding effort",
+    "type": "wordplay"
+  },
   "ineffective": {
     "hook": "IN-EFFECTIVE: NOT EFFECTIVE at all - produces no results",
+    "type": "wordplay"
+  },
+  "inert": {
+    "hook": "IN-ERT: insert nothing, it just sits there - lacking ability to move",
     "type": "wordplay"
   },
   "inexorable": {
@@ -1539,8 +2007,16 @@
     "hook": "IN-FLEXIBLE: NOT FLEXIBLE - rigid as an iron rod",
     "type": "wordplay"
   },
+  "ingenious": {
+    "hook": "IN-GENIUS: having genius inside - cleverly inventive",
+    "type": "wordplay"
+  },
   "ingenuity": {
     "hook": "Inner GENIUS at work - cleverness and inventiveness",
+    "type": "wordplay"
+  },
+  "ingenuous": {
+    "hook": "IN-GENUINE: genuinely innocent inside - naive and unsuspecting",
     "type": "wordplay"
   },
   "ingrained": {
@@ -1559,12 +2035,20 @@
     "hook": "IN-NOVA-TIVE: introducing NOVA (new) and fresh ideas",
     "type": "wordplay"
   },
+  "inordinate": {
+    "hook": "IN-ORDINATE: not in ordinary order - unusually excessive",
+    "type": "wordplay"
+  },
   "inscrutable": {
     "hook": "IN-SCRUTABLE: can NOT be SCRUTINIZED - impossible to read",
     "type": "wordplay"
   },
   "insipid": {
     "hook": "IN-SIPID: NO SAPID (taste) at all - bland and dull",
+    "type": "wordplay"
+  },
+  "insouciant": {
+    "hook": "IN-SO-CIANT: so not caring - casually unconcerned and carefree",
     "type": "wordplay"
   },
   "instigate": {
@@ -1579,12 +2063,20 @@
     "hook": "Stuck on an ISLAND (insula) - isolated and narrow-minded",
     "type": "wordplay"
   },
+  "integrity": {
+    "hook": "INTEGER-ITY: whole like an integer - complete moral wholeness",
+    "type": "wordplay"
+  },
   "intelligible": {
     "hook": "INTELLIGENT enough to understand - clear and comprehensible",
     "type": "wordplay"
   },
   "intensify": {
     "hook": "Crank the INTENSITY dial up - make stronger",
+    "type": "wordplay"
+  },
+  "interminable": {
+    "hook": "IN-TERMINATE-ABLE: unable to be terminated - endless and tedious",
     "type": "wordplay"
   },
   "intermittent": {
@@ -1611,28 +2103,40 @@
     "hook": "Make it IN-VALID - prove it wrong and worthless",
     "type": "wordplay"
   },
-  "inventive": {
-    "hook": "Always INVENTing something new - creative mind at work",
+  "inveigh": {
+    "hook": "IN-WEIGH: weighing in heavily against something - speak vehemently against",
     "type": "wordplay"
   },
-  "invigorate": {
-    "hook": "Fill with VIGOR and vitality - energize completely",
+  "inventive": {
+    "hook": "Always INVENTing something new - creative mind at work",
     "type": "wordplay"
   },
   "invidious": {
     "hook": "Caught on VIDEO doing something unfairly harmful",
     "type": "sound"
   },
+  "invigorate": {
+    "hook": "Fill with VIGOR and vitality - energize completely",
+    "type": "wordplay"
+  },
+  "irascible": {
+    "hook": "IRATE-SCIBLE: easily made irate - hot-tempered and quick to anger",
+    "type": "wordplay"
+  },
   "ironic": {
     "hook": "An IRON that wrinkles your clothes - the unexpected twist",
     "type": "imagery"
   },
-  "irreverent": {
-    "hook": "IR-REVERENT: NOT REVERENT at all - disrespectful",
+  "irreconcilable": {
+    "hook": "IR-RECONCILE-ABLE: unable to reconcile - impossible to resolve",
     "type": "wordplay"
   },
   "irredentist": {
     "hook": "Wants to RE-DENT (return) lost territory to the homeland",
+    "type": "wordplay"
+  },
+  "irreverent": {
+    "hook": "IR-REVERENT: NOT REVERENT at all - disrespectful",
     "type": "wordplay"
   },
   "jejune": {
@@ -1642,6 +2146,10 @@
   "jovial": {
     "hook": "Happy like the god JOVE (Jupiter) at a feast - cheerful",
     "type": "wordplay"
+  },
+  "jubilant": {
+    "hook": "JUBILEE-ANT: an ant celebrating a jubilee - expressing great joy",
+    "type": "imagery"
   },
   "judicious": {
     "hook": "Like a wise JUDGE making careful decisions - good judgment",
@@ -1663,13 +2171,21 @@
     "hook": "From LACONIA (Sparta) - Spartans used very few words",
     "type": "wordplay"
   },
+  "lambaste": {
+    "hook": "BASTE the LAMB on a spit - roast someone with harsh criticism",
+    "type": "wordplay"
+  },
+  "lament": {
+    "hook": "LA-MEANT: 'la' the sad song note - express grief and deep regret",
+    "type": "wordplay"
+  },
   "lamentable": {
     "hook": "Deserves a LAMENT - so bad it makes you cry with regret",
     "type": "wordplay"
   },
-  "lambaste": {
-    "hook": "BASTE the LAMB on a spit - roast someone with harsh criticism",
-    "type": "wordplay"
+  "languid": {
+    "hook": "LANG-QUID: language too liquid to hold shape - slow and dreamy",
+    "type": "imagery"
   },
   "languish": {
     "hook": "LANGUAGE of ANGUISH - suffering and weakening from neglect",
@@ -1691,8 +2207,16 @@
     "hook": "LAUD-ABLE: worthy of being LAUDED with applause",
     "type": "wordplay"
   },
+  "lavish": {
+    "hook": "LA-VISH: making a lavish wish come true - sumptuously rich",
+    "type": "wordplay"
+  },
   "lax": {
     "hook": "LAX airport security letting everyone through - not strict",
+    "type": "imagery"
+  },
+  "lethargic": {
+    "hook": "LEATHER-GIC: heavy as leather - sluggish and lacking energy",
     "type": "imagery"
   },
   "limpid": {
@@ -1701,6 +2225,14 @@
   },
   "lionize": {
     "hook": "Treat someone like the LION King - celebrity status",
+    "type": "wordplay"
+  },
+  "listless": {
+    "hook": "LIST-LESS: no list, no tasks, no energy - lacking enthusiasm",
+    "type": "wordplay"
+  },
+  "litigious": {
+    "hook": "LITI-GATE-US: always at the litigation gate - prone to lawsuits",
     "type": "wordplay"
   },
   "logorrhea": {
@@ -1713,6 +2245,10 @@
   },
   "lucid": {
     "hook": "LUCID like LUX (light) - clear, bright, easy to understand",
+    "type": "wordplay"
+  },
+  "lucrative": {
+    "hook": "LUCRE-ATIVE: full of lucre (money) - producing great profit",
     "type": "wordplay"
   },
   "lugubrious": {
@@ -1735,6 +2271,10 @@
     "hook": "MAL (bad) + ICE: cold as ICE with harmful intent",
     "type": "wordplay"
   },
+  "malicious": {
+    "hook": "MAL-ICIOUS: mal means bad - intending to cause harm",
+    "type": "wordplay"
+  },
   "malign": {
     "hook": "MAL (bad) + SIGN: giving BAD signs about someone",
     "type": "wordplay"
@@ -1743,8 +2283,16 @@
     "hook": "MALL clay - easily shaped and molded by influence",
     "type": "wordplay"
   },
+  "mandate": {
+    "hook": "MAN-DATE: the man sets the date - an official order with authority",
+    "type": "wordplay"
+  },
   "manifest": {
     "hook": "A ship's MANIFEST lists everything clearly and obviously",
+    "type": "imagery"
+  },
+  "marginalize": {
+    "hook": "MARGIN-ALIZE: pushing to the margins of the page - treat as insignificant",
     "type": "imagery"
   },
   "maverick": {
@@ -1763,8 +2311,24 @@
     "hook": "Every response carefully MEASURED - controlled and deliberate",
     "type": "wordplay"
   },
+  "meek": {
+    "hook": "Like a mouse that goes MEEK - quiet, gentle, and submissive",
+    "type": "sound"
+  },
+  "melancholy": {
+    "hook": "MELON-COLLIE: a sad collie dog eating a melon alone - deep persistent sadness",
+    "type": "imagery"
+  },
   "mellifluous": {
     "hook": "MELLI (honey) + FLUENT: sweet honey flowing smoothly - sweet-sounding",
+    "type": "wordplay"
+  },
+  "mendacious": {
+    "hook": "MEN-DACIOUS: men who are audacious liars - habitually dishonest",
+    "type": "wordplay"
+  },
+  "mercantilist": {
+    "hook": "MERCHANT + LIST: government controls the MERCHANT list",
     "type": "wordplay"
   },
   "mercenary": {
@@ -1775,12 +2339,12 @@
     "hook": "Like liquid MERCURY - unpredictable, changes shape instantly",
     "type": "wordplay"
   },
-  "mercantilist": {
-    "hook": "MERCHANT + LIST: government controls the MERCHANT list",
-    "type": "wordplay"
-  },
   "meritorious": {
     "hook": "Full of MERIT - deserving praise and reward",
+    "type": "wordplay"
+  },
+  "metamorphose": {
+    "hook": "META-MORPH-OSE: morphing beyond original form - transform completely",
     "type": "wordplay"
   },
   "methodical": {
@@ -1798,6 +2362,10 @@
   "miserliness": {
     "hook": "A MISER counting every penny - extreme stinginess",
     "type": "wordplay"
+  },
+  "mitigate": {
+    "hook": "MITI-GATE: a gate that reduces the flood flow - make less severe",
+    "type": "imagery"
   },
   "mock": {
     "hook": "A MOCK exam isn't real - making fun of the real thing",
@@ -1835,6 +2403,10 @@
     "hook": "Can MUTATE and change form - not fixed",
     "type": "wordplay"
   },
+  "myopic": {
+    "hook": "MY-OPTIC nerves are short - nearsighted, lacking foresight",
+    "type": "wordplay"
+  },
   "naive": {
     "hook": "A NEWBIE who hasn't learned the game yet - lacking experience",
     "type": "sound"
@@ -1863,6 +2435,10 @@
     "hook": "Does NOT SEQUENCE logically - conclusion jumps off a cliff",
     "type": "wordplay"
   },
+  "nonchalant": {
+    "hook": "NON-SHALL-ANT: 'shall not care' ant - casually unconcerned",
+    "type": "wordplay"
+  },
   "nostalgic": {
     "hook": "Your NOSE remembers grandma's cookies - longing for the past",
     "type": "sound"
@@ -1875,16 +2451,32 @@
     "hook": "A brand new NOVEL you've never read - fresh and original",
     "type": "wordplay"
   },
+  "noxious": {
+    "hook": "NOX-IOUS: nox like toxic - harmful and poisonous",
+    "type": "sound"
+  },
   "nuance": {
     "hook": "NEW-ANCE: a NEW angle of subtle difference",
+    "type": "wordplay"
+  },
+  "nullify": {
+    "hook": "NULL-IFY: make it null - cancel out and void completely",
+    "type": "wordplay"
+  },
+  "obdurate": {
+    "hook": "OB-DURABLE: stubbornness so DURABLE it never breaks",
+    "type": "wordplay"
+  },
+  "obfuscate": {
+    "hook": "OB-FUSCATE: fuse the clarity shut - make unclear on purpose",
     "type": "wordplay"
   },
   "objective": {
     "hook": "Look at the OBJECT itself, not your feelings about it - unbiased",
     "type": "wordplay"
   },
-  "obdurate": {
-    "hook": "OB-DURABLE: stubbornness so DURABLE it never breaks",
+  "oblivious": {
+    "hook": "O-BLIV-IOUS: living in oblivion - completely unaware of surroundings",
     "type": "wordplay"
   },
   "obscure": {
@@ -1939,6 +2531,10 @@
     "hook": "PACKed so dense that no light passes through - unclear",
     "type": "sound"
   },
+  "opulent": {
+    "hook": "OPE-LENT: opening a lent of gold - ostentatiously rich and luxurious",
+    "type": "imagery"
+  },
   "ornate": {
     "hook": "Covered in ORNAMENTs - highly decorated and elaborate",
     "type": "wordplay"
@@ -1950,6 +2546,18 @@
   "ossified": {
     "hook": "OSSI (bone) + FIED: turned to BONE - rigid and unchanging",
     "type": "wordplay"
+  },
+  "ossify": {
+    "hook": "OS-SIFY: os means bone - turning to bone, becoming rigid",
+    "type": "wordplay"
+  },
+  "ostentatious": {
+    "hook": "OSTENT-ATION: putting on a show for the station - showy to impress",
+    "type": "wordplay"
+  },
+  "ostracize": {
+    "hook": "OSTRICH-SIZE: making someone an ostrich - excluded, head in sand alone",
+    "type": "imagery"
   },
   "outspoken": {
     "hook": "Speaks OUT freely and boldly - frank and direct",
@@ -1965,6 +2573,14 @@
   },
   "pacify": {
     "hook": "PACI (peace): bring PEACE - calm everything down",
+    "type": "wordplay"
+  },
+  "painstaking": {
+    "hook": "PAINS-TAKING: taking great pains over every detail - extremely thorough",
+    "type": "wordplay"
+  },
+  "palliate": {
+    "hook": "PALL-IATE: a pall (covering) over the symptoms - relieve without curing",
     "type": "wordplay"
   },
   "panegyric": {
@@ -1987,12 +2603,12 @@
     "hook": "Stuck in your PARISH - can't see beyond the church walls",
     "type": "wordplay"
   },
-  "parsimony": {
-    "hook": "PARSE every PENNY - extreme unwillingness to spend",
-    "type": "wordplay"
-  },
   "parsimonious": {
     "hook": "PARSES every single MONEY coin - painfully stingy",
+    "type": "wordplay"
+  },
+  "parsimony": {
+    "hook": "PARSE every PENNY - extreme unwillingness to spend",
     "type": "wordplay"
   },
   "partisan": {
@@ -2007,12 +2623,12 @@
     "hook": "A POOR CITY with almost nothing - scarcity and lack",
     "type": "wordplay"
   },
-  "pedestrian": {
-    "hook": "Just a regular PEDESTRIAN walking by - nothing special, dull",
-    "type": "wordplay"
-  },
   "pedantic": {
     "hook": "A PEDANT nitpicking every tiny detail obsessively",
+    "type": "wordplay"
+  },
+  "pedestrian": {
+    "hook": "Just a regular PEDESTRIAN walking by - nothing special, dull",
     "type": "wordplay"
   },
   "peevish": {
@@ -2027,8 +2643,20 @@
     "hook": "PER-LUCID: perfectly LUCID - crystal clear transparency",
     "type": "wordplay"
   },
+  "penurious": {
+    "hook": "PENNY-URIOUS: furious about spending a penny - extremely poor or miserly",
+    "type": "wordplay"
+  },
   "perceptive": {
     "hook": "Strong PERCEPTION powers - insightful and observant",
+    "type": "wordplay"
+  },
+  "perennial": {
+    "hook": "PERE-NNIAL: perennial flowers that bloom every year - lasting and recurring",
+    "type": "imagery"
+  },
+  "perfidious": {
+    "hook": "PER-FIDIOUS: per-fidy (bad faith) - deceitful and untrustworthy",
     "type": "wordplay"
   },
   "perfidy": {
@@ -2067,6 +2695,10 @@
     "hook": "A spoiled PET whining and stamping - childishly irritable",
     "type": "wordplay"
   },
+  "philanthropic": {
+    "hook": "PHIL-ANTHRO-PIC: phil (love) + anthro (human) - loving humanity, charitable",
+    "type": "wordplay"
+  },
   "phlegmatic": {
     "hook": "Thick as PHLEGM - slow, unmoved, and calmly unemotional",
     "type": "wordplay"
@@ -2074,6 +2706,14 @@
   "pillory": {
     "hook": "Tied to a PILLAR in the town square for public shaming",
     "type": "wordplay"
+  },
+  "pithy": {
+    "hook": "PITHY like the pith of a fruit - the essential core, concise and forceful",
+    "type": "imagery"
+  },
+  "pivot": {
+    "hook": "PIVOT on a basketball court - sharp turn in direction",
+    "type": "imagery"
   },
   "pivotal": {
     "hook": "The PIVOT point everything turns on - critically important",
@@ -2091,12 +2731,20 @@
     "hook": "A PLACID lake at dawn - perfectly calm and peaceful",
     "type": "imagery"
   },
+  "plaintive": {
+    "hook": "PLAIN-TIVE: the plain cry of grief - sounding sad and mournful",
+    "type": "wordplay"
+  },
   "platitudinous": {
     "hook": "FLAT-itude remarks - flat, boring, unoriginal statements",
     "type": "wordplay"
   },
   "plausible": {
     "hook": "Deserves APPLAUSE for how believable it sounds",
+    "type": "wordplay"
+  },
+  "pliable": {
+    "hook": "PLI-ABLE: able to be plied (bent) - easily influenced or shaped",
     "type": "wordplay"
   },
   "pliant": {
@@ -2111,8 +2759,16 @@
     "hook": "Split to opposite POLES - North vs South, extreme division",
     "type": "wordplay"
   },
+  "polemic": {
+    "hook": "POLE-MIC: grabbing the mic on a pole to attack - strong verbal assault",
+    "type": "imagery"
+  },
   "polemical": {
     "hook": "Taking a strong POLE position in a fierce argument",
+    "type": "wordplay"
+  },
+  "polymath": {
+    "hook": "POLY-MATH: poly means many + math = many subjects mastered",
     "type": "wordplay"
   },
   "pompous": {
@@ -2129,6 +2785,10 @@
   },
   "posit": {
     "hook": "Take a POSITION and state it as fact - assert firmly",
+    "type": "wordplay"
+  },
+  "postulate": {
+    "hook": "POST-U-LATE: posting an assumption late - assume without proof",
     "type": "wordplay"
   },
   "pragmatic": {
@@ -2153,6 +2813,10 @@
   },
   "prescience": {
     "hook": "PRE-SCIENCE: knowing the science BEFORE it's discovered",
+    "type": "wordplay"
+  },
+  "prescient": {
+    "hook": "PRE-SCIENT: pre-science, knowing before the science proves it - having foresight",
     "type": "wordplay"
   },
   "preserve": {
@@ -2183,6 +2847,18 @@
     "hook": "Sounds like PROVE-ATIVE: helps PROVE the case - providing proof",
     "type": "sound"
   },
+  "probity": {
+    "hook": "PROBE-ITY: if you probe their character, you find integrity - moral uprightness",
+    "type": "wordplay"
+  },
+  "prodigal": {
+    "hook": "PRODIGAL son who spent all dad's money - recklessly extravagant",
+    "type": "imagery"
+  },
+  "profligate": {
+    "hook": "PROF-LIGATE: a professor who litigates with money - recklessly wasteful",
+    "type": "wordplay"
+  },
   "profuse": {
     "hook": "PRO-FUSE: fusing out abundantly in every direction",
     "type": "wordplay"
@@ -2207,16 +2883,28 @@
     "hook": "Plain as PROSE - no poetry, just dull ordinary language",
     "type": "wordplay"
   },
+  "prosperous": {
+    "hook": "PROSPER-OUS: full of prosperity - successful and thriving",
+    "type": "wordplay"
+  },
+  "protean": {
+    "hook": "PROTEUS the shape-shifting Greek god - readily changing form",
+    "type": "imagery"
+  },
   "protract": {
     "hook": "TRACTORS move painfully slowly - prolong and drag out",
     "type": "wordplay"
   },
-  "provoke": {
-    "hook": "PRO-VOKE: professionally INVOKE anger or reaction",
+  "protracted": {
+    "hook": "PRO-TRACTED: tracted (pulled) out longer - drawn out beyond expected",
     "type": "wordplay"
   },
   "provincial": {
     "hook": "Stuck in a small PROVINCE - can't see the bigger world",
+    "type": "wordplay"
+  },
+  "provoke": {
+    "hook": "PRO-VOKE: professionally INVOKE anger or reaction",
     "type": "wordplay"
   },
   "prudent": {
@@ -2225,6 +2913,10 @@
   },
   "pugnacious": {
     "hook": "A PUG dog snarling and wanting to fight everyone",
+    "type": "imagery"
+  },
+  "purge": {
+    "hook": "PURGE like purging a computer of viruses - rid of unwanted elements",
     "type": "imagery"
   },
   "qualified": {
@@ -2239,6 +2931,10 @@
     "hook": "Always QUERYING and complaining in a whiny voice",
     "type": "wordplay"
   },
+  "quiescent": {
+    "hook": "QUIET-ESCENT: becoming quiet - inactive and at rest",
+    "type": "sound"
+  },
   "quirky": {
     "hook": "Full of unique QUIRKS - unusual in an interesting way",
     "type": "wordplay"
@@ -2250,6 +2946,10 @@
   "rancor": {
     "hook": "RANK hatred that's gone sour - deep bitter resentment",
     "type": "sound"
+  },
+  "rapport": {
+    "hook": "RAP-PORT: rapping at the port together - harmonious mutual connection",
+    "type": "imagery"
   },
   "rapprochement": {
     "hook": "Two rappers APPROACH each other to make peace",
@@ -2267,16 +2967,28 @@
     "hook": "RE-BUT: 'BUT wait!' - here's my counter-argument",
     "type": "wordplay"
   },
-  "recondite": {
-    "hook": "Hidden (condite) in deep layers - very difficult to understand",
+  "recalcitrant": {
+    "hook": "RE-CALCITRANT: kicking back (calcitrant from Latin calx, heel) - stubbornly uncooperative",
+    "type": "wordplay"
+  },
+  "reclusive": {
+    "hook": "RE-CLUSIVE: closing yourself in again - avoiding company of others",
     "type": "wordplay"
   },
   "reconcile": {
     "hook": "RE-COUNCIL: bring the COUNCIL back together in harmony",
     "type": "sound"
   },
+  "recondite": {
+    "hook": "Hidden (condite) in deep layers - very difficult to understand",
+    "type": "wordplay"
+  },
   "reductionist": {
     "hook": "REDUCES complex issues to oversimplified bite-sized pieces",
+    "type": "wordplay"
+  },
+  "refractory": {
+    "hook": "RE-FACTORY: refusing to be re-made in the factory - stubbornly resistant",
     "type": "wordplay"
   },
   "refute": {
@@ -2291,6 +3003,10 @@
     "hook": "Make it REAL - treat an abstract concept as concrete",
     "type": "wordplay"
   },
+  "reinforce": {
+    "hook": "RE-IN-FORCE: forcing strength back in - strengthen further",
+    "type": "wordplay"
+  },
   "relegated": {
     "hook": "Sent to a LOWER LEAGUE - assigned to a lesser position",
     "type": "wordplay"
@@ -2303,8 +3019,20 @@
     "hook": "REMARK-ABLE: worthy of a REMARK - stands out as notable",
     "type": "wordplay"
   },
+  "remorse": {
+    "hook": "RE-MORSE: morse code tapping guilt over and over - deep regret for wrongdoing",
+    "type": "imagery"
+  },
   "renounce": {
     "hook": "RE-NOUNCE: ANNOUNCE again that you're formally giving up",
+    "type": "wordplay"
+  },
+  "repentant": {
+    "hook": "RE-PENT-ANT: an ant who re-pents (goes back to confession) - showing sincere regret",
+    "type": "imagery"
+  },
+  "reprimand": {
+    "hook": "RE-PRIM-AND: getting primed for a scolding again - formal disapproval",
     "type": "wordplay"
   },
   "reproach": {
@@ -2313,6 +3041,10 @@
   },
   "repudiate": {
     "hook": "Toss it in a PUDDLE and walk away - reject strongly",
+    "type": "imagery"
+  },
+  "rescind": {
+    "hook": "RE-SCIND: scissoring it away - officially cancel and revoke",
     "type": "imagery"
   },
   "reserved": {
@@ -2327,6 +3059,10 @@
     "hook": "SPRINGS back like rubber - bounces and recovers quickly",
     "type": "imagery"
   },
+  "resolute": {
+    "hook": "RE-SOLUTE: solid resolution that doesn't dissolve - firmly determined",
+    "type": "wordplay"
+  },
   "restrained": {
     "hook": "Held back by RESTRAINTS - controlled, not extreme",
     "type": "wordplay"
@@ -2335,17 +3071,33 @@
     "hook": "Keeps words behind a NET - reserved and not talkative",
     "type": "wordplay"
   },
-  "reverent": {
-    "hook": "Shows deep REVERENCE - respectful and admiring",
+  "retrograde": {
+    "hook": "RETRO-GRADE: going back a grade - moving backward to inferior state",
     "type": "wordplay"
   },
   "revere": {
     "hook": "Paul REVERE was revered as an American hero",
     "type": "story"
   },
+  "reverent": {
+    "hook": "Shows deep REVERENCE - respectful and admiring",
+    "type": "wordplay"
+  },
   "revisionist": {
     "hook": "Always making REVISIONS to established historical views",
     "type": "wordplay"
+  },
+  "revoke": {
+    "hook": "RE-VOKE: taking back the invocation - officially cancel a right",
+    "type": "wordplay"
+  },
+  "rhetoric": {
+    "hook": "RHETT-ORIC: Rhett Butler's fancy persuasive speeches - impressive language",
+    "type": "imagery"
+  },
+  "rigid": {
+    "hook": "RIGID like a frozen stick - stiff and strictly unyielding",
+    "type": "imagery"
   },
   "rigorous": {
     "hook": "Full of RIGOR - thorough and exact in every detail",
@@ -2375,12 +3127,12 @@
     "hook": "SALUT-ARY: a health SALUTE - beneficial effects",
     "type": "wordplay"
   },
-  "sanction": {
-    "hook": "From the SANCTUARY: approve OR punish (tricky dual meaning!)",
-    "type": "wordplay"
-  },
   "sanctimonious": {
     "hook": "Pretending to be a SAINT - fake moral superiority",
+    "type": "wordplay"
+  },
+  "sanction": {
+    "hook": "From the SANCTUARY: approve OR punish (tricky dual meaning!)",
     "type": "wordplay"
   },
   "sanguine": {
@@ -2395,6 +3147,14 @@
     "hook": "Using SATIRE as a weapon - humor that cuts and criticizes",
     "type": "wordplay"
   },
+  "savvy": {
+    "hook": "SAVVY Jack Sparrow: 'Savvy?' = street-smart knowledge",
+    "type": "imagery"
+  },
+  "scathing": {
+    "hook": "SCATHE-ING: scorching with words - severely critical and withering",
+    "type": "wordplay"
+  },
   "scrupulous": {
     "hook": "Full of SCRUPLES - extremely careful about right and wrong",
     "type": "wordplay"
@@ -2407,8 +3167,16 @@
     "hook": "Sits down (SED) in rebellion - encouraging revolt against authority",
     "type": "wordplay"
   },
+  "seminal": {
+    "hook": "SEMIN-AL: like a seed (semen) that grows into something huge - foundational",
+    "type": "wordplay"
+  },
   "sententious": {
     "hook": "Drops heavy SENTENCES of moral wisdom nobody asked for",
+    "type": "wordplay"
+  },
+  "sequester": {
+    "hook": "SE-QUEST-ER: sent on a quest alone - isolate and set apart",
     "type": "wordplay"
   },
   "servile": {
@@ -2431,12 +3199,16 @@
     "hook": "A born SKEPTIC who questions everything - show me proof!",
     "type": "wordplay"
   },
-  "slapdash": {
-    "hook": "SLAP it together and DASH away - careless and hurried",
-    "type": "wordplay"
+  "skittish": {
+    "hook": "SKIT-TISH: jumpy like a cat watching a skit - nervous and easily frightened",
+    "type": "imagery"
   },
   "slander": {
     "hook": "Words that LAND on someone like mud - false damaging talk",
+    "type": "wordplay"
+  },
+  "slapdash": {
+    "hook": "SLAP it together and DASH away - careless and hurried",
     "type": "wordplay"
   },
   "sober": {
@@ -2447,16 +3219,20 @@
     "hook": "SO SOLEMN it's like a funeral - serious and formal",
     "type": "wordplay"
   },
+  "somber": {
+    "hook": "SOM-BER: some bear the weight of sadness - dark and gloomy",
+    "type": "imagery"
+  },
   "sonorous": {
     "hook": "SONIC boom resonance - deep, rich, impressive sound",
     "type": "wordplay"
   },
-  "soporific": {
-    "hook": "Puts you in a SOPOR (deep sleep) - professor's boring lecture",
-    "type": "wordplay"
-  },
   "sophisticated": {
     "hook": "Complex as a SOPHIST's argument - refined and worldly",
+    "type": "wordplay"
+  },
+  "soporific": {
+    "hook": "Puts you in a SOPOR (deep sleep) - professor's boring lecture",
     "type": "wordplay"
   },
   "sound": {
@@ -2483,17 +3259,29 @@
     "hook": "Pops up like mushroom SPORES - randomly, irregularly",
     "type": "wordplay"
   },
+  "spur": {
+    "hook": "Cowboy's SPUR kicks the horse into action - stimulate!",
+    "type": "imagery"
+  },
   "spurious": {
     "hook": "A SPUR-of-the-moment fake - false and not genuine",
     "type": "wordplay"
   },
-  "spur": {
-    "hook": "Cowboy's SPUR kicks the horse into action - stimulate!",
+  "stagnant": {
+    "hook": "STAG-NANT: a stag standing still in a nant (brook) - not flowing, no growth",
     "type": "imagery"
   },
   "stagnate": {
     "hook": "A STAGNANT swamp pond - nothing grows, nothing moves",
     "type": "imagery"
+  },
+  "stalwart": {
+    "hook": "STALL-WART: like a wart that won't leave the stall - loyal and unmovable",
+    "type": "imagery"
+  },
+  "steadfast": {
+    "hook": "STEADY-FAST: holding steady and fast - firmly loyal and unwavering",
+    "type": "wordplay"
   },
   "stealthy": {
     "hook": "STEALTH bomber mode - secretive and undetected",
@@ -2523,9 +3311,37 @@
     "hook": "Face of STONE - enduring pain quietly without emotion",
     "type": "sound"
   },
+  "stolid": {
+    "hook": "SOLID as a stone - calm and showing zero emotion",
+    "type": "sound"
+  },
   "strident": {
     "hook": "Taking aggressive STRIDES while yelling - loud and harsh",
     "type": "wordplay"
+  },
+  "subjugate": {
+    "hook": "SUB-JUG-ATE: put under the jug - bring under domination",
+    "type": "imagery"
+  },
+  "sublime": {
+    "hook": "SUB-LIME: below the lime light but so excellent it transcends - awe-inspiring",
+    "type": "wordplay"
+  },
+  "subservient": {
+    "hook": "SUB-SERVANT: a servant below a servant - excessively willing to serve",
+    "type": "wordplay"
+  },
+  "subside": {
+    "hook": "SUB-SIDE: sinking to the sub-side - gradually declining and calming",
+    "type": "wordplay"
+  },
+  "substantiate": {
+    "hook": "SUB-STANCE-IATE: giving substance to a claim - provide supporting evidence",
+    "type": "wordplay"
+  },
+  "subterfuge": {
+    "hook": "SUBTER-FUGE: fugitive going underground - deceit to achieve a goal",
+    "type": "imagery"
   },
   "subversive": {
     "hook": "Working from SUB-terranean levels to undermine authority",
@@ -2539,16 +3355,16 @@
     "hook": "SUCK out all extra words - brief, clear, and tight",
     "type": "wordplay"
   },
+  "supercilious": {
+    "hook": "Raising your SUPERCILIA (eyebrows) at peasants - arrogant snob",
+    "type": "wordplay"
+  },
   "superficial": {
     "hook": "Only on the SURFACE level - shallow, not deep at all",
     "type": "wordplay"
   },
   "superfluous": {
     "hook": "SUPER FLOW of extra stuff nobody needs - unnecessary overflow",
-    "type": "wordplay"
-  },
-  "supercilious": {
-    "hook": "Raising your SUPERCILIA (eyebrows) at peasants - arrogant snob",
     "type": "wordplay"
   },
   "supersede": {
@@ -2579,6 +3395,10 @@
     "hook": "Follows the SYSTEM precisely - methodical and organized",
     "type": "wordplay"
   },
+  "tacit": {
+    "hook": "TACIT sounds like TACIT-URN (silent) - understood without being stated",
+    "type": "sound"
+  },
   "taciturn": {
     "hook": "Keeps words TACIT (silent) locked in an URN - speaks very little",
     "type": "wordplay"
@@ -2607,8 +3427,16 @@
     "hook": "Runs out of TIME to think and acts with reckless boldness",
     "type": "sound"
   },
+  "temper": {
+    "hook": "TEMPER the temperature - moderate and soften the extremes",
+    "type": "wordplay"
+  },
   "temperate": {
     "hook": "Keep your TEMPER moderate and even - not extreme",
+    "type": "wordplay"
+  },
+  "tenable": {
+    "hook": "TEN-ABLE: able to hold (tenere=hold) - defensible position",
     "type": "wordplay"
   },
   "tenacious": {
@@ -2643,20 +3471,36 @@
     "hook": "Throw a WART into their plans - block and prevent success",
     "type": "wordplay"
   },
+  "timorous": {
+    "hook": "TIMOR-OUS: full of timor (fear) like Timor the timid mouse",
+    "type": "imagery"
+  },
   "token": {
     "hook": "Just a TOKEN gesture - symbolic but not real or substantial",
     "type": "wordplay"
+  },
+  "torpid": {
+    "hook": "TORPEDO that's a dud - sluggish, inactive, going nowhere",
+    "type": "imagery"
+  },
+  "tout": {
+    "hook": "TOUT like shouting out - promote and praise energetically",
+    "type": "sound"
   },
   "tractable": {
     "hook": "Easy to TRACK and steer - controllable and manageable",
     "type": "wordplay"
   },
-  "transparent": {
-    "hook": "TRANS-PARENT: see RIGHT THROUGH like glass - totally clear",
-    "type": "wordplay"
-  },
   "transient": {
     "hook": "In TRANSIT - just passing through, short-lived stay",
+    "type": "wordplay"
+  },
+  "transmute": {
+    "hook": "TRANS-MUTE: transforming from mute to something else - change in nature",
+    "type": "wordplay"
+  },
+  "transparent": {
+    "hook": "TRANS-PARENT: see RIGHT THROUGH like glass - totally clear",
     "type": "wordplay"
   },
   "trenchant": {
@@ -2679,6 +3523,10 @@
     "hook": "Writing swollen like a TURGID river after rain - bloated and pompous",
     "type": "imagery"
   },
+  "tyrannical": {
+    "hook": "TYRANT-ICAL: like a tyrant - exercising power cruelly",
+    "type": "wordplay"
+  },
   "ubiquitous": {
     "hook": "U-B-QUIT-OUS: you can't QUIT appearing - present everywhere!",
     "type": "wordplay"
@@ -2695,20 +3543,20 @@
     "hook": "Against your CONSCIENCE - shockingly unfair and wrong",
     "type": "wordplay"
   },
-  "underscore": {
-    "hook": "Draw a line UNDER the word to SCORE emphasis on it",
+  "underhanded": {
+    "hook": "Doing deals UNDER the table with hidden HANDS - dishonest",
     "type": "wordplay"
   },
   "undermine": {
     "hook": "Digging a MINE underneath the fortress walls - weaken gradually",
     "type": "wordplay"
   },
-  "understated": {
-    "hook": "STATED less than what it really is - subtly expressed",
+  "underscore": {
+    "hook": "Draw a line UNDER the word to SCORE emphasis on it",
     "type": "wordplay"
   },
-  "underhanded": {
-    "hook": "Doing deals UNDER the table with hidden HANDS - dishonest",
+  "understated": {
+    "hook": "STATED less than what it really is - subtly expressed",
     "type": "wordplay"
   },
   "unequivocal": {
@@ -2727,17 +3575,25 @@
     "hook": "Made into ONE (UNI) - joined together as a whole",
     "type": "wordplay"
   },
+  "unorthodox": {
+    "hook": "UN-ORTHODOX: breaks from the ORTHODOX tradition",
+    "type": "wordplay"
+  },
   "unprecedented": {
     "hook": "No PRECEDENT exists in history - never happened before",
     "type": "wordplay"
   },
-  "unorthodox": {
-    "hook": "UN-ORTHODOX: breaks from the ORTHODOX tradition",
+  "unscrupulous": {
+    "hook": "UN-SCRUPLES: without scruples - having no moral principles",
     "type": "wordplay"
   },
   "untenable": {
     "hook": "Can't be a TENANT here - this position can't be held",
     "type": "wordplay"
+  },
+  "upbraid": {
+    "hook": "UP-BRAID: braiding someone up with harsh words - scold severely",
+    "type": "imagery"
   },
   "uphold": {
     "hook": "HOLD it UP high - support and maintain the standard",
@@ -2746,6 +3602,10 @@
   "upright": {
     "hook": "Standing straight UP and doing what's RIGHT - honest and moral",
     "type": "wordplay"
+  },
+  "usurp": {
+    "hook": "U-SLURP power like slurping a milkshake - seize without authority",
+    "type": "imagery"
   },
   "utopian": {
     "hook": "Dreaming of UTOPIA - beautiful but totally unrealistic",
@@ -2771,6 +3631,10 @@
     "hook": "Hits you like a VEHICLE - intensely forceful passion",
     "type": "sound"
   },
+  "veiled": {
+    "hook": "VEILED behind a veil - disguised and not openly expressed",
+    "type": "imagery"
+  },
   "veneer": {
     "hook": "Only NEAR the surface - a thin pretty coating hiding the ugly",
     "type": "wordplay"
@@ -2783,6 +3647,14 @@
     "hook": "Show VENERATION - regard with the deepest respect",
     "type": "wordplay"
   },
+  "veracious": {
+    "hook": "VERA-CIOUS: vera means truth - truthful and accurate",
+    "type": "wordplay"
+  },
+  "veracity": {
+    "hook": "VERA-CITY: a city of truth - the quality of being truthful",
+    "type": "wordplay"
+  },
   "verbose": {
     "hook": "Too many VERBS, nouns, and adjectives - way too wordy",
     "type": "wordplay"
@@ -2790,6 +3662,14 @@
   "verisimilitude": {
     "hook": "VERY SIMILAR to the truth - has the appearance of being real",
     "type": "wordplay"
+  },
+  "versatile": {
+    "hook": "VERSE-A-TILE: able to write any verse on any tile - adaptable to many functions",
+    "type": "wordplay"
+  },
+  "vestige": {
+    "hook": "VEST-IGE: an old vest is all that remains - a trace of something past",
+    "type": "imagery"
   },
   "viable": {
     "hook": "Has the VITAlity and life to actually work - possible",
@@ -2811,9 +3691,21 @@
     "hook": "Seeks VINDICATION through revenge - wants payback",
     "type": "wordplay"
   },
+  "virtuous": {
+    "hook": "VIRTUE-OUS: full of virtue - having high moral standards",
+    "type": "wordplay"
+  },
+  "virulent": {
+    "hook": "VIRUS-LENT: a virus that was lent and spread - extremely harmful",
+    "type": "wordplay"
+  },
   "vitriolic": {
     "hook": "Throwing VITRIOL (sulfuric acid) of pure bitter hatred",
     "type": "wordplay"
+  },
+  "vituperate": {
+    "hook": "VITU-PERATE: viper-ate, attacking with viper's tongue - harsh verbal abuse",
+    "type": "imagery"
   },
   "vivid": {
     "hook": "Full of VIVE (life) - bright, intense, impossible to ignore",
@@ -2849,6 +3741,10 @@
   },
   "whimsical": {
     "hook": "Following every WHIM like a butterfly - playfully unusual",
+    "type": "wordplay"
+  },
+  "wistful": {
+    "hook": "WISH-FUL: full of wishes for what's gone - yearning with gentle sadness",
     "type": "wordplay"
   },
   "wry": {
